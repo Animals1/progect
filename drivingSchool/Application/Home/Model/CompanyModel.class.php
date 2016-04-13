@@ -17,8 +17,7 @@ class CompanyModel extends Model {
 	    $upload->rootPath  =      './';
 	    $upload->savePath  =      './Public/Uploads/';  
 	    $info   =   $upload->upload(); 
-	    $news_logo=$info['myfile']['savepath'].$info['myfile']['savename'];
-	    $img=substr($news_logo,strpos($news_logo,"U"));
+	    $img = $info['photo']['md5'].'.'.$info['photo']['ext'];
 		$data['company_logo']=$img;
 		$data['company_person'] = $rows['person'];
 		$data['company_tel'] = $rows['person'];
