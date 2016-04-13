@@ -18,3 +18,53 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2016-04-13T18:34:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `staff_leave`  [ RunTime:0.0060s ]
+
+[ 2016-04-13T18:44:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `staff_leave`  [ RunTime:0.0060s ]
+
+[ 2016-04-13T18:46:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `staff`  [ RunTime:0.0070s ]
+
+[ 2016-04-13T18:48:07+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2870s ]
+SQL: SELECT * FROM `staff` WHERE ( staff_id = '1' ) LIMIT 1   [ RunTime:0.2300s ]
+
+[ 2016-04-13T18:49:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0940s ]
+SQL: DELETE FROM `staff` WHERE ( staff_id = '1' ) [ RunTime:0.1070s ]
+
