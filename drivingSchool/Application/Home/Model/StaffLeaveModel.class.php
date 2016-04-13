@@ -1,0 +1,12 @@
+<?php
+/**
+ *	Ô±¹¤Çë¼Ù±í
+ *	created by: yaobowen
+ */
+namespace Home\Model;
+use Think\Model;
+class StaffLeaveModel extends Model {
+	
+}
+
+?>
