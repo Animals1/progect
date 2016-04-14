@@ -6,18 +6,29 @@
 namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
-	//查询全部员工的信息
-	public function selall(){
-		return $this->select();
+	protected $tableName='staff';
+	protected $area='area';
+	
+	/*
+	 * 员工地区联动查询
+	 * 作者：张捷
+	 */
+	public function linkage($id){
+
+		$db=D($this->area);
+		$rows = $db->where("parent_id = $id")->select();
+		return $rows;
+
 	}
-	//查询一个员工的信息
-	public function selone($id){
-		return $this->where("staff_id = '$id'")->find();
+
+	/*
+	 * 添加教练时查询的数据
+	 * 作者：张捷
+	 */
+	public function satffcoach(){
+		
 	}
-	//删除一个员工的信息
-	public function delone($id){
-		return $this->where("staff_id = '$id'")->delete();
-	}
+
 }
 
 ?>
