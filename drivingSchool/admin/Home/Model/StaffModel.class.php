@@ -53,7 +53,7 @@ class StaffModel extends Model {
 	}
 	
 	/**
-	*	关联角色表，查出一个教练的角色信息
+	*	关联角色表，查出一个教练的信息
 	*	author：yaobowen
 	*/
 	public function getvalue(){
