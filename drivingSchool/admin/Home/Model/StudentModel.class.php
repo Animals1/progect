@@ -1,6 +1,6 @@
 <?php
 /*
- * @author:hechengwei
+ * @author:xueyunhuan
  * @date  :2016-4-13
  * @tablename:学员报名表
  * */
@@ -8,22 +8,13 @@ namespace Home\Model;
 use Think\Model;
 class StudentModel extends Model {
     /*
-     * 查询数据
+     * xueyunhuan
+     * 查询用户数据
      * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getshow($user_id)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
-    }
-    /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
-    {
-        return $this->where($where)->delete();
+        return $this->where("user_id=2")->join('class on student.class_id = class.class_id')->select();
     }
 }
 ?>

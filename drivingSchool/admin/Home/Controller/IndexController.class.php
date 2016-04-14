@@ -9,4 +9,10 @@ class IndexController extends Controller {
         {
         	$this->display('index');
         }
+        public function aa()
+        {
+        	$arr = D('Progress');
+            $arr = $arr->getshow();
+            print_r($arr);die;
+        }
 }
