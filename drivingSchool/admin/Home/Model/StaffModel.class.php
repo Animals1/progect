@@ -51,6 +51,7 @@ class StaffModel extends Model {
 	public function satffcoach(){
 
 	}
+	
 	/**
 	*	关联角色表，查出一个教练的角色信息
 	*	author：yaobowen
