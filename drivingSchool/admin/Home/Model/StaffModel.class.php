@@ -2,9 +2,6 @@
 namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 	/*
 	*	@author:郭旭峰
 	*	@module:管理员-个人中心
@@ -34,12 +31,6 @@ class StaffModel extends Model {
 		}
 		
 	}
-
-	
-=======
-	protected $tableName='staff';
-	protected $area='area';
->>>>>>> cbe9d38e55f6a9ea720c007304d5843221543cd5
 	
 	/*
 	 * 员工地区联动查询
@@ -60,8 +51,6 @@ class StaffModel extends Model {
 	public function satffcoach(){
 
 	}
-
->>>>>>> 1094fefbc7fbdcb5f1078fe174fb0fd15913fffc
 }
 
 ?>
