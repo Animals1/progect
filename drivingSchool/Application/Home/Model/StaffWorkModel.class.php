@@ -1,5 +1,4 @@
 <?php
-<<<<<<< HEAD
 namespace Home\Model;
 use Think\Model;
 class StaffWrokModel extends Model {
@@ -40,16 +39,11 @@ class StaffWrokModel extends Model {
         return $re = $db->where($where)->select();
 
 	}
-}
-=======
 /*
  * @author:hechengwei
  * @date  :2016-4-13
  * @tablename:员工考勤表
  * */
-namespace Home\Model;
-use Think\Model;
-class StaffWorkModel extends Model {
     /*
      * 查询数据
      * @$where  条件
@@ -69,5 +63,3 @@ class StaffWorkModel extends Model {
         return $this->where($where)->delete();
     }
 }
-?>
->>>>>>> 70432cfd88e3a2b9472f763605c3857f3eec1c4f
