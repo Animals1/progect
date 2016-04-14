@@ -1,29 +1,37 @@
 <?php
-/*
- * @author:hechengwei
- * @date  :2016-4-13
- * @tablename:准教车型表
- * */
 namespace Home\Model;
 use Think\Model;
-class CoachmodelModel extends Model {
-    /*
-     * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
-     * */
-    public function getValue($where,$order,$limit)
-    {
-        return $this->where($where)->order("$order")->limit($limit)->find();
-    }
-    /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
-    {
-        return $this->where($where)->delete();
-    }
+class CoachModelModel extends Model {
+	/*
+	*	by 郭旭峰
+	*	准教车型表
+	*	添加信息
+	*/
+	public function coachmodeladd($modelname){
+		$data['model_name'] = $modelname;
+		return $this->Table("coach_model")->add($data);
+	}
+
+
+	/*
+	*	查看
+	*/
+	public function coachmodelsele(){
+		return $this->Table("coach_model")->select();
+	}
+
+	/*
+	*	根据id进行查看
+	*/
+	public function coachmodelidsele($id){
+		return $this->Table("coach_model")->where("model_id=$id")->select();
+	}
+
+	/*
+	*	根据id进行删除
+	*/
+	public function coachmodeliddele($id){
+		return $this->Table("coach_model")->where("model_id=$id")->delete();
+	}
 }
 ?>
