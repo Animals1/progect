@@ -7,23 +7,19 @@
 namespace Home\Model;
 use Think\Model;
 class CoachGrandeModel extends Model {
-    /*
-     * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
-     * */
-    public function getValue($where,$order,$limit)
+    /**
+     * 查询全部数据
+     */
+    public function getValue()
     {
-        return $this->where($where)->order($order)->limit($limit)->find();
+        return $this->select();
     }
     /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
+     * 删除一条数据数据
+     */
+    public function delValue()
     {
-        return $this->where($where)->delete();
+        return $this->where("grade_id ='$id'")->delete();
     }
 }
 ?>

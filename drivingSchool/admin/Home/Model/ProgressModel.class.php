@@ -8,22 +8,14 @@ namespace Home\Model;
 use Think\Model;
 class ProgressModel extends Model {
     /*
-     * 查询数据
+     * 查询数据(考证进度)
      * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getshow($user_id)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
-    }
-    /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
-    {
-        return $this->where($where)->delete();
+        $arr=$this->Table('student')->where("user_id = 2")->select();
+        $arr1 = $this->where("stu_id = $arr[0]['stu_id']")->select();
+        return $arr1;
     }
 }
 ?>
