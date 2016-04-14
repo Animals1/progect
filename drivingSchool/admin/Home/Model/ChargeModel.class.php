@@ -13,7 +13,7 @@ class ChargeModel extends Model {
      * */
     public function getvalue()
     {
-        return $this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->find();
+        return $this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->select();
     }
     /*
      * 收费明细-添加信息

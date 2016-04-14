@@ -27963,6 +27963,9 @@ ERR: 无法加载控制器:Coach
 >>>>>>> 3419ca71ce651b07ddd25fc3173b16ad5081197a
 
 <<<<<<< HEAD
+[ 2016-04-14T19:17:20+08:00 ] 127.0.0.1 /home/charge/index
+=======
+<<<<<<< HEAD
 [ 2016-04-14T15:53:22+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/home/coach/index
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -34801,12 +34804,16 @@ SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0200s ]
 SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach_group ON staff.group_id = coach_group.group_id  WHERE ( staff.staff_name = '张三' ) LIMIT 1   [ RunTime:0.0100s ]
 
 [ 2016-04-14T20:32:42+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+>>>>>>> 57855a54a3b298ca02d261a226630e3df218d8c6
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+<<<<<<< HEAD
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'driving.arrears' doesn't exist
+=======
 SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0070s ]
 SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff.staff_name = '张三' ) LIMIT 1   [ RunTime:0.0070s ]
 
@@ -35451,4 +35458,5 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000447s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000483s ]
 >>>>>>> c74b8b1bc6e8f3bcfcb81bb3c3b1f6909cc5d643
+>>>>>>> 57855a54a3b298ca02d261a226630e3df218d8c6
 
