@@ -149,6 +149,19 @@ class StaffModel extends Model {
 		return $db->where("staff_id = $id")->save($data);
 
 	}
+	
+	/**
+	*	关联角色表，查出一个教练的信息
+	*	author：yaobowen
+	*/
+	public function getvalue($name){
+		return $this->where("staff.staff_name = '$name'")
+					->join('role ON staff.role_id = role.role_id' )
+					->join('coach_group ON staff.group_id = coach_group.group_id' )
+					->find();
+	}
+
+
 }
 
 ?>

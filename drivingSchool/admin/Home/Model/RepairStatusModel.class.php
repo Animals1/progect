@@ -1,12 +1,12 @@
 <?php
 /*
- *@author:hechengwei
- *@date  :2016-4-13
- *@tablename:预约申请
+ * @author:hechengwei
+ * @date  :2016-4-13
+ * @tablename:车辆更换表
  * */
 namespace Home\Model;
 use Think\Model;
-class OrderModel extends Model {
+class RepairStatusModel extends Model {
     /*
      * 查询数据
      * @$where  条件

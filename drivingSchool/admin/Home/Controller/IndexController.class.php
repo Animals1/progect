@@ -11,8 +11,8 @@ class IndexController extends Controller {
         }
         public function aa()
         {
-        	$arr = D('Progress');
-            $arr = $arr->getshow();
-            print_r($arr);die;
+        	$model = D('StuOrder');
+            $arr = $model->getadd();
+            print_r($arr);
         }
 }
