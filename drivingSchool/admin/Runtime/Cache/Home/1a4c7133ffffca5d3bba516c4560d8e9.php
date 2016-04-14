@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -36,6 +37,9 @@
     <li><a href="#">关于</a></li>
     </ul>    
     </div>
+=======
+<?php if (!defined('THINK_PATH')) exit();?>﻿
+>>>>>>> ac520375d62f9eeb23ab62ec5baece47e621ea20
     
     <div class="loginbody">
     
@@ -54,13 +58,3 @@
     
     
     </div>
-    
-    </div>
-    
-    
-    <div class="loginbm">版权所有  2014  <a href="http://www.uimaker.com">uimaker.com</a>  仅供学习交流，勿用于任何商业用途</div>
-	
-    
-</body>
-
-</html>
