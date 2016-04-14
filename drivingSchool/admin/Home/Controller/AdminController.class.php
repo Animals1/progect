@@ -1,6 +1,6 @@
 <?php
 /**
-	*@管理员模块----个人中心
+	*@教练模块----个人中心
 	*/
 namespace Home\Controller;
 use Think\Controller;

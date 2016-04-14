@@ -126,8 +126,11 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">个人信息</a></li>
-            <li><a href="javascript:;" target="rightFrame">评价考核</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Coach/personal_info" target="rightFrame">个人信息</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Coach/award" target="rightFrame">评价考核</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Coach/attendance" target="rightFrame">出勤信息</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Coach/leave" target="rightFrame">请假管理</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Coach/leave" target="rightFrame">工资明细</a></li>
             </ul>
         </li>
         
