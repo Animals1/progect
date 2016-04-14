@@ -11,8 +11,8 @@ class IndexController extends Controller {
         }
         public function aa()
         {
-        	$arr = D('Progress');
-            $arr = $arr->getshow();
+        	$arr = D('Charge');
+            $arr = $arr->chargeshow();
             print_r($arr);die;
         }
 }
