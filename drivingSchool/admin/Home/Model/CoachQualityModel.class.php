@@ -7,23 +7,19 @@
 namespace Home\Model;
 use Think\Model;
 class CoachQualityModel extends Model {
-    /*
-     * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
-     * */
+    /**
+     * 查询全部数据
+     */
     public function getValue($where,$order,$limit)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
-    /*
+    /**
      * 删除数据
-     *@$where   条件
-     * */
+	 */
     public function delValue($where)
     {
-        return $this->where($where)->delete();
+        return $this->where("quality_id = '$id'")->delete();
     }
 }
 ?>
