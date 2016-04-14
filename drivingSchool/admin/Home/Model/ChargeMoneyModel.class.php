@@ -17,13 +17,5 @@ class ChargeMoneyModel extends Model {
     {
         return $this->where($where)->order("$order")->limit($limit)->find();
     }
-    /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
-    {
-        return $this->where($where)->delete();
-    }
 }
 ?>

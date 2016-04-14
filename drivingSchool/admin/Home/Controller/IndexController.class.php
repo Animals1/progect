@@ -5,7 +5,6 @@ class IndexController extends Controller {
     public function index(){
     	$this->display('main');
         }
-<<<<<<< HEAD
         public function personinfo()
         {
         	$this->display('index');
@@ -16,7 +15,4 @@ class IndexController extends Controller {
             $arr = $arr->getshow();
             print_r($arr);die;
         }
-=======
-    
->>>>>>> ac520375d62f9eeb23ab62ec5baece47e621ea20
 }
