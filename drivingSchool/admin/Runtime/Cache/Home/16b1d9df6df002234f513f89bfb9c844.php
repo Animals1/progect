@@ -5,8 +5,8 @@
 <title>无标题文档</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="js/jquery.js"></script>
-<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
 
 <script type="text/javascript">
 $(function(){   
@@ -56,7 +56,7 @@ $(function(){
         
     <dd>
     <div class="title">
-    <span><img src="/progect/drivingSchool/Public/admin/images/leftico01.png" /></span>管理员
+    <span><img src="/Public/admin/images/leftico01.png" /></span>管理员
     </div>
         <ul class="menuson">
         
@@ -67,7 +67,7 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
-            <li><a href="/progect/drivingSchool/index.php/Home/Index/personinfo" target="rightFrame">个人信息</a></li>
+            <li><a href="/index.php/Home/Index/personinfo" target="rightFrame">个人信息</a></li>
             <li><a href="javascript:;" target="rightFrame">出勤信息</a></li>
             <li><a href="javascript:;" target="rightFrame">请假管理</a></li>
             <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
@@ -115,7 +115,7 @@ $(function(){
     
     <dd>
     <div class="title">
-    <span><img src="/progect/drivingSchool/Public/admin/images/leftico02.png" /></span>教练
+    <span><img src="/Public/admin/images/leftico02.png" /></span>教练
     </div>
     <ul class="menuson">
         
@@ -168,7 +168,7 @@ $(function(){
     </dd> 
     
     
-    <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico03.png" /></span>行政</div>
+    <dd><div class="title"><span><img src="/Public/admin/images/leftico03.png" /></span>行政</div>
     <ul class="menuson">
         
         <li>
@@ -228,7 +228,7 @@ $(function(){
     </dd>  
     
     
-    <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>人事</div>
+    <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>人事</div>
     <ul class="menuson">
         <li><cite></cite><a href="#">自定义</a><i></i></li>
         <li><cite></cite><a href="#">常用资料</a><i></i></li>
@@ -238,7 +238,7 @@ $(function(){
     
     </dd> 
 
-       <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>财务</div>
+       <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
         <li><cite></cite><a href="#">自定义</a><i></i></li>
         <li><cite></cite><a href="#">常用资料</a><i></i></li>
@@ -254,7 +254,7 @@ $(function(){
 <div class="lefttop" id="student" style="cursor:pointer;"><span></span>学员端</div>
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
-        <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>学员</div>
+        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
         <ul class="menuson">
             <li><cite></cite><a href="#">自定义</a><i></i></li>
             <li><cite></cite><a href="#">常用资料</a><i></i></li>

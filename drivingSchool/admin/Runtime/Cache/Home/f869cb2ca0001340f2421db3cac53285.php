@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>欢迎登录后台管理系统</title>
-<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
-<script src="/progect/drivingSchool/Public/admin/js/cloud.js" type="text/javascript"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+<script src="/Public/admin/js/cloud.js" type="text/javascript"></script>
 
 <script language="javascript">
 	$(function(){
@@ -18,7 +18,7 @@
 
 </head>
 
-<body style="background-color:#df7611; background-image:url(/progect/drivingSchool/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+<body style="background-color:#df7611; background-image:url(/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
 
 
 
