@@ -67,11 +67,11 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
-            <li><a href="/progect/drivingSchool/index.php/Home/Index/personinfo" target="rightFrame">个人信息</a></li>
-            <li><a href="javascript:;" target="rightFrame">出勤信息</a></li>
-            <li><a href="javascript:;" target="rightFrame">请假管理</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+
+            <li><a href="/progect/drivingSchool/index.php/Home/Admin/leave" target="rightFrame">请假管理</a></li>
             <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
-            <li><a href="javascript:;" target="rightFrame">待办事项</a></li>
             </ul>
         </li>
         
@@ -82,9 +82,9 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">帐号管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">角色管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">权限管理</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/UserManager/index" target="rightFrame">帐号管理</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/UserManager/role" target="rightFrame">角色管理</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/UserManager/previlege" target="rightFrame">权限管理</a></li>
             </ul>
         </li>
          <li>
@@ -94,8 +94,8 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">基本信息</a></li>
-            <li><a href="javascript:;" target="rightFrame">学费设置</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Company/index" target="rightFrame">基本信息</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Company/index" target="rightFrame">学费设置</a></li>
             </ul>
         </li>
         <li>
@@ -105,8 +105,8 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">登录操作</a></li>
-            <li><a href="javascript:;" target="rightFrame">页面操作</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Log/index" target="rightFrame">登录操作</a></li>
+            <li><a href="/progect/drivingSchool/index.php/Home/Log/page" target="rightFrame">页面操作</a></li>
             </ul>
         </li>
         </ul>    
