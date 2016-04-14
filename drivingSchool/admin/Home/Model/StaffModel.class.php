@@ -94,7 +94,11 @@ class StaffModel extends Model {
 		$data['role_id'] = $rows['role'];
 		$data['staff_job'] = $rows['job'];
 		$data['staff_basic'] = $rows['basic'];
-		return $re = $db->create($data);
+		if ($data['role_id'] == '1') {
+			
+		}else{
+			return $re = $db->create($data);
+		}
 	}
 	/*
 	 * 教练员工查询
