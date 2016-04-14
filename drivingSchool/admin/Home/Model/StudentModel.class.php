@@ -14,7 +14,7 @@ class StudentModel extends Model {
      * */
     public function getshow($user_id)
     {
-        return $this->where("user_id=2")->join('class on student.class_id = class.class_id')->select();
+        return $this->join('class on student.class_id = class.class_id')->where("user_id=2")->select();
     }
 }
 ?>
