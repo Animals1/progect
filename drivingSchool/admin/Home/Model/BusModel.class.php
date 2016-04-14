@@ -13,9 +13,9 @@ class BusModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
     /*
      * 删除数据
@@ -25,5 +25,36 @@ class BusModel extends Model {
     {
         return $this->where($where)->delete();
     }
+    /*
+     * 修改
+     * */
+    public function updateBus($id,$data)
+    {
+        $msg=$this->where($id)->save($data);
+    }
+    /*
+     * 班车时刻表
+     * 根据路线id分组查询路线
+     * */
+    public function busTimetable()
+    {
+        return $this->join('bus_record on bus.bus_id=bus_record.bus_id')->field('bus_route')->group('bus_id')->select();
+    }
+    /*
+     * 添加班车
+     * */
+    public function addBus($data)
+    {
+        $addbus=$this->add($data);
+        if($addbus)
+        {
+            return $addbus;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 }
 ?>
