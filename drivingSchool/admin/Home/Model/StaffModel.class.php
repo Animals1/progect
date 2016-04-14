@@ -2,7 +2,6 @@
 namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
-<<<<<<< HEAD
 	/*
 	*	@author:郭旭峰
 	*	@module:管理员-个人中心
@@ -32,11 +31,6 @@ class StaffModel extends Model {
 		}
 		
 	}
-
-	
-=======
-	protected $tableName='staff';
-	protected $area='area';
 	
 	/*
 	 * 员工地区联动查询
@@ -44,7 +38,7 @@ class StaffModel extends Model {
 	 */
 	public function linkage($id){
 
-		$db=D($this->area);
+		$db=D('area');
 		$rows = $db->where("parent_id = $id")->select();
 		return $rows;
 
@@ -55,10 +49,8 @@ class StaffModel extends Model {
 	 * 作者：张捷
 	 */
 	public function satffcoach(){
-		
-	}
 
->>>>>>> 1094fefbc7fbdcb5f1078fe174fb0fd15913fffc
+	}
 }
 
 ?>
