@@ -1,6 +1,6 @@
 <?php
 /*
- *@author:hechengwei
+ *@author:xueyunhuan
  *@date  :2016-4-13
  *@tablename:考证进度
  * */

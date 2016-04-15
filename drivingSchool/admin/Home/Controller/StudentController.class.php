@@ -1,9 +1,9 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
+class StudentController extends Controller {
     public function index(){
-    	$this->display('main');
+    	$this->display('personinfo');
         }
         public function personinfo()
         {
