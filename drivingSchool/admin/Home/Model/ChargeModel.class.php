@@ -13,7 +13,15 @@ class ChargeModel extends Model {
      * */
     public function getvalue()
     {
-        return $this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->select();
+        $User = M('charge'); // 实例化User对象
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+        $list = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('charge_id>0')->order('charge_id desc')-> page($p.',3')->select();
+        $count      = $User->where('charge_id>0')->count();
+        $page       = new \Think\Page($count,3);
+        $show       = $page->show();
+        $data = array($list,$count,$show);
+        return $data;
     }
     /*
      * 收费明细-添加信息
