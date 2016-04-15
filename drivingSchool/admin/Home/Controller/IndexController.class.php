@@ -11,8 +11,8 @@ class IndexController extends Controller {
         }
         public function aa()
         {
-        	$model = D('StuOrder');
-            $arr = $model->getadd();
+        	$model = D('Charge');
+            $arr = $model->chargeshow();
             print_r($arr);
         }
 }
