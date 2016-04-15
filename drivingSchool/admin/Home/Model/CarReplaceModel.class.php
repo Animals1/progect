@@ -26,7 +26,7 @@ class CarReplaceModel extends Model {
      * 换车记录添加
      *
      * */
-    public function addCarreplace($data,$check)
+    public function addCarreplace($data)
     {
         return $this->add($data);
     }
