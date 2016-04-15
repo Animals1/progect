@@ -9,18 +9,13 @@ class StudentController extends Controller {
 	 * （xueyunhuan）
 	 *调用stuorder中数据
 	 *$p = 当前页码
-	 *$list = 显示数据
+	 *$list = 显示数据(当前用户信息)
 	 *$page = 翻页
 	*/
        public function index(){
-       	$model = D('StuOrder');
+       	$model = D('Student');
        	$arr = $model->getshow();
-       	$p = $arr['0'];
-       	$list = $arr['1'];
-       	$page = $arr['2'];
-       	$this->assign('$page',$page);
-       	$this->assign('p',$p);
-       	$this->assign('list',$list);
+       	$this->assign('arr',$arr);
        	$this->display('personinfo');
         }
       /*
@@ -41,6 +36,25 @@ class StudentController extends Controller {
        	$this->assign('list',$list);
        	$this->display('stuorder');
         }
+ 		/*
+	 * （xueyunhuan）
+	 *调用stuorder中数据
+	 *$p = 当前页码
+	 *$list = 显示数据(我的学费---学费明细)
+	 *$page = 翻页
+	*/
+       public function mycharge(){
+       	$model = D('Charge');
+       	$arr = $model->chargeshow();
+       	$p = $arr['0'];
+       	$list = $arr['1'];
+       	$page = $arr['2'];
+       	$this->assign('$page',$page);
+       	$this->assign('p',$p);
+       	$this->assign('list',$list);
+       	$this->display('mycharge');
+        }
+
        /*
 	 * （xueyunhuan）
 	 *调用stuorder中数据

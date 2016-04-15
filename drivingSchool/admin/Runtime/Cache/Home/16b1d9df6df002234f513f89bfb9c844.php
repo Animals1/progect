@@ -284,6 +284,7 @@ $(function(){
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
+        <li>
         <ul class="menuson">
            <li>
             <div class="header">
@@ -293,6 +294,18 @@ $(function(){
             </div>                
             <ul class="sub-menus">
             <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
+            </ul>
+        </li>
+        <li>
+        <ul class="menuson">
+           <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">学费管理</a>
+            <i></i>
+            </div>                
+            <ul class="sub-menus">
+            <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
             </ul>
         </li>
             <li>
