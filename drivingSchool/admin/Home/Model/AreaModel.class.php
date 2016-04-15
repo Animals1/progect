@@ -25,5 +25,6 @@ class AreaModel extends Model {
     {
         return $this->where($where)->delete();
     }
+    
 }
 ?>

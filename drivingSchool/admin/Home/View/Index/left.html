@@ -45,7 +45,6 @@ $(function(){
 })  
 </script>
 
-
 </head>
 
 <body style="background:#fff3e1;">
@@ -56,26 +55,27 @@ $(function(){
         
     <dd>
     <div class="title">
-    <span><img src="__PUBLIC__/admin/images/leftico01.png" /></span>管理员
+    <span><img src="__PUBLIC__/admin/images/leftico01.png" /></span><?php echo $rolename?>
     </div>
         <ul class="menuson">
-        
+      <foreach name="arr" item="v">
         <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">个人中心</a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name']?></a>
             <i></i>
             </div>
+            
             <ul class="sub-menus">
-            <li><a href="__APP__/Home/Admin/index" target="rightFrame">个人信息</a></li>
-            <li><a href="__APP__/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
-
-            <li><a href="__APP__/Home/Admin/leave" target="rightFrame">请假管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
-            </ul>
-        </li>
+            <foreach name="v.methods" item="vv">
+            <li><a href="__APP__/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li>
         
-        <li>
+             </foreach>
+            </ul>
+           
+        </li>
+        </foreach>
+       <!--  <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">用户管理</a>
@@ -282,7 +282,7 @@ $(function(){
             <li><a href="javascript:;">科一面试</a></li>
             <li><a href="javascript:;">科二面试</a></li>
             </ul>
-            </li>
+            </li> -->
         </ul>
         
         </dd> 
