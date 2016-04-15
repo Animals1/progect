@@ -105,36 +105,43 @@ class IndexController extends Controller {
                {
                     case "knowlege":
                        $contentStr[] = array("Title" =>"远达驾校", 
-                        "Description" =>"驾校位于北京市大兴区金星西路，拥有花园般的环境、酒店式的服务，建有目前国际硬件设施标准等级最高的训练和考试场，也是全国第一个“残疾人驾驶汽车训练示范基地”，拥有外籍学员培训资质，年培训学员数量和考试合格率均居驾校行业之首。", 
-                       "PicUrl" =>"http://101.200.201.202/Tp/Public/logo.jpg", 
-                       "Url" =>"http://101.200.201.202/Tp/Application/Home/View//aboutus.html");
+                        "Description" =>"  远达驾校成立于1992年10月。作为驾驶技能教学部门，驾校承担着公安大学在校学生驾驶培训实习任务，并且为社会人士考取驾照提供优质服务。 ", 
+                        "PicUrl" =>"http://101.200.201.202/Tp/Public/image/logo.jpg", 
+                        "Url" =>"http://101.200.201.202/Tp/Application/Home/View/Index/knowlege.html");
+                        break;
+                    case "studycar":
+                       $contentStr[] = array("Title" =>"学车须知", 
+                        "Description" =>"学车须知", 
+                       "PicUrl" =>"http://101.200 .201.202/Tp/Public/image/studycar.jpg", 
+                       "Url" =>"http://101.200.201.202/Tp/Application/Home/View/Studycar/studycar.html");
                        break;
-                    case "group":
-                       $contentStr[] = array("Title" =>"峰艺工作室团队介绍", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html");
+                    case "romantic":
+                       $contentStr[] = array("Title" =>"浪漫四月", 
+                        "Description" =>"暖男躲避战，看你能躲多远！真爱挑战。", 
+                        "PicUrl" =>"http://101.200.201.202/Tp/Public/image/phone.jpg", 
+                        "Url" =>"http://bishengforever.applinzi.com/group.html");
                        break;
-                     case "news":
-                       $contentStr = array(0=>array("Title" =>"习近平出席政协十二届四次会议开幕会", 
+                     case "class":
+                       $contentStr = array(0=>array("Title" =>"班型介绍", 
                         "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/1.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),1=>array("Title" =>"辽宁原省委书记王珉涉严重违纪接受组织调查", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
+                       array("Title" =>"平日班", 
+                        "Description" =>"平日班", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"金正恩回应对朝制裁议案:随时准备使用核弹头", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
+                       array("Title" =>"周末班", 
+                        "Description" =>"周末班", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"表演艺术家葛存壮去世 系葛优父亲(图)", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
+                       array("Title" =>"全周班", 
+                        "Description" =>"全周班", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"亚视今遣散所有员工停播 香港官方表遗憾", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"));
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
+                     );
                        break;  
                     default:
-                       $contentStr[] = array("Title" =>"驾考宝典", 
+                       $contentStr[] = array("Title" =>"错误默认", 
                         "Description" =>"远程驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，海淀驾校永远欢迎您的到来!", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/logo.png", 
                         "Url" =>"http://bishengforever.applinzi.com/about.html");
@@ -174,7 +181,7 @@ class IndexController extends Controller {
         if(!is_array($arr_item))
            return;
 
-        $itemTpl = "    <item>
+        $itemTpl = "<item>
 				        <Title><![CDATA[%s]]></Title>
 				       <Description><![CDATA[%s]]></Description>
 				       <PicUrl><![CDATA[%s]]></PicUrl>
@@ -197,7 +204,7 @@ class IndexController extends Controller {
 					<FuncFlag>%s</FuncFlag>
 					</xml>";
 
-      $resultStr = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time(), count($arr_item), $funcFlag);
+        $resultStr = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time(), count($arr_item), $funcFlag);
         return $resultStr;
     }
 
