@@ -13,9 +13,17 @@ class SalaryModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        $page=$_GET['page']?$_GET['page']:1;
+        $page_size=3;
+        $limit=($page-1)*$page_size;
+
+        $num=$this->count();
+        $page_list=ceil($num/$page_size);
+        $re = $this->join('staff on salary.staff_id=staff.staff_id')->select();
+        $arr = array($page_list,$re);
+        return $arr;
     }
     /*
      * 删除数据

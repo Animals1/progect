@@ -1,8 +1,8 @@
 <?php
 /*
  * @author:hechengwei
- * @date  :2016-4-13
- * @tablename:班车表
+ * @date  :2016-4-14
+ * @tablename:班车记录
  * */
 namespace Home\Model;
 use Think\Model;
@@ -41,9 +41,9 @@ class BusModel extends Model {
         return $this->join('bus_record on bus.bus_id=bus_record.bus_id')->field('bus_route')->group('bus_id')->select();
     }
     /*
-     * 添加班车
+     * 申请班车记录
      * */
-    public function addBus($data)
+    public function useraddBus($data)
     {
         $addbus=$this->add($data);
         if($addbus)

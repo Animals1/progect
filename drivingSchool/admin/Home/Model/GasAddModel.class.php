@@ -25,5 +25,48 @@ class GasAddModel extends Model {
     {
         return $this->where($where)->delete();
     }
+
+    /*
+     * 申请车辆
+     * */
+    public function carApplication()
+    {
+        $carApplication=M('car');
+        return $carApplication->select("car_number");
+    }
+
+    /*
+     * 油气添加
+     * */
+    public function addGas($data)
+    {
+        $data['gas_addtime']=time();
+        $add=$this->add($data);
+        if($add)
+        {
+            return $add;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    /*
+     * 油气添加记录
+     * */
+    public function gasRecord()
+    {
+        return $this->select();
+    }
+
+    /*
+     * 筛选
+     * 根据汽油类型id分组查询汽油名称
+     * */
+    public function gasScreening($Screen)
+    {
+        return $this->join('gas_type on gas_add.gas_type_id=gas_type.gas_type_id')->field('gas_type_name')->where($Screen)->group('gas_type_id')->select();
+    }
 }
 ?>

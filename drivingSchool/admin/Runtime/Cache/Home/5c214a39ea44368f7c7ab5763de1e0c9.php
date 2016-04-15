@@ -3,8 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+<<<<<<< HEAD
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+=======
+<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
 
 <script language="javascript">
     $(function(){
@@ -14,7 +19,9 @@
     })  
 });  
 </script> 
+<style>
 
+</style>
 
 </head>
 
@@ -24,19 +31,35 @@
     <div class="place">
     <span>位置：</span>
     <ul class="placeul">
-    <li><a href="#">首页</a></li>
-    <li><a href="#">技术支持</a></li>
+    <li><a href="#">教练</a></li>
+    <li><a href="#">个人中心</a></li>
+    <li><a href="#">个人信息</a></li>
     </ul>
     </div>
     
     <div class="tech">
         
-    <dl>    
-    <dt>技术支持</dt>
-    <dd><b>官方网站uimaker.com</b>&nbsp;&nbsp;&nbsp;&nbsp; QQ：32534386</dd>
-    <dd><b>电子邮件</b>&nbsp;&nbsp;&nbsp;&nbsp;admin@uimaker.com</dd>
-    <dd>交流QQ群：274722250</dd>
-    </dl>
+		
+	<dl> 
+	
+    <dd><b>姓名：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_name']); ?></dd>
+    <dd><b>头像：</b></dd><span><img src="/eleven/progect/drivingSchool/Public/admin/<?php echo ($arr['staff_photo']); ?>" width="118" height="122"/></span>
+    <dd><b>性别：</b>&nbsp;&nbsp;&nbsp;&nbsp;
+	<?php  if($arr['staff_sex'] == 1){ echo "男"; } else if($arr['staff_sex'] == 0){ echo "女"; } ?>
+	</dd>
+    <dd><b>民族：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_nation']); ?>族</dd>
+    <dd><b>出生日期</b>&nbsp;&nbsp;&nbsp;&nbsp;
+	<?php
+ echo date("Y年m月d日",$arr['staff_year']); ?>
+	</dd>
+    <dd><b>身份证号：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_idcard']); ?></dd>
+    <dd><b>籍贯：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_account']); ?></dd>
+	<dd><b>职位：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['role_name']); ?></dd>
+	<dd><b>教练组：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['group_name']); ?></dd>
+	<dd><b>联系地址：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_curaddress']); ?></dd>
+	<dd><b>手机号：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_tel']); ?></dd>
+	<dd><b>邮箱：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_email']); ?></dd>
+	</dl>
     
         
     </div>

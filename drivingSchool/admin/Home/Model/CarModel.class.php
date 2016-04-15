@@ -18,15 +18,15 @@ class CarModel extends Model {
      * @car_type 可预约类型
      * @
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue($where=1,$order,$limit)
     {
-        return $this->join("car.model_id=coach_model.model_id")->join("car.car_status=car_status.status_id")->join("car.motor_id=coach_motor_model.motor_id")->join("car.type_id=car_type.type_id")->where($where)->order("$order")->limit($limit)->select();
+        return $this->join("coach_model on car.model_id=coach_model.model_id")->join("car_status on car.car_status=car_status.status_id")->join("coach_motor_model on car.motor_id=coach_motor_model.motor_id")->join("car_type on car.type_id=car_type.type_id")->where($where)->order("$order")->limit($limit)->select();
     }
     /*
      * 修改数据
      *@$where   条件
      * */
-    public function updateValue($where,$data)
+    public function updateValue($where=1,$data)
     {
         return $this->where($where)->save($data);
     }
@@ -57,25 +57,20 @@ class CarModel extends Model {
     public function searchValue($where=1)
     {
         $model=M('car');
-        return $model->where("$where='car_number' or $where='license_number'")->find();
+        return $model->where($where)->find();
     }
 
     /*============================================================新增车辆==================================================================*/
 
     /*
      * 新增车辆
-     * 穿过来个一个处理好的数组,直接添加
+     * 传过来个一个处理好的数组,直接添加
      * */
     public function addCar($data)
     {
         return $this->add($data);
     }
-    /*
-     * 车辆出勤状态
-     * */
-    public function goingOut()
-    {
 
-    }
+
 }
 ?>
