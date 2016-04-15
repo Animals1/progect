@@ -48,5 +48,41 @@ class StuOrderModel extends Model {
         $arr = array($p,$list,$page);
         return $arr;
     }
+
+    /*
+     * author:hechengwei
+    * 行政教练排课
+     * 所有教练的预约课程情况
+     * $where  查询状态
+    * */
+    public function coachClass($where=1)
+    {
+        $this->join('coach on stu_order.coach_id=coach.coach_id')->join('student on stu_order.stu_id=student.stu_id')->join('class on stu_order.class_id=class.class_id')->join('time_table on stu_order.time_id=time_table.time_id')->join('coach_motor_model on coach.motor_id=coach_motor_model.model_id')->where($where)->select();
+    }
+
+    /*
+     * 教练学时
+     * @ $time 传递过来的时间  传递小时然后*60转换成分钟
+     * @ $where 传递那个学员为条件
+     *
+     * */
+    public function coachTime($time,$where)
+    {
+        $progress=M('progress');
+        $test_time=$progress->where($where)->select();
+        if($test_time['test_one']>0)
+        {
+            $new_time=$test_time['test_one']-$time;
+        }
+        elseif($test_time['test_two']>0)
+        {
+            $new_time=$test_time['test_two']-$time;
+        }
+        else
+        {
+            $new_time=$test_time['test_three']-$time;
+        }
+        return $progress->where($where)->save($new_time);
+    }
 }
 ?>

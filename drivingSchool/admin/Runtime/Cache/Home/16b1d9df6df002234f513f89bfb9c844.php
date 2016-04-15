@@ -269,10 +269,48 @@ $(function(){
 
        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-        <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">收费管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="/index.php/Home/Finance/charge" target="rightFrame">收费明细</a></li>
+                <li><a href="javascript:;">欠费明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">工资管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">工资明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">费用支出</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">支出明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">财务报表</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">收入报表</a></li>
+                <li><a href="javascript:;">支出报表</a></li>
+            </ul>
+        </li>
     </ul>
     
     </dd> 
@@ -291,7 +329,7 @@ $(function(){
             <cite></cite>
             <a href="javascript:;" target="rightFrame">个人中心</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
             <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
             </ul>
@@ -307,22 +345,21 @@ $(function(){
             <ul class="sub-menus">
             <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
             </ul>
-        </li>
+            </li>
             <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">预约管理</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
-            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
-            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            <li><a href="javascript:;">预约申请</a></li>
+            <li><a href="javascript:;">预约记录</a></li>
             </ul>
             </li>
         </ul>
-        
-        </dd> 
+
+        </dd>
     </dl>
 
 </div>
