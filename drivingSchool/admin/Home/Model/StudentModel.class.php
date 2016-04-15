@@ -9,7 +9,7 @@ use Think\Model;
 class StudentModel extends Model {
     /*
      * xueyunhuan
-     * 查询用户数据
+     * 学员个人信息查询
      * @$where  条件
      * */
     public function getshow($user_id)

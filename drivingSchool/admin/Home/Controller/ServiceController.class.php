@@ -1,23 +1,23 @@
 <?php
 	/**
-	*	@Æû³µ·şÎñ----½ÌÁ·
-	*	author£ºyaobowen
+	*	@æ±½è½¦æœåŠ¡----æ•™ç»ƒ
+	*	authorï¼šyaobowen
 	*/
 namespace Home\Controller;
 use Think\Controller;
 class ServiceController extends Controller {
 	/**
-	*	²éÑ¯µ±Ç°½ÌÁ·Î¬ĞŞ¼ÇÂ¼µÄÈ«²¿ĞÅÏ¢£¬
+	*	æŸ¥è¯¢å½“å‰æ•™ç»ƒçš„å…¨éƒ¨æ¢è½¦è®°å½•ä¿¡æ¯ï¼Œ
 	*/
 	public function getrepaircar(){
-		$name = "ÕÅÈı";
+		$name = "å¼ ä¸‰";
 		$model = D('CarReplace');
 		$arr = $model->getValue($name);
 		print_r($arr);die;
 		
 	}
 	/**
-	*	É¾³ıÒ»ÌõÊı¾İ
+	*	åˆ é™¤ä¸€æ¡æ•°æ®
 	*/
 	public function delrepaircar(){
 		$id = '1';
@@ -28,7 +28,7 @@ class ServiceController extends Controller {
 		
 	}
 	/**
-	*	Ìí¼ÓÒ»ÌõÎ¬ĞŞ¼ÇÂ¼
+	*	æ·»åŠ ä¸€æ¡ç»´ä¿®è®°å½•
 	*/
 	public function addrepaircar(){
 		$arr = $_POST;
@@ -37,14 +37,64 @@ class ServiceController extends Controller {
 		$res = $model->addValue($data);
 		print_r($res);die;
 	}
-	
+	/**
+	*	æŸ¥è¯¢å½“å‰æ•™ç»ƒçš„å…¨éƒ¨æ²¹æ°”ç”³è¯·ä¿¡æ¯
+	*/
     public function oil(){
-    	echo "oil";die;
-        }      
-    public function repair(){
-		echo "repair";die;
-        }
-      
-      
+    	$name = "å¼ ä¸‰";
+		$model = D('GasAdd');
+		$type = $model->gasScreening();
+		$arr = $model->getValue($name);
+		print_r($arr);die;
+    } 
+/**
+	*	åˆ é™¤ä¸€æ¡æ²¹æ°”è®°å½•
+	*/
+	public function deloil(){
+		$id = '1';
+		$where = "";
+		$model = D('GasAdd');
+		$arr = $model->delValue($where);
+		print_r($arr);die;
+		
+	}
+	/**
+	*	æ·»åŠ ä¸€æ¡æ²¹æ°”è®°å½•
+	*/
+	public function addoil(){
+		$arr = $_POST;
+		$data = array();
+		$model = D('GasAdd');
+		$res = $model->addValue($data);
+		print_r($res);die;
+	}	
+    /**
+	*	ç»´ä¿®è®°å½•
+	*/
+	public function repair(){
+		$name = "å¼ ä¸‰";
+		$model = D('CarRepair');
+		$arr = $model->getValue($name);
+		print_r($arr);die;
+    }
+	/**
+	*	åˆ é™¤ç»´ä¿®è®°å½•
+	*/
+    public function delrepair(){
+		$where = "";
+		$model = D('CarRepair');
+		$arr = $model->delValue();
+		print_r($arr);die;
+    }
+    /**
+	*	åˆ é™¤ç»´ä¿®è®°å½•
+	*/
+    public function addrepair(){
+		$data = $_POST;
+		$arr = array();
+		$model = D('CarRepair');
+		$arr = $model->addCarrepair($arr);
+		print_r($arr);die;
+    }  
 
 }
