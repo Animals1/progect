@@ -3,13 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<<<<<<< HEAD
-<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
-=======
-<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
->>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
 <script type="text/javascript">
 $(function(){	
 	//顶部导航切换
@@ -23,32 +18,19 @@ $(function(){
 
 </head>
 
-<<<<<<< HEAD
-<body style="background:url(/Public/admin/images/topbg.gif) repeat-x;">
+<body style="background:url(/eleven/progect/drivingSchool/Public/admin/images/topbg.gif) repeat-x;">
 
     <div class="topleft">
-    <a href="main.html" target="_parent"><img src="/Public/admin/images/logo.png" title="系统首页" /></a>
-=======
-<body style="background:url(/progect/drivingSchool/Public/admin/images/topbg.gif) repeat-x;">
-
-    <div class="topleft">
-    <a href="main.html" target="_parent"><img src="/progect/drivingSchool/Public/admin/images/logo.png" title="系统首页" /></a>
->>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+    <a href="main.html" target="_parent"><img src="/eleven/progect/drivingSchool/Public/admin/images/logo.png" title="系统首页" /></a>
     </div>
         
  
             
     <div class="topright">    
     <ul>
-<<<<<<< HEAD
-    <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
+    <li><span><img src="/eleven/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
-    <li><a href="/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-    <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
->>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+    <li><a href="/eleven/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
     </ul>
      
     <div class="user">
