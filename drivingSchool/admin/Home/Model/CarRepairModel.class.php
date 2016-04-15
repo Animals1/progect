@@ -2,17 +2,19 @@
 /*
  * @author:yaobowen
  * @date  :2016-4-15
- * @tablename:车辆更换表
+ * @tablename:汽车维修表
  * */
 namespace Home\Model;
 use Think\Model;
-class CarReplaceModel extends Model {
+class CarRepairModel extends Model {
     /**
-     * 	查询相对教练的换车记录数据
+     * 查询数据
      */
     public function getValue($name)
     {
-        return $this->where("replace_name = '$name'")->select();
+        return $this->where("repair_name = '$name'")
+					->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')
+					->select();
     }
     /*
      * 删除一条数据
@@ -26,10 +28,13 @@ class CarReplaceModel extends Model {
      * 换车记录添加
      *
      * */
-    public function addCarreplace($data)
+    public function addCarrepair($data)
     {
-        return $this->add($data);
+		return $this->add($data);
     }
 
+    
+
+    
 }
 ?>

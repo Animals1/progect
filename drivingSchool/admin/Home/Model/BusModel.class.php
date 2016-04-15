@@ -45,15 +45,7 @@ class BusModel extends Model {
      * */
     public function addBus($data)
     {
-        $addbus=$this->add($data);
-        if($addbus)
-        {
-            return $addbus;
-        }
-        else
-        {
-            return false;
-        }
+        return $addbus=$this->add($data);
     }
 
 }

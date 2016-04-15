@@ -25,5 +25,44 @@ class CoachModel extends Model {
     {
         return $this->where($where)->delete();
     }
+
+    /*
+     *教练信息
+     * */
+    public function coachMessage($where=1)
+    {
+        return $this->join('coach_group on coach.group_id=coach_group.group_id')->where($where)->select();
+    }
+    /*
+     * 修改
+     * */
+    public function updatecoach($data,$where)
+    {
+        $this->where($where)->save($data);
+    }
+    /*
+     * 新增分组
+     * 表单里用复选框遍历出来没有分组的每个人
+     * */
+    public function addGroup($data)
+    {
+        return $this->add($data);
+    }
+    /*查询没有分组的人*/
+    public function noGroup()
+    {
+
+        $where="group_id=0";
+        return $coach_group=$this->coachMessage($where);
+    }
+    /*查询所有组名*/
+    public function groupName()
+    {
+        $group_name=M('CoachGroup');
+        return $group_name->select();
+    }
+
+
+
 }
 ?>
