@@ -1,21 +1,21 @@
 <?php
 /*
- *@author:hanqiming
- *@date  :2016-4-14
- *@tablename:支出明细
+ * @author:hechengwei
+ * @date  :2016-4-13
+ * @tablename:车辆更换表
  * */
 namespace Home\Model;
 use Think\Model;
-class ExpenseModel extends Model {
+class RepairStatusModel extends Model {
     /*
      * 查询数据
      * @$where  条件
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue()
+    public function getValue($where,$order,$limit)
     {
-        return $this->find();
+        return $this->where($where)->order("$order")->limit($limit)->find();
     }
     /*
      * 删除数据

@@ -1,7 +1,7 @@
 <?php
 /*
- *@author:hechengwei
- *@date  :2016-4-13
+ *@author:hanqiming
+ *@date  :2016-4-14
  *@tablename:支付方式model
  * */
 namespace Home\Model;
@@ -13,9 +13,9 @@ class CoachModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getvalue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
     /*
      * 删除数据

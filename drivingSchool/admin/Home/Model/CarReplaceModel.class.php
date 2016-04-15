@@ -13,9 +13,17 @@ class CarReplaceModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function selectValue($where=1,$order,$limit)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        $select=$this->where($where)->order("$order")->limit($limit)->select();
+        if($select)
+        {
+            return $select;
+        }
+        else
+        {
+            return false;
+        }
     }
     /*
      * 删除数据
@@ -23,7 +31,51 @@ class CarReplaceModel extends Model {
      * */
     public function delValue($where)
     {
-        return $this->where($where)->delete();
+        $delect=$this->where($where)->delete();
+        if($delect)
+        {
+            return $delect;
+        }
+        else
+        {
+            return false;
+        }
+
+    }
+
+    /*
+     * 换车记录添加
+     *
+     * */
+    public function addCarreplace($data,$check)
+    {
+        if($check)
+        {
+            $repair=M('Car_repair');
+            $this->add($data);
+            return $repair->add($data);
+        }
+        else
+        {
+            return $this->add($data);
+        }
+
+    }
+
+    /*
+     * 搜索
+     * */
+    public function searchreplace($where=1)
+    {
+        $search=$this->where($where)->select();
+        if($search)
+        {
+            return $search;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 ?>

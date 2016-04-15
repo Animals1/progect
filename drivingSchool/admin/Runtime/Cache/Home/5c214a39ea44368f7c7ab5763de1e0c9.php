@@ -3,8 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+<<<<<<< HEAD
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+=======
 <link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
 
 <script language="javascript">
     $(function(){
