@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+<<<<<<< HEAD
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
@@ -77,6 +78,22 @@
     </div>
     
     
+=======
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+
+</script> 
+
+
+</head>
+
+
+<body style="background:#FFF8ED;">
+    <div >
+        aaa
+    </div>
+>>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
 
 </body>
 

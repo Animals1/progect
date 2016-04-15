@@ -37,7 +37,7 @@ class ChargeModel extends Model {
         return $this->Table('charge')->add($_POST);
     }
     /*
-     *我的学费——显示信息
+     *我的学费——显示信息(xueyunhuan)
      *收费明细表、学员信息表、费用类型表、支付方式表。
     */
     public function chargeshow(){

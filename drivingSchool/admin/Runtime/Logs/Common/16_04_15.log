@@ -1,42 +1,12 @@
-[ 2016-04-15T08:08:33+08:00 ] ::1 /favicon.ico
+[ 2016-04-15T16:32:42+08:00 ] 127.0.0.1 /index.php/Student/index
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000377s ]
-ERR: 无法加载模块:Favicon
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+ERR: 无法加载模块:Student
 
-[ 2016-04-15T08:11:43+08:00 ] ::1 /index.php/admin
+[ 2016-04-15T16:32:49+08:00 ] 127.0.0.1 /index.php/student/index
 INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000048s ]
-INFO: [ app_init ] --END-- [ RunTime:0.004077s ]
-ERR: 无法加载模块:Admin
-
-[ 2016-04-15T08:12:10+08:00 ] ::1 /index.php/admin/Home
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
-ERR: 无法加载模块:Admin
-
-[ 2016-04-15T08:13:20+08:00 ] ::1 /index.php/admin/Home/Index/index
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000135s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001989s ]
-ERR: 无法加载模块:Admin
-
-[ 2016-04-15T08:13:26+08:00 ] ::1 /index.phpHome/Index/index
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
-INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
-ERR: 无法加载模块:Index.phpHome
-
-[ 2016-04-15T10:10:34+08:00 ] 127.0.0.1 /favicon.ico
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Favicon
-
-[ 2016-04-15T10:10:34+08:00 ] 127.0.0.1 /favicon.ico
-INFO: [ app_init ] --START--
-INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
-INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
-ERR: 无法加载模块:Favicon
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+ERR: 无法加载模块:Student
 

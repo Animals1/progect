@@ -28,13 +28,12 @@ class ReviewModel extends Model {
 		return $arr;
 		
     }
-    /*
-     * 删除数据
-     *@$where   条件
-     * */
-    public function delValue($where)
+    /**
+     * 删除一条数据
+     */
+    public function delValue($id)
     {
-        return $this->where($where)->delete(); 
+        return $this->where("coach_id = '$id'")->delete(); 
     }
 }
 ?>
