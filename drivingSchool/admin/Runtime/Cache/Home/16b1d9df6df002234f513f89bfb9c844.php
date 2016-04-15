@@ -339,7 +339,7 @@ $(function(){
            <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">学费管理</a>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">学费管理</a>
             <i></i>
             </div>                
             <ul class="sub-menus">
@@ -349,12 +349,12 @@ $(function(){
             <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">预约管理</a>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">预约管理</a>
             <i></i>
             </div>
             <ul class="sub-menus">
-            <li><a href="javascript:;">预约申请</a></li>
-            <li><a href="javascript:;">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
             </ul>
             </li>
         </ul>
