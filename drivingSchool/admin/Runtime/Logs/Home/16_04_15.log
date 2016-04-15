@@ -22318,3 +22318,401 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0140s ]
 ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'relace_name' in 'where clause'
 
+[ 2016-04-15T14:18:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '’≈»˝' )  [ RunTime:0.0090s ]
+
+[ 2016-04-15T14:35:17+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0170s ]
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'driving.gas_type' doesn't exist
+
+[ 2016-04-15T14:36:45+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T14:36:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T14:36:49+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '’≈»˝' )  [ RunTime:0.0160s ]
+
+[ 2016-04-15T14:36:50+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0110s ]
+
+[ 2016-04-15T14:36:52+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-15T14:36:54+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '’≈»˝' )  [ RunTime:0.0060s ]
+
+[ 2016-04-15T14:36:55+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T14:36:57+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T14:41:01+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0090s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'gas_type_id' in group statement is ambiguous
+
+[ 2016-04-15T14:41:13+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T14:41:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T14:41:16+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0160s ]
+
+[ 2016-04-15T14:42:04+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0060s ]
+
+[ 2016-04-15T14:42:05+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id  WHERE ( applicant_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T15:58:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0110s ]
+SQL: SELECT `gas_type_name` FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id   [ RunTime:0.0080s ]
+
+[ 2016-04-15T15:58:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT `gas_type_name` FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id   [ RunTime:0.0040s ]
+
+[ 2016-04-15T15:59:13+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001001s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0060s ]
+SQL: SELECT `gas_type_name` FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id   [ RunTime:0.0040s ]
+
+[ 2016-04-15T16:00:00+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0050s ]
+SQL: SELECT `gas_type_name` FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id   [ RunTime:0.0080s ]
+
+[ 2016-04-15T16:02:34+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0060s ]
+SQL: SELECT `gas_type_name` FROM `gas_add` INNER JOIN gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id   [ RunTime:0.0050s ]
+
+[ 2016-04-15T16:34:07+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0060s ]
+NOTIC: [2] Missing argument 1 for Home\Model\CarRepairModel::getValue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php on line 76 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\CarRepairModel.class.php Á¨¨ 13 Ë°å.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\CarRepairModel.class.php Á¨¨ 15 Ë°å.
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = '' )  [ RunTime:0.0060s ]
+
+[ 2016-04-15T16:34:09+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0110s ]
+NOTIC: [2] Missing argument 1 for Home\Model\CarRepairModel::getValue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php on line 76 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\CarRepairModel.class.php Á¨¨ 13 Ë°å.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\CarRepairModel.class.php Á¨¨ 15 Ë°å.
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = '' )  [ RunTime:0.0070s ]
+
+[ 2016-04-15T16:34:52+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:34:52+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:34:52+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/footer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:34:53+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:34:54+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: ÈùûÊ≥ïÊìç‰Ωú:css
+
+[ 2016-04-15T16:34:54+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: ÈùûÊ≥ïÊìç‰Ωú:js
+
+[ 2016-04-15T16:34:58+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = '’≈»˝' )  [ RunTime:0.0070s ]
+
+[ 2016-04-15T16:35:00+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = '’≈»˝' )  [ RunTime:0.0050s ]
+
+[ 2016-04-15T16:35:01+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = '’≈»˝' )  [ RunTime:0.0060s ]
+
+[ 2016-04-15T16:35:10+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-15T16:35:11+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-15T16:35:33+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-15T16:35:33+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-04-15T16:35:49+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/repair
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( repair_name = 'Âº†‰∏â' )  [ RunTime:0.0080s ]
+
