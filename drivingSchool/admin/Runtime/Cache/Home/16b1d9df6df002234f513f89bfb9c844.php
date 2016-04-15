@@ -190,16 +190,16 @@ $(function(){
             </div>                
             <ul class="sub-menus">
 
-            <li><a href="javascript:;" target="rightFrame">车辆设置</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆登记</a></li>
-            <li><a href="javascript:;" target="rightFrame">新增车辆</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆出勤</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆维修</a></li>
-            <li><a href="javascript:;" target="rightFrame">维修记录</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆更换</a></li>
-            <li><a href="javascript:;" target="rightFrame">油气添加</a></li>
-            <li><a href="javascript:;" target="rightFrame">班车管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">班车设置</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆登记</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">新增车辆</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆出勤</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆维修</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">维修记录</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆更换</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">油气添加</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车管理</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车设置</a></li>
 
             <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
             <li><a href="/index.php/Home/Administration/registration" target="rightFrame">车辆登记</a></li>
@@ -292,7 +292,7 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="/index.php/Home/Student/personinfo"  target="rightFrame">个人信息</a></li>
+            <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
             </ul>
         </li>
             <li>
@@ -304,17 +304,7 @@ $(function(){
             <ul class="sub-menus">
             <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
             <li><a href="javascript:;"  target="rightFrame">预约记录</a></li>
-            </ul>
-            </li>
-            <li>
-            <div class="header">
-            <cite></cite>
-            <a href="javascript:;" target="rightFrame">模拟考试</a>
-            <i></i>
-            </div>                
-            <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">科一面试</a></li>
-            <li><a href="javascript:;" target="rightFrame">科二面试</a></li>
+            <li><a href="javascript:;"  target="rightFrame">取消预约</a></li>
             </ul>
             </li>
         </ul>
