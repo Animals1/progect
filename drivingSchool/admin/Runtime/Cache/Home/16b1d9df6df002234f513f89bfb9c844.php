@@ -126,22 +126,11 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
-<<<<<<< HEAD
             <li><a href="/index.php/Home/Coach/personal_info" target="rightFrame">个人信息</a></li>
             <li><a href="/index.php/Home/Coach/award" target="rightFrame">评价考核</a></li>
             <li><a href="/index.php/Home/Coach/attendance" target="rightFrame">出勤信息</a></li>
             <li><a href="/index.php/Home/Coach/leave" target="rightFrame">请假管理</a></li>
-            <li><a href="/index.php/Home/Coach/attendance" target="rightFrame">工资明细</a></li>
-=======
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/personal_info" target="rightFrame">个人信息</a></li>
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/award" target="rightFrame">评价考核</a></li>
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/attendance" target="rightFrame">出勤信息</a></li>
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/leave" target="rightFrame">请假管理</a></li>
-<<<<<<< HEAD
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/attendance" target="rightFrame">工资明细</a></li>
-=======
-            <li><a href="/progect/drivingSchool/index.php/Home/Coach/leave" target="rightFrame">工资明细</a></li>
->>>>>>> cbe9d38e55f6a9ea720c007304d5843221543cd5
+            <li><a href="/index.php/Home/Coach/leave" target="rightFrame">工资明细</a></li>
             </ul>
         </li>
         
@@ -270,10 +259,30 @@ $(function(){
     <dl class="leftmenu" >
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
         <ul class="menuson">
-            <li><cite></cite><a href="#">自定义</a><i></i></li>
-            <li><cite></cite><a href="#">常用资料</a><i></i></li>
-            <li><cite></cite><a href="#">信息列表</a><i></i></li>
-            <li><cite></cite><a href="#">其他</a><i></i></li>
+            <li><cite></cite><a href="#">个人中心</a><i></i></li>
+            <li><cite></cite><a href="#">我的学费</a><i></i></li>
+            <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">预约管理</a>
+            <i></i>
+            </div>                
+            <ul class="sub-menus">
+            <li><a href="javascript:;">预约申请</a></li>
+            <li><a href="javascript:;">预约记录</a></li>
+            </ul>
+            </li>
+            <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">模拟考试</a>
+            <i></i>
+            </div>                
+            <ul class="sub-menus">
+            <li><a href="javascript:;">科一面试</a></li>
+            <li><a href="javascript:;">科二面试</a></li>
+            </ul>
+            </li>
         </ul>
         
         </dd> 
