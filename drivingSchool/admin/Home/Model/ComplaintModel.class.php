@@ -25,5 +25,23 @@ class ComplaintModel extends Model {
     {
         return $this->where($where)->delete();
     }
+
+    /*
+     * 投诉管理+下拉搜索
+     * @ $where 条件
+     * */
+    public function complaincontrol($where=1)
+    {
+        $this->join('student on complain.stu_id=student.stu_id')->where($where)->select();
+    }
+
+
+    /*
+     * 被投诉人下拉列表
+     * */
+    public function selectComplain()
+    {
+        return $this->select('complaint_name');
+    }
 }
 ?>
