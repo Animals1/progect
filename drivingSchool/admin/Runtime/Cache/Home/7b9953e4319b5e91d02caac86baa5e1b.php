@@ -33,7 +33,7 @@ $(document).ready(function(){
 
 <body>
 
-    <div class="place">
+	<div class="place">
     <span>位置：</span>
     <ul class="placeul">
     <li><a href="#">首页</a></li>
@@ -46,7 +46,7 @@ $(document).ready(function(){
     
     <div class="tools">
     
-        <ul class="toolbar">
+    	<ul class="toolbar">
         <li class="click"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t01.png" /></span>添加</li>
         <li class="click"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t02.png" /></span>修改</li>
         <li><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t03.png" /></span>删除</li>
@@ -62,8 +62,8 @@ $(document).ready(function(){
     
     
     <table class="tablelist">
-        <thead>
-        <tr>
+    	<thead>
+    	<tr>
         <th><input name="" type="checkbox" value="" checked="checked"/></th>
         <th>请假时间<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
         <th>销假时间</th>
@@ -178,7 +178,7 @@ $(document).ready(function(){
     
    
     <div class="pagin">
-        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+    	<div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
         <ul class="paginList">
         <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
         <li class="paginItem"><a href="javascript:;">1</a></li>
@@ -194,7 +194,7 @@ $(document).ready(function(){
     
     
     <div class="tip">
-        <div class="tiptop"><span>提示信息</span><a></a></div>
+    	<div class="tiptop"><span>提示信息</span><a></a></div>
         
       <div class="tipinfo">
         <span><img src="/eleven/progect/drivingSchool/Public/admin/images/ticon.png" /></span>
@@ -217,8 +217,8 @@ $(document).ready(function(){
     </div>
     
     <script type="text/javascript">
-    $('.tablelist tbody tr:odd').addClass('odd');
-    </script>
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
 
 </body>
 
