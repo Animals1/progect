@@ -303,8 +303,8 @@ $(function(){
             </div>                
             <ul class="sub-menus">
             <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-            <li><a href="javascript:;"  target="rightFrame">预约记录</a></li>
-            <li><a href="javascript:;"  target="rightFrame">取消预约</a></li>
+            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
             </ul>
             </li>
         </ul>
