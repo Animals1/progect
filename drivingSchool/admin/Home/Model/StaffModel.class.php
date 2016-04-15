@@ -38,10 +38,23 @@ class StaffModel extends Model {
 	 */
 	public function linkage($id){
 
-		$db=D('area');
-		$rows = $db->where("parent_id = $id")->select();
-		return $rows;
+		$db=D('region');
+		if (isset($id)) {
+			$rows = $db->where("parent_id = $id")->select();
+			return $rows;
+		}else{
+			$rows = $db->where("parent_id = 1")->select();
+			return $rows;
+		}
 
+	}
+	/*
+	 * 角色查询
+	 * 作者：张捷
+	 */
+	public function roleselect(){
+		$db = D('role');
+		return $db->select();
 	}
 
 	/*
@@ -55,7 +68,7 @@ class StaffModel extends Model {
 		$grade = D('coach_grade');
 		$quality = D('coach_quality');
 		$coach = D('coach_model');
-		$coachmotor = D('coach_motor_model');
+		$coachmotor = D('coach_motor');
 		$data[] = $drivingcard->select();
 		$data[] = $grade->select();
 		$data[] = $quality->select();
@@ -68,16 +81,9 @@ class StaffModel extends Model {
 	 * 员工添加
 	 * 作者：张捷	
 	 */
-	public function staffadd($rows){
+	public function staffadd($img,$rows){
 		$db=D("staff");
 		$coach = D('coach');
-		$upload = new \Think\Upload();   
-	    $upload->maxSize   =     3145728 ;
-	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');   
-	    $upload->rootPath  =      './';
-	    $upload->savePath  =      './Public/Uploads/';  
-	    $info   =   $upload->upload(); 
-	    $img = $info['photo']['md5'].'.'.$info['photo']['ext'];
 		$data['staff_photo']=$img;
 		$data['staff_name'] = $rows['name'];
 		$data['staff_sn'] = $rows['sn'];
@@ -112,9 +118,9 @@ class StaffModel extends Model {
 			$codata['motor_id'] = $rows['motor_id'];
 			$core = $coach->create($codata);
 			if ($re && $core){
-				return ture;
+				return true;
 			}else{
-				return folse;
+				return false;
 			}
 		}else{
 			return $re = $db->create($data);
@@ -132,7 +138,7 @@ class StaffModel extends Model {
 	 * 其他员工查询
 	 * 作者：张捷
 	 */
-	public function staffselect(){
+	public function staffcoachselect(){
 		$db=D("staff");
 		return $db->select();
 	}
@@ -143,7 +149,7 @@ class StaffModel extends Model {
 	public function staffsearch($data){
 
 		$db = D('staff');
-		$datas = ''
+		$datas = '';
 		if ($data['staff_sn'] != '') {
 			$datas .= 'staff_sn = '.$data['staff_sn'];
 		}else if ($data['staff_name' != '']){
