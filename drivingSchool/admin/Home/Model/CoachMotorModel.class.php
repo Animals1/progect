@@ -25,5 +25,13 @@ class CoachMotorModel extends Model {
     {
         return $this->where($where)->delete();
     }
+
+    /*
+     * 车辆设置添加教练车类型
+     * */
+    public function addcoachmotor($data)
+    {
+        return $this->add($data);
+    }
 }
 ?>

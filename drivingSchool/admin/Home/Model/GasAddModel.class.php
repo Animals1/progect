@@ -41,15 +41,8 @@ class GasAddModel extends Model {
     public function addGas($data)
     {
         $data['gas_addtime']=time();
-        $add=$this->add($data);
-        if($add)
-        {
-            return $add;
-        }
-        else
-        {
-            return false;
-        }
+        return $add=$this->add($data);
+
     }
 
     /*

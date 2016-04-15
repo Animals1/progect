@@ -17,14 +17,14 @@ class CarRepairModel extends Model {
     public function getValue($where,$order,$limit)
     {
 
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->where($where)->order($order)->limit($limit)->find();
 
     }
     /*
      * 删除数据
      *@$where   条件
      * */
-    public function delValue($where)
+    public function delValue($where=1)
     {
 
         return $this->where($where)->delete();
@@ -60,17 +60,17 @@ class CarRepairModel extends Model {
     */
        public function gooutSearch($where=1)
     {
-        return $coach_motor_model->where($where)->select();
+        return $this->where($where)->select();
     }
     /*
      * 车辆维修查询
      * @ $where 查询条件
      * @ repair_status 车辆维修状态表
      * */
-    public function searchRepair($where)
+    public function searchRepair($where=1)
     {
 
-        return $this->join("repair_status on car_repair.repair_statusid=repair_status.repair_statusid")->where($where)->find();
+        return $this->join("repair_status on car_repair.repair_statusid=repair_status.repair_statusid")->where($where)->select();
 
     }
 }
