@@ -36,5 +36,14 @@ class ExpenseModel extends Model {
     {
         return $this->add($_POST);
     }
+
+    /**
+     * 支出报表
+     */
+    public function findvalue(){
+        $sql = "select status_id,SUM(expense_money) from expense group by status_id";
+        $arr = $this->query($sql);
+        return $arr;
+    }
 }
 ?>

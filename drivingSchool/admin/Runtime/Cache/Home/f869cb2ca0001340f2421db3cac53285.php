@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>学员登录</title>
+<title>管理员登录</title>
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
 <script src="/Public/admin/js/cloud.js" type="text/javascript"></script>
@@ -29,7 +29,7 @@
 
 
 <div class="logintop">    
-    <span>欢迎使用-驾校管理系统-学员登录平台</span>    
+    <span>欢迎使用-驾校管理系统-管理员登录平台</span>    
     <ul>
     <li><a href="/index.php/Home/Login/index">回首页</a></li>
     <li><a href="#">帮助</a></li>
@@ -41,31 +41,54 @@
     
     <span class="systemlogo"></span> 
        
-    <div class="loginbox loginbox1">
-    
+    <div class="loginbox">
+    <form action="/index.php/Home/Index/index" method="post" onsubmit="return funall();">
     <ul>
-    <li><input name="" type="text" class="loginuser" value="admin" onclick="JavaScript:this.value=''"/></li>
-    <li><input name="" type="text" class="loginpwd" value="密码" onclick="JavaScript:this.value=''"/></li>
-    <li class="yzm">
-    <span><input name="" type="text" value="验证码" onclick="JavaScript:this.value=''"/></span><cite>X3D5S</cite> 
-    </li>
-    <li><input name="" type="button" class="loginbtn" value="登录"  onclick="javascript:window.location='main.html'"  />
-    <label>
+
+    <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>
+    <li><input name="upwd" id="upwd" type="password" class="loginpwd" placeholder="请输入密码" onblur="fun2();" /><span id="span_pwd"></span></li>
+    <li><input  type="submit" class="loginbtn" value="登录"    /><label>
     <input type="checkbox" name="checkbox" id="checkbox" value="7" />
     记住密码</label><label><a href="#">忘记密码？</a>
-    </label>
-    </li>
+    </label></li>
     </ul>
+    </form>
     
     
     </div>
     
     </div>
-    
-    
-    
-	
-    
 </body>
+<script type="text/javascript">
+    function funall(){
+        if(fun1()&&fun2()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    function fun1(){
+        var uname = document.getElementById("uname").value;
+        if(uname==""){
+            document.getElementById("span_name").innerHTML="账号不能为空";
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+
+    function fun2(){
+        var upwd = document.getElementById("upwd").value;
+        if(upwd==""){
+            document.getElementById("span_pwd").innerHTML="密码不能为空";
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
 
 </html>

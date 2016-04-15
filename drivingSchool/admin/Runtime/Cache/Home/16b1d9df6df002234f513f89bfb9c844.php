@@ -45,7 +45,6 @@ $(function(){
 })  
 </script>
 
-
 </head>
 
 <body style="background:#fff3e1;">
@@ -56,26 +55,43 @@ $(function(){
         
     <dd>
     <div class="title">
+<<<<<<< HEAD
     <span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico01.png" /></span>管理员
+=======
+<<<<<<< HEAD
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
+=======
+    <span><img src="/Public/admin/images/leftico01.png" /></span>管理员
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
     </div>
         <ul class="menuson">
-        
-        <li>
+      <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">个人中心</a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name']?></a>
             <i></i>
             </div>
+            
             <ul class="sub-menus">
+<<<<<<< HEAD
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+=======
+<<<<<<< HEAD
+            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
+=======
+            <li><a href="/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
+            <li><a href="/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
 
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Admin/leave" target="rightFrame">请假管理</a></li>
             <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
             </ul>
-        </li>
-        
-        <li>
+           
+        </li><?php endforeach; endif; ?>
+       <!--  <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">用户管理</a>
@@ -190,16 +206,16 @@ $(function(){
             </div>                
             <ul class="sub-menus">
 
-            <li><a href="javascript:;" target="rightFrame">车辆设置</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆登记</a></li>
-            <li><a href="javascript:;" target="rightFrame">新增车辆</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆出勤</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆维修</a></li>
-            <li><a href="javascript:;" target="rightFrame">维修记录</a></li>
-            <li><a href="javascript:;" target="rightFrame">车辆更换</a></li>
-            <li><a href="javascript:;" target="rightFrame">油气添加</a></li>
-            <li><a href="javascript:;" target="rightFrame">班车管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">班车设置</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆登记</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">新增车辆</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆出勤</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆维修</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">维修记录</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆更换</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">油气添加</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车管理</a></li>
+            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车设置</a></li>
 
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Administration/registration" target="rightFrame">车辆登记</a></li>
@@ -269,10 +285,48 @@ $(function(){
 
        <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-        <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">收费管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="/index.php/Home/Finance/charge" target="rightFrame">收费明细</a></li>
+                <li><a href="javascript:;">欠费明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">工资管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">工资明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">费用支出</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">支出明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">财务报表</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">收入报表</a></li>
+                <li><a href="javascript:;">支出报表</a></li>
+            </ul>
+        </li>
     </ul>
     
     </dd> 
@@ -283,43 +337,56 @@ $(function(){
 <div class="lefttop" id="student" style="cursor:pointer;"><span></span>学员端</div>
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
+<<<<<<< HEAD
         <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>学员</div>
+=======
+        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
+<<<<<<< HEAD
+=======
+        <li>
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
         <ul class="menuson">
            <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">个人中心</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
+<<<<<<< HEAD
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Student/personinfo"  target="rightFrame">个人信息</a></li>
+=======
+            <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
             </ul>
         </li>
-            <li>
+        <li>
+        <ul class="menuson">
+           <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">预约管理</a>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">学费管理</a>
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-            <li><a href="javascript:;"  target="rightFrame">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
             </ul>
             </li>
             <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">模拟考试</a>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">预约管理</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
-            <li><a href="javascript:;" target="rightFrame">科一面试</a></li>
-            <li><a href="javascript:;" target="rightFrame">科二面试</a></li>
+            <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
             </ul>
-            </li>
+            </li> -->
         </ul>
-        
-        </dd> 
+
+        </dd>
     </dl>
 
 </div>

@@ -8,7 +8,7 @@ namespace Home\Model;
 use Think\Model;
 class ProgressModel extends Model {
     /*
-     * 查询数据(考证进度)
+     * 查询数据(考证进度)(xueyunhuan)
      * @$where  条件
      * */
     public function getshow($user_id)

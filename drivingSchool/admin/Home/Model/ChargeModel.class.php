@@ -37,7 +37,7 @@ class ChargeModel extends Model {
         return $this->Table('charge')->add($_POST);
     }
     /*
-     *我的学费——显示信息
+     *我的学费——显示信息(xueyunhuan)
      *收费明细表、学员信息表、费用类型表、支付方式表。
     */
     public function chargeshow(){
@@ -49,6 +49,16 @@ class ChargeModel extends Model {
             $show       = $page->show();
             $arr = array($p,$list,$show);
             return $arr;
+    }
+
+
+    /**
+     * 收入报表
+     */
+    public function findvalue(){
+        $sql="select money_type_id,sum(charge_money) from charge group by money_type_id";
+        $arr = $this->query($sql);
+        return $arr;
     }
 }
 ?>

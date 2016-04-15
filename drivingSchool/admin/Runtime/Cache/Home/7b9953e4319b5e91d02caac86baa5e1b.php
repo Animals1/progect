@@ -46,11 +46,19 @@ $(document).ready(function(){
     
     <div class="tools">
     
-    	<ul class="toolbar">
+<<<<<<< HEAD:drivingSchool/admin/Runtime/Cache/Home/ad134de9bc1a609f20cb50b4fae4b634.php
+        <ul class="toolbar">
         <li class="click"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t01.png" /></span>添加</li>
         <li class="click"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t02.png" /></span>修改</li>
         <li><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t03.png" /></span>删除</li>
         <li><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t04.png" /></span>统计</li>
+=======
+    	<ul class="toolbar">
+        <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
+        <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
+        <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
+        <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a:drivingSchool/admin/Runtime/Cache/Home/7b9953e4319b5e91d02caac86baa5e1b.php
         </ul>
         
         
