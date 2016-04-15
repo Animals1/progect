@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理员登录</title>
-<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="__PUBLIC__/admin/js/jquery.js"></script>
-<script src="__PUBLIC__/admin/js/cloud.js" type="text/javascript"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+<script src="/Public/admin/js/cloud.js" type="text/javascript"></script>
 
 <script language="javascript">
 	$(function(){
@@ -18,7 +18,7 @@
 
 </head>
 
-<body style="background-color:#df7611; background-image:url(__PUBLIC__/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+<body style="background-color:#df7611; background-image:url(/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
 
 
 
@@ -31,7 +31,7 @@
 <div class="logintop">    
     <span>欢迎使用-驾校管理系统-管理员登录平台</span>    
     <ul>
-    <li><a href="__APP__/Home/Login/index">回首页</a></li>
+    <li><a href="/index.php/Home/Login/index">回首页</a></li>
     <li><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
     </ul>    
@@ -42,7 +42,7 @@
     <span class="systemlogo"></span> 
        
     <div class="loginbox">
-    <form action="__APP__/Home/Index/index" method="post" onsubmit="return funall();">
+    <form action="/index.php/Home/Index/index" method="post" onsubmit="return funall();">
     <ul>
 
     <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>

@@ -3,7 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+<<<<<<< HEAD
 <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+=======
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
 
 </head>
 

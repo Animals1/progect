@@ -1,19 +1,22 @@
 <?php
-/**
- *@教练模块----个人中心
- */
+/*
+ *@author:hanqiming
+ *@date  :2016-4-15
+ *@财务模块
+ * */
 namespace Home\Controller;
 use Think\Controller;
-class ChargeController extends Controller {
+class FinanceController extends Controller {
 
     /**
-     * 测试
+     * 收费明细
      */
-    public function index(){
+    public function charge(){
 
         $arr = D('expense');
 
         $re = $arr->findvalue();
-        print_r($re);
+        $this->assign('re',$re);
+        $this->display('charge');
     }
 }

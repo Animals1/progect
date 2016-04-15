@@ -45,7 +45,6 @@ $(function(){
 })  
 </script>
 
-
 </head>
 
 <body style="background:#fff3e1;">
@@ -56,26 +55,43 @@ $(function(){
         
     <dd>
     <div class="title">
+<<<<<<< HEAD
     <span><img src="/progect/drivingSchool/Public/admin/images/leftico01.png" /></span>管理员
+=======
+<<<<<<< HEAD
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
+=======
+    <span><img src="/Public/admin/images/leftico01.png" /></span>管理员
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
     </div>
         <ul class="menuson">
-        
-        <li>
+      <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">个人中心</a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name']?></a>
             <i></i>
             </div>
+            
             <ul class="sub-menus">
+<<<<<<< HEAD
             <li><a href="/progect/drivingSchool/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
             <li><a href="/progect/drivingSchool/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+=======
+<<<<<<< HEAD
+            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
+=======
+            <li><a href="/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
+            <li><a href="/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
 
             <li><a href="/progect/drivingSchool/index.php/Home/Admin/leave" target="rightFrame">请假管理</a></li>
             <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
             </ul>
-        </li>
-        
-        <li>
+           
+        </li><?php endforeach; endif; ?>
+       <!--  <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">用户管理</a>
@@ -290,7 +306,6 @@ $(function(){
 
        <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-<<<<<<< HEAD
         <li>
             <div class="header">
                 <cite></cite>
@@ -298,7 +313,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">收费明细</a></li>
+                <li><a href="/index.php/Home/Finance/charge" target="rightFrame">收费明细</a></li>
                 <li><a href="javascript:;">欠费明细</a></li>
             </ul>
         </li>
@@ -333,13 +348,6 @@ $(function(){
                 <li><a href="javascript:;">支出报表</a></li>
             </ul>
         </li>
-
-=======
-        <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
->>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
     </ul>
     
     </dd> 
@@ -350,14 +358,22 @@ $(function(){
 <div class="lefttop" id="student" style="cursor:pointer;"><span></span>学员端</div>
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
+<<<<<<< HEAD
         <dd><div class="title"><span><img src="/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>学员</div>
+=======
+        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
+<<<<<<< HEAD
+=======
+        <li>
+>>>>>>> 75b8e27229662574998aca367b3108419c650795
+>>>>>>> ab93db8c4618d01ee74c960c40b9146db003154a
         <ul class="menuson">
            <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">个人中心</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
 <<<<<<< HEAD
             <li><a href="/progect/drivingSchool/index.php/Home/Student/index">个人信息</a></li>
@@ -366,21 +382,32 @@ $(function(){
 >>>>>>> c1f496ff84fd76ff428b71d6ae6b7464f97e11aa
             </ul>
         </li>
-            <li>
+        <li>
+        <ul class="menuson">
+           <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame">预约管理</a>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">学费管理</a>
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
-            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
             </ul>
             </li>
+            <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame" target="rightFrame">预约管理</a>
+            <i></i>
+            </div>
+            <ul class="sub-menus">
+            <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
+            </ul>
+            </li> -->
         </ul>
-        
-        </dd> 
+
+        </dd>
     </dl>
 
 </div>
