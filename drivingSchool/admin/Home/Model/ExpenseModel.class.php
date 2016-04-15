@@ -25,12 +25,16 @@ class ExpenseModel extends Model {
         return $data;
     }
     /*
-     * 删除数据
-     *@$where   条件
+     * 添加数据
+     * $_POST['staff_id']=$staff_id
+     * $_POST['expense_time']=$time
+     * $_POST['status_id']=$status_id
+     * $_POST['expense_money']=$money
+     * $_POST['expense_desc']=$desc
      * */
-    public function delValue($where)
+    public function addvalue()
     {
-        return $this->where($where)->delete();
+        return $this->add($_POST);
     }
 }
 ?>

@@ -44,7 +44,7 @@
       <file leaf-file-name="ArrearsModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ArrearsModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.088235">
+            <state vertical-scroll-proportion="-12.5">
               <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="45" />
               <folding>
                 <element signature="e#6#76#0#PHP" expanded="true" />
@@ -53,13 +53,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SalaryModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/SalaryModel.class.php">
+      <file leaf-file-name="ChargeModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ChargeModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5882354">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="24" selection-end-column="21" />
+            <state vertical-scroll-proportion="3.3823528">
+              <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
               <folding>
-                <element signature="e#6#74#0#PHP" expanded="true" />
+                <element signature="e#6#73#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +68,8 @@
       <file leaf-file-name="ExpenseModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ExpenseModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7741348">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.63752276">
+              <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
               <folding>
                 <element signature="e#6#72#0#PHP" expanded="true" />
               </folding>
@@ -90,8 +90,8 @@
         <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Model/ChargeModel.class.php" />
         <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Model/ArrearsModel.class.php" />
         <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Model/SalaryModel.class.php" />
-        <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Model/ExpenseModel.class.php" />
         <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Controller/ChargeController.class.php" />
+        <option value="$PROJECT_DIR$/drivingSchool/admin/Home/Model/ExpenseModel.class.php" />
       </list>
     </option>
   </component>
@@ -389,36 +389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ChargeModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3169399">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ArrearsModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.088235">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="45" />
-          <folding>
-            <element signature="e#6#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/SalaryModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5882354">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Controller/ChargeController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.558824">
@@ -429,10 +399,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/SalaryModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6357013">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ArrearsModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="e#6#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ChargeModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3823528">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/drivingSchool/admin/Home/Model/ExpenseModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7741348">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.63752276">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
             <element signature="e#6#72#0#PHP" expanded="true" />
           </folding>
