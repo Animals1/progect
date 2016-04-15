@@ -95,5 +95,59 @@ class PersonalController extends Controller {
 		$this->assign();
 		$this->display("");
 	}
+
+
+	/*
+	*	查询请假信息
+	*/
+	public function leaveabout(){
+		$data = D("StaffLeave");
+		$arr = $data->leaveabout();
+		$this->assign();
+		$this->display();
+	}
+
+
+	/*
+	*	我要请假
+	*/
+	public function iwantgo(){
+		$data = D("StaffLeave");
+		$arr = $data->iwantgo();
+		if($arr){
+			//成功
+		}else{
+			//失败
+		}
+	}
+
+
+
+
+	/*
+	*	@BY 郭旭峰
+	*	@用户管理-账号管理
+	*	查询用户-角色表
+	*/
+	public function numbermanager(){
+		$data = D("admin");
+		$arr = $data->numbermanager();
+		$this->assign();
+		$this->display();
+	}
+
+
+
+	/*
+	*	@BY 郭旭峰
+	*	@用户管理-账号管理
+	*	查询权限-角色表
+	*/
+	public function rolejurisdiction(){
+		$data = D("privilege");
+		$arr = $data->rolejurisdiction();
+		$this->assign();
+		$this->display("");
+	}
 }
 ?>

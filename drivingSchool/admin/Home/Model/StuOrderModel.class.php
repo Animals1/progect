@@ -12,17 +12,16 @@ class StuOrderModel extends Model {
      * @$where  条件
      * @$limit  限制几条数据
      * */
-    public function getadd($user_id)
+    public function getshow($user_id)
     {
-        $page=$_GET['page']?$_GET['page']:1;
-        $page_size=3;
-        $limit=($page-1)*$page_size;
-
-        $num=$this->count();
-        $yeshu=ceil($num/$page_size);
-        $data=$this->join('student on student.stu_id = stu_order.stu_id')->join('coach on coach.coach_id = stu_order.coach_id')->where("user_id=2")->select();
-        $arr=array($yeshu,$data);
-        return $arr;
+        $user = M('stu_order');
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$this->join('student on student.stu_id = stu_order.stu_id')->join('coach on coach.coach_id = stu_order.coach_id')->where("user_id=2")->page($p,3)->select();
+        $count      = $user->count();
+        $page       = new \Think\Page($count,3);
+        $show       = $page->show();
+        $arr = array($p,$show,$page);
+        return $page;
     }
 }
 ?>

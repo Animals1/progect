@@ -13,7 +13,15 @@ class ChargeModel extends Model {
      * */
     public function getvalue()
     {
-        return $this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->select();
+        $User = M('charge'); // 实例化User对象
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
+        $list = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('charge_id>0')->order('charge_id desc')-> page($p.',3')->select();
+        $count      = $User->where('charge_id>0')->count();
+        $page       = new \Think\Page($count,3);
+        $show       = $page->show();
+        $data = array($list,$count,$show);
+        return $data;
     }
     /*
      * 收费明细-添加信息
@@ -33,18 +41,15 @@ class ChargeModel extends Model {
      *收费明细表、学员信息表、费用类型表、支付方式表。
     */
     public function chargeshow(){
-        $page=$_GET['page']?$_GET['page']:1;
-            $page_size=3;
-            $limit=($page-1)*$page_size;
-
-            $num=$this->count();
-            //echo $num;die;
-            $yeshu=ceil($num/$page_size);
-            //echo $yeshu;die;
-
-            $data=$this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('user_id = 2')->limit($limit,$page_size)->find();;
-            $arr=array($yeshu,$data);
+            $user = M('charge');
+            isset($_GET['p'])?$p=$_GET['p']:$p=1;
+            $list =$user->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('user_id = 2')->page($p,2)->select();
+            $count      = $user->where('charge_id>0')->count();
+            $page       = new \Think\Page($count,2);
+            $show       = $page->show();
+            $arr = array($p,$list,$show);
             return $arr;
     }
 }
 ?>
+

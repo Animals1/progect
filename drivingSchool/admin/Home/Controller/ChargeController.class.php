@@ -10,9 +10,10 @@ class ChargeController extends Controller {
      * 测试
      */
     public function index(){
-        $arr = D('arrears');
 
-        $row = $arr->getValue();
-        print_r($row);
+        $arr = D('expense');
+
+        $re = $arr->getvalue();
+        print_r($re);
     }
 }
