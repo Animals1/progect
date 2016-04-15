@@ -18,7 +18,6 @@ class SalaryModel extends Model {
         $page=$_GET['page']?$_GET['page']:1;
         $page_size=3;
         $limit=($page-1)*$page_size;
-
         $num=$this->count();
         $page_list=ceil($num/$page_size);
         $re = $this->join('staff on salary.staff_id=staff.staff_id')->select();
