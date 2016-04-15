@@ -3,8 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
+<<<<<<< HEAD
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+=======
+<<<<<<< HEAD
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+=======
+<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -47,15 +57,36 @@ $(document).ready(function(){
     <div class="tools">
     
     	<ul class="toolbar">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
         <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
         <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
         <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
         <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
+<<<<<<< HEAD
+=======
+=======
+        <li class="click"><span><img src="/progect/drivingSchool/Public/admin/images/t01.png" /></span>添加</li>
+        <li class="click"><span><img src="/progect/drivingSchool/Public/admin/images/t02.png" /></span>修改</li>
+        <li><span><img src="/progect/drivingSchool/Public/admin/images/t03.png" /></span>删除</li>
+        <li><span><img src="/progect/drivingSchool/Public/admin/images/t04.png" /></span>统计</li>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
         </ul>
         
         
         <ul class="toolbar1">
+<<<<<<< HEAD
         <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
+=======
+<<<<<<< HEAD
+        <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
+=======
+        <li><span><img src="/progect/drivingSchool/Public/admin/images/t05.png" /></span>我要请假</li>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
         </ul>
     
     </div>
@@ -65,7 +96,15 @@ $(document).ready(function(){
     	<thead>
     	<tr>
         <th><input name="" type="checkbox" value="" checked="checked"/></th>
+<<<<<<< HEAD
         <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+=======
+<<<<<<< HEAD
+        <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+=======
+        <th>请假时间<i class="sort"><img src="/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
         <th>销假时间</th>
         <th>请假类型</th>
         <th>请假天数</th>
@@ -197,7 +236,15 @@ $(document).ready(function(){
     	<div class="tiptop"><span>提示信息</span><a></a></div>
         
       <div class="tipinfo">
+<<<<<<< HEAD
         <span><img src="/Public/admin/images/ticon.png" /></span>
+=======
+<<<<<<< HEAD
+        <span><img src="/Public/admin/images/ticon.png" /></span>
+=======
+        <span><img src="/progect/drivingSchool/Public/admin/images/ticon.png" /></span>
+>>>>>>> 7bf1998cdc43b73ad715f3bc762245f53d533d2b
+>>>>>>> 595caebf21c7c7e2e612a80882f2d886a37744a9
         <div class="tipright">
         <p>是否确认对信息的修改 ？</p>
         <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
