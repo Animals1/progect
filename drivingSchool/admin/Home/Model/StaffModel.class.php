@@ -2,15 +2,15 @@
 namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
-	/*
-	*	@author:郭旭峰
-	*	@module:管理员-个人中心
-	*	@个人信息
-	*/
+	
+		/*@author:郭旭峰
+		@module:管理员-个人中心
+		@个人信息*/
+	
 	public function staffsele($staffid){
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_id=$staffid")->select();
 	}
-
+	
 	/*
 	*	@个人信息字符修改
 	*/
@@ -37,19 +37,19 @@ class StaffModel extends Model {
 	 * 作者：张捷
 	 */
 	public function linkage($id){
-
+	
 		$db=D('area');
 		$rows = $db->where("parent_id = $id")->select();
 		return $rows;
-
+	
 	}
-
+	
 	/*
 	 * 添加教练时查询的数据
 	 * 作者：张捷
 	 */
 	public function satffcoach(){
-
+	
 		$data = array();
 		$drivingcard = D('coach_driving');
 		$grade = D('coach_grade');
@@ -62,7 +62,7 @@ class StaffModel extends Model {
 		$data[] = $coach->select();
 		$data[] = $coachmotor->select();
 		return $data;
-
+	
 	}
 	/*
 	 * 员工添加
@@ -70,6 +70,7 @@ class StaffModel extends Model {
 	 */
 	public function staffadd($rows){
 		$db=D("staff");
+		$coach = D('coach');
 		$upload = new \Think\Upload();   
 	    $upload->maxSize   =     3145728 ;
 	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');   
@@ -95,7 +96,26 @@ class StaffModel extends Model {
 		$data['staff_job'] = $rows['job'];
 		$data['staff_basic'] = $rows['basic'];
 		if ($data['role_id'] == '1') {
-			
+			$re = $db->create($data);
+			$row = $db->where("staff_sn = '".$rows['sn']."'");
+			$staff_id = $row['staff_id'];
+			$codata['coach_staff_id'] = $staff_id;
+			$codata['coach_start_year'] = $rows['coachyear'];
+			$codata['coach_validity'] = $rows['coachvalidity'];
+			$codata['driving_start_year'] = $rows['drivingyear'];
+			$codata['driving_validity'] = $rows['drivingvalidity'];
+			$codata['driving_id'] = $rows['drivingid'];
+			$codata['coach_sn'] = $rows['coachsn'];
+			$codata['grade_id'] = $rows['gradeid'];
+			$codata['quality_id'] = $rows['qualityid'];
+			$codata['model_id'] = $rows['modelid'];
+			$codata['motor_id'] = $rows['motor_id'];
+			$core = $coach->create($codata);
+			if ($re && $core){
+				return ture;
+			}else{
+				return folse;
+			}
 		}else{
 			return $re = $db->create($data);
 		}
@@ -104,7 +124,7 @@ class StaffModel extends Model {
 	 * 教练员工查询
 	 * 作者：张捷
 	 */
-	public function staffselect(){
+	public function staffcoachselect(){
 		$db=D("staff");
 		return $db->join('staff.staff_id = coach.coach_staff_id')->select();
 	}
@@ -121,7 +141,7 @@ class StaffModel extends Model {
 	 * 作者：张捷
 	 */
 	public function staffsearch($data){
-
+	
 		$db = D('staff');
 		$datas = ''
 		if ($data['staff_sn'] != '') {
@@ -139,19 +159,19 @@ class StaffModel extends Model {
 		}else{
 			return $db->where($datas)->select();
 		}
-
+	
 	}
 	/*
 	 * 员工状态修改
 	 * 作者：张捷
 	 */
 	public function jobstatus($id){
-
+	
 		$db = D('staff');
 		$data = array();
 		$data['staff_job'] = 2;
 		return $db->where("staff_id = $id")->save($data);
-
+	
 	}
 	
 	/**
@@ -164,8 +184,13 @@ class StaffModel extends Model {
 					->join('coach_group ON staff.group_id = coach_group.group_id' )
 					->find();
 	}
-
-
+	/**
+	*	关联角色表，查出一个教练的预约状态和姓名
+	*	author：xueyunhuan
+	*/
+	public function getshow(){
+		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
+	}
 }
 
 ?>
