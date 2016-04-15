@@ -11,7 +11,7 @@ class ChargeController extends Controller {
      */
     public function index(){
 
-        $arr = D('salary');
+        $arr = D('expense');
 
         $re = $arr->getvalue();
         print_r($re);

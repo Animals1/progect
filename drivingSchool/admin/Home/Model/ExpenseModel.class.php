@@ -13,9 +13,16 @@ class ExpenseModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue()
+    public function getvalue()
     {
-        return $this->find();
+        $User = M('expense');
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list = $User->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->where('expense_id>0')->order('expense_id desc')->page($p.',3')->select();
+        $count      = $User->where('expense_id>0')->count();
+        $page       = new \Think\Page($count,3);
+        $show       = $page->show();
+        $data = array($list,$count,$show);
+        return $data;
     }
     /*
      * 删除数据
