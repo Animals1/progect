@@ -266,7 +266,7 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-            <li><a href="/index.php/Home/Student/index">个人信息</a></li>
+            <li><a href="/index.php/Home/Student/personinfo"  target="rightFrame">个人信息</a></li>
             </ul>
         </li>
             <li>

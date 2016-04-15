@@ -20,8 +20,8 @@ class StuOrderModel extends Model {
         $count      = $user->count();
         $page       = new \Think\Page($count,3);
         $show       = $page->show();
-        $arr = array($p,$show,$page);
-        return $page;
+        $arr = array($p,$list,$page);
+        return $arr;
     }
 }
 ?>
