@@ -1,19 +1,27 @@
 <?php
-/**
- *	员工请假表
- *	created by: yaobowen
- */
 namespace Home\Model;
 use Think\Model;
 class StaffLeaveModel extends Model {
+	/*
+ 	*	个人中心-员工请假表
+ 	*	by:郭旭峰
+ 	*/
 	
-	//查询全部请假表的信息
-	public function selall(){
-		return $this->select();
+	
+	/*
+	*	员工请假表内容查询
+	*/
+	public function leaveabout(){
+		return $this->Table("staff_leave")->select();
 	}
-	//删除一个请假表的信息
-	public function delone($id){
-		return $this->where("staff_id = '$id'")->delete();
+
+	/*
+	*	我要请假
+	*/
+	public function iwantgo(){
+		//接收信息
+		$data[""] = ;
+		return $this->Table("staff_leave")->add($data);
 	}
 }
 

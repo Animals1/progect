@@ -66,5 +66,15 @@
 
 			return $child;
 		}
+
+
+		/*
+		*	@BY 郭旭峰
+		*	@用户管理-账号管理
+		*	查询用户-角色表
+		*/
+		public function numbermanager(){
+			return $this->Table("admin")->join('admin_role ON admin.admin_id = admin_role.admin_id')->join('role ON admin_role.role_id = role.role_id')->select();
+		}
 	}
 ?>
