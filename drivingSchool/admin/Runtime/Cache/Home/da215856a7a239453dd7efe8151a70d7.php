@@ -10,14 +10,14 @@
     </script>
 
 
-    </head>
+</head>
 
 
-    <body style="background:#FFF8ED;">
-            <div >
-                收费明细
-            </div>
+<body style="background:#FFF8ED;">
+<div >
+    欠费明细
+</div>
 
-            </body>
+</body>
 
-            </html>
+</html>

@@ -19,4 +19,20 @@ class FinanceController extends Controller {
         $this->assign('re',$re);
         $this->display('charge');
     }
+
+
+    /**
+     * 支出明细
+     */
+    public function arrears(){
+        $this->display('arrears');
+    }
+
+
+    /**
+     * 工资明细
+     */
+    public function salary(){
+        $this->display('salary');
+    }
 }
