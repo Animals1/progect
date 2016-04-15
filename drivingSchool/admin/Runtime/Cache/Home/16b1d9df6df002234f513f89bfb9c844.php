@@ -269,7 +269,6 @@ $(function(){
 
        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-<<<<<<< HEAD
         <li>
             <div class="header">
                 <cite></cite>
@@ -277,7 +276,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">收费明细</a></li>
+                <li><a href="/index.php/Home/Finance/charge" target="rightFrame">收费明细</a></li>
                 <li><a href="javascript:;">欠费明细</a></li>
             </ul>
         </li>
@@ -312,13 +311,6 @@ $(function(){
                 <li><a href="javascript:;">支出报表</a></li>
             </ul>
         </li>
-
-=======
-        <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
->>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
     </ul>
     
     </dd> 
