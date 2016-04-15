@@ -12,7 +12,7 @@ class CarReplaceModel extends Model {
      */
     public function getValue($name)
     {
-        return $this->where("relace_name = '$name'")->select();
+        return $this->where("replace_name = '$name'")->select();
     }
     /*
      * 删除一条数据
