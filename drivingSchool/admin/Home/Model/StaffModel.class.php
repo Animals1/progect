@@ -70,6 +70,7 @@ class StaffModel extends Model {
 	 */
 	public function staffadd($rows){
 		$db=D("staff");
+		$coach = D('coach');
 		$upload = new \Think\Upload();   
 	    $upload->maxSize   =     3145728 ;
 	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');   
@@ -95,7 +96,26 @@ class StaffModel extends Model {
 		$data['staff_job'] = $rows['job'];
 		$data['staff_basic'] = $rows['basic'];
 		if ($data['role_id'] == '1') {
-			
+			$re = $db->create($data);
+			$row = $db->where("staff_sn = '".$rows['sn']."'");
+			$staff_id = $row['staff_id'];
+			$codata['coach_staff_id'] = $staff_id;
+			$codata['coach_start_year'] = $rows['coachyear'];
+			$codata['coach_validity'] = $rows['coachvalidity'];
+			$codata['driving_start_year'] = $rows['drivingyear'];
+			$codata['driving_validity'] = $rows['drivingvalidity'];
+			$codata['driving_id'] = $rows['drivingid'];
+			$codata['coach_sn'] = $rows['coachsn'];
+			$codata['grade_id'] = $rows['gradeid'];
+			$codata['quality_id'] = $rows['qualityid'];
+			$codata['model_id'] = $rows['modelid'];
+			$codata['motor_id'] = $rows['motor_id'];
+			$core = $coach->create($codata);
+			if ($re && $core){
+				return ture;
+			}else{
+				return folse;
+			}
 		}else{
 			return $re = $db->create($data);
 		}
