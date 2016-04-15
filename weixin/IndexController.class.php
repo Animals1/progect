@@ -105,9 +105,9 @@ class IndexController extends Controller {
                {
                     case "knowlege":
                        $contentStr[] = array("Title" =>"远达驾校", 
-                        "Description" =>"  远达驾校成立于1992年10月。作为驾驶技能教学部门，驾校承担着公安大学在校学生驾驶培训实习任务，并且为社会人士考取驾照提供优质服务。 ", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/logo.png", 
-                       "Url" =>"http://bishengforever.applinzi.com/aboutus.html");
+                        "Description" =>"驾校位于北京市大兴区金星西路，拥有花园般的环境、酒店式的服务，建有目前国际硬件设施标准等级最高的训练和考试场，也是全国第一个“残疾人驾驶汽车训练示范基地”，拥有外籍学员培训资质，年培训学员数量和考试合格率均居驾校行业之首。", 
+                       "PicUrl" =>"http://101.200.201.202/Tp/Public/logo.jpg", 
+                       "Url" =>"http://101.200.201.202/Tp/Application/Home/View//aboutus.html");
                        break;
                     case "group":
                        $contentStr[] = array("Title" =>"峰艺工作室团队介绍", 

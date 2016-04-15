@@ -1,0 +1,15 @@
+时间段				在做什么					
+6:50-7:30		看行业知识（互联网+旅游）	
+7:30-8:00		吃早饭	
+8:00-9:00		开始看评论表review，分析其逻辑	
+9:00-10:00		做蹲起，听老师讲经验~	
+10:00-11:30		改字段详见补充，分页，分页样式	review表里的添加时间字段设为int不合理，我改成了char，并改了数据字典，在群里也说了，评价表里面，没有评价内容，我			加了一个字段，r_content学员评论内容，做了CoachController控制器里的award方法，并调用
+			ReviewModel.class.php里面的getValue方法，分页功能，page.class.php分页类
+11:30-1:00		吃饭。午睡	
+1:00-2:50		车辆管理模块，分析思路。	
+			新建ServiceController.class.php,增删查，还有CarReplaceModel.class.php里面的增删查
+3:00-4:00		就业指导课	
+4:00-04:30		CarrepairModel.class.php	
+4:30-6:00		吃饭	
+6:00-6:30		杨总分析产品题	
+6:30-9:30		换车记录模块ServiceController.class.php	显示界面，分页，删除，修改

@@ -1,0 +1,81 @@
+04-14
+
+收费明细表 ChargeModel  方法名：getValue() 四表联查 三行代码  addValue() 添加数据 一行代码
+欠费明细表 ArrearsModel  方法名：getValue() 四表联查 十行代码 
+工资明细表 SalaryModel  方法名：getValue（）八行代码
+费用类型表 MoneyTypeModel 方法名：getvalue() 一行代码
+支付方式表 CoachModel   方法名：getvalue() 一行代码
+
+
+添加表字段：
+收费明细表的字段 stu_id 学员信息表
+    		 money_type_id 关联费用表
+		 payment_id 关联支付方式表
+
+添加表：
+欠费明细表（arrears）6个字段 arrears_id 自增    stu_id 关联学员信息表    money_type_id  关联费用类型表     arrears_money 欠费金额地段      status_id  关联状态表     arrears_time  欠费日期
+状态表     (status)  2个字段 status_id 自增   status_name 补交方式名字
+
+
+
+
+04-15
+6:50--7:50 	行业知识（背诵）常见问题50道题（1-5）
+8:00--8:45 	看“从需求到原型，如何思考与设计「后台产品」	?”,“深度长文：如何从社交行为模型定义产品需求 ”;
+8:55--9:40	检查和惩罚
+9:50--10:35	model名：ArrearsModel.class.php 
+			方法名：getvalue()  调用分页类  
+			ChargeModel.class.php  
+			方法名: getvalue()  调用分页类
+			SalaryModel.class.php
+			方法名：getvalue(); 调用分页类
+10:45--11:30   salary 工资明细表 修改字段  salary_status_id (关联工资明细状态表)
+	       (添加表)salary_status 工资明细状态表 salary_status_id (自增) salary_status_name(工资明细状态名称)
+
+		expense 支出明细表 修改字段  status_id （关联支出 费用分类表）
+		（添加表）expense_status 支出费用分类表  status_id (自增)  status_name（费用分类名称）
+
+
+13:00--13:45  model名：ExpenseModel.class.php 
+			方法名：getvalue() 联查全部信息 调用分页类  	
+		      ExpenseModel.class.php
+			方法名：addvalue() 添加数据（支出明细表）
+
+
+13:55--14:40  分析财务报表：收入报表和支出报表
+		jquery插件：条形统计图车间和扇形统计图插件
+		收入报表：全部的学费、包车费、欠费、其他费
+		支出报表：全部的油气费、维修费、保养费、伙食费、班车费、其他费
+		查询出全部的费用数据，求出每个费用的总和，传到页面。
+14:50--15:35  就业指导课
+
+
+15:45--16:30 
+	     收入报表： ChargeModel.class.php 方法名：findvalue(); 
+	     支出报表： ExpenseModel.class.php 方法名：findvalue(); 
+
+
+18:00--18:45  查询求和得sql语句，查询需要的字段，根据每个费用类型的ID查询出相对应的费用（求出总和），把总和传到controller层。
+	      修改 收入报表： ChargeModel.class.php 方法名：findvalue(); 
+	     	   支出报表： ExpenseModel.class.php 方法名：findvalue(); 
+
+18:55--19:40
+19:50--20:30 这两节课更新GIT 套模板（财务）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

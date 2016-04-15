@@ -12,7 +12,19 @@ class CarReplaceModel extends Model {
      */
     public function getValue($name)
     {
-        return $this->where("replace_name = '$name'")->select();
+        $count      = $this->where("replace_name = '$name'")->count();
+		// 查询满足要求的总记录数
+		$Page       = new \Think\Page($count,2);
+		// print_r($Page);die;
+		// 实例化分页类 传入总记录数和每页显示的记录数(25)
+		$show       = $Page->show();// 分页显示输出
+		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
+		$list = $this->where("replace_name = '$name'")
+					->limit($Page->firstRow.','.$Page->listRows)
+					->select();
+		$arr = array($show,$list);
+		return $arr;
+		
     }
     /*
      * 删除一条数据
@@ -30,6 +42,15 @@ class CarReplaceModel extends Model {
     {
         return $this->add($data);
     }
-
+	
+	/*
+     * 查询一条换车记录
+     *
+     * */
+    public function getoneValue($id)
+    {
+        return $this->where("replace_id = '$id'")->find();
+    }
+	
 }
 ?>
