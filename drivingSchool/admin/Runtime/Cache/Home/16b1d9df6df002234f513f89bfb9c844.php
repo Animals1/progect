@@ -243,10 +243,49 @@ $(function(){
 
        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-        <li><cite></cite><a href="#">自定义</a><i></i></li>
-        <li><cite></cite><a href="#">常用资料</a><i></i></li>
-        <li><cite></cite><a href="#">信息列表</a><i></i></li>
-        <li><cite></cite><a href="#">其他</a><i></i></li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">收费管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">收费明细</a></li>
+                <li><a href="javascript:;">欠费明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">工资管理</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">工资明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">费用支出</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">支出明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="header">
+                <cite></cite>
+                <a href="javascript:;" target="rightFrame">财务报表</a>
+                <i></i>
+            </div>
+            <ul class="sub-menus">
+                <li><a href="javascript:;">收入报表</a></li>
+                <li><a href="javascript:;">支出报表</a></li>
+            </ul>
+        </li>
+
     </ul>
     
     </dd> 

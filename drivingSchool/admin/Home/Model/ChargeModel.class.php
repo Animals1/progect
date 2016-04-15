@@ -50,6 +50,16 @@ class ChargeModel extends Model {
             $arr = array($p,$list,$show);
             return $arr;
     }
+
+
+    /**
+     * 收入报表
+     */
+    public function findvalue(){
+        $sql="select money_type_id,sum(charge_money) from charge group by money_type_id";
+        $arr = $this->query($sql);
+        return $arr;
+    }
 }
 ?>
 

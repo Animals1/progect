@@ -13,7 +13,7 @@ class ChargeController extends Controller {
 
         $arr = D('expense');
 
-        $re = $arr->getvalue();
+        $re = $arr->findvalue();
         print_r($re);
     }
 }
