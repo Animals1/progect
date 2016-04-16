@@ -50,7 +50,7 @@
         <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><tr>
         <td><input name="" type="checkbox" value="" /></td>
         <td><?php echo ($vo["replace_name"]); ?></td>
-        <td><?php echo ($vo["replace_time"]); ?></td>
+        <td><?php echo date("Y-m-d",$vo['replace_time']);?></td>
         <td><?php echo ($vo["replace_number_before"]); ?></td>
         <td><?php echo ($vo["replace_number_after"]); ?></td>
         <td><?php echo ($vo["deal_name"]); ?></td>
@@ -66,12 +66,6 @@
         <ul class="paginList">
         </ul>
     </div>
-    
-    
-    
-    
-    
-    
     
     </div>
     

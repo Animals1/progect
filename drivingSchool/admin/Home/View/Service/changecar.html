@@ -51,7 +51,7 @@
 		<tr>
         <td><input name="" type="checkbox" value="" /></td>
         <td>{$vo.replace_name}</td>
-        <td>{$vo.replace_time}</td>
+        <td><?php echo date("Y-m-d",$vo['replace_time']);?></td>
         <td>{$vo.replace_number_before}</td>
         <td>{$vo.replace_number_after}</td>
         <td>{$vo.deal_name}</td>
@@ -68,12 +68,6 @@
         <ul class="paginList">
         </ul>
     </div>
-    
-    
-    
-    
-    
-    
     
     </div>
     
