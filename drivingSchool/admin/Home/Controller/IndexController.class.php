@@ -81,15 +81,5 @@ class IndexController extends Controller {
         {
         	$this->display('index');
         }
-<<<<<<< HEAD
 
-
-        public function aa()
-        {
-        	$model = D('Charge');
-            $arr = $model->chargeshow();
-            print_r($arr);
-        }
-=======
->>>>>>> 75b8e27229662574998aca367b3108419c650795
 }

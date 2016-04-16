@@ -259,6 +259,24 @@ $(function(){
     
     <dd><div class="title"><span><img src="__PUBLIC__/admin/images/leftico04.png" /></span>人事</div>
     <ul class="menuson">
+        <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">个人中心</a>
+            <i></i>
+            </div>
+        </li>
+        <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">学员管理</a>
+            <i></i>
+            </div>                
+            <ul class="sub-menus">
+            <li><a href="__APP__/Home/Staff/staff_add" target="rightFrame">新增员工</a></li>
+            <li><a href="javascript:;">员工维护</a></li>
+            </ul>
+        </li>
         <li><cite></cite><a href="__APP__/Home/Personal/index"  target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
@@ -277,7 +295,7 @@ $(function(){
             </div>
             <ul class="sub-menus">
                 <li><a href="__APP__/Home/Finance/charge" target="rightFrame">收费明细</a></li>
-                <li><a href="javascript:;">欠费明细</a></li>
+                <li><a href="__APP__/Home/Finance/arrears" target="rightFrame">欠费明细</a></li>
             </ul>
         </li>
         <li>
@@ -287,7 +305,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">工资明细</a></li>
+                <li><a href="__APP__/Home/Finance/salary" target="rightFrame">工资明细</a></li>
             </ul>
         </li>
         <li>
@@ -297,7 +315,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">支出明细</a></li>
+                <li><a href="javascript:; ">支出明细</a></li>
             </ul>
         </li>
         <li>
@@ -311,6 +329,10 @@ $(function(){
                 <li><a href="javascript:;">支出报表</a></li>
             </ul>
         </li>
+        <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
+        <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
+        <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
+        <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
     </ul>
     
     </dd> 
@@ -324,6 +346,11 @@ $(function(){
         <dd><div class="title"><span><img src="__PUBLIC__/admin/images/leftico04.png" /></span>学员</div>
         <li>
         <ul class="menuson">
+
+            <li><cite></cite><a href="#">自定义</a><i></i></li>
+            <li><cite></cite><a href="#">常用资料</a><i></i></li>
+            <li><cite></cite><a href="#">信息列表</a><i></i></li>
+            <li><cite></cite><a href="#">其他</a><i></i></li>
            <li>
             <div class="header">
             <cite></cite>
@@ -343,6 +370,8 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
+            <li><a href="javascript:;">预约申请</a></li>
+            <li><a href="javascript:;">预约记录</a></li>
             <li><a href="__APP__/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
             </ul>
             </li>
@@ -353,6 +382,16 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
+            <li><a href="javascript:;">科一面试</a></li>
+            <li><a href="javascript:;">科二面试</a></li>
+            </ul>
+            </li>
+
+            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
+            <li><a href="__APP__/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
+            <li><a href="__APP__/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            </ul>
+            </li>
             <li><a href="__APP__/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
             <li><a href="__APP__/Home/Student/noorder" target="rightFrame">预约记录</a></li>
             </ul>

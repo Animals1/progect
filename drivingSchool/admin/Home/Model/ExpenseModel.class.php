@@ -12,6 +12,7 @@ class ExpenseModel extends Model {
      * @$where  条件
      * @$order  排序字段
      * @$limit  限制几条数据
+     * hanqiming
      * */
     public function getvalue()
     {
@@ -25,7 +26,7 @@ class ExpenseModel extends Model {
         return $data;
     }
     /*
-     * 添加数据
+     * 添加数据 hanqiming
      * $_POST['staff_id']=$staff_id
      * $_POST['expense_time']=$time
      * $_POST['status_id']=$status_id
@@ -38,7 +39,7 @@ class ExpenseModel extends Model {
     }
 
     /**
-     * 支出报表
+     * 支出报表 hanqiming
      */
     public function findvalue(){
         $sql = "select status_id,SUM(expense_money) from expense group by status_id";
