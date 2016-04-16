@@ -48,13 +48,16 @@ $(function(){
 </head>
 
 <body style="background:#fff3e1;">
-    <div class="lefttop" id="school" style="cursor:pointer;"><span></span>驾校端</div>
+    <div class="lefttop" id="school" style="cursor:pointer;"><span></span>
+        <?php
+ if($_COOKIE['rolename']=="学员"){ echo "学员端"; }else{ echo "驾校端"; } ?>
+    </div>
 <div id='driving' style="display:block;">
     <dl class="leftmenu">
         
     <dd>
     <div class="title">
-    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
     </div>
         <ul class="menuson">
       <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
@@ -65,7 +68,8 @@ $(function(){
             </div>
             
             <ul class="sub-menus">
-            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
+            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name']?></a></li>
+            <!--/index.php/Home/Admin/index--><?php endforeach; endif; ?>
             </ul>
            
         </li><?php endforeach; endif; ?>

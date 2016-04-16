@@ -34,7 +34,7 @@ $(function(){
     </ul>
      
     <div class="user">
-    <span>admin</span>
+    <span><?php echo $_COOKIE['username'];?></span>
     <i>消息</i>
     <b>5</b>
     </div>    
