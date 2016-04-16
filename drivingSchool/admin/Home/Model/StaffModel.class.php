@@ -143,7 +143,7 @@ class StaffModel extends Model {
 	public function staffsearch($data){
 	
 		$db = D('staff');
-		$datas = ''
+		$datas = '';
 		if ($data['staff_sn'] != '') {
 			$datas .= 'staff_sn = '.$data['staff_sn'];
 		}else if ($data['staff_name' != '']){

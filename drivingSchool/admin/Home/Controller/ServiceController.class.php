@@ -35,6 +35,9 @@ class ServiceController extends Controller {
 	*	修改一条数据
 	*/
 	public	function updaterepaircar(){
+		$id = $_GET['id'];
+		$model = D('CarReplace');
+		$arr = $model->getoneValue($id);
 		
 		if($_POST){
 			$replace_name = $_POST['replace_name'];
@@ -42,27 +45,34 @@ class ServiceController extends Controller {
 			$replace_number_after = $_POST['replace_number_after'];
 			$replace_reason = $_POST['replace_reason'];
 			$deal_name = $_POST['deal_name'];
+			
+			if($replace_name == $arr['replace_name']  & $replace_number_before == $arr['replace_number_before'] 
+			& $replace_number_after ==$arr['replace_number_after'] & $replace_reason == $arr['replace_reason'] 
+			& $deal_name == $arr['deal_name']){
+				echo "<script>alert('没有修改，不能提交~');window.history.back(-1);</script>";die;
+			}
+			
 			$data['replace_name'] = $replace_name;
 			$data['replace_number_before'] = $replace_number_before;
 			$data['replace_number_after'] = $replace_number_after;
 			$data['replace_reason'] = $replace_reason;
 			$data['deal_name'] = $deal_name;
-			$data['replace_time'] = $replace_time;
+			$data['replace_time'] = time();
+			
+			
 			
 			$model = D('CarReplace');
 			$res = $model->add($data);
 			if($res){
-				echo "location.href=__APP__/Home/Service/changecar";
+				$this->redirect("Service/getrepaircar");
 			}
 			else
 			{
-				echo "<script>alert('添加失败');window.history.back(-1);</script>";
+				echo "<script>alert('添加失败');window.history.back(-1);</script>";die;
 			}
 		}
-		$id = $_GET['id'];
-		$model = D('CarReplace');
-		$data = $model->getoneValue($id);
-		$this->assign('data',$data);
+		
+		$this->assign('data',$arr);
 		$this->display('uchangecar');
 	}
 	/**
