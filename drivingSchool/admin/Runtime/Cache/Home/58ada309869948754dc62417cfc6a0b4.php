@@ -14,7 +14,7 @@
 
 
 <body style="background:#FFF8ED;">
-    <div >
+    <div>
         aaa
     </div>
 

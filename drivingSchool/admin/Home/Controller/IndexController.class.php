@@ -57,13 +57,14 @@ class IndexController extends Controller {
                         //print_r($arr);die;
                         $this->assign("arr",$arr);
                          $this->assign("rolename",$rolename);
-                        $this->display("left");
+                        $this->display("main");
 
                     }
 
 
                 }else{
                     //cookie操作
+                    echo "123";
                 }
             }else{
                 $this->error("用户名或密码错误");
@@ -81,15 +82,5 @@ class IndexController extends Controller {
         {
         	$this->display('index');
         }
-<<<<<<< HEAD
 
-
-        public function aa()
-        {
-        	$model = D('Charge');
-            $arr = $model->chargeshow();
-            print_r($arr);
-        }
-=======
->>>>>>> 75b8e27229662574998aca367b3108419c650795
 }
