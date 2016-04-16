@@ -13,9 +13,10 @@ class FinanceController extends Controller {
      */
     public function charge(){
 
-        $arr = D('expense');
+        $arr = D('charge');
 
-        $re = $arr->findvalue();
+        $re = $arr->getvalue();
+        print_r($re);die;
         $this->assign('re',$re);
         $this->display('charge');
     }
@@ -25,6 +26,12 @@ class FinanceController extends Controller {
      * 支出明细
      */
     public function arrears(){
+
+        $arr = D('arrears');
+
+        $re = $arr->getvalue();
+        print_r($re);die;
+        $this->assign('re',$re);
         $this->display('arrears');
     }
 
@@ -33,6 +40,13 @@ class FinanceController extends Controller {
      * 工资明细
      */
     public function salary(){
+
+        $arr = D('salary');
+
+        $re = $arr->getvalue();
+        print_r($re);die;
+        $this->assign('re',$re);
+
         $this->display('salary');
     }
 }
