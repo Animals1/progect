@@ -54,11 +54,116 @@ class IndexController extends Controller {
                         }
                         //$arr[] = $rolename; 
                         //dump($arr);die;
-                        //print_r($arr);die;
-                        $this->assign("arr",$arr);
-                         $this->assign("rolename",$rolename);
-                        $this->display("left");
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
 
+                    }else if($rolename=="教练"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=2")->select();
+                        print_r($arr);die;
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="行政"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=3")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="人事"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=4")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="财务"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=5")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="学员"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=6")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else{
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=privilege_id")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
                     }
 
 
@@ -81,15 +186,18 @@ class IndexController extends Controller {
         {
         	$this->display('index');
         }
-<<<<<<< HEAD
 
 
-        public function aa()
-        {
-        	$model = D('Charge');
-            $arr = $model->chargeshow();
-            print_r($arr);
+        /*
+        *   显示左边界面
+        */
+        public function showleft(){
+            $arr = $_COOKIE["arr"];
+            $ar = unserialize(gzuncompress(base64_decode($arr)));
+            //print_r($ar);die;
+            $this->assign("arr",$ar);
+            $this->display("left");
         }
-=======
->>>>>>> 75b8e27229662574998aca367b3108419c650795
+       
+
 }

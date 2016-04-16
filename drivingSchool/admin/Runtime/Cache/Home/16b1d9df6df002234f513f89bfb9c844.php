@@ -48,37 +48,24 @@ $(function(){
 </head>
 
 <body style="background:#fff3e1;">
-   
     <div class="lefttop" id="school" style="cursor:pointer;"><span></span>驾校端</div>
 <div id='driving' style="display:block;">
     <dl class="leftmenu">
         
     <dd>
     <div class="title">
-<<<<<<< HEAD
     <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
-=======
-    <span><img src="/Public/admin/images/leftico01.png" /></span>管理员
->>>>>>> 75b8e27229662574998aca367b3108419c650795
     </div>
         <ul class="menuson">
       <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name']?></a>
+            <a ><?php echo $v['privilege_name']?></a>
             <i></i>
             </div>
             
             <ul class="sub-menus">
-<<<<<<< HEAD
             <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
-=======
-            <li><a href="/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
-            <li><a href="/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
-
-            <li><a href="/index.php/Home/Admin/leave" target="rightFrame">请假管理</a></li>
-            <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
->>>>>>> 75b8e27229662574998aca367b3108419c650795
             </ul>
            
         </li><?php endforeach; endif; ?>
@@ -329,10 +316,7 @@ $(function(){
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
-<<<<<<< HEAD
-=======
         <li>
->>>>>>> 75b8e27229662574998aca367b3108419c650795
         <ul class="menuson">
            <li>
             <div class="header">
