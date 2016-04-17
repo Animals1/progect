@@ -45,6 +45,7 @@ $(function(){
 })  
 </script>
 
+
 </head>
 
 <body style="background:#fff3e1;">
@@ -57,23 +58,39 @@ $(function(){
         
     <dd>
     <div class="title">
+<<<<<<< HEAD
     <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+=======
+    <span><img src="/Public/admin/images/leftico01.png" /></span>管理员
+>>>>>>> d33cbc225b9aa3f4bf2ca6785dbb3816d39da6e6
     </div>
         <ul class="menuson">
-      <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
+        
+        <li>
             <div class="header">
             <cite></cite>
+<<<<<<< HEAD
             <a ><?php echo $v['privilege_name']?></a>
+=======
+            <a href="javascript:;" target="rightFrame">个人中心</a>
+>>>>>>> d33cbc225b9aa3f4bf2ca6785dbb3816d39da6e6
             <i></i>
             </div>
-            
             <ul class="sub-menus">
+<<<<<<< HEAD
             <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name']?></a></li>
             <!--/index.php/Home/Admin/index--><?php endforeach; endif; ?>
+=======
+            <li><a href="/index.php/Home/Admin/index" target="rightFrame">个人信息</a></li>
+            <li><a href="/index.php/Home/Admin/attendance" target="rightFrame">出勤信息</a></li>
+
+            <li><a href="/index.php/Home/Admin/leave" target="rightFrame">请假管理</a></li>
+            <li><a href="javascript:;" target="rightFrame">工资明细</a></li>
+>>>>>>> d33cbc225b9aa3f4bf2ca6785dbb3816d39da6e6
             </ul>
-           
-        </li><?php endforeach; endif; ?>
-       <!--  <li>
+        </li>
+        
+        <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">用户管理</a>
@@ -275,7 +292,7 @@ $(function(){
             </div>
             <ul class="sub-menus">
                 <li><a href="/index.php/Home/Finance/charge" target="rightFrame">收费明细</a></li>
-                <li><a href="javascript:;">欠费明细</a></li>
+                <li><a href="/index.php/Home/Finance/arrears" target="rightFrame">欠费明细</a></li>
             </ul>
         </li>
         <li>
@@ -285,7 +302,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">工资明细</a></li>
+                <li><a href="/index.php/Home/Finance/salary" target="rightFrame">工资明细</a></li>
             </ul>
         </li>
         <li>
@@ -295,7 +312,7 @@ $(function(){
                 <i></i>
             </div>
             <ul class="sub-menus">
-                <li><a href="javascript:;">支出明细</a></li>
+                <li><a href="javascript:; ">支出明细</a></li>
             </ul>
         </li>
         <li>
@@ -320,8 +337,21 @@ $(function(){
 <div id='stu' style="display:block;">
     <dl class="leftmenu" >
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
+<<<<<<< HEAD
         <li>
         <ul class="menuson">
+=======
+        <ul class="menuson">
+<<<<<<< HEAD
+
+            <li><cite></cite><a href="#">自定义</a><i></i></li>
+            <li><cite></cite><a href="#">常用资料</a><i></i></li>
+            <li><cite></cite><a href="#">信息列表</a><i></i></li>
+            <li><cite></cite><a href="#">其他</a><i></i></li>
+
+=======
+>>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
+>>>>>>> d33cbc225b9aa3f4bf2ca6785dbb3816d39da6e6
            <li>
             <div class="header">
             <cite></cite>
@@ -332,29 +362,37 @@ $(function(){
             <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
             </ul>
         </li>
-        <li>
-        <ul class="menuson">
-           <li>
+            <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame" target="rightFrame">学费管理</a>
+            <a href="javascript:;" target="rightFrame">预约管理</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
-            <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
+<<<<<<< HEAD
+            <li><a href="javascript:;">预约申请</a></li>
+            <li><a href="javascript:;">预约记录</a></li>
             </ul>
             </li>
             <li>
             <div class="header">
             <cite></cite>
-            <a href="javascript:;" target="rightFrame" target="rightFrame">预约管理</a>
+            <a href="javascript:;" target="rightFrame">模拟考试</a>
             <i></i>
             </div>
             <ul class="sub-menus">
-            <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
-            <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
+            <li><a href="javascript:;">科一面试</a></li>
+            <li><a href="javascript:;">科二面试</a></li>
             </ul>
-            </li> -->
+            </li>
+
+=======
+            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            </ul>
+            </li>
+>>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
         </ul>
 
         </dd>

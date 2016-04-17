@@ -53,7 +53,7 @@ class ChargeModel extends Model {
 
 
     /**
-     * 收入报表
+     * 收入报表（hanqiming）
      */
     public function findvalue(){
         $sql="select money_type_id,sum(charge_money) from charge group by money_type_id";
