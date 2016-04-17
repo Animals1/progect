@@ -77,10 +77,28 @@ class WeixinController extends Controller {
    //文本类型推送消息
    private function receiveText($object)
    {
-       $funcFlag = 0;
-       $contentStr = "你发送的内容为：".$object->Content;
-       $resultStr = $this->transmitText($object, $contentStr, $funcFlag);
-        return $resultStr;
+       // $funcFlag = 0;
+       // $contentStr = "你发送的内容为：".$object->Content;
+       // $resultStr = $this->transmitText($object, $contentStr, $funcFlag);
+       //  return $resultStr;
+        $funcFlag = 0;
+        $keyword = trim($object->Content);
+        //urlencode可以把城市转化为%北京%（$object->ToUserName为开发者的微信号）
+        $url = "http://apix.sinaapp.com/weather/?appkey=".$object->ToUserName."&city=".urlencode($keyword); 
+        $output = file_get_contents($url);
+        $content = json_decode($output, true);
+        //如果有城市将返回的json串转化为数组，否则没有该城市那么将返回的我不是数组
+        if(is_array($content))
+        {
+          $result = $this->transmitNews($object, $content,$funcFlag);
+        }
+        else
+        {
+           $contentStr = "你发送的内容为：".$keyword;
+           $result = $this->transmitText($object, $contentStr, $funcFlag);
+        } 
+        
+        return $result;
    }
     
    private function receiveEvent($object)
@@ -113,9 +131,9 @@ class WeixinController extends Controller {
                         break;
                     case "phone":
                        $contentStr[] = array("Title" =>"手机官网", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html");
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/130327/1-13032F02503644.jpg", 
+                       "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index");
                        break;
                        case "route":
                        $contentStr[] = array("Title" =>"远达驾校", 
@@ -130,21 +148,21 @@ class WeixinController extends Controller {
                          "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/introduce/introduce");
                        break;  
                       case "test":
-                       $contentStr = array(0=>array("Title" =>"习近平出席政协十二届四次会议开幕会", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/1.jpg", 
-                       "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/introduce/introduce"),1=>array("Title" =>"辽宁原省委书记王珉涉严重违纪接受组织调查", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"金正恩回应对朝制裁议案:随时准备使用核弹头", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"表演艺术家葛存壮去世 系葛优父亲(图)", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"亚视今遣散所有员工停播 香港官方表遗憾", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
+                       $contentStr = array(0=>array("Title" =>"科目二弯道驾驶技巧", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/allimg/130405/1_2105083671.gif", 
+                       "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/introduce/introduce"),1=>array("Title" =>"科目一安全文明驾驶笔试知识点", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/allimg/130405/1_2103141941.gif", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"科目二安全文明驾驶笔试知识点", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/allimg/130405/1_2105083671.gif", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"科目三安全文明驾驶笔试知识点", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/allimg/130405/1_2112233301.gif", 
+                       "Url" =>"http://bishengforever.applinzi.com/group.html"),array("Title" =>"科目四安全文明驾驶笔试知识点", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/allimg/130405/1_2113449211.gif", 
                        "Url" =>"http://bishengforever.applinzi.com/group.html"));
                        break;  
                        case "online":
@@ -217,7 +235,7 @@ class WeixinController extends Controller {
           <CreateTime>%s</CreateTime>
           <MsgType><![CDATA[news]]></MsgType>
           <Content><![CDATA[]]></Content>
-          <ArticleCount>%s</ArticleCount>
+          <ArticleCount>".count($arr_item)."</ArticleCount>
           <Articles>
           $item_str</Articles>
           <FuncFlag>%s</FuncFlag>
