@@ -10,7 +10,7 @@ class ServiceController extends Controller {
 	*	查询当前教练的全部换车记录信息，
 	*/
 	public function getrepaircar(){
-		$name = "张三";
+		$name = $_COOKIE['username'];
 		$model = D('CarReplace');
 		$data = $model->getValue($name);
 		$page = $data['0'];
@@ -120,7 +120,7 @@ class ServiceController extends Controller {
 	*	维修记录
 	*/
 	public function repair(){
-		$name = "张三";
+		$name = $_COOKIE['username'];
 		$model = D('CarRepair');
 		$arr = $model->getValue($name);
 		print_r($arr);die;

@@ -15,7 +15,7 @@ class CoachModel extends Model {
      * */
     public function getValue($where,$order,$limit)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
     /*
      * 删除数据
