@@ -21,7 +21,7 @@ class StuOrderModel extends Model {
         $count      = $user->count();
         $page       = new \Think\Page($count,3);
         $show       = $page->show();
-        $arr = array($p,$list,$page);
+        $arr = array($p,$list,$show,$countx);
         return $arr;
     }
     /*
@@ -39,13 +39,14 @@ class StuOrderModel extends Model {
      * 查询取消预约记录 (xueyunhuan)
      * @$where  条件
      * */
-    public function noorder(){
+    public function noorder($user_id){
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->where("stu_order_status=0")->page($p,3)->select();
-        $count      = $this->count();
-        $page       = new \Think\Page($count,3);
+        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("role on role.role_id = coach.role_id")->join("staff on staff.role_id = role.role_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_order_status=0 AND stu_id = 2")->field('staff_name,class_name,add_time,time_section')->page($p,2)->select();
+        $count      = $this->where("stu_order_status = 0")->count();
+        $page       = new \Think\Page($count,2);
         $show       = $page->show();
-        $arr = array($p,$list,$page);
+        $arr = array($p,$list,$show,$count);
+        
         return $arr;
     }
 

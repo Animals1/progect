@@ -48,25 +48,52 @@ $(function(){
 </head>
 
 <body style="background:#fff3e1;">
-   
-    <div class="lefttop" id="school" style="cursor:pointer;"><span></span>驾校端</div>
+    <div class="lefttop" id="school" style="cursor:pointer;"><span></span>
+        <?php
+ if($_COOKIE['rolename']=="学员"){ echo "学员端"; }else{ echo "驾校端"; } ?>
+    </div>
 <div id='driving' style="display:block;">
     <dl class="leftmenu">
         
     <dd>
     <div class="title">
+<<<<<<< HEAD
     <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
+=======
+<<<<<<< HEAD
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $rolename?>
+=======
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+>>>>>>> b47caba4c6e300c4157beac213a67a64797ddf49
+>>>>>>> fc8d0cb0151029cfa913d7e272217224b8d40ef1
     </div>
         <ul class="menuson">
       <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
             <div class="header">
             <cite></cite>
+<<<<<<< HEAD
             <a href="javascript:void(0);"><?php echo $v['privilege_name']?></a>
+=======
+<<<<<<< HEAD
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name']?></a>
+=======
+            <a ><?php echo $v['privilege_name']?></a>
+>>>>>>> b47caba4c6e300c4157beac213a67a64797ddf49
+>>>>>>> fc8d0cb0151029cfa913d7e272217224b8d40ef1
             <i></i>
             </div>
             
             <ul class="sub-menus">
+<<<<<<< HEAD
             <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
+=======
+<<<<<<< HEAD
+            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/Admin/index" target="rightFrame"><?php echo $vv['privilege_name']?></a></li><?php endforeach; endif; ?>
+=======
+            <?php if(is_array($v["methods"])): foreach($v["methods"] as $key=>$vv): ?><li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name']?></a></li>
+            <!--/index.php/Home/Admin/index--><?php endforeach; endif; ?>
+>>>>>>> b47caba4c6e300c4157beac213a67a64797ddf49
+>>>>>>> fc8d0cb0151029cfa913d7e272217224b8d40ef1
             </ul>
            
         </li><?php endforeach; endif; ?>

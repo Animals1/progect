@@ -35,7 +35,12 @@
     </select> &nbsp;&nbsp;&nbsp;&nbsp;
         出生年月：<input type="text" class="sang_Calender" name="year" />
     </li>
-    <li><label>婚否：</label>
+    <li><label>婚否：</label><select name="marriage" id="">
+        <option value='1'>是</option>
+        <option value='2'>不是</option>
+    </select>
+    </li>
+    <li><label>籍贯：</label>
     <select name="birthplace" id="select" class="site">
       <option value="0">--请选择--</option>
         <foreach name="region" item="rev">
@@ -48,12 +53,9 @@
       <select name="birthplace2" id="select3" class="site">
         <option value="0">--请选择--</option>
     </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;
     </li>
-    <li><label>籍贯：</label><select name="marriage" id="">
-        <option value='1'>结婚</option>
-        <option value='2'>未结婚</option>
-    </select>
-    </li>
+    
     <li><label>民族：</label><input name="nation" type="text" class="dfinput" />&nbsp;&nbsp;&nbsp;&nbsp;
         身份证号：<input name="idcard" type="text" class="dfinput" />
     </li>
