@@ -58,11 +58,7 @@ class StaffModel extends Model {
 	}
 
 	
-		$db=D('area');
-		$rows = $db->where("parent_id = $id")->select();
-		return $rows;
-	
-	}
+		
 	
 	/*
 	 * 添加教练时查询的数据
@@ -141,14 +137,7 @@ class StaffModel extends Model {
 		$db=D("staff");
 		return $db->join('staff.staff_id = coach.coach_staff_id')->select();
 	}
-	/*
-	 * 其他员工查询
-	 * 作者：张捷
-	 */
-	public function staffcoachselect(){
-		$db=D("staff");
-		return $db->select();
-	}
+	
 	/*
 	 * 员工多条件查询
 	 * 作者：张捷

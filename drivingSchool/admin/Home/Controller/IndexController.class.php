@@ -329,7 +329,7 @@ class IndexController extends Controller {
         	$this->display('index');
         }
 
-<<<<<<< HEAD
+
 
         /*
         *   显示左边界面
@@ -347,6 +347,4 @@ class IndexController extends Controller {
         
        
 
-=======
->>>>>>> d33cbc225b9aa3f4bf2ca6785dbb3816d39da6e6
 }
