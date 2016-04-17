@@ -60,8 +60,15 @@ class FinanceController extends Controller {
         $arr = D('salary');
 
         $re = $arr->getvalue();
-        print_r($re);die;
-        $this->assign('re',$re);
+        $list = $re['0'];
+        $count = $re['1'];
+        $page = $re['2'];
+        $p = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
 
         $this->display('salary');
     }
