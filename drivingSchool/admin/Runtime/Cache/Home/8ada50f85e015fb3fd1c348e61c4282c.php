@@ -1,64 +1,47 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
     <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
     <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="/Public/text/javascript">
-    </script>
+</script> 
 
 
 </head>
 
 
 <body style="background:#FFF8ED;">
-<div class="rightinfo">
-
-    <div class="tools">
-
-        <ul class="toolbar">
-            <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
-        </ul>
-
-
-        <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>收费</li>
-        </ul>
-
-    </div>
-
-
+   <div class="rightinfo">
     <table class="tablelist">
         <thead>
         <tr>
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>欠费学员<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
-            <th>学员编号</th>
-            <th>费用日期</th>
-            <th>欠费类型</th>
-            <th>欠费金额（元）</th>
+            <th>预约教练姓名<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+            <th>预约课程</th>
+            <th>预约时刻</th>
+            <th>预约时间</th>
             <th>状态</th>
-            <th>操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php foreach($list as $v){?>
+        <?php  foreach ($list as $v) { ?>
         <tr>
             <td><input name="" type="checkbox" value="" /></td>
-            <td><?php echo $v['stu_name']; ?></td>
-            <td><?php echo $v['stu_sn']; ?></td>
-            <td><?php echo $v['arrears_time']; ?></td>
-            <td><?php echo $v['money_name']; ?></td>
-            <td><?php echo $v['arrears_money']; ?></td>
-            <td><?php echo $v['status_name']; ?></td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
+            <td><?php echo $v['staff_name']; ?></td>
+            <td><?php echo $v['class_name']; ?></td>
+            <td><?php echo $v['time_section']; ?></td>
+            <td><?php echo $v['add_time']; ?></td>
+            <td><?php  if ($v['stu_order_status']==0 ) { ?>
+               已取消 
+            <?php  }else{ ?> 
+            预约中
+            <?php } ?></td>
         </tr>
-        <?php }?>
+        <?php  } ?>
         </tbody>
     </table>
 
@@ -66,7 +49,10 @@
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
         <ul class="paginList">
+            <?php echo ($page); ?>
+            <!-- <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
             <li class="paginItem"><a href="javascript:;"><?php echo ($page); ?></a></li>
+            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li> -->
         </ul>
     </div>
 
@@ -89,15 +75,12 @@
 
     </div>
 
-
-
-
 </div>
 
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
-</script>
 
+</script>
 
 </body>
 

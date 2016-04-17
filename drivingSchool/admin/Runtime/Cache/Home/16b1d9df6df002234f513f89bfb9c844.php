@@ -63,7 +63,7 @@ $(function(){
       <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
             <div class="header">
             <cite></cite>
-            <a ><?php echo $v['privilege_name']?></a>
+            <a href="javascript:void(0);"><?php echo $v['privilege_name']?></a>
             <i></i>
             </div>
             

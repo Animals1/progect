@@ -1,0 +1,6 @@
+6.00 - 7.00   controller 层调用信息 显示页面noorder personinfo
+7.00-8.00    controller 层调用信息 显示页面stuorder   途中有一错误。 数据库中数据显示不全
+		已解决
+8.00-9.00	controller 层调用信息 显示页面mycharge完善controller  
+		调用各个页面
+9.00-9.30       git上传代码。 解决冲突，总结面试题、
