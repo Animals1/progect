@@ -16,6 +16,7 @@ class StudentController extends Controller {
        	$model = D('Student');
        	$arr = $model->getshow();
        	$this->assign('arr',$arr);
+       	//print_r($arr);die;
        	$this->display('personinfo');
         }
       /*
@@ -49,9 +50,12 @@ class StudentController extends Controller {
        	$p = $arr['0'];
        	$list = $arr['1'];
        	$page = $arr['2'];
-       	$this->assign('$page',$page);
+       	$count = $arr['3'];
+       	//print_r($page);die;
+       	$this->assign('page',$page);
        	$this->assign('p',$p);
        	$this->assign('list',$list);
+       	$this->assign('count',$count);
        	$this->display('mycharge');
         }
 
@@ -68,9 +72,12 @@ class StudentController extends Controller {
        	$p = $arr['0'];
        	$list = $arr['1'];
        	$page = $arr['2'];
-       	$this->assign('$page',$page);
+       	$count = $arr['3'];
+       	$this->assign('page',$page);
        	$this->assign('p',$p);
        	$this->assign('list',$list);
+       	$this->assign('count',$count);
+       	//print_r($list);die;
        	$this->display('noorder');
         }
 }

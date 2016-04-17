@@ -1,4 +1,4 @@
-
+<?php if (!defined('THINK_PATH')) exit();?>
 
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
 </script> 
 
@@ -22,15 +22,15 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="__PUBLIC__/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="__PUBLIC__/admin/images/t04.png" /></span>统计</li>
+            <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
+            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
+            <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
+            <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
         </ul>
 
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span>我要请假</li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
         </ul>
 
     </div>
@@ -40,7 +40,7 @@
         <thead>
         <tr>
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>请假时间<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
+            <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>销假时间</th>
             <th>请假类型</th>
             <th>请假天数</th>
@@ -84,7 +84,7 @@
         <div class="tiptop"><span>提示信息</span><a></a></div>
 
         <div class="tipinfo">
-            <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
+            <span><img src="/Public/admin/images/ticon.png" /></span>
             <div class="tipright">
                 <p>是否确认对信息的修改 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
@@ -111,4 +111,3 @@
 </body>
 
 </html>
-

@@ -47,11 +47,9 @@ class ChargeModel extends Model {
             $count      = $user->where('charge_id>0')->count();
             $page       = new \Think\Page($count,2);
             $show       = $page->show();
-            $arr = array($p,$list,$show);
+            $arr = array($p,$list,$show,$count);
             return $arr;
     }
-
-
     /**
      * 收入报表（hanqiming）
      */
