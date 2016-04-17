@@ -191,27 +191,17 @@ $(function(){
             <ul class="sub-menus">
 
             <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆登记</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">新增车辆</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆出勤</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆维修</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">维修记录</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆更换</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">油气添加</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车管理</a></li>
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">班车设置</a></li>
-
-            <li><a href="/index.php/Home/Administration/vehsettingadd" target="rightFrame">车辆设置</a></li>
             <li><a href="/index.php/Home/Administration/registration" target="rightFrame">车辆登记</a></li>
             <li><a href="/index.php/Home/Administration/addveh" target="rightFrame">新增车辆</a></li>
             <li><a href="/index.php/Home/Administration/vehgoout" target="rightFrame">车辆出勤</a></li>
             <li><a href="/index.php/Home/Administration/vehservice" target="rightFrame">车辆维修</a></li>
             <li><a href="/index.php/Home/Administration/servicerecord" target="rightFrame">维修记录</a></li>
             <li><a href="/index.php/Home/Administration/vehreplace" target="rightFrame">车辆更换</a></li>
+                <li><a href="/index.php/Home/Administration/vehreplaceadd" target="rightFrame">车辆更换添加</a></li>
             <li><a href="/index.php/Home/Administration/gasadd" target="rightFrame">油气添加</a></li>
+                <li><a href="/index.php/Home/Administration/gasrecord" target="rightFrame">油气添加记录</a></li>
             <li><a href="/index.php/Home/Administration/buscontrol" target="rightFrame">班车管理</a></li>
             <li><a href="/index.php/Home/Administration/bussetting" target="rightFrame">班车设置</a></li>
-
             </ul>
         </li>
          <li>
@@ -221,11 +211,6 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-
-            <li><a href="javascript:;" target="rightFrame">学员报名</a></li>
-            <li><a href="javascript:;" target="rightFrame">在校学员</a></li>
-            <li><a href="javascript:;" target="rightFrame">入学登记</a></li>
-            <li><a href="javascript:;" target="rightFrame">投诉管理</a></li>
 
             <li><a href="/index.php/Home/Administration/stureg" target="rightFrame">学员报名</a></li>
             <li><a href="/index.php/Home/Administration/stuinschool" target="rightFrame">在校学员</a></li>
@@ -241,11 +226,6 @@ $(function(){
             <i></i>
             </div>                
             <ul class="sub-menus">
-
-            <li><a href="javascript:;"  target="rightFrame" >教练信息</a></li>
-            <li><a href="javascript:;"  target="rightFrame" >教练分组</a></li>
-            <li><a href="javascript:;"  target="rightFrame" >教练学时</a></li>
-            <li><a href="javascript:;"  target="rightFrame" >教练排课</a></li>
 
             <li><a href="/index.php/Home/Administration/trainmsg" target="rightFrame">教练信息</a></li>
             <li><a href="/index.php/Home/Administration/traingroup" target="rightFrame">教练分组</a></li>
@@ -269,7 +249,7 @@ $(function(){
 
        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-<<<<<<< HEAD
+
         <li>
             <div class="header">
                 <cite></cite>
@@ -313,12 +293,11 @@ $(function(){
             </ul>
         </li>
 
-=======
         <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
->>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
+
     </ul>
     
     </dd> 
@@ -331,12 +310,19 @@ $(function(){
     <dl class="leftmenu" >
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
         <ul class="menuson">
+
+
+            <li><cite></cite><a href="#">自定义</a><i></i></li>
+            <li><cite></cite><a href="#">常用资料</a><i></i></li>
+            <li><cite></cite><a href="#">信息列表</a><i></i></li>
+            <li><cite></cite><a href="#">其他</a><i></i></li>
+
            <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">个人中心</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
             <li><a href="/index.php/Home/Student/index"  target="rightFrame">个人信息</a></li>
             </ul>
@@ -346,16 +332,35 @@ $(function(){
             <cite></cite>
             <a href="javascript:;" target="rightFrame">预约管理</a>
             <i></i>
-            </div>                
+            </div>
             <ul class="sub-menus">
-            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
-            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+
+            <li><a href="javascript:;">预约申请</a></li>
+            <li><a href="javascript:;">预约记录</a></li>
             </ul>
             </li>
+            <li>
+            <div class="header">
+            <cite></cite>
+            <a href="javascript:;" target="rightFrame">模拟考试</a>
+            <i></i>
+            </div>
+            <ul class="sub-menus">
+            <li><a href="javascript:;">科一面试</a></li>
+            <li><a href="javascript:;">科二面试</a></li>
+            </ul>
+            </li>
+
+
+            <!--<li><a href="javascript:;"  target="rightFrame">预约申请</a></li>-->
+            <!--<li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>-->
+            <!--<li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>-->
+            </ul>
+            </li>
+
         </ul>
-        
-        </dd> 
+
+        </dd>
     </dl>
 
 </div>

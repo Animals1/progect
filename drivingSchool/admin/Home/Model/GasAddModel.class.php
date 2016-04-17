@@ -31,12 +31,8 @@ class GasAddModel extends Model {
     public function addCarreplace($data)
     {
         $data['gas_addtime']=time();
-<<<<<<< HEAD
-        return $add=$this->add($data);
 
-=======
-		return $this->add($data);
->>>>>>> b91de226a61cb644d84c517d4c1529d10b40c164
+        return $add=$this->add($data);
     }
 
     

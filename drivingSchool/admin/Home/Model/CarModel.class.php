@@ -6,7 +6,8 @@
  * */
 namespace Home\Model;
 use Think\Model;
-class CarModel extends Model {
+class CarModel extends Model
+{
     /*
      * 查询车辆登记数据
      * @$where  条件
@@ -18,17 +19,27 @@ class CarModel extends Model {
      * @car_type 可预约类型
      * @
      * */
-    public function getValue($where=1,$order,$limit)
+    public function getValues()
     {
-        return $this->join("coach_model on car.model_id=coach_model.model_id")->join("car_status on car.car_status=car_status.status_id")->join("coach_motor_model on car.motor_id=coach_motor_model.motor_id")->join("car_type on car.type_id=car_type.type_id")->where($where)->order("$order")->limit($limit)->select();
+        return $this->join("coach_model on car.model_id=coach_model.model_id")->join("coach_motor on car.motor_id=coach_motor.motor_id")->join("car_goout on car.out_id=car_goout.out_id")->join("car_status on car_goout.out_status_id=car_status.status_id")->join('car_repair on car.repair_id=car_repair.repair_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->select();
     }
+
     /*
      * 修改数据
      *@$where   条件
+     * ->join('car_repair on car.repair_id=car_repair.repair_id')
      * */
-    public function updateValue($where=1,$data)
+    public function updateValue($where = 1, $data)
     {
         return $this->where($where)->save($data);
+    }
+
+    /*
+     * 删除车辆表信息
+     * */
+    public function delCar($where)
+    {
+        return $this->where($where)->delete();
     }
 
     /*
@@ -36,16 +47,35 @@ class CarModel extends Model {
      * */
     public function carModel()
     {
-        $model=M('coach_model');
+        $model = M('CoachDriving');
         return $model->select();
     }
+
+    /*
+     * 可预约类型
+     */
+    public function carType()
+    {
+        $model=M('CarType');
+        return $model->select();
+    }
+
 
     /*
    * 教练车型下拉框
    * */
     public function carMotor()
     {
-        $model=M('coach_motor_model');
+        $model = M('CoachMotor');
+        return $model->select();
+    }
+
+    /*
+     * 车辆状态
+     * */
+    public function carStatus()
+    {
+        $model=M('CarStatus');
         return $model->select();
     }
 
