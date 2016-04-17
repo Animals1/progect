@@ -143,7 +143,7 @@ class StaffModel extends Model {
 	public function staffsearch($data){
 	
 		$db = D('staff');
-		$datas = ''
+		$datas = '';
 		if ($data['staff_sn'] != '') {
 			$datas .= 'staff_sn = '.$data['staff_sn'];
 		}else if ($data['staff_name' != '']){
@@ -190,6 +190,17 @@ class StaffModel extends Model {
 	*/
 	public function getshow(){
 		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
+	}
+
+
+	/*
+	*	个人中心-个人信息
+	*	by 郭旭峰
+	*/
+	public function everyoneabout(){
+		//接收cookie
+		$username = $_COOKIE["username"];
+		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
 	}
 }
 

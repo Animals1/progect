@@ -8,7 +8,7 @@ class IndexController extends Controller {
     */
 
     public function index(){
-        if($_COOKIE["username"]){
+
         //接收用户登录信息
         $uname = $_POST['uname'];
 
@@ -38,6 +38,7 @@ class IndexController extends Controller {
                     cookie('username',$username,time()+3600*24*7);
                     cookie('userpwd',$userpwd,time()+3600*24*7);
                     cookie('userip',$userip,time()+3600*24*7);
+                    
                     
                     //判断角色
                     $role = D("admin");
@@ -311,10 +312,11 @@ class IndexController extends Controller {
             }else{
                 $this->error("用户名或密码错误");
             }
-        }
+        
         }else{
             $this->error("请先登录",U("Login/adminlogin"));
         }
+
         
     
     }
@@ -322,8 +324,8 @@ class IndexController extends Controller {
 
 
 
-        public function personinfo()
-        {
+
+        public function personinfo(){
         	$this->display('index');
         }
 
