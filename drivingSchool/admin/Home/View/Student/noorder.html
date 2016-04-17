@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -9,6 +6,8 @@
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
     <script type="__PUBLIC__/text/javascript">
 
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <script type="__PUBLIC__/text/javascript">
 </script> 
 
 
@@ -36,7 +35,11 @@
             <td><?php echo $v['class_name'];  ?></td>
             <td><?php echo $v['time_section'];  ?></td>
             <td><?php echo $v['add_time'];  ?></td>
-            <td>已取消</td>
+            <td><?php  if ($v['stu_order_status']==0 ) { ?>
+               已取消 
+            <?php   }else{ ?> 
+            预约中
+            <?php } ?></td>
         </tr>
         <?php  } ?>
         </tbody>

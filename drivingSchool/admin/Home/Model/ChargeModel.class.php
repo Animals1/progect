@@ -16,11 +16,11 @@ class ChargeModel extends Model {
         $User = M('charge'); // 实例化User对象
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
         // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-        $list = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('charge_id>0')->order('charge_id desc')-> page($p.',3')->select();
+        $list = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('charge_id>0')->order('charge_id desc')-> page($p.',2')->select();
         $count      = $User->where('charge_id>0')->count();
-        $page       = new \Think\Page($count,3);
+        $page       = new \Think\Page($count,2);
         $show       = $page->show();
-        $data = array($list,$count,$show);
+        $data = array($list,$count,$show,$p);
         return $data;
     }
     /*

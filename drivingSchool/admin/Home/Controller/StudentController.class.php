@@ -33,7 +33,7 @@ class StudentController extends Controller {
        	$list = $arr['1'];
        	$page = $arr['2'];
        	$count = $arr['3'];
-       	print_r($list);die;
+       	//print_r($list);die;
        	$this->assign('count',$count);
        	$this->assign('page',$page);
        	$this->assign('p',$p);
@@ -83,4 +83,18 @@ class StudentController extends Controller {
        	//print_r($list);die;
        	$this->display('noorder');
         }
+      /*
+	 * （xueyunhuan）
+	 *科1考题
+	*/
+      public function one(){
+      	$this->display('ke1');
+      }
+      /*
+	 * （xueyunhuan）
+	 *科1考题
+	*/
+      public function two(){
+      	$this->display('ke2');
+      }
 }
