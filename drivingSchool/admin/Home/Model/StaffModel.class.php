@@ -204,6 +204,41 @@ class StaffModel extends Model {
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
 	}
+
+
+	/*
+	*	个人信息--字段修改
+	*	by 郭旭峰
+	*/
+	public function updatefield($field){
+		$username = $_COOKIE["username"];
+		if($field==1){
+			//接收字段
+			$newstaff_curaddress = $_POST["staff_curaddress"];
+			$data["staff_curaddress"] = $newstaff_curaddress;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}else if($field==2){
+			//接收字段
+			$newstaff_tel = $_POST["staff_tel"];
+			$data["staff_tel"] = $newstaff_tel;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}else{
+			//接收字段
+			$newstaff_email = $_POST["staff_email"];
+			$data["staff_email"] = $newstaff_email;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}
+	}
+
+
+
+	/*
+	*	个人信息--字段修改界面显示
+	*/
+	public function showupdatefield(){
+		$username = $_COOKIE["username"];
+		return $this->Table("staff")->where("staff_name='$username'")->select();
+	}
 }
 
 ?>

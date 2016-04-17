@@ -75,10 +75,42 @@ class IndexController extends Controller {
    //文本类型推送消息
    private function receiveText($object)
    {
-       $funcFlag = 0;
-       $contentStr = "你发送的内容为：".$object->Content;
-       $resultStr = $this->transmitText($object, $contentStr, $funcFlag);
-        return $resultStr;
+       $keyword = trim($object->Content);
+       
+        //自动回复模式
+        if (strstr($keyword, "你好")){
+            $content = "欢迎来到远达驾校";
+        }else if(strstr($keyword,"驾校")){
+            $content = "欢迎来到远达驾校";
+        }else if (strstr($keyword, "表情")){
+            $content = "微笑：/::)\n乒乓：/:oo\n中国：".$this->bytes_to_emoji(0x1F1E8).$this->bytes_to_emoji(0x1F1F3)."\n仙人掌：".$this->bytes_to_emoji(0x1F335);
+        }else if (strstr($keyword, "科目一考试")){
+            $content = array();
+            $content[] = array("Title"=>"科目一考试",  "Description"=>"驾照考试科目一，又称科目一理论考试、驾驶员理论考试，是机动车驾驶证考核的一部分。根据《机动车驾驶证申领和使用规定》，考试内容包括驾车理论基础、道路安全法律法规、地方性法规等相关知识。考试形式为上机考试，100道题，90分及以上过关。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/kemuyi.jpg");
+        }else if (strstr($keyword, "科目二考试")){
+            $content = array();
+            $content[] = array("Title"=>"科目二考试",  "Description"=>"科目二，又称小路考，是机动车驾驶证考核的一部分，是场地驾驶技能考试科目的简称，考试项目包括倒车入库、侧方停车、坡道定点停车和起步、直角转弯、曲线行驶五项必考。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test2.jpg");
+        }else if (strstr($keyword, "科目三考试")){
+            $content = array();
+            $content[] = array("Title"=>"科目三考试",  "Description"=>"科目三，又称大路考，是机动车驾驶证考核的一部分，是机动车驾驶人考试中道路驾驶技能和安全文明驾驶常识考试科目的简称。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test3.jpg");
+        }else if(strstr($keyword, "天气")){
+            $content = array();
+            $content[] = array("Title"=>"天气",  "Description"=>"科目三，又称大路考，是机动车驾驶证考核的一部分，是机动车驾驶人考试中道路驾驶技能和安全文明驾驶常识考试科目的简称。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test3.jpg");
+        }
+        else{
+            $content = date("Y-m-d H:i:s",time())."\n\n".'<a href="http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index">远达驾校</a>';
+        }
+
+        if(is_array($content)){
+            if (isset($content[0])){
+                $result = $this->transmitNews($object, $content);
+            }else if (isset($content['MusicUrl'])){
+                $result = $this->transmitMusic($object, $content);
+            }
+        }else{
+            $result = $this->transmitText($object, $content);
+        }
+        return $result;
    }
     
    private function receiveEvent($object)
@@ -115,33 +147,32 @@ class IndexController extends Controller {
                        "PicUrl" =>"http://101.200 .201.202/Tp/Public/image/studycar.jpg", 
                        "Url" =>"http://101.200.201.202/Tp/Application/Home/View/Studycar/studycar.html");
                        break;
-                    case "romantic":
-                       $contentStr[] = array("Title" =>"浪漫四月", 
-                        "Description" =>"暖男躲避战，看你能躲多远！真爱挑战。", 
-                        "PicUrl" =>"http://101.200.201.202/Tp/Public/image/phone.jpg", 
-                        "Url" =>"http://bishengforever.applinzi.com/group.html");
+                    case "phone":
+                       $contentStr[] = array("Title" =>"手机官网", 
+                        "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://www.haijiaw.com/uploads222/130327/1-13032F02503644.jpg", 
+                       "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index");
                        break;
-                     case "class":
-                       $contentStr = array(0=>array("Title" =>"班型介绍", 
-                        "Description" =>"峰艺工作室主要从平面设计，软件开发，网站设计，网站开发的公司，位于北京中关村南路。", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/1.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
-                       array("Title" =>"平日班", 
-                        "Description" =>"平日班", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
-                       array("Title" =>"周末班", 
-                        "Description" =>"周末班", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
-                       array("Title" =>"全周班", 
-                        "Description" =>"全周班", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/group.jpg", 
-                       "Url" =>"http://bishengforever.applinzi.com/group.html"),
-                     );
-                       break;  
+                    case "class":
+                        $contentStr[] = array("Title" =>"班型介绍", 
+                          "Description" =>"远达驾校成立于1992年10月。作为驾驶技能教学部门，驾校承担着公安大学在校学生驾驶培训实习任务，并且为社会人士考取驾照提供优质服务。", 
+                         "PicUrl" =>"http://101.200.202.203/weixin/thinkphp/Public/images/20150922190354_23972.jpg", 
+                         "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/introduce/introduce");
+                       break; 
+                    case "online":
+                       $contentStr[] = array("Title" =>"在线报名", 
+                        "Description" =>"  远达驾校成立于1992年10月。作为驾驶技能教学部门，驾校承担着公安大学在校学生驾驶培训实习任务，并且为社会人士考取驾照提供优质服务。 ", 
+                        "PicUrl" =>"http://101.200.202.203/weixin/thinkphp/Public/images/201309171626498422.jpg", 
+                        "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/online/online");
+                        break;
+                    case "mitting":
+                      $contentStr[] = array("Title" =>"优惠春天", 
+                        "Description" =>"  远达驾校成立于1992年10月。作为驾驶技能教学部门，驾校承担着公安大学在校学生驾驶培训实习任务，并且为社会人士考取驾照提供优质服务。 ", 
+                        "PicUrl" =>"http://101.200.202.203/weixin/thinkphp/Public/images/83d342e25e504363a412a2887a78b30c.gif", 
+                        "Url" =>"http://101.200.202.203/weixin/thinkphp/index.php/Home/spring/spring");
+                        break;
                     default:
-                       $contentStr[] = array("Title" =>"错误默认", 
+                       $contentStr[] = array("Title" =>"驾考宝典", 
                         "Description" =>"远程驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，海淀驾校永远欢迎您的到来!", 
                        "PicUrl" =>"http://bishengforever.applinzi.com/images/logo.png", 
                         "Url" =>"http://bishengforever.applinzi.com/about.html");
@@ -208,5 +239,20 @@ class IndexController extends Controller {
         return $resultStr;
     }
 
+    //字节转Emoji表情
+    function bytes_to_emoji($cp)
+    {
+        if ($cp > 0x10000){       # 4 bytes
+            return chr(0xF0 | (($cp & 0x1C0000) >> 18)).chr(0x80 | (($cp & 0x3F000) >> 12)).chr(0x80 | (($cp & 0xFC0) >> 6)).chr(0x80 | ($cp & 0x3F));
+        }else if ($cp > 0x800){   # 3 bytes
+            return chr(0xE0 | (($cp & 0xF000) >> 12)).chr(0x80 | (($cp & 0xFC0) >> 6)).chr(0x80 | ($cp & 0x3F));
+        }else if ($cp > 0x80){    # 2 bytes
+            return chr(0xC0 | (($cp & 0x7C0) >> 6)).chr(0x80 | ($cp & 0x3F));
+        }else{                    # 1 byte
+            return chr($cp);
+        }
+    }
+
+    //
  
 }

@@ -175,7 +175,7 @@ class IndexController extends Controller {
 
                 }else{
                     //cookie操作
-                    echo "123";
+                    //echo "123";
                     //cookie操作+密码项
                     //id、用户名都存入cookie
                     $userid = $arr[0]["admin_id"];

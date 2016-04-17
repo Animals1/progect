@@ -15,13 +15,12 @@ class StuOrderModel extends Model {
      * */
     public function getshow($user_id)
     {
-        $user = M('stu_order');
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join('student on student.stu_id = stu_order.stu_id')->join('coach on coach.coach_id = stu_order.coach_id')->where("user_id=2")->page($p,3)->select();
-        $count      = $user->count();
-        $page       = new \Think\Page($count,3);
+        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("role on role.role_id = coach.role_id")->join("staff on staff.role_id = role.role_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_id = 2")->field('staff_name,class_name,add_time,time_section,stu_order_status')->page($p,2)->select();
+        $count      = $this->count();
+        $page       = new \Think\Page($count,2);
         $show       = $page->show();
-        $arr = array($p,$list,$show,$countx);
+        $arr = array($p,$list,$show,$count);
         return $arr;
     }
     /*
@@ -41,7 +40,7 @@ class StuOrderModel extends Model {
      * */
     public function noorder($user_id){
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("role on role.role_id = coach.role_id")->join("staff on staff.role_id = role.role_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_order_status=0 AND stu_id = 2")->field('staff_name,class_name,add_time,time_section')->page($p,2)->select();
+        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("role on role.role_id = coach.role_id")->join("staff on staff.role_id = role.role_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_order_status=0 AND stu_id = 2")->field('staff_name,class_name,add_time,time_section,stu_order_status')->page($p,2)->select();
         $count      = $this->where("stu_order_status = 0")->count();
         $page       = new \Think\Page($count,2);
         $show       = $page->show();
