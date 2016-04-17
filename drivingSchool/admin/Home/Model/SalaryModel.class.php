@@ -23,7 +23,7 @@ class SalaryModel extends Model {
         $count      = $User->where('salary_id>0')->count();
         $page       = new \Think\Page($count,3);
         $show       = $page->show();
-        $data = array($list,$count,$show);
+        $data = array($list,$count,$show,$p);
         return $data;
     }
     /*
