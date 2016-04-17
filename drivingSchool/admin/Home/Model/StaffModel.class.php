@@ -37,12 +37,28 @@ class StaffModel extends Model {
 	 * 作者：张捷
 	 */
 	public function linkage($id){
-	
-		$db=D('area');
-		$rows = $db->where("parent_id = $id")->select();
-		return $rows;
-	
+
+		$db=D('region');
+		if (isset($id)) {
+			$rows = $db->where("parent_id = $id")->select();
+			return $rows;
+		}else{
+			$rows = $db->where("parent_id = 1")->select();
+			return $rows;
+		}
+
 	}
+	/*
+	 * 角色查询
+	 * 作者：张捷
+	 */
+	public function roleselect(){
+		$db = D('role');
+		return $db->select();
+	}
+
+	
+		
 	
 	/*
 	 * 添加教练时查询的数据
@@ -55,7 +71,7 @@ class StaffModel extends Model {
 		$grade = D('coach_grade');
 		$quality = D('coach_quality');
 		$coach = D('coach_model');
-		$coachmotor = D('coach_motor_model');
+		$coachmotor = D('coach_motor');
 		$data[] = $drivingcard->select();
 		$data[] = $grade->select();
 		$data[] = $quality->select();
@@ -68,16 +84,9 @@ class StaffModel extends Model {
 	 * 员工添加
 	 * 作者：张捷	
 	 */
-	public function staffadd($rows){
+	public function staffadd($img,$rows){
 		$db=D("staff");
 		$coach = D('coach');
-		$upload = new \Think\Upload();   
-	    $upload->maxSize   =     3145728 ;
-	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');   
-	    $upload->rootPath  =      './';
-	    $upload->savePath  =      './Public/Uploads/';  
-	    $info   =   $upload->upload(); 
-	    $img = $info['photo']['md5'].'.'.$info['photo']['ext'];
 		$data['staff_photo']=$img;
 		$data['staff_name'] = $rows['name'];
 		$data['staff_sn'] = $rows['sn'];
@@ -112,9 +121,9 @@ class StaffModel extends Model {
 			$codata['motor_id'] = $rows['motor_id'];
 			$core = $coach->create($codata);
 			if ($re && $core){
-				return ture;
+				return true;
 			}else{
-				return folse;
+				return false;
 			}
 		}else{
 			return $re = $db->create($data);
@@ -128,14 +137,7 @@ class StaffModel extends Model {
 		$db=D("staff");
 		return $db->join('staff.staff_id = coach.coach_staff_id')->select();
 	}
-	/*
-	 * 其他员工查询
-	 * 作者：张捷
-	 */
-	public function staffselect(){
-		$db=D("staff");
-		return $db->select();
-	}
+	
 	/*
 	 * 员工多条件查询
 	 * 作者：张捷
@@ -143,7 +145,7 @@ class StaffModel extends Model {
 	public function staffsearch($data){
 	
 		$db = D('staff');
-		$datas = ''
+		$datas = '';
 		if ($data['staff_sn'] != '') {
 			$datas .= 'staff_sn = '.$data['staff_sn'];
 		}else if ($data['staff_name' != '']){
@@ -190,6 +192,52 @@ class StaffModel extends Model {
 	*/
 	public function getshow(){
 		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
+	}
+
+
+	/*
+	*	个人中心-个人信息
+	*	by 郭旭峰
+	*/
+	public function everyoneabout(){
+		//接收cookie
+		$username = $_COOKIE["username"];
+		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
+	}
+
+
+	/*
+	*	个人信息--字段修改
+	*	by 郭旭峰
+	*/
+	public function updatefield($field){
+		$username = $_COOKIE["username"];
+		if($field==1){
+			//接收字段
+			$newstaff_curaddress = $_POST["staff_curaddress"];
+			$data["staff_curaddress"] = $newstaff_curaddress;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}else if($field==2){
+			//接收字段
+			$newstaff_tel = $_POST["staff_tel"];
+			$data["staff_tel"] = $newstaff_tel;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}else{
+			//接收字段
+			$newstaff_email = $_POST["staff_email"];
+			$data["staff_email"] = $newstaff_email;
+			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
+		}
+	}
+
+
+
+	/*
+	*	个人信息--字段修改界面显示
+	*/
+	public function showupdatefield(){
+		$username = $_COOKIE["username"];
+		return $this->Table("staff")->where("staff_name='$username'")->select();
 	}
 }
 

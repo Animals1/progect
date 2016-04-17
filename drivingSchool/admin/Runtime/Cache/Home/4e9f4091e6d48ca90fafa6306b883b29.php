@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<<<<<<< HEAD
 <title>信息管理系统-uimaker.com</title>
+=======
+<title>驾校-信息管理系统</title>
+>>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
 
@@ -23,7 +27,11 @@
 <div class="logintop">    
     <span>欢迎进入驾校管理系统</span>    
     <ul>
+<<<<<<< HEAD
     <li><a href="/index.php/Home/Index/index">回首页</a></li>
+=======
+    <li><a href="/index.php/Home/Login/index">回首页</a></li>
+>>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
     <li><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
     </ul>    
@@ -46,7 +54,11 @@
     
     </div>
     
+<<<<<<< HEAD
     <div class="loginbm">版权所有  2014&nbsp;&nbsp;&nbsp; <strong>uimaker.com</strong> &nbsp;&nbsp;&nbsp;仅供学习交流，勿用于任何商业用途</div>
+=======
+   
+>>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
 	
     
 </body>

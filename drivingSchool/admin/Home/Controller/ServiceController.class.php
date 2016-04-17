@@ -12,20 +12,68 @@ class ServiceController extends Controller {
 	public function getrepaircar(){
 		$name = "张三";
 		$model = D('CarReplace');
-		$arr = $model->getValue($name);
-		print_r($arr);die;
+		$data = $model->getValue($name);
+		$page = $data['0'];
+		$arr = $data['1'];
+		$this->assign('arr',$arr);
+		$this->assign('page',$page);
+    	$this->display('changecar');
 		
 	}
 	/**
 	*	删除一条数据
 	*/
 	public function delrepaircar(){
-		$id = '1';
-		$where = "";
+		$id = $_POST['id'];
+		$where = "replace_id='$id'";
 		$model = D('CarReplace');
 		$arr = $model->delValue($where);
-		print_r($arr);die;
+		echo $arr;
 		
+	}
+	/**
+	*	修改一条数据
+	*/
+	public	function updaterepaircar(){
+		$id = $_GET['id'];
+		$model = D('CarReplace');
+		$arr = $model->getoneValue($id);
+		
+		if($_POST){
+			$replace_name = $_POST['replace_name'];
+			$replace_number_before = $_POST['replace_number_before'];
+			$replace_number_after = $_POST['replace_number_after'];
+			$replace_reason = $_POST['replace_reason'];
+			$deal_name = $_POST['deal_name'];
+			
+			if($replace_name == $arr['replace_name']  & $replace_number_before == $arr['replace_number_before'] 
+			& $replace_number_after ==$arr['replace_number_after'] & $replace_reason == $arr['replace_reason'] 
+			& $deal_name == $arr['deal_name']){
+				echo "<script>alert('没有修改，不能提交~');window.history.back(-1);</script>";die;
+			}
+			
+			$data['replace_name'] = $replace_name;
+			$data['replace_number_before'] = $replace_number_before;
+			$data['replace_number_after'] = $replace_number_after;
+			$data['replace_reason'] = $replace_reason;
+			$data['deal_name'] = $deal_name;
+			$data['replace_time'] = time();
+			
+			
+			
+			$model = D('CarReplace');
+			$res = $model->add($data);
+			if($res){
+				$this->redirect("Service/getrepaircar");
+			}
+			else
+			{
+				echo "<script>alert('添加失败');window.history.back(-1);</script>";die;
+			}
+		}
+		
+		$this->assign('data',$arr);
+		$this->display('uchangecar');
 	}
 	/**
 	*	添加一条维修记录

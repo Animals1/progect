@@ -34,7 +34,11 @@ $(function(){
     </ul>
      
     <div class="user">
+<<<<<<< HEAD
     <span>admin</span>
+=======
+    <span><?php echo $_COOKIE['username'];?></span>
+>>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
     <i>消息</i>
     <b>5</b>
     </div>    

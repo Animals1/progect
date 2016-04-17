@@ -7,7 +7,7 @@ class ContinuityModel extends Model {
 	*	记录登陆天数
 	*/
 	public function descsele(){
-		return $this->Table("continuity")->order("c_id desc")->select();
+		return $this->Table("continuity")->order("id desc")->select();
 	}
 
 
@@ -15,9 +15,9 @@ class ContinuityModel extends Model {
 	*	登陆记录添加
 	*/
 	public function continuityadd(){
+		$time = time();
 		//接收值
-		$data[""] = ;
-		$data[""] = ;
+		$data["time"] = $time;
 		return $this->Table("continuity")->add($data);
 	}
 
