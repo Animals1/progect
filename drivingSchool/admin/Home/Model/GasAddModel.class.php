@@ -32,7 +32,9 @@ class GasAddModel extends Model {
     {
         $data['gas_addtime']=time();
 
+
         return $add=$this->add($data);
+
     }
 
     
