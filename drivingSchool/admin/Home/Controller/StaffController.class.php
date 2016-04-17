@@ -12,7 +12,7 @@ class StaffController extends Controller {
     	$coach = $staff->satffcoach();
     	$region = $staff->linkage();
     	$this->assign('role',$role);
-    	$this->assign('region',$region);
+        $this->assign('region',$region);
     	$this->assign('coach',$coach);
         $this->display('add');
     }
@@ -21,5 +21,16 @@ class StaffController extends Controller {
     	$staff = D('staff');
     	$region = $staff->linkage($id);
     	echo json_encode($region);
+    }
+    public function adds(){
+       $staff = D('staff');
+       $area = $staff->area($_POST);
+       if ($area['role'] == '1') {
+           $id = $staff->iddeal($area);
+           $data = $staff->dealtime($id);
+       }else{
+           $data = $staff->dealtime($area);
+       }
+       
     }
 }

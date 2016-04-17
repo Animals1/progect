@@ -23,7 +23,7 @@
     <div class="mainindex">
         
     <div class="formtitle"><span>基本信息</span></div>
-    <form action="__URL__/upload" enctype="multipart/form-data" method="post" >
+    <form action="__APP__/Home/Staff/adds" enctype="multipart/form-data" method="post" >
     <ul class="forminfo">
     <li><label>员工照片</label><input name="img" type="file" /></li>
     <li><label>姓名：</label><input name="name" type="text" class="dfinput" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -54,27 +54,53 @@
         <option value="0">--请选择--</option>
     </select>
     &nbsp;&nbsp;&nbsp;&nbsp;
+    户口所在地：
+    <select name="account" id="select" class="site">
+      <option value="0">--请选择--</option>
+        <foreach name="region" item="rev">
+            <option value="{$rev.region_id}">{$rev.region_name}</option>
+        </foreach>
+    </select>
+    <select name="account1" id="select2" class="site">
+        <option value="0">--请选择--</option>
+      </select>
+      <select name="account2" id="select3" class="site">
+        <option value="0">--请选择--</option>
+    </select>
     </li>
-    
+    <li><label>现住地址：</label>
+    <select name="curaddress" id="select" class="site">
+      <option value="0">--请选择--</option>
+        <foreach name="region" item="rev">
+            <option value="{$rev.region_id}">{$rev.region_name}</option>
+        </foreach>
+    </select>
+    <select name="curaddress1" id="select2" class="site">
+        <option value="0">--请选择--</option>
+      </select>
+      <select name="curaddress2" id="select3" class="site">
+        <option value="0">--请选择--</option>
+    </select>
+    <input name="curaddress3" type="text" class="dfinput" />
+    </li>
     <li><label>民族：</label><input name="nation" type="text" class="dfinput" />&nbsp;&nbsp;&nbsp;&nbsp;
         身份证号：<input name="idcard" type="text" class="dfinput" />
     </li>
     <li><label>联系电话：</label><input name="tel" type="text" class="dfinput" />
     </li>
-    <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/></li>
     <li><label></label>
     合同开始日期：<input type="text" class="sang_Calender" name="startyear" />
     &nbsp;&nbsp;&nbsp;&nbsp;
     合同结束日期：<input type="text" class="sang_Calender" name="endyear" />
     </li>
     <li><label>入职岗位：</label>
-    <select name="role" id="">
+    <select name="role" id="ro">
         <foreach name="role" item="vo" >
             <option value="{$vo.role_id}">{$vo.role_name}</option>
         </foreach>
     </select>
     </li>
-    <div style="display: block">
+    <div style="display: block" id="list">
         <li><label></label>
         教练证初领日：<input type="text" class="sang_Calender" name="coachyear" />
         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -85,7 +111,44 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         驾驶证有效期：<input type="text" class="sang_Calender" name="drivingvalidity" />
         </li>
+        <li><label>驾驶证类型：</label>
+        <select name="drivingid" id="">
+            <foreach name="coach[0]" item="coach_v" >
+                <option value="{$coach_v.dirving_id}">{$coach_v.driving_name}</option>
+            </foreach>
+        </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        教练证编号：<input name="coachsn" type="text" class="dfinput" />
+        </li>
+        <li><label>教练等级：</label>
+        <select name="gradeid" id="">
+            <foreach name="coach[1]" item="grade_v" >
+                <option value="{$grade_v.grade_id}">{$grade_v.grade_name}</option>
+            </foreach>
+        </select>
+        </li>
+        <li><label>可带教资质：</label>
+            <foreach name="coach[2]" item="quality_v" >
+                <input type="checkbox" name="qualityid[]" id="" value="{$quality_v.quality_id}" />
+                {$quality_v.quality_name}
+            </foreach>
+        </li>
+        <li><label>准教车型：</label>
+            <foreach name="coach[3]" item="model_v" >
+                <input type="checkbox" name="modelid[]" id="" value="{$model_v.model_id}" />
+                {$model_v.model_name}
+            </foreach>
+        </li>
+        <li><label>教练车类型：</label>
+            <foreach name="coach[4]" item="motor_v" >
+                <input type="checkbox" name="motorid[]" id="" value="{$motor_v.motor_id}" />
+                {$motor_v.motor_name}
+            </foreach>
+        </li>
     </div>
+    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
+    
+    
     </ul>
     
     </form>
@@ -116,9 +179,24 @@
                             for (a in msg) {
                                 str+="<option value=\""+msg[a].region_id+"\">"+msg[a].region_name+"</option>";
                             }
-                        obj.next().html(str);
+                        if (msg != '') {
+                            obj.next().html(str)
+                        }
                     }
                 })
             }
         })
+        $('#ro').ready( function (){
+            $('#list').css('display','block');
+        });
+        $('#ro').change( function () {
+            var obj = $(this)
+            var id = obj.val();
+            if (id == '1') {
+                $('#list').css('display','block');
+            }else{
+                $('#list').css('display','none');
+            }
+            
+        });
     </script>

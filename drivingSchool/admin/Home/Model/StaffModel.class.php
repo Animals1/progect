@@ -118,7 +118,7 @@ class StaffModel extends Model {
 			$codata['grade_id'] = $rows['gradeid'];
 			$codata['quality_id'] = $rows['qualityid'];
 			$codata['model_id'] = $rows['modelid'];
-			$codata['motor_id'] = $rows['motor_id'];
+			$codata['motor_id'] = $rows['motorid'];
 			$core = $coach->create($codata);
 			if ($re && $core){
 				return true;
@@ -128,6 +128,83 @@ class StaffModel extends Model {
 		}else{
 			return $re = $db->create($data);
 		}
+	}
+	/*
+	 * 对地区进行处理
+	 * 作者：张捷
+	 */
+	public function area($area){
+		$region = D('region');
+		$birthplace = $area['birthplace'];
+		$birthplace .= ','.$area['birthplace1'];
+		$birthplace .= ','.$area['birthplace2'];
+		$account = $area['account'];
+		$account .= ','.$area['account1'];
+		$account .= ','.$area['account2'];
+		$curaddress = $area['curaddress'];
+		$curaddress .= ','.$area['curaddress1'];
+		$curaddress .= ','.$area['curaddress2'];
+		$curaddress_name = $region->where("region_id in ($curaddress)")->select();
+		$curaddress_names = $curaddress_name[0]['region_name'].$curaddress_name[1]['region_name'].$curaddress_name[2]['region_name'].$area['curaddress3'];
+		unset($area['birthplace']);
+		unset($area['birthplace1']);
+		unset($area['birthplace2']);
+		unset($area['account']);
+		unset($area['account1']);
+		unset($area['account2']);
+		unset($area['curaddress']);
+		unset($area['curaddress1']);
+		unset($area['curaddress2']);
+		unset($area['curaddress3']);
+		$area['birthplace'] = $birthplace;
+		$area['account'] = $account;
+		$area['curaddress'] = $curaddress_names;
+		return $area;
+	}
+	/*
+	 * 对接过来的id进行处理
+	 * 作者：张捷
+	 */
+	public function iddeal($iddeal){
+		foreach ($iddeal['qualityid'] as $quk => $quv) {
+			$quid .= ','.$quv;
+		}
+		foreach ($iddeal['modelid'] as $modelk => $modelv) {
+			$modelid .= ','.$modelv;
+		}
+		foreach ($iddeal['motorid'] as $motork => $motorv) {
+			$motorid .= ','.$motorv;
+		}
+		$quid = trim($quid,',');
+		$modelid = trim($modelid,',');
+		$motorid = trim($motorid,',');
+		$iddeal['qualityid'] = $quid;
+		$iddeal['modelid'] = $modelid;
+		$iddeal['motorid'] = $motorid;
+		return $iddeal;
+	}
+	/*
+	 * 对时间进行处理
+	 * 作者：张捷
+	 */
+	public function dealtime($time){
+		if ($time['role'] == '1') {
+			$year = strtotime($time['year']);
+			$coachyear = strtotime($time['coachyear']);
+			$coachvalidity = strtotime($time['coachvalidity']);
+			$drivingyear = strtotime($time['drivingyear']);
+			$drivingvalidity = strtotime($time['drivingvalidity']);
+			$time['year'] = $year;
+			$time['coachyear'] = $coachyear;
+			$time['coachvalidity'] = $coachvalidity;
+			$time['drivingyear'] = $drivingyear;
+			$time['drivingvalidity'] = $drivingvalidity;
+		}else{
+			$year = strtotime($time['year']);
+			$time['year'] = $year;
+		}
+		return $time;
+		
 	}
 	/*
 	 * 教练员工查询
