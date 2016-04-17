@@ -32,7 +32,10 @@ class StudentController extends Controller {
        	$p = $arr['0'];
        	$list = $arr['1'];
        	$page = $arr['2'];
-       	$this->assign('$page',$page);
+       	$count = $arr['3'];
+       	print_r($list);die;
+       	$this->assign('count',$count);
+       	$this->assign('page',$page);
        	$this->assign('p',$p);
        	$this->assign('list',$list);
        	$this->display('stuorder');
