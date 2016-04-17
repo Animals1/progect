@@ -149,5 +149,18 @@ class PersonalController extends Controller {
 		$this->assign();
 		$this->display("");
 	}
+
+
+
+	/*
+	*	个人中心-个人信息
+	*	by 郭旭峰
+	*/
+	public function everyoneabout(){
+		$data = D("staff");
+		$arr = $data->everyoneabout();
+		$this->assign("arr",$arr);
+		$this->display("everyoneabout");
+	}
 }
 ?>

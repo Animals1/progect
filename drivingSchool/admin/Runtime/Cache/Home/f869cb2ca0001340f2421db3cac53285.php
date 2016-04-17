@@ -75,6 +75,7 @@
             document.getElementById("span_name").innerHTML="账号不能为空";
             return false;
         }else{
+            document.getElementById("span_name").innerHTML="";
             return true;
         }
     }
@@ -86,6 +87,7 @@
             document.getElementById("span_pwd").innerHTML="密码不能为空";
             return false;
         }else{
+            document.getElementById("span_pwd").innerHTML="";
             return true;
         }
     }

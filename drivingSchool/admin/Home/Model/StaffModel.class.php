@@ -58,11 +58,7 @@ class StaffModel extends Model {
 	}
 
 	
-		$db=D('area');
-		$rows = $db->where("parent_id = $id")->select();
-		return $rows;
-	
-	}
+		
 	
 	/*
 	 * 添加教练时查询的数据
@@ -141,14 +137,7 @@ class StaffModel extends Model {
 		$db=D("staff");
 		return $db->join('staff.staff_id = coach.coach_staff_id')->select();
 	}
-	/*
-	 * 其他员工查询
-	 * 作者：张捷
-	 */
-	public function staffcoachselect(){
-		$db=D("staff");
-		return $db->select();
-	}
+	
 	/*
 	 * 员工多条件查询
 	 * 作者：张捷
@@ -203,6 +192,17 @@ class StaffModel extends Model {
 	*/
 	public function getshow(){
 		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
+	}
+
+
+	/*
+	*	个人中心-个人信息
+	*	by 郭旭峰
+	*/
+	public function everyoneabout(){
+		//接收cookie
+		$username = $_COOKIE["username"];
+		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
 	}
 }
 
