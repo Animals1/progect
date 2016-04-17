@@ -56,6 +56,10 @@ class IndexController extends Controller {
                         }
                         //$arr[] = $rolename; 
                         //dump($arr);die;
+                        //print_r($arr);die;
+                        $this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);
+                        $this->display("main");
                         $ar = base64_encode(gzcompress(serialize($arr)));
                          cookie('arr',$ar);
                          cookie('rolename',$rolename);
@@ -170,6 +174,8 @@ class IndexController extends Controller {
 
 
                 }else{
+                    //cookie操作
+                    echo "123";
                     //cookie操作+密码项
                     //id、用户名都存入cookie
                     $userid = $arr[0]["admin_id"];

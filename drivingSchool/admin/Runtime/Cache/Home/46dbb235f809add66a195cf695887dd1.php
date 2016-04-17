@@ -1,20 +1,23 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>无标题文档</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
     <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-
-    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="/Public/text/javascript">
-    </script>
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+
+</script> 
 
 
 </head>
 
 
 <body style="background:#FFF8ED;">
-<div class="rightinfo">
+   <div class="rightinfo">
 
     <div class="tools">
 
@@ -27,7 +30,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>收费</li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
         </ul>
 
     </div>
@@ -37,36 +40,42 @@
         <thead>
         <tr>
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>欠费学员<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
-            <th>学员编号</th>
-            <th>费用日期</th>
-            <th>欠费类型</th>
-            <th>欠费金额（元）</th>
+            <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+            <th>销假时间</th>
+            <th>请假类型</th>
+            <th>请假天数</th>
+            <th>请假原因</th>
             <th>状态</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php foreach($list as $v){?>
         <tr>
             <td><input name="" type="checkbox" value="" /></td>
-            <td><?php echo $v['stu_name']; ?></td>
-            <td><?php echo $v['stu_sn']; ?></td>
-            <td><?php echo $v['arrears_time']; ?></td>
-            <td><?php echo $v['money_name']; ?></td>
-            <td><?php echo $v['arrears_money']; ?></td>
-            <td><?php echo $v['status_name']; ?></td>
+            <td>20130908</td>
+            <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
+            <td>admin</td>
+            <td>江苏南京</td>
+            <td>2013-09-09 15:05</td>
+            <td>已审核</td>
             <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
         </tr>
-        <?php }?>
         </tbody>
     </table>
 
 
     <div class="pagin">
-        <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
+        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
         <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><?php echo ($page); ?></a></li>
+            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
+            <li class="paginItem"><a href="javascript:;">1</a></li>
+            <li class="paginItem current"><a href="javascript:;">2</a></li>
+            <li class="paginItem"><a href="javascript:;">3</a></li>
+            <li class="paginItem"><a href="javascript:;">4</a></li>
+            <li class="paginItem"><a href="javascript:;">5</a></li>
+            <li class="paginItem more"><a href="javascript:;">...</a></li>
+            <li class="paginItem"><a href="javascript:;">10</a></li>
+            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
         </ul>
     </div>
 
