@@ -13,9 +13,9 @@ class RepairStatusModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
     /*
      * 删除数据

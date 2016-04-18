@@ -56,12 +56,12 @@
         </thead>
         <tbody>
         <foreach name="repair_record" item="record">
-        <tr>
-            <td>{$record.car_number}</td>
-            <td>{$record.record_time|date="Y-m-d H:i:s",###}</td>
-            <td>{$record.repair_desc}</td>
-            <td>{$record.repair_record}</td>
-        </tr>
+            <tr>
+                <td>{$record.car_number}</td>
+                <td>{$record.record_time|date="Y-m-d H:i:s",###}</td>
+                <td>{$record.repair_desc}</td>
+                <td>{$record.repair_record}</td>
+            </tr>
         </foreach>
 
         </tbody>

@@ -53,27 +53,48 @@
             <li><span><img src="/Public/admin/images/t04.png" /></span><a href="">统计</a></li>
 
             <li>
-                车型:<select name="coach_driving" id="" onchange="searchDriving()">
+                车型:<select name="coach_driving" id="coach_driving" ">
                 <option value="-1">请选择</option>
                 <?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_id"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
-                教练车类型:<select name="coach_motor" id="" onchange="searchMotor()">
+                教练车类型:<select name="coach_motor" id="coach_motor" ">
                 <option value="-1">请选择</option>
             <?php if(is_array($motor)): foreach($motor as $key=>$motor): ?><option value="<?php echo ($motor["motor_id"]); ?>"><?php echo ($motor["motor_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
-                状态:<select name="car_status" id="" onchange="searchStatus()">
+                状态:<select name="car_status" id="car_status" >
                 <option value="-1">请选择</option>
                 <?php if(is_array($status)): foreach($status as $key=>$status): ?><option value="<?php echo ($status["status_id"]); ?>"><?php echo ($status["status_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
-            <li>车牌:<input type="text" name="car_number" onblur=""></li>
-            <li>行驶证号:<input type="text" name="license_number" onblur=""></li>
+            <li>车牌:<input type="text" name="car_number" id="car_number" style="width: 100px;"></li>
+            <li>行驶证号:<input type="text" name="license_number" id="license_number" style="width: 100px;"></li>
+            <li><input type="button" value="搜索" onclick="search()"></li>
         </ul>
+        <script>
+            function search()
+            {
+                var coach_driving=$('#coach_driving').val();
+                var coach_motor=$('#coach_motor').val();
+                var car_status=$('#car_status').val();
+                var car_number=$('#car_number').val();
+                var license_number=$('#license_number').val();
+                //批量删除
+                $.ajax({
+                    url: "/index.php/Home/Administration/registrationsearch",
+                    type: 'get',
+                    data: {'coach_driving':coach_driving,'coach_motor':coach_motor,'car_status':car_status,'car_number':car_number,'license_number':license_number},
+                    success: function (data) {
+                        //alert(data)
+                        $("#div").html(data);
+                    }
+                })
 
+            }
+        </script>
 
         <ul class="toolbar1">
             <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh">车辆登记</a></li>
