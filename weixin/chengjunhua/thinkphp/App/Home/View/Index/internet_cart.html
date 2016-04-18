@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><title>
+	远达驾校-学员网络预约系统
+</title><link href="__PUBLIC__/css/login.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript" src="__PUBLIC__/js/jquery-1.4.1-vsdoc.js"></script>
+    <script src="__PUBLIC__/js/global.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/js/jquery.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("#ValidIMG").attr("src", "tools/CreateCode.ashx?key=ImgCode&random=" + Math.random());
+            $("#ValidIMG").click(function () {
+                $(this).attr("src", "tools/CreateCode.ashx?key=ImgCode&random=" + Math.random());
+            });
+        });
+        function GetXy() {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "Login.aspx/GetProhibiLogins",
+                dataType: "json",
+                success: function (result) {
+                    $("#indexText").append(result.d);
+                }
+            });
+        }
+    </script>
+</head>
+<script tag="float_xuechebu" type="text/javascript" src="__PUBLIC__/js/floaticon.js"></script>
+<script tag="float_xuechebu" type="text/javascript" src="__PUBLIC__/js/floaticon_1.js"></script>
+
+<body>
+    <div class="wrap">
+        <!-- logo -->
+        <div class="logo">
+            <img src="__PUBLIC__/images/logo.png" class="logoIcon" />
+        </div>
+        <!-- middle -->
+        <div class="midBox">
+            <!-- QR code -->
+            <div class="ewmBox">
+                <img width="160px" height="160px" src="__PUBLIC__/images/erweima.png"
+                    alt="二维码下载地址" />
+                <p>
+                    手机约车、驾考做题
+                </p>
+                <p>
+                    <a href="http://jcysj.bjxueche.net:8012/wwz/help/聚车友操做指南(约车).html">
+                                        使用指南</a>
+                </p>
+            </div>
+            <!-- login box -->
+ 
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMjkyMDI4NzYyD2QWAgIDD2QWAgINDxYCHglpbm5lcmh0bWwFAzI3OGRkAs4dWOFUaKkY3YSAK/smA0QzrrSNfywQlLzhzzQ6piQ=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C2EE9ABB" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAYGGpns79qq7jK5TFxx5te3Y3plgk0YBAefRz3MyBlTcHY2+Mc6SrnAqio3oCKbxYZxHHBh6T/0qvM7nnT1C8JEQiUagUcDcu68gyetszRkSY7bzJhCrs4nlwf1kSE7uBAC4Wi6SCIHA1I4qOmkpBTCjRfiVQZWif0pJcY4zCxx8w==" />
+</div>
+            <div class="loginBox">
+                <h2>
+                    <span class="loginTit">学员网络预约系统</span>
+                </h2>
+                <div class="loginCon">
+                    <div>
+                        <span>用户名：</span>
+                        <input name="txtUserName" type="text" id="txtUserName" name="email" value="" size="20" placeholder="身份证号" />
+                    </div>
+                    <div>
+                        <span>密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+                        <input name="txtPassword" type="password" maxlength="20" id="txtPassword" name="password" placeholder="出生月日4位数字" size="20" type="password" />
+                    </div>
+                    <div>
+                        <span>验证码：</span>
+                        <input name="txtIMGCode" id="txtIMGCode" name="code" type="text" size="4" />
+                        &nbsp;&nbsp;<img src="__URL__/code" alt="" width='100px' height='40px' onclick="this.src='__URL__/code/'+Math.random()">
+                    </div>
+                    <div>
+                        <span style="visibility: hidden;">操&nbsp;&nbsp;&nbsp;&nbsp;作：</span>
+                        <input type="submit" name="BtnLogin" value="登  录" onclick='submit()' class="fk" />
+                        <input type="submit" name="BtnReset" value="重  置" onclick="javascript:document.forms[0].reset(); return false;" id="BtnReset" class="fk" />
+                    </div>
+                    <div style="display: none;">
+                        当前在线：<label id="lblUserCount">278</label>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <!-- notice -->
+        <script>
+            function submit()
+            {
+                //获取省份证号
+                var txtUserName=$('#txtUserName').val();
+                //获取密码
+                var txtPassword=$('#txtPassword').val();
+                //获取验证码
+                var txtIMGCode=$('#txtIMGCode').val();
+                var idcard=/^\d{18}|\d{17}x$/i;
+                if(txtIMGCode=='')
+                {
+                    alert('验证码不能为空');
+                }
+                else                   
+                {
+                     $.ajax({
+                            url:'__URL__/verity',
+                            type:'post',
+                            data:{'yzm':txtIMGCode},
+                            success:function(data){
+                                if(data=='1')
+                                {
+                                    
+                                    if(txtUserName=='' || txtPassword=='')
+                                        {
+                                           alert('省份证号或密码不能为空');
+                                        }
+                                        else
+                                        {
+                                            if(idcard.test(txtUserName))
+                                            {
+                                                $.ajax({
+                                                    url:'__URL__/submit',
+                                                    type:'post',
+                                                    data:{'idcard':txtUserName,'Password':txtPassword},
+                                                    success:function(data){
+                                                        //alert(data)
+                                                        if(data!=0)
+                                                        {
+                                                            //ajax中处理返回的json字符串,将它转化为js对象：eval再加上两边的括号和引号，例： eval("("+xhr.responseText+")"); 
+                                                          var str=eval("("+data+")"); 
+                                                           //alert(str.stu_test)
+                                                            if(str.new_pwd==str.admin_pwd)
+                                                            {
+                                                                alert('登录成功')
+                                                                location.href="http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index";
+                                                            }
+                                                            else
+                                                            {
+                                                                 alert('密码错误')
+                                                            }
+
+
+                                                        }
+                                                        else
+                                                        {
+                                                            alert('不存在的号')
+                                                        }
+                                                    }
+                                                })
+                                            }
+                                            else
+                                            {
+                                                alert("不合法的身份证号")
+                                            }
+                                        }
+
+                                }
+                                else
+                                {
+                                    alert('验证码错误')
+                                }
+
+                            }
+                            })
+                }
+            }
+        </script>
+      
+        <!-- footer -->
+        <div class="footer">
+            <p>
+                驾校网络预约系统由 <a href='http://www.bjcsxq.com/'>北京创世新强科技有限公司</a> 提供 &nbsp&nbsp;版权所有:北京远达驾校
+                技术支持:<a href="http://www.xuechebu.com" style="text-decoration:none;"  >学车不</a>
+            </p>
+            <script type="text/javascript">                var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1257130924'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257130924%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+        </div>
+    </div>
+</body>
+</html>
