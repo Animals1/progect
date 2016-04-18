@@ -2,11 +2,11 @@
 /*
  * @author:hechengwei
  * @date  :2016-4-13
- * @tablename:教练车型表
+ * @tablename:车辆更换表
  * */
 namespace Home\Model;
 use Think\Model;
-class CoachMotorModel extends Model {
+class CoachModelModel extends Model {
     /*
      * 查询数据
      * @$where  条件
@@ -15,7 +15,7 @@ class CoachMotorModel extends Model {
      * */
     public function getValue()
     {
-        return $this->join('coach_model on coach_motor.model_id=coach_model.model_id')->select();
+        return $this->select();
     }
     /*
      * 删除数据
@@ -26,12 +26,14 @@ class CoachMotorModel extends Model {
         return $this->where($where)->delete();
     }
 
-    /*
-     * 车辆设置添加教练车类型
-     * */
-    public function addcoachmotor($data)
+    public function addValue($data)
     {
         return $this->add($data);
     }
+
+
+
+
+
 }
 ?>

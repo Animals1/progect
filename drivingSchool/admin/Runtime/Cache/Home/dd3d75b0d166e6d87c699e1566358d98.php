@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -47,33 +47,27 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click1"><span><img src="__PUBLIC__/admin/images/t01.png" /></span><a href="__APP__/Home/Administration/addveh">添加</a></li>
-            <li class="click1"><span><img src="__PUBLIC__/admin/images/t02.png" /></span><a href="">修改</a></li>
-            <li><span><img src="__PUBLIC__/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>
-            <li><span><img src="__PUBLIC__/admin/images/t04.png" /></span><a href="">统计</a></li>
+            <li class="click1"><span><img src="/Public/admin/images/t01.png" /></span><a href="/index.php/Home/Administration/addveh">添加</a></li>
+            <li class="click1"><span><img src="/Public/admin/images/t02.png" /></span><a href="">修改</a></li>
+            <li><span><img src="/Public/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>
+            <li><span><img src="/Public/admin/images/t04.png" /></span><a href="">统计</a></li>
 
             <li>
                 车型:<select name="coach_driving" id="" onchange="searchDriving()">
                 <option value="-1">请选择</option>
-                <foreach name="driving" item="driving">
-                <option value="{$driving.driving_id}">{$driving.driving_name}</option>
-                    </foreach>
+                <?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_id"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
                 教练车类型:<select name="coach_motor" id="" onchange="searchMotor()">
                 <option value="-1">请选择</option>
-            <foreach name="motor" item="motor">
-                <option value="{$motor.motor_id}">{$motor.motor_name}</option>
-        </foreach>
+            <?php if(is_array($motor)): foreach($motor as $key=>$motor): ?><option value="<?php echo ($motor["motor_id"]); ?>"><?php echo ($motor["motor_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
                 状态:<select name="car_status" id="" onchange="searchStatus()">
                 <option value="-1">请选择</option>
-                <foreach name="status" item="status">
-                <option value="{$status.status_id}">{$status.status_name}</option>
-</foreach>
+                <?php if(is_array($status)): foreach($status as $key=>$status): ?><option value="<?php echo ($status["status_id"]); ?>"><?php echo ($status["status_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>车牌:<input type="text" name="car_number" onblur=""></li>
@@ -82,7 +76,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span><a href="__APP__/Home/Administration/addveh">车辆登记</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh">车辆登记</a></li>
         </ul>
 
     </div>
@@ -92,7 +86,7 @@
         <thead>
         <tr>
             <th><input name="qx" type="checkbox" value="" id="qx" onclick="allSelect()"/></th>
-            <th>序号<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
+            <th>序号<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>车牌号</th>
             <th>车型</th>
             <th>行驶证号</th>
@@ -104,20 +98,18 @@
         </tr>
         </thead>
         <tbody>
-        <foreach name="car" item="car">
-        <tr>
-            <td><input name="dx" type="checkbox" value="{$car.car_id}" /></td>
-            <td>{$car.veh_id}</td>
-            <td>{$car.veh_number}</td>
-            <td>{$car.driving_name}</td>
-            <td>{$car.license_number}</td>
-            <td>{$car.motor_name}</td>
-            <td>{$car.car_validity|date="Y-m-d",###}</td>
-            <td>{$car.car_register|date="Y-m-d",###}</td>
-            <td>{$car.status_name}</td>
-            <td><a href="__APP__/Home/Administration/registrationdel/id/{$car.car_id}" class="tablelink"> 修改</a></td>
-        </tr>
-        </foreach>
+        <?php if(is_array($car)): foreach($car as $key=>$car): ?><tr>
+            <td><input name="dx" type="checkbox" value="<?php echo ($car["car_id"]); ?>" /></td>
+            <td><?php echo ($car["veh_id"]); ?></td>
+            <td><?php echo ($car["veh_number"]); ?></td>
+            <td><?php echo ($car["driving_name"]); ?></td>
+            <td><?php echo ($car["license_number"]); ?></td>
+            <td><?php echo ($car["motor_name"]); ?></td>
+            <td><?php echo (date("Y-m-d",$car["car_validity"])); ?></td>
+            <td><?php echo (date("Y-m-d",$car["car_register"])); ?></td>
+            <td><?php echo ($car["status_name"]); ?></td>
+            <td><a href="/index.php/Home/Administration/registrationdel/id/<?php echo ($car["car_id"]); ?>" class="tablelink"> 修改</a></td>
+        </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
     <script>
@@ -154,7 +146,7 @@
             {
                 //批量删除
                 $.ajax({
-                    url: "__APP__/Home/Administration/registrationdel",
+                    url: "/index.php/Home/Administration/registrationdel",
                     type: 'get',
                     data: {'id': ids},
                     success: function (data) {
@@ -187,7 +179,7 @@
         <div class="tiptop"><span>提示信息</span><a></a></div>
 
         <div class="tipinfo">
-            <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
+            <span><img src="/Public/admin/images/ticon.png" /></span>
             <div class="tipright">
                 <p>是否确认对信息的修改 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
@@ -211,6 +203,3 @@
 </script>
 
 </html>
-
-
-

@@ -1,12 +1,12 @@
 <?php
 /*
  * @author:hechengwei
- * @date  :2016-4-13
- * @tablename:车辆登记表
+ * @date  :2016-4-17
+ * @tablename:车辆表
  * */
 namespace Home\Model;
 use Think\Model;
-class CarModel extends Model
+class VehiclesModel extends Model
 {
     /*
      * 查询车辆登记数据
@@ -21,13 +21,14 @@ class CarModel extends Model
      * */
     public function getValues()
     {
-        return $this->join("coach_model on car.model_id=coach_model.model_id")->join("coach_motor on car.motor_id=coach_motor.motor_id")->join("car_goout on car.out_id=car_goout.out_id")->join("car_status on car_goout.out_status_id=car_status.status_id")->join('car_repair on car.repair_id=car_repair.repair_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->select();
+        return $this->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->select();
     }
 
     /*
      * 修改数据
      *@$where   条件
      * ->join('car_repair on car.repair_id=car_repair.repair_id')
+     *
      * */
     public function updateValue($where = 1, $data)
     {

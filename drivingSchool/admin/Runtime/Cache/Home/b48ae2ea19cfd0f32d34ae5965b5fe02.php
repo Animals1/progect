@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
     </script>
 
@@ -17,7 +17,7 @@
 <div class="formbody">
 
     <div class="formtitle"><span>新增车辆</span></div>
-    <form action="__APP__/Home/Administration/addveh" method="post">
+    <form action="/index.php/Home/Administration/addveh" method="post">
     <table>
         <tr>
             <td>车牌号:</td>
@@ -32,10 +32,7 @@
             <td>
                 <select name="driving_id" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="driving" item="driving">
-
-                    <option value="{$driving.driving_id}">{$driving.driving_name}</option>
-    </foreach>
+                    <?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_id"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
             </td>
         </tr>
@@ -44,10 +41,7 @@
             <td>
                 <select name="motor_id" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="motor" item="motor">
-
-                    <option value="{$motor.motor_id}">{$motor.motor_name}</option>
-                        </foreach>
+                    <?php if(is_array($motor)): foreach($motor as $key=>$motor): ?><option value="<?php echo ($motor["motor_id"]); ?>"><?php echo ($motor["motor_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
             </td>
         </tr>
@@ -56,10 +50,7 @@
             <td>
                 <select name="car_status" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="status" item="status">
-
-                    <option value="{$status.status_id}">{$status.status_name}</option>
-                        </foreach>
+                    <?php if(is_array($status)): foreach($status as $key=>$status): ?><option value="<?php echo ($status["status_id"]); ?>"><?php echo ($status["status_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
             </td>
         </tr>
@@ -74,9 +65,7 @@
             <td>
                 <select name="type_id" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="type" item="type">
-                    <option value="{$type.type_id}">{$type.type_name}</option>
-                    </foreach>
+                    <?php if(is_array($type)): foreach($type as $key=>$type): ?><option value="<?php echo ($type["type_id"]); ?>"><?php echo ($type["type_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
 
 
@@ -95,8 +84,5 @@
 
 </div>
 </body>
-<script type="text/javascript" src="__PUBLIC__/admin/js/datetime.js"></script>
+<script type="text/javascript" src="/Public/admin/js/datetime.js"></script>
 </html>
-
-
-
