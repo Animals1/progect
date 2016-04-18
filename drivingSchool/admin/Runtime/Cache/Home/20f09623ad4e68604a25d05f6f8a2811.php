@@ -65,9 +65,9 @@
 
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
-        <span style="float: right;">
+        <div class="paginList">
             <?php echo ($page); ?>
-        </span>
+        </div>
     </div>
 
 
