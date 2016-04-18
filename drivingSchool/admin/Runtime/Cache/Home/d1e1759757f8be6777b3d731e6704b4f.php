@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -55,14 +55,12 @@
         </tr>
         </thead>
         <tbody>
-        <foreach name="repair_record" item="record">
-        <tr>
-            <td>{$record.car_number}</td>
-            <td>{$record.record_time|date="Y-m-d H:i:s",###}</td>
-            <td>{$record.repair_desc}</td>
-            <td>{$record.repair_record}</td>
-        </tr>
-        </foreach>
+        <?php if(is_array($repair_record)): foreach($repair_record as $key=>$record): ?><tr>
+                <td><?php echo ($record["car_number"]); ?></td>
+                <td><?php echo (date("Y-m-d H:i:s",$record["record_time"])); ?></td>
+                <td><?php echo ($record["repair_desc"]); ?></td>
+                <td><?php echo ($record["repair_record"]); ?></td>
+            </tr><?php endforeach; endif; ?>
 
         </tbody>
     </table>
@@ -73,6 +71,3 @@
 </script>
 
 </html>
-
-
-

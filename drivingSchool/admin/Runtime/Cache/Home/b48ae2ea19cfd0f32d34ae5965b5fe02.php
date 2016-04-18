@@ -57,7 +57,7 @@
         <tr>
             <td>保险有效期:</td>
             <td>
-                <input type="text" class="sang_Calender" name="car_validity" />
+                <input class="laydate-icon" onclick="laydate()">
             </td>
         </tr>
         <tr>
@@ -84,5 +84,5 @@
 
 </div>
 </body>
-<script type="text/javascript" src="/Public/admin/js/datetime.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>
