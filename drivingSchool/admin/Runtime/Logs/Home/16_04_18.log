@@ -24098,3 +24098,2833 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
+[ 2016-04-18T16:34:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:34:42+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2880s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.2540s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:35:01+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T16:35:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0560s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-18T16:35:14+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+NOTIC: [8] Undefined index: userid D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\AdminModel.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-04-18T16:35:18+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0530s ]
+NOTIC: [8] Undefined index: userid D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\AdminModel.class.php 第 99 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-04-18T16:35:33+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.3180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:35:38+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0660s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0870s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1070s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1020s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0940s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0760s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0640s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0610s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0610s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0590s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:35:38+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-18T16:35:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:35:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T16:35:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T16:35:44+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.9361s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '姚博文' ) LIMIT 1   [ RunTime:0.3100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T16:35:48+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 0,2   [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:36:00+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3790s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.4200s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.4630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 1   [ RunTime:0.0540s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 2,2   [ RunTime:0.2710s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:36:02+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar/p/3.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2720s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 1   [ RunTime:0.2720s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 4,2   [ RunTime:0.0340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T16:36:05+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/value/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1530s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0790s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.1340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_status = '0' ) LIMIT 1   [ RunTime:0.1210s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_status = '0' ) LIMIT 0,2   [ RunTime:0.0510s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T16:36:08+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/value/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0490s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.1240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_status = '1' ) LIMIT 1   [ RunTime:0.0720s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_status = '1' ) LIMIT 0,2   [ RunTime:0.2980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:36:11+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/value/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: value D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 137 行.
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `car_replace` LIMIT 0,2   [ RunTime:0.0910s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T16:36:19+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/addrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant addrepaircar - assumed 'addrepaircar' D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 191 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:36:25+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2240s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '姚博文' ) LIMIT 1   [ RunTime:0.0800s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T16:36:32+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.003000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.003000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-18T17:57:07+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1080s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:12:55+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2340s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0790s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:12:58+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.7510s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.7930s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-18T18:13:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3660s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0440s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0700s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0600s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-18T18:13:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:13:04+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:13:04+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T18:13:05+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T18:13:08+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.4620s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '姚博文' ) LIMIT 1   [ RunTime:0.0780s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-18T18:13:12+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0340s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_name = '姚博文' ) LIMIT 0,2   [ RunTime:0.2530s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-04-18T18:13:17+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/value/0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4260s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_replace` WHERE ( replace_status = '0' ) LIMIT 1   [ RunTime:0.0290s ]
+SQL: SELECT * FROM `car_replace` WHERE ( replace_status = '0' ) LIMIT 0,2   [ RunTime:0.0340s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 44 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 60 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 62 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 79 行.
+NOTIC: [8] Undefined variable: type D:\xiaoqiao\eleven\progect\drivingSchool\admin\Runtime\Cache\Home\c64f37ef72718ce40548c4a4c94945db.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:18:22+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:18:51+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.3300s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.1660s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:22:52+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: username D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:22:53+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:43:02+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:43:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:43:31+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.1720s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.2830s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0540s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:43:31+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:43:32+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:43:32+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T18:43:34+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T18:44:10+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:44:18+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '1' ) LIMIT 1   [ RunTime:0.0330s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '1' ) LIMIT 0,1   [ RunTime:0.0410s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T18:50:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2790s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1030s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1010s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0670s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0670s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  LIMIT 0,1   [ RunTime:0.3750s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T18:59:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1030s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0720s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0400s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  LIMIT 0,1   [ RunTime:0.0390s ]
+
+[ 2016-04-18T19:19:51+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0380s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0340s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  LIMIT 0,1   [ RunTime:0.0370s ]
+
+[ 2016-04-18T19:20:14+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.3690s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0440s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  LIMIT 0,1   [ RunTime:0.0740s ]
+
+[ 2016-04-18T19:41:21+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3190s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2410s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2300s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.2680s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.3840s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.1900s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1310s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:1.0571s ]
+
+[ 2016-04-18T19:41:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3480s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1100s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0620s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.8340s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.1850s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.1210s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1390s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.1400s ]
+
+[ 2016-04-18T19:44:17+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1340s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1170s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2330s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.7560s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.1150s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0410s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2016-04-18T19:44:20+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.7830s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0780s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0640s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0560s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0650s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0390s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0430s ]
+
+[ 2016-04-18T19:44:23+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.9671s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3200s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0370s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0420s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0360s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2016-04-18T19:44:24+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0530s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 16 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `review` LIMIT 1   [ RunTime:0.0500s ]
+NOTIC: [8] Undefined variable: where D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\ReviewModel.class.php 第 23 行.
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 0,1   [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0430s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0460s ]
+
+[ 2016-04-18T19:44:35+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0290s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0320s ]
+
+[ 2016-04-18T19:44:38+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0410s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:44:38+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:44:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:44:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:44:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:44:44+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.7670s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0440s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0380s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0560s ]
+
+[ 2016-04-18T19:44:46+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0410s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0400s ]
+
+[ 2016-04-18T19:45:23+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:1.0411s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0340s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.2160s ]
+
+[ 2016-04-18T19:45:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1570s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1140s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0460s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0450s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1300s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0550s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0820s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0400s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:45:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:45:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:45:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:45:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:45:33+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/personal_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:1.1291s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '姚博文' ) LIMIT 1   [ RunTime:0.2170s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:45:35+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1580s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0660s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::getvalue(), called in D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\CoachController.class.php on line 43 and defined D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 260 行.
+NOTIC: [8] Undefined variable: name D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 261 行.
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id INNER JOIN coach ON staff.staff_id = coach.coach_staff_id INNER JOIN coach_group ON coach.group_id = coach_group.group_id  WHERE ( staff.staff_name = '' ) LIMIT 1   [ RunTime:0.0420s ]
+
+[ 2016-04-18T19:46:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4570s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1240s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0760s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0540s ]
+
+[ 2016-04-18T19:46:16+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0500s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:46:56+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2680s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0300s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0350s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:47:25+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0390s ]
+
+[ 2016-04-18T19:49:54+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0740s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0540s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0370s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0490s ]
+
+[ 2016-04-18T19:50:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0360s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0340s ]
+
+[ 2016-04-18T19:50:30+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.1030s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0310s ]
+
+[ 2016-04-18T19:50:34+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3110s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1030s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0290s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0180s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-18T19:50:34+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:50:35+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:50:35+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:50:36+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:50:38+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0340s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0200s ]
+
+[ 2016-04-18T19:50:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0370s ]
+
+[ 2016-04-18T19:52:05+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4130s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3010s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2230s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.3020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.2780s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.3220s ]
+
+[ 2016-04-18T19:52:07+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0080s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0100s ]
+
+[ 2016-04-18T19:52:09+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0090s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0100s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0100s ]
+
+[ 2016-04-18T19:52:14+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1130s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0390s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0570s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0290s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0260s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0310s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.1450s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0450s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:52:14+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:52:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:52:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:52:16+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:52:18+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:52:25+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0380s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0970s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0300s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.2780s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:52:25+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:52:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:52:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:52:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:52:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0390s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.2660s ]
+
+[ 2016-04-18T19:53:06+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0330s ]
+
+[ 2016-04-18T19:54:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.5520s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.1460s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0750s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:54:28+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:54:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:54:29+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:54:30+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:54:33+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1190s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2910s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2400s ]
+
+[ 2016-04-18T19:54:45+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0230s ]
+
+[ 2016-04-18T19:54:54+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1060s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0070s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0110s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:55:07+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1920s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0830s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0140s ]
+
+[ 2016-04-18T19:55:41+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1750s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0260s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0220s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0160s ]
+
+[ 2016-04-18T19:55:56+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0200s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 0,2   [ RunTime:0.0170s ]
+
+[ 2016-04-18T19:56:10+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1590s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0700s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1180s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.3370s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.1150s ]
+
+[ 2016-04-18T19:56:22+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0200s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:56:59+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.5680s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1750s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1700s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.1390s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:57:31+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0240s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:57:35+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1150s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1210s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.3450s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0300s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:57:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4920s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.9501s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0420s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0760s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T19:57:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T19:57:41+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2016-04-18T19:57:41+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T19:57:42+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T19:58:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2930s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0520s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0420s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T19:58:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0630s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0410s ]
+
+[ 2016-04-18T20:12:22+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1050s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1300s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1470s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.1290s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.1410s ]
+
+[ 2016-04-18T20:14:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1070s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0160s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0150s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0150s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:14:40+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:14:41+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:14:42+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T20:14:43+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T20:14:45+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0060s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:16:23+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2680s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1520s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.2550s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0640s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:16:24+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.3760s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1180s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0590s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0610s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0290s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:20:19+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:1.4201s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:2.1761s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1080s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0710s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.2250s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:20:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0400s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0400s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0330s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0260s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0250s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0520s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0280s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:20:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T20:20:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-18T20:20:26+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T20:20:27+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T20:20:31+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.2830s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:20:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4590s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2680s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.1730s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0940s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0920s ]
+
+[ 2016-04-18T20:25:43+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0470s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0420s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0440s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0690s ]
+SQL: SELECT * FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0380s ]
+
+[ 2016-04-18T20:26:48+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0370s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0290s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0350s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0260s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:31:43+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1180s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1480s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.2030s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.4800s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.5050s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:1.4621s ]
+ERR: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'coach_id' in where clause is ambiguous
+
+[ 2016-04-18T20:31:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 20 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0920s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0810s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '姚博文' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0920s ]
+NOTIC: [8] Undefined index: checkbox D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 28 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0830s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0730s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0600s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0710s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=2 )  [ RunTime:0.0660s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=11 )  [ RunTime:0.0450s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=12 )  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=13 )  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=14 )  [ RunTime:0.0460s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:31:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-18T20:31:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-18T20:31:47+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/css/style.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:css
+
+[ 2016-04-18T20:31:48+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Index/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+ERR: 非法操作:js
+
+[ 2016-04-18T20:32:06+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.2750s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.5100s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.1410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.0320s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.2740s ]
+SQL: SELECT * FROM `review` INNER JOIN coach ON review.coach_id = coach.coach_id  LIMIT 1   [ RunTime:0.0440s ]
+
+[ 2016-04-18T20:33:15+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0400s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( review.coach_id = '5' ) LIMIT 1   [ RunTime:0.0450s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  WHERE ( review.coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0430s ]
+
+[ 2016-04-18T20:34:03+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0510s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0360s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0370s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( review.coach_id = '5' ) LIMIT 1   [ RunTime:0.0240s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id  WHERE ( review.coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0420s ]
+
+[ 2016-04-18T20:35:39+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0400s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( review.coach_id = '5' ) LIMIT 1   [ RunTime:0.0520s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id INNER JOIN coach ON review.coach_id = coach.coach_id INNER JOIN staff ON coach.coach_staff_id = staff.staff_id  WHERE ( review.coach_id = '5' ) LIMIT 0,1   [ RunTime:0.1000s ]
+
+[ 2016-04-18T20:37:13+08:00 ] 127.0.0.1 /eleven/progect/drivingSchool/index.php/Home/Coach/award
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0260s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0290s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=5 )  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `review` [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `review` WHERE ( coach_id = '5' ) LIMIT 1   [ RunTime:0.2920s ]
+SQL: SELECT * FROM `review` INNER JOIN student ON review.stu_id = student.user_id  WHERE ( coach_id = '5' ) LIMIT 0,1   [ RunTime:0.0380s ]
+SQL: SELECT * FROM `review` INNER JOIN coach ON review.coach_id = coach.coach_id INNER JOIN staff ON coach.coach_staff_id = staff.staff_id  WHERE ( review.coach_id = '5' ) LIMIT 1   [ RunTime:0.0380s ]
+
