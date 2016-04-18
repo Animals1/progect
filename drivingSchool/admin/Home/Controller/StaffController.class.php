@@ -24,6 +24,8 @@ class StaffController extends Controller {
     }
     public function adds(){
        $staff = D('staff');
+       $img = $staff->upload('img');
+       $_POST['img'] = $img;
        $area = $staff->area($_POST);
        if ($area['role'] == '1') {
            $id = $staff->iddeal($area);
@@ -31,6 +33,23 @@ class StaffController extends Controller {
        }else{
            $data = $staff->dealtime($area);
        }
-       
+       $re = $staff->staffadd($data);
+       if($re){
+            $this->success('添加成功',__CONTROLLER__."/show",3);
+        }else{
+            $this->error('添加失败');
+        }
+    }
+    public function show()
+    {
+        $staff = D('staff');
+        
+        $coach = $staff->staffcoachselect();
+        $staffs = $staff->staffselect();
+        $coachs = $staff->coachdatetime($coach);
+        $staffdata = $staff->staffdatetime($staffs);
+        $this->assign('coach',$coachs);
+        $this->assign('staff',$staffdata);
+        $this->display('show');
     }
 }
