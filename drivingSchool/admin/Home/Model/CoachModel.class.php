@@ -61,8 +61,15 @@ class CoachModel extends Model {
         $group_name=M('CoachGroup');
         return $group_name->select();
     }
-
-
-
+    /*
+     * author:xueyunhuan
+    * j查询教练姓名
+     * 
+     * 
+    * */
+    public function coachinfo($where=1)
+    {
+        return $this->join("staff on staff.staff_id = coach.coach_staff_id")->field("staff_name,coach_id")->select();
+    }
 }
 ?>

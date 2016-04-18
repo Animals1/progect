@@ -1,41 +1,41 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/Public/admin/js/jquery.js"></script>
 </head>
 
 
 <body he style="background:#FFF8ED;">
    <div class="rightinfo">
-   <form action="__URL__/add_order" method="post">
+   <form action="/index.php/Home/Student/add_order" method="post">
     <table border="1" width="500px">
         <tr>
             <td align='center'>
             <select name="coach_id" id="coach_id">
             <option value="">预约教练姓名</option>
-            <?php foreach ($staff_name as $v) {  ?>
+            <?php foreach ($staff_name as $v) { ?>
 
-            	<option value="<?php echo $v['coach_id'];  ?>"><?php echo $v['staff_name'];  ?></option>
-            <?php   }  ?>
+            	<option value="<?php echo $v['coach_id']; ?>"><?php echo $v['staff_name']; ?></option>
+            <?php  } ?>
             </select>
             </td>
             <td align='center'>
             	<select name="class_id">
             	<option value="">预约课程</option>
-            	<?php foreach ($class_name as $v) {  ?>
-            		<option value="<?php echo $v['class_id'];  ?>"><?php echo $v['class_name'];  ?></option>
-            	<?php   }  ?>
+            	<?php foreach ($class_name as $v) { ?>
+            		<option value="<?php echo $v['class_id']; ?>"><?php echo $v['class_name']; ?></option>
+            	<?php  } ?>
             	</select>
             </td>
             <td align='center'>
             <select name="time_id" id="coach">
             <option value="">预约时间段</option>
-            <?php foreach ($time_table as $v) {  ?>
-            	<option value="<?php echo $v['time_id'];  ?>"><?php echo $v['time_section'];  ?></option>
-            <?php   }  ?>
+            <?php foreach ($time_table as $v) { ?>
+            	<option value="<?php echo $v['time_id']; ?>"><?php echo $v['time_section']; ?></option>
+            <?php  } ?>
             </select>
             </td>
             <td align="center">
@@ -50,7 +50,7 @@
        	var id = $(this).val()
        	var id1 = $('#coach_id').val()
        	$.ajax({
-			url:"__URL__/select_order",
+			url:"/index.php/Home/Student/select_order",
 			data:{time_id:id,coach_id:id1},
 			type:"GET",
 			dataType:"text",
