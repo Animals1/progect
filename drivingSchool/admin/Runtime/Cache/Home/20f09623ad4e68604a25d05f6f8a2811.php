@@ -27,7 +27,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>收费</li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span>发工资</li>
         </ul>
 
     </div>
