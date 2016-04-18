@@ -84,10 +84,10 @@ class StaffModel extends Model {
 	 * 员工添加
 	 * 作者：张捷	
 	 */
-	public function staffadd($img,$rows){
+	public function staffadd($rows){
 		$db=D("staff");
 		$coach = D('coach');
-		$data['staff_photo']=$img;
+		$data['staff_photo']= $rows['img'];
 		$data['staff_name'] = $rows['name'];
 		$data['staff_sn'] = $rows['sn'];
 		$data['staff_sex'] = $rows['sex'];
@@ -99,16 +99,19 @@ class StaffModel extends Model {
 		$data['staff_account'] = $rows['account'];
 		$data['staff_curaddress'] = $rows['curaddress'];
 		$data['staff_tel'] = $rows['tel'];
+		$data['staff_email'] = $rows['email'];
 		$data['staff_start_year'] = $rows['startyear'];
 		$data['staff_end_year'] = $rows['endyear'];
 		$data['role_id'] = $rows['role'];
-		$data['staff_job'] = $rows['job'];
-		$data['staff_basic'] = $rows['basic'];
-		if ($data['role_id'] == '1') {
-			$re = $db->create($data);
-			$row = $db->where("staff_sn = '".$rows['sn']."'");
-			$staff_id = $row['staff_id'];
+		$data['staff_job'] = '1';
+		$data['staff_basic'] = '2000';
+		if ($rows['role'] == '1') {
+			$re = $db->add($data);
+			$sn = $rows['sn'];
+			$row = $db->where("staff_sn = $sn")->select();
+			$staff_id = $row[0]['staff_id'];
 			$codata['coach_staff_id'] = $staff_id;
+			$codata['role_id'] = $rows['role'];
 			$codata['coach_start_year'] = $rows['coachyear'];
 			$codata['coach_validity'] = $rows['coachvalidity'];
 			$codata['driving_start_year'] = $rows['drivingyear'];
@@ -116,18 +119,28 @@ class StaffModel extends Model {
 			$codata['driving_id'] = $rows['drivingid'];
 			$codata['coach_sn'] = $rows['coachsn'];
 			$codata['grade_id'] = $rows['gradeid'];
-			$codata['quality_id'] = $rows['qualityid'];
-			$codata['model_id'] = $rows['modelid'];
-			$codata['motor_id'] = $rows['motorid'];
-			$core = $coach->create($codata);
+			$codata['quality'] = $rows['qualityid'];
+			$codata['model'] = $rows['modelid'];
+			$codata['motor'] = $rows['motorid'];
+			$core = $coach->add($codata);
 			if ($re && $core){
 				return true;
 			}else{
 				return false;
 			}
 		}else{
-			return $re = $db->create($data);
+			return $re = $db->add($data);
 		}
+	}
+	/*
+	 * 对传过来的图片进行处理
+	 * 作者：张捷
+	 */
+	public function img($data)
+	{
+		$img = D('Upload');
+		$srcimg = $img->upload('img');
+		return $srcimg;
 	}
 	/*
 	 * 对地区进行处理
@@ -190,21 +203,70 @@ class StaffModel extends Model {
 	public function dealtime($time){
 		if ($time['role'] == '1') {
 			$year = strtotime($time['year']);
+			$startyear = strtotime($time['startyear']);
+			$endyear = strtotime($time['endyear']);
 			$coachyear = strtotime($time['coachyear']);
 			$coachvalidity = strtotime($time['coachvalidity']);
 			$drivingyear = strtotime($time['drivingyear']);
 			$drivingvalidity = strtotime($time['drivingvalidity']);
 			$time['year'] = $year;
+			$time['startyear'] = $startyear;
+			$time['endyear'] = $endyear;
 			$time['coachyear'] = $coachyear;
 			$time['coachvalidity'] = $coachvalidity;
 			$time['drivingyear'] = $drivingyear;
 			$time['drivingvalidity'] = $drivingvalidity;
 		}else{
 			$year = strtotime($time['year']);
+			$startyear = strtotime($time['startyear']);
+			$endyear = strtotime($time['endyear']);
+			$time['startyear'] = $startyear;
+			$time['endyear'] = $endyear;
 			$time['year'] = $year;
 		}
 		return $time;
 		
+	}
+	/*
+	 * 对教练角色时间进行格式化处理处理
+	 * 作者：张捷
+	 */
+	public function coachdatetime($time){
+
+		foreach ($time as $k => $v) {
+				$year = date("Y-m-d",$time['staff_year']);
+				$startyear = date("Y-m-d",$time['staff_start_year']);
+				$endyear = date("Y-m-d",$time['staff_end_year']);
+				$coachyear = date("Y-m-d",$time['coach_start_year']);
+				$coachvalidity = date("Y-m-d",$time['coach_validity']);
+				$drivingyear = date("Y-m-d",$time['driving_start_year']);
+				$drivingvalidity = date("Y-m-d",$time['driving_validity']);
+				$time[$k]['staff_year'] = $year;
+				$time[$k]['staff_start_year'] = $startyear;
+				$time[$k]['staff_end_year'] = $endyear;
+				$time[$k]['coach_start_year'] = $coachyear;
+				$time[$k]['coach_validity'] = $coachvalidity;
+				$time[$k]['driving_start_year'] = $drivingyear;
+				$time[$k]['driving_validity'] = $drivingvalidity;
+		}
+		return $time;
+	}
+	/*
+	 * 对其他角色时间进行格式化处理处理
+	 * 作者：张捷
+	 */
+	public function staffdatetime($time){
+
+		foreach ($time as $k => $v) {
+				$year = date("Y-m-d",$time['staff_year']);
+				$startyear = date("Y-m-d",$time['staff_start_year']);
+				$endyear = date("Y-m-d",$time['staff_end_year']);
+				$time[$k]['staff_year'] = $year;
+				$time[$k]['staff_start_year'] = $startyear;
+				$time[$k]['staff_end_year'] = $endyear;
+				$time[$k]['coach_start_year'] = $coachyear;
+		}
+		return $time;
 	}
 	/*
 	 * 教练员工查询
@@ -212,7 +274,15 @@ class StaffModel extends Model {
 	 */
 	public function staffcoachselect(){
 		$db=D("staff");
-		return $db->join('staff.staff_id = coach.coach_staff_id')->select();
+		return $db->join('coach ON staff.staff_id = coach.coach_staff_id')->where("staff.role_id = 1")->select();
+	}
+	/*
+	 * 其他员工进行查询
+	 * 作者：张捷
+	 */
+	public function staffselect(){
+		$db=D("staff");
+		return $db->where("role_id = 4 OR role_id = 5 OR role_id = 6")->select();
 	}
 	
 	/*
@@ -315,6 +385,22 @@ class StaffModel extends Model {
 	public function showupdatefield(){
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->where("staff_name='$username'")->select();
+	}
+	/*
+	 * 文件上传公共类
+	 * 作者：张捷
+	 */
+	public function upload($name){
+
+		$upload = new \Think\Upload();   
+	    $upload->maxSize   =     3145728 ;
+	    $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');   
+	    $upload->rootPath  =      './';
+	    $upload->savePath  =      './Public/Uploads/';  
+	    $info   =   $upload->upload(); 
+	    return $img = $info[$name]['savepath'].$info[$name]['savename'];
+		return $img;
+
 	}
 }
 
