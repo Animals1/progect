@@ -10,9 +10,10 @@ class CoachController extends Controller {
 	*	查询当前教练的信息，返回一维数组
 	*/
 	public function personal_info(){
-		$name = "张三";
+		$name = $_COOKIE['username'];
 		$model = D('Staff');
 		$arr = $model->getvalue($name);
+		// print_r($arr);die;
 		$this->assign('arr',$arr);
     	$this->display('personal_info');
 		
