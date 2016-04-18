@@ -8,6 +8,14 @@ namespace Home\Controller;
 use Think\Controller;
 class AdministrationController extends Controller {
 
+
+    /*
+     * 个人中心
+     * */
+    public function personalcore()
+    {
+
+    }
     /*
      * @ vehsetting
      * @ 车辆设置

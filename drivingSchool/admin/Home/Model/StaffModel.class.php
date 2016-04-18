@@ -260,7 +260,8 @@ class StaffModel extends Model {
 	public function getvalue($name){
 		return $this->where("staff.staff_name = '$name'")
 					->join('role ON staff.role_id = role.role_id' )
-					->join('coach_group ON staff.group_id = coach_group.group_id' )
+					->join('coach ON staff.staff_id = coach.coach_staff_id' )
+					->join('coach_group ON coach.group_id = coach_group.group_id' )
 					->find();
 	}
 	/**
