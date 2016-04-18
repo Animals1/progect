@@ -82,13 +82,15 @@ class VehiclesModel extends Model
 
     /*
      * 搜索
+     * @驾照等级
+     * @车型
+     * @状态
      * @车牌号
      * @行驶证号
      * */
     public function searchValue($where=1)
     {
-        $model=M('car');
-        return $model->where($where)->find();
+        return $this->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->where($where)->select();
     }
 
     /*============================================================新增车辆==================================================================*/

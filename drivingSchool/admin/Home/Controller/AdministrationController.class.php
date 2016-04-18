@@ -8,6 +8,14 @@ namespace Home\Controller;
 use Think\Controller;
 class AdministrationController extends Controller {
 
+
+    /*
+     * 个人中心
+     * */
+    public function personalcore()
+    {
+
+    }
     /*
      * @ vehsetting
      * @ 车辆设置
@@ -177,8 +185,67 @@ class AdministrationController extends Controller {
         }
 
     /*
+     * 车辆登记搜索
+     * 多条件搜索,拼接条件
+     * */
+        public function registrationsearch()
+        {
+            $coach_driving=$_GET['coach_driving'];
+            $coach_motor=$_GET['coach_motor'];
+           //print_r($coach_motor);die;
+            $car_status=$_GET['car_status'];
+            $car_number=$_GET['car_number'];
+            $license_number=$_GET['license_number'];
+            $where=1;
+            if($coach_driving != null && $coach_driving != -1)
+            {
+                $where.=" and vehicles.driving_id='$coach_driving'";
+            }
+            if($coach_motor != null && $coach_motor != -1)
+            {
+                $where.=" and vehicles.motor_id='$coach_motor'";
+            }
+            if($car_status != null && $car_status != -1)
+            {
+                $where.=" and vehicles.car_status='$car_status'";
+            }
+            if($car_number != null)
+            {
+                $where.=" and vehicles.veh_number like '%$car_number%'";
+            }
+            if($license_number != null)
+            {
+                $where.=" and vehicles.license_number like '%$license_number%'";
+            }
+            $veh=D('Vehicles');
+            $car=D('Car');
+
+            //实例化驾照表
+            $coach_driving=D('CoachDriving');
+            $driving=$coach_driving->getValue();
+            //实例化教练车类型表
+            $coach_motor=D('CoachMotor');
+            //查询教练车类型
+            $motor_val=$coach_motor->getValue();
+            //实例化车辆状态表
+            $coach_status=D('CarStatus');
+            //查询车辆状态
+            $status=$coach_status->show();
+            //驾照表
+            $this->assign('driving',$driving);
+            //教练车类型
+            $this->assign('motor',$motor_val);
+            //状态
+            $this->assign('status',$status);
+            $search=$veh->searchValue($where);
+            $this->assign('car',$search);
+            $this->display("vehsettinglist");
+        }
+
+    /*
     * @ addveh
     * @ 新增车辆
+     * 如果有post值添加,否则就是列表
     * */
         public function addveh()
         {
@@ -235,6 +302,72 @@ class AdministrationController extends Controller {
     * */
         public function vehgoout()
         {
+            $car=D('Car');
+            $where=" car_status.status_id='2' or car_status.status_id='5'";
+            $goout=$car->getGoout($where);
+            $time=$car->timetable();
+            //驾照
+            $driving=$car->coachDriving();
+            //教练车类型
+            $motor=$car->coachMotor();
+            //状态
+            $status=$car->carStatus();
+            //print_r($goout);die;
+            $this->assign('goout',$goout);
+            $this->assign('time',$time);
+            $this->assign('driving',$driving);
+            $this->assign('motor',$motor);
+            $this->assign('status',$status);
+            $this->display('vehgoout');
+        }
+
+    /*
+     * 车辆出勤搜索
+     * */
+        public function vehgooutsearch()
+        {
+            /*接收值,拼接where条件*/
+            $coach_driving=$_GET['coach_driving'];
+            $coach_motor=$_GET['coach_motor'];
+            $car_status=$_GET['car_status'];
+            $car_number=$_GET['car_number'];
+            $license_number=$_GET['license_number'];
+            $where=" car_status.status_id='2' or car_status.status_id='5'";
+            if($coach_driving != null && $coach_driving != -1)
+            {
+                $where.=" and car.driving_id='$coach_driving'";
+            }
+            if($coach_motor != null && $coach_motor != -1)
+            {
+                $where.=" and car.motor_id='$coach_motor'";
+            }
+            if($car_status != null && $car_status != -1)
+            {
+                $where.=" and car.car_status='$car_status'";
+            }
+            if($car_number != null)
+            {
+                $where.=" and car.car_number like '%$car_number%'";
+            }
+            if($license_number != null)
+            {
+                $where.=" and car.license_number like '%$license_number%'";
+            }
+            $car=D('Car');
+            $goout=$car->getGoout($where);
+            $time=$car->timetable();
+            //驾照
+            $driving=$car->coachDriving();
+            //教练车类型
+            $motor=$car->coachMotor();
+            //状态
+            $status=$car->carStatus();
+            //print_r($goout);die;
+            $this->assign('goout',$goout);
+            $this->assign('time',$time);
+            $this->assign('driving',$driving);
+            $this->assign('motor',$motor);
+            $this->assign('status',$status);
             $this->display('vehgoout');
         }
 
@@ -244,25 +377,127 @@ class AdministrationController extends Controller {
     * */
         public function vehservice()
         {
+            //查询维修记录
+            $car=D('Car');
+            $repair=$car->vehrepair();
+            //查询状态下拉用
+            $status=D('RepairStatus');
+            $repair_status=$status->getValue();
+            //查询员工,下拉用
+            $coach=D('Coach');
+            $coachMess=$coach->coachMessage();
+
+            $this->assign('coachMess',$coachMess);
+            $this->assign('status',$repair_status);
+            $this->assign('repair',$repair);
             $this->display('vehservice');
         }
+    /*
+     * 车辆维修记录搜索
+     * 字符串拼接where条件
+     * */
+        public function repairsearch()
+        {
+            /*接收值*/
+            $car_number=$_GET['car_number'];
+            $repair_coachname=$_GET['repair_coachname'];
+            $laydate=strtotime($_GET['laydate']);
+            $repair_status=$_GET['repair_status'];
+            /*开始拼接条件*/
+            $where=1;
+            if($car_number != null && $car_number != -1)
+            {
+                $where.=" and car.car_number like '%$car_number%'";
+            }
+            if($repair_coachname != null && $repair_coachname != -1)
+            {
+                $where.=" and staff.staff_id='$repair_coachname'";
+            }
+            if($repair_status != null && $repair_status != -1)
+            {
+                $where.=" and car_repair.repair_statusid='$repair_status'";
+            }
+            if($laydate != null && $laydate != -1)
+            {
+                $where.=" and car_repair.repair_time='$laydate'";
+            }
+            /*实例化车辆登记表model,调用方法查询*/
+            $car=D('Car');
+            $repair=$car->vehrepair($where);
+            /*查询状态*/
+            $status=D('RepairStatus');
+            $repair_status=$status->getValue();
+            /*查询员工*/
+            $coach=D('Coach');
+            $coachMess=$coach->coachMessage();
+            $this->assign('coachMess',$coachMess);
+            $this->assign('status',$repair_status);
+            $this->assign('repair',$repair);
+            $this->display('vehservice');
 
+        }
     /*
     * servicerecord
      * 维修记录详细
     * */
         public function servicerecord()
         {
-            $this->display('servicerecord');
+            if($_GET)
+            {
+                $car_number=$_GET['id'];
+                $where="car.car_number like '%$car_number%'";
+                $car=D('Car');
+                $repair_record=$car->vehrepair($where);
+                $this->assign('repair_record',$repair_record);
+                $this->display('servicerecord');
+            }
+            else
+            {
+                $car=D('Car');
+                $repair_record=$car->vehrepair();
+                $this->assign('repair_record',$repair_record);
+                $this->display('servicerecord');
+            }
+
         }
 
     /*
      * servicerecordadd
      * 车辆维修添加
+     * 如果post不是空的就添加,否则就是列表
      * */
         public function servicerecordadd()
         {
-            $this->display('servicerecordadd');
+           if(!empty($_POST))
+           {
+                $data['repair_carid']=$_POST['repair_carid'];
+                $data['repair_coachname']=$_POST['repair_coachname'];
+                $data['repair_desc']=$_POST['repair_desc'];
+                $data['repair_time']=time();
+                $data['repair_statusid']=2;
+                $repair=D('CarRepair');
+               $add=$repair->addrepair($data);
+               if($add)
+               {
+                   $this->success('添加维修记录成功','/Home/Administration/servicerecordadd');
+               }
+               else
+               {
+                   $this->error('添加维修记录失败');
+               }
+           }
+           else
+           {
+                $car=D('Car');
+                $vehicles=$car->vehicles();
+                $coach=D('Coach');
+                $coachMess=$coach->coachMessage();
+
+                $this->assign('vehicles',$vehicles);
+                $this->assign('coachMess',$coachMess);
+
+                $this->display('servicerecordadd');
+           }
         }
     /*
     * vehreplace
