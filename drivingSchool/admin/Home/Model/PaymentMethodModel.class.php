@@ -6,12 +6,9 @@
  * */
 namespace Home\Model;
 use Think\Model;
-class CoachModel extends Model {
+class PaymentMethodModel extends Model {
     /*
      * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
     public function getvalue()
     {

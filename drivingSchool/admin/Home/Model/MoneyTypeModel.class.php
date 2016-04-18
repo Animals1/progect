@@ -9,9 +9,6 @@ use Think\Model;
 class MoneyTypeModel extends Model {
     /*
      * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
     public function getvalue()
     {
