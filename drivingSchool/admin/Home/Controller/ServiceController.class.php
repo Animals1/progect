@@ -11,13 +11,36 @@ class ServiceController extends Controller {
 	*/
 	public function getrepaircar(){
 		$name = $_COOKIE['username'];
-		$model = D('CarReplace');
-		$data = $model->getValue($name);
-		$page = $data['0'];
-		$arr = $data['1'];
-		$this->assign('arr',$arr);
-		$this->assign('page',$page);
-    	$this->display('changecar');
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		// $rolename = '最高管理';
+		if($rolename == '教练'){
+			$model = D('CarReplace');
+			$where = "replace_name = '$name'";
+			$data = $model->getValue($where);
+			$page = $data['0'];
+			$arr = $data['1'];
+			$status = '';
+			$this->assign('status',$status);
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('changecar');
+		}else if($rolename == '最高管理'){
+			$model = D('CarReplace');
+			$where = "";
+			$data = $model->getValue($where);
+			$page = $data['0'];
+			$arr = $data['1'];
+			$type = '1';
+			$status = '';
+			$this->assign('status',$status);
+			$this->assign('type',$type);
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('changecar');
+		}
+		
 		
 	}
 	/**
@@ -35,6 +58,7 @@ class ServiceController extends Controller {
 	*	修改一条数据
 	*/
 	public	function updaterepaircar(){
+		
 		$id = $_GET['id'];
 		$model = D('CarReplace');
 		$arr = $model->getoneValue($id);
@@ -76,14 +100,96 @@ class ServiceController extends Controller {
 		$this->display('uchangecar');
 	}
 	/**
+	*	修改状态
+	*/
+	public function updrepaircar(){
+		$name = $_COOKIE['username'];
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		// $rolename = '最高管理';
+		if($rolename !='最高管理'){
+			echo "100";die;
+		}
+		$id = $_POST['id'];
+		$model = D('CarReplace');
+		$arr = $model->getoneValue($id);
+		$data['replace_status'] = '1';
+		$data['deal_name'] = $_COOKIE['username'];
+		$res = $model->where("replace_id = '$id'")->save($data);
+		if($res){
+			echo  json_encode($_COOKIE['username']);
+		}
+		else{
+			return false;
+		}
+	} 
+	/**
+	*	关于审核状态的搜索
+	*/
+	public function searchcondition(){
+		$name = $_COOKIE['username'];
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		// $rolename = '最高管理';
+		
+		$status = $_GET['value'];
+		$model = D('CarReplace');
+		if($status == ''){
+			$where = '';
+		}
+		else if($status == '0'){
+			$where = "replace_status = '$status'";
+		}
+		else if($status == '1'){
+			$where = "replace_status = '$status'";
+		}
+		else{
+			echo "<script>alert('不合法');history.go(-1);</script>";die;
+		}
+		
+		$data = $model->getValue($where);
+		$page = $data['0'];
+		$arr = $data['1'];
+		if($rolename == '最高管理'){
+			$type = '1';
+			$this->assign('type',$type);
+			$this->assign('status',$status);
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('changecar');
+		}
+		else
+		{
+			$this->assign('status',$status);
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('changecar');
+		}
+		
+	}
+	/**
 	*	添加一条维修记录
 	*/
 	public function addrepaircar(){
-		$arr = $_POST;
-		$data = array();
-		$model = D('CarReplace');
-		$res = $model->addValue($data);
-		print_r($res);die;
+		if($_POST){
+			
+			$model = D('CarReplace');
+			$arr['replace_time'] = time();
+			$arr['replace_name'] = $_COOKIE['username'];
+			$arr['replace_number_before'] = $_POST['replace_number_before'];
+			$arr['replace_number_after'] = $_POST['replace_number_after'];
+			$arr['replace_reason'] = $_POST['replace_reason'];
+			$arr['deal_name'] = "";
+			$arr['replace_status'] = "0";
+			$res = $model->add($arr);
+			print_r($res);die;
+		}
+		else
+		{
+				$this->display(addrepaircar);
+		}
 	}
 	/**
 	*	查询当前教练的全部油气申请信息
@@ -121,9 +227,29 @@ class ServiceController extends Controller {
 	*/
 	public function repair(){
 		$name = $_COOKIE['username'];
-		$model = D('CarRepair');
-		$arr = $model->getValue($name);
-		print_r($arr);die;
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		if($rolename == '教练'){
+			$model = D('CarRepair');
+			$where = "repair_coachname = '$name'";
+			$data = $model->getValue($where);
+			$page = $data['0'];
+			$arr = $data['1'];
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('repairlist');
+		}else if($rolename == '最高管理'){
+			$model = D('CarRepair');
+			$where = '';
+			$data = $model->getValue($where);
+			$page = $data['0'];
+			$arr = $data['1'];
+			$this->assign('arr',$arr);
+			$this->assign('page',$page);
+			$this->display('repairlist');
+		}
+		
     }
 	/**
 	*	删除维修记录

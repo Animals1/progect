@@ -165,19 +165,11 @@ $(function(){
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Service/repair" target="rightFrame">维修记录</a></li>
             </ul>
         </li>
-<<<<<<< HEAD
-        </ul>    
-    </dd> 
-    
-    
-    <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico03.png" /></span>行政</div>
-=======
         </ul>
     </dd>
 
 
-    <dd><div class="title"><span><img src="/Public/admin/images/leftico03.png" /></span>行政</div>
->>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
+    <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico03.png" /></span>行政</div>
     <ul class="menuson">
 
         <li>
@@ -259,19 +251,11 @@ $(function(){
             <li><a href="/eleven/progect/drivingSchool/index.php/Home/Administration/trainclass" target="rightFrame">教练排课</a></li>
             </ul>
         </li>
-<<<<<<< HEAD
-        </ul>     
-    </dd>  
-    
-    
-    <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>人事</div>
-=======
         </ul>
     </dd>
 
 
-    <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>人事</div>
->>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
+    <dd><div class="title"><span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico04.png" /></span>人事</div>
     <ul class="menuson">
         <li>
             <div class="header">
