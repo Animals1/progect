@@ -47,6 +47,27 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".click").click(function(){
+                $(".tip").fadeIn(200);
+            });
+
+            $(".tiptop a").click(function(){
+                $(".tip").fadeOut(200);
+            });
+
+            $(".sure").click(function(){
+                $(".tip").fadeOut(100);
+                window.location.href="/index.php/Home/Finance/charge";
+            });
+
+            $(".cancel").click(function(){
+                $(".tip").fadeOut(100);
+            });
+
+        });
+    </script>
 </head>
 
 <body style="background:#FFF8ED;">
@@ -55,7 +76,7 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><a href="/index.php/Home/Finance/charge"><span><img src="/Public/admin/images/t02.png" /></span>列表</a></li>
+            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>列表</li>
 
             <li><a href="/index.php/Home/Finance/income"><span><img src="/Public/admin/images/t04.png" /></span>统计</a></li>
         </ul>
@@ -133,7 +154,23 @@
         </table>
     </form>
 
+    <div class="tip">
+    <div class="tiptop"><span>提示信息</span><a></a></div>
 
+    <div class="tipinfo">
+        <span><img src="/Public/admin/images/ticon.png" /></span>
+        <div class="tipright">
+            <p>是否返回列表 ？</p>
+            <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
+        </div>
+    </div>
+
+    <div class="tipbtn">
+        <input name="" type="button"  class="sure" value="确定" />&nbsp;
+        <input name="" type="button"  class="cancel" value="取消" />
+    </div>
+
+</div>
 
 
 </div>

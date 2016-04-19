@@ -60,7 +60,16 @@ class ArrearsModel extends Model {
         return $this->Table('arrears')->add($date);
     }
 
+    /**
+     *@author:hanqiming
+     *@date  :2016-4-19
+     *@tablename:查看
+     */
+    public function selvalue(){
+        $id = $_GET['id'];
 
+        return $this->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where("arrears_id=$id")->find();
+    }
 
     /**
      * 收入报表（hanqiming）

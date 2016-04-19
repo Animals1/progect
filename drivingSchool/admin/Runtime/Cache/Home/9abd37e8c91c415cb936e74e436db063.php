@@ -14,9 +14,11 @@
 
 <body style="background:#FFF8ED;">
 
+
 <div class="formbody">
 
     <div class="formtitle"><span>车辆维修登记</span></div>
+
     <form action="/index.php/Home/Administration/servicerecordadd" method="post">
     <table>
         <tr>
