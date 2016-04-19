@@ -57,6 +57,17 @@ class ChargeModel extends Model {
         return $this->where("charge_id=$id")->delete();
     }
 
+
+    /**
+     *@author:hanqiming
+     *@date  :2016-4-19
+     *@tablename:查看
+     */
+    public function selvalue(){
+        $id = $_GET['id'];
+        return $this->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where("charge_id=$id")->find();
+    }
+
     /*
      *我的学费——显示信息(xueyunhuan)
      *收费明细表、学员信息表、费用类型表、支付方式表。

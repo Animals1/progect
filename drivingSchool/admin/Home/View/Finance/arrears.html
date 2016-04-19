@@ -6,8 +6,27 @@
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
-    <script type="__PUBLIC__/text/javascript">
-    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $(".click").click(function(){
+            $(".tip").fadeIn(200);
+        });
+
+        $(".tiptop a").click(function(){
+            $(".tip").fadeOut(200);
+        });
+
+        $(".sure").click(function(){
+            $(".tip").fadeOut(100);
+            window.location.href="__APP__/Home/Finance/addarrears";
+        });
+
+        $(".cancel").click(function(){
+            $(".tip").fadeOut(100);
+        });
+
+    });
+</script>
 
 
 </head>
@@ -19,8 +38,7 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><a href="__APP__/Home/Finance/addarrears"><span><img src="__PUBLIC__/admin/images/t01.png" /></span>添加</a></li>
-            <li><span><img src="__PUBLIC__/admin/images/t03.png" /></span>删除</li>
+            <li class="click"><span><img src="__PUBLIC__/admin/images/t01.png" /></span>添加</li>
             <li><a href="__APP__/Home/Finance/income"><span><img src="__PUBLIC__/admin/images/t04.png" /></span>统计</a></li>
         </ul>
 
@@ -35,7 +53,6 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
             <th>欠费学员<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
             <th>学员编号</th>
             <th>费用日期</th>
@@ -48,14 +65,13 @@
         <tbody>
         <?php foreach($list as $v){?>
         <tr>
-            <td><input name="" type="checkbox" value="" /></td>
             <td><?php echo $v['stu_name']; ?></td>
             <td><?php echo $v['stu_sn']; ?></td>
             <td><?php echo $v['arrears_time']; ?></td>
             <td><?php echo $v['money_name']; ?></td>
             <td><?php echo $v['arrears_money']; ?></td>
             <td><?php echo $v['status_name']; ?></td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="__URL__/delarrears?id=<?php echo $v['arrears_id']; ?>" class="tablelink"> 删除</a></td>
+            <td><a href="__URL__/selarrears?id=<?php echo $v['arrears_id']; ?>" class="tablelink">查看</a>     <a href="__URL__/delarrears?id=<?php echo $v['arrears_id']; ?>" class="tablelink"> 删除</a></td>
         </tr>
         <?php }?>
         </tbody>
@@ -76,7 +92,7 @@
         <div class="tipinfo">
             <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
             <div class="tipright">
-                <p>是否确认对信息的修改 ？</p>
+                <p>是否进行添加 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
             </div>
         </div>

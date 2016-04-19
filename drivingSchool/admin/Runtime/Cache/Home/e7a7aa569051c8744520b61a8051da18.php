@@ -47,27 +47,6 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $(".click").click(function(){
-                $(".tip").fadeIn(200);
-            });
-
-            $(".tiptop a").click(function(){
-                $(".tip").fadeOut(200);
-            });
-
-            $(".sure").click(function(){
-                $(".tip").fadeOut(100);
-                window.location.href="/index.php/Home/Finance/charge";
-            });
-
-            $(".cancel").click(function(){
-                $(".tip").fadeOut(100);
-            });
-
-        });
-    </script>
 </head>
 
 <body style="background:#FFF8ED;">
@@ -76,7 +55,7 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>列表</li>
+            <li class="click"><a href="/index.php/Home/Finance/charge"><span><img src="/Public/admin/images/t02.png" /></span>列表</a></li>
 
             <li><a href="/index.php/Home/Finance/income"><span><img src="/Public/admin/images/t04.png" /></span>统计</a></li>
         </ul>
@@ -88,89 +67,53 @@
 
     </div>
 
-    <form action="doadd" method="post">
+    <form action="doup" method="post">
         <table class="imagetable" >
             <tr>
                 <th>学员姓名:</th>
                 <td>
-                    <select name="stu_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($name as $v){?>
-                        <option value="<?php echo $v['stu_id'];?>"><?php echo $v['stu_name'];?></option>
-                        <?php }?>
-                    </select>
+                    <input type="text" name="stu_id" value="<?php echo $up['stu_name']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>学员编号:</th>
                 <td>
-                    <select name="stu_sn">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($name as $v2){?>
-                        <option value="<?php echo $v2['stu_sn'];?>"><?php echo $v2['stu_sn'];?></option>
-                        <?php }?>
-                    </select>
+                    <input type="text" name="stu_sn" value="<?php echo $up['stu_sn']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>费用类型:</th>
                 <td>
-                    <select name="money_type_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($type as $v3){?>
-                        <option value="<?php echo $v3['money_type_id'];?>"><?php echo $v3['money_name'];?></option>
-                        <?php }?>
-                    </select>
+                    <input type="text" name="money_type_id" value="<?php echo $up['money_name']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>收费日期:</th>
                 <td>
-                    <input class="laydate-icon" onclick="laydate()" name="charge_time"><br /><br />
+                    <input class="laydate-icon" onclick="laydate()" name="charge_time" value="<?php echo $up['charge_time']; ?>"><br /><br />
                 </td>
             </tr>
             <tr>
                 <th>支付方式:</th>
                 <td>
-                    <select name="payment_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($method as $v4){?>
-                        <option value="<?php echo $v4['payment_id'];?>"><?php echo $v4['payment_name'];?></option>
-                        <?php }?>
-                    </select>
+                    <input type="text" name="payment_id" value="<?php echo $up['payment_name']; ?>">
                 </td>
             </tr>
             <tr>
                 <th>收费金额:</th>
                 <td>
-                    <input type="text" name="charge_money">元
+                    <input type="text" name="charge_money" value="<?php echo $up['charge_money']; ?>">元
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
-                    <input type="submit" value="收费">
+                    <input type="submit" value="修改">
                 </td>
             </tr>
         </table>
     </form>
 
-    <div class="tip">
-    <div class="tiptop"><span>提示信息</span><a></a></div>
 
-    <div class="tipinfo">
-        <span><img src="/Public/admin/images/ticon.png" /></span>
-        <div class="tipright">
-            <p>是否返回列表 ？</p>
-            <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-        </div>
-    </div>
-
-    <div class="tipbtn">
-        <input name="" type="button"  class="sure" value="确定" />&nbsp;
-        <input name="" type="button"  class="cancel" value="取消" />
-    </div>
-
-</div>
 
 
 </div>

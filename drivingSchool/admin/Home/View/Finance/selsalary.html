@@ -59,7 +59,7 @@
 
             $(".sure").click(function(){
                 $(".tip").fadeOut(100);
-                window.location.href="__APP__/Home/Finance/arrears";
+                window.location.href="__APP__/Home/Finance/salary";
             });
 
             $(".cancel").click(function(){
@@ -88,71 +88,44 @@
 
     </div>
 
-    <form action="doadds" method="post">
-        <table class="imagetable" >
-            <tr>
-                <th>学员姓名:</th>
-                <td>
-                    <select name="stu_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($name as $v){?>
-                        <option value="<?php echo $v['stu_id'];?>"><?php echo $v['stu_name'];?></option>
-                        <?php }?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th>学员编号:</th>
-                <td>
-                    <select name="stu_sn">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($name as $v2){?>
-                        <option value="<?php echo $v2['stu_sn'];?>"><?php echo $v2['stu_sn'];?></option>
-                        <?php }?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th>费用发生日期:</th>
-                <td>
-                    <input class="laydate-icon" onclick="laydate()" name="arrears_time"><br /><br />
-                </td>
-            </tr>
-            <tr>
-                <th>欠费类型:</th>
-                <td>
-                    <select name="money_type_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($type as $v3){?>
-                        <option value="<?php echo $v3['money_type_id'];?>"><?php echo $v3['money_name'];?></option>
-                        <?php }?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th>欠费金额:</th>
-                <td>
-                    <input type="text" name="arrears_money">元
-                </td>
-            </tr>
-            <tr>
-                <th>状态:</th>
-                <td>
-                    <select name="status_id">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($statu as $v4){?>
-                        <option value="<?php echo $v4['status_id'];?>"><?php echo $v4['status_name'];?></option>
-                        <?php }?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="收费">
-                </td>
-            </tr>
-        </table>
-    </form>
+    <table class="imagetable" >
+        <tr>
+            <th>岗位:</th>
+            <td>
+                <?php echo $all['role_name']; ?>
+            </td>
+        </tr>
+        <tr>
+            <th>编号:</th>
+            <td>
+                <?php echo $all['staff_sn']; ?>
+            </td>
+        </tr>
+        <tr>
+            <th>姓名:</th>
+            <td>
+                <?php echo $all['staff_name']; ?>
+            </td>
+        </tr>
+        <tr>
+            <th>出勤天数:</th>
+            <td>
+                <?php echo $all['salary_day']; ?>天
+            </td>
+        </tr>
+        <tr>
+            <th>实发工资:</th>
+            <td>
+                <?php echo $all['salary_wages']; ?>元
+            </td>
+        </tr>
+        <tr>
+            <th>状态:</th>
+            <td>
+                <?php echo $all['salary_status_name']; ?>
+            </td>
+        </tr>
+    </table>
 
 
     <div class="tip">
