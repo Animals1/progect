@@ -378,5 +378,16 @@ class PersonalController extends Controller {
 		}
 		
 	}
+
+
+
+
+	/*
+	*	待办事项
+	*	by 郭旭峰
+	*/
+	public function waitthing(){
+		
+	}
 }
 ?>

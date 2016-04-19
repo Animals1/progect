@@ -67,5 +67,13 @@
 	<div style="margin-left:500px;">
 		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100" style="cursor:pointer" title="照片">
 	</div>
+
+
+	<div>
+
+		<?php
+ if($arr['staff_photo']==''||$arr["staff_email"]==''||$arr["staff_tel"]==''||$arr["staff_curaddress"]==''||$arr["staff_start_year"]==''){ echo "<font size='2' color='red'>您的信息不完整，请尽快去服务台办理相关验证，否则将会影响您的操作！</font>"; } ?>
+
+	</div>
 </body>
 </html>

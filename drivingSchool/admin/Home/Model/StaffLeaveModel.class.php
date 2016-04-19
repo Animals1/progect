@@ -18,7 +18,7 @@ class StaffLeaveModel extends Model {
 			$userid = $_COOKIE["userid"];
 			$user = M('staff_leave');
             isset($_GET['p'])?$p=$_GET['p']:$p=1;
-            $list =$user->page($p,6)->select();
+            $list =$user->page($p,6)->order('leave_starttime desc')->select();
             $count      = $user->where("work_id='$userid'")->count();
         	$page       = new \Think\Page($count,6);
         	$show       = $page->show();
@@ -127,7 +127,7 @@ class StaffLeaveModel extends Model {
 
 			$user = M('staff_leave');
             isset($_GET['p'])?$p=$_GET['p']:$p=1;
-            $list =$user->page($p,6)->select();
+            $list =$user->page($p,6)->order('leave_starttime desc')->select();
             $count      = $user->where("leave_starttime like'%$date%'")->count();
         	$page       = new \Think\Page($count,6);
         	$show       = $page->show();
