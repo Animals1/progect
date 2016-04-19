@@ -387,7 +387,11 @@ class PersonalController extends Controller {
 	*	by 郭旭峰
 	*/
 	public function waitthing(){
-		
+		$data = D("Waitthing");
+		$arr = $data->waitthing();
+		$this->assign("arr",$arr);
+		$this->display("waitthing");
 	}
+	
 }
 ?>
