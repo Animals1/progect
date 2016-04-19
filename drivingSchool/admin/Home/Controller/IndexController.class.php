@@ -124,15 +124,6 @@ class IndexController extends Controller {
 }
         
         
-
-        
-    
-    
-
-
-
-
-
         public function personinfo(){
         	$this->display('index');
         }
