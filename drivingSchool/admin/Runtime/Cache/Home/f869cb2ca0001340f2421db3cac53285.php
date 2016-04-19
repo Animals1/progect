@@ -44,7 +44,6 @@
     <div class="loginbox">
     <form action="/index.php/Home/Index/index" method="post" onsubmit="return funall();">
     <ul>
-
     <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>
     <li><input name="upwd" id="upwd" type="password" class="loginpwd" placeholder="请输入密码" onblur="fun2();" /><span id="span_pwd"></span></li>
     <li><input  type="submit" class="loginbtn" value="登录"    /><label>

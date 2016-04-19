@@ -403,6 +403,20 @@ class StaffModel extends Model {
 		return $img;
 
 	}
+
+	/**
+	 * 查询全部的员工信息（部分字段）
+	 */
+	public function allvalue(){
+		return $this->field('staff_id,staff_name,staff_sn')->select();
+	}
+
+	/**
+	 * 查询信息
+	 */
+	public function allpen(){
+		return $this->select();
+	}
 }
 
 ?>
