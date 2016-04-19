@@ -7,7 +7,8 @@ class ContinuityModel extends Model {
 	*	记录登陆天数
 	*/
 	public function descsele(){
-		return $this->Table("continuity")->order("id desc")->select();
+		$username = $_COOKIE['username'];
+		return $this->Table("continuity")->order("id desc")->where("uname='$username'")->find();
 	}
 
 
@@ -16,8 +17,10 @@ class ContinuityModel extends Model {
 	*/
 	public function continuityadd(){
 		$time = time();
+		$uname = $_COOKIE["username"];
 		//接收值
 		$data["time"] = $time;
+		$data["uname"] = $uname;
 		return $this->Table("continuity")->add($data);
 	}
 
@@ -32,11 +35,26 @@ class ContinuityModel extends Model {
 
 	/*
 	*	查询表中的总记录数
+	*	BY 郭旭峰
 	*/
 	public function continuitydayssele(){
-		$arr = $this->Table("continuity")->select();
+		$uname = $_COOKIE["username"];
+		$arr = $this->Table("continuity")->where("uname='$uname'")->select();
 		$count = count($arr);
 		return $count;
+	}
+
+
+	/*
+	*	月底入库上月打卡信息
+	*	by  郭旭峰
+	*/
+	public function dakanumadd($dakanum,$nowmonth){
+		$uname = $_COOKIE["username"];
+		$data["uname"] = $uname;
+		$data["month"] = $nowmonth;
+		$data["num"] = $dakanum;
+		return $this->Table("dakanum")->add($data);
 	}
 }
 ?>
