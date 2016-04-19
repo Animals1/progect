@@ -102,9 +102,9 @@ class StudentController extends Controller {
         	$time = D('TimeTable');
         	$time_table = $time->getvalue();
         	//print_r($time_table);die;
-			$this->assign('staff_name',$arr);
-			$this->assign('time_table',$time_table);
-			$this->assign('class_name',$class_name);
+			    $this->assign('staff_name',$arr);
+			    $this->assign('time_table',$time_table);
+			    $this->assign('class_name',$class_name);
         	$this->display('applyorder');
         }
       /*

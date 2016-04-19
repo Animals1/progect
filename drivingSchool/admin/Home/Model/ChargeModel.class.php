@@ -23,6 +23,8 @@ class ChargeModel extends Model {
         $data = array($list,$count,$show,$p);
         return $data;
     }
+
+
     /*
      * 收费明细-添加信息
      * 接受post的传值
@@ -34,8 +36,27 @@ class ChargeModel extends Model {
      * */
     public function addValue()
     {
-        return $this->Table('charge')->add($_POST);
+        $date['stu_id'] = $_POST['stu_id'];
+        $date['stu_sn'] = $_POST['stu_sn'];
+        $date['money_type_id'] = $_POST['money_type_id'];
+        $date['charge_time'] = $_POST['charge_time'];
+        $date['payment_id'] = $_POST['payment_id'];
+        $date['charge_money'] = $_POST['charge_money'];
+        return $this->Table('charge')->add($date);
     }
+
+    /**
+     *@author:hanqiming
+     *@date  :2016-4-18
+     *@tablename:删除
+     */
+    public function delvalue(){
+
+        $id = $_GET['id'];
+
+        return $this->where("charge_id=$id")->delete();
+    }
+
     /*
      *我的学费——显示信息(xueyunhuan)
      *收费明细表、学员信息表、费用类型表、支付方式表。
@@ -50,11 +71,12 @@ class ChargeModel extends Model {
             $arr = array($p,$list,$show,$count);
             return $arr;
     }
+
     /**
      * 收入报表（hanqiming）
      */
     public function findvalue(){
-        $sql="select money_type_id,sum(charge_money) from charge group by money_type_id";
+        $sql="select charge.money_type_id,sum(charge_money),money_name from charge join money_type on charge.money_type_id=money_type.money_type_id group by charge.money_type_id";
         $arr = $this->query($sql);
         return $arr;
     }

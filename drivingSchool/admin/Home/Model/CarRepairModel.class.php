@@ -38,10 +38,10 @@ class CarRepairModel extends Model {
     }
 
     /*
-     * 换车记录添加
+     * 维修记录添加
      *
      * */
-    public function addCarrepair($data)
+    public function addrepair($data)
     {
 		return $this->add($data);
     }

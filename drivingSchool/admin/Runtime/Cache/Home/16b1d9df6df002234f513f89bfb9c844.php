@@ -73,7 +73,7 @@ $(function(){
             </ul>
            
         </li><?php endforeach; endif; ?>
-       <!--  <li>
+       <!-- <li>
             <div class="header">
             <cite></cite>
             <a href="javascript:;" target="rightFrame">用户管理</a>
@@ -265,10 +265,6 @@ $(function(){
 
        <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>财务</div>
     <ul class="menuson">
-<<<<<<< HEAD
-
-=======
->>>>>>> fb4698e7d2cf25816d149ff5466dabd03828d976
         <li>
             <div class="header">
                 <cite></cite>
@@ -311,12 +307,18 @@ $(function(){
                 <li><a href="javascript:;">支出报表</a></li>
             </ul>
         </li>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2732981dfe48ae4db5ade337a6b08d5314a64244
         <li><cite></cite><a href="#"  target="rightFrame">自定义</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">常用资料</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">信息列表</a><i></i></li>
         <li><cite></cite><a href="#"  target="rightFrame">其他</a><i></i></li>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2732981dfe48ae4db5ade337a6b08d5314a64244
     </ul>
 
     </dd>
@@ -330,12 +332,18 @@ $(function(){
         <dd><div class="title"><span><img src="/Public/admin/images/leftico04.png" /></span>学员</div>
         <li>
         <ul class="menuson">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2732981dfe48ae4db5ade337a6b08d5314a64244
             <li><cite></cite><a href="#">自定义</a><i></i></li>
             <li><cite></cite><a href="#">常用资料</a><i></i></li>
             <li><cite></cite><a href="#">信息列表</a><i></i></li>
             <li><cite></cite><a href="#">其他</a><i></i></li>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2732981dfe48ae4db5ade337a6b08d5314a64244
            <li>
             <div class="header">
             <cite></cite>
@@ -355,7 +363,10 @@ $(function(){
             <i></i>
             </div>
             <ul class="sub-menus">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 2732981dfe48ae4db5ade337a6b08d5314a64244
             <li><a href="javascript:;">预约申请</a></li>
             <li><a href="javascript:;">预约记录</a></li>
             <li><a href="/index.php/Home/Student/mycharge"  target="rightFrame">我的学费</a></li>
@@ -372,9 +383,22 @@ $(function(){
             <li><a href="javascript:;">科二面试</a></li>
             </ul>
             </li>
+<<<<<<< HEAD
+            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            </ul>
+            </li>
 
-
-
+            <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
+            <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
+            </ul>
+            </li>
+            <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
+            <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
+            </ul>
+            </li> -->
             <!--<li><a href="javascript:;"  target="rightFrame">预约申请</a></li>-->
             <!--<li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>-->
             <!--<li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>-->
@@ -396,6 +420,8 @@ $(function(){
            
 
 >>>>>>> af9b7f7eb89a1d0be73fa4e7c44843224f834b4d
+=======
+>>>>>>> 5a688202cef60f8aa4425a0f037aa21e06936156
         </ul>
 
         </dd>

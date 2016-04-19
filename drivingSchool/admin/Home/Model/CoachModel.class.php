@@ -31,10 +31,10 @@ class CoachModel extends Model {
      * */
     public function coachMessage($where=1)
     {
-        return $this->join('coach_group on coach.group_id=coach_group.group_id')->where($where)->select();
+        return $this->join('staff on coach.coach_staff_id=staff.staff_id')->where($where)->select();
     }
     /*
-     * 修改
+     * 修改join('coach_group on coach.group_id=coach_group.group_id')->
      * */
     public function updatecoach($data,$where)
     {
