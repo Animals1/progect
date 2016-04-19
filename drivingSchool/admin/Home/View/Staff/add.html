@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+
 
 </head>
 
@@ -87,6 +87,8 @@
         身份证号：<input name="idcard" type="text" class="dfinput" />
     </li>
     <li><label>联系电话：</label><input name="tel" type="text" class="dfinput" />
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    电子邮箱：<input name="email" type="text" class="dfinput" />
     </li>
     <li><label></label>
     合同开始日期：<input type="text" class="sang_Calender" name="startyear" />
@@ -114,7 +116,7 @@
         <li><label>驾驶证类型：</label>
         <select name="drivingid" id="">
             <foreach name="coach[0]" item="coach_v" >
-                <option value="{$coach_v.dirving_id}">{$coach_v.driving_name}</option>
+                <option value="{$coach_v.driving_id}">{$coach_v.driving_name}</option>
             </foreach>
         </select>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -161,6 +163,7 @@
 </body>
 
 </html>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>        
 <script type="text/javascript" src="__PUBLIC__/admin/js/datetime.js"></script>
 <script type="text/javascript">
         $(".site").live("change",function(){
