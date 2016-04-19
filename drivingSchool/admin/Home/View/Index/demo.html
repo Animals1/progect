@@ -1,0 +1,126 @@
+if($rolename=="管理员"){
+
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=1")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+
+                    }else if($rolename=="教练"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=2")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="行政"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=3")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="人事"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=4")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="财务"){
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=5")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else if($rolename=="学员"){
+                        
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $arr=$db->where("parent_id=6")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($arr as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            $arr[$k]['methods']=$tmp;
+                        }
+                        //$arr[] = $rolename; 
+                        //dump($arr);die;
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }else{
+                        //目的是取出所有的控制器
+                        $db=D("privilege");
+                        $da=$db->where("parent_id=0")->select();
+                        //对控制器做一个循环，取出每一个控制器下的方法
+                        foreach ($da as $k => $v) {
+                            $tmp=$db->where("parent_id=".$v['privilege_id'])->select();
+                            //$arr[$k]['methods']=$tmp;
+                            foreach($tmp as $kk => $vo){
+                                $tmp[$kk]['methods'] = $db->where("parent_id=".$vo['privilege_id'])->select();
+                            }
+                            $da[$k]['method']=$tmp;
+                            $arr = array($da);
+                        }
+                        $ar = base64_encode(gzcompress(serialize($arr)));
+                         cookie('arr',$ar);
+                         cookie('rolename',$rolename);
+                         /*$this->assign("arr",$arr);
+                         $this->assign("rolename",$rolename);*/
+                        $this->display("main");
+                    }
