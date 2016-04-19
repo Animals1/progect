@@ -37,7 +37,21 @@ class GasAddModel extends Model {
 
     }
 
-    
+    /*
+     * 汽油添加
+     * */
+    public function addgas($data)
+    {
+        return $this->add($data);
+    }
+
+    /*
+     * 汽油添加记录
+     * */
+    public function gasMessage()
+    {
+       return $this->select();
+    }
 
     /*
      * 查询汽油名称

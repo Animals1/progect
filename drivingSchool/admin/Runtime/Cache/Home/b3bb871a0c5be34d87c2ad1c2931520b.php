@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -50,9 +50,7 @@
             <li class="click">车牌号:<input type="text" name="car_number" id="car_number"></li>
             <li class="click">申请人:<select name="replace_name" id="replace_name">
                 <option value="-1">请选择</option>
-                <foreach name="coachMess" item="coachMess">
-                    <option value="{$coachMess.staff_id}">{$coachMess.staff_name}</option>
-                </foreach>
+                <?php if(is_array($coachMess)): foreach($coachMess as $key=>$coachMess): ?><option value="<?php echo ($coachMess["staff_id"]); ?>"><?php echo ($coachMess["staff_name"]); ?></option><?php endforeach; endif; ?>
             </select></li>
             <li>日期: <input class="laydate-icon" onclick="laydate()" id='laydate'></li>
             <li><input type="button" value="查找" onclick="searchvalue()"></li>
@@ -60,7 +58,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span><a href="__APP__/Home/Administration/vehreplaceadd">申请换车</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/vehreplaceadd">申请换车</a></li>
         </ul>
 
     </div>
@@ -73,7 +71,7 @@
             var laydate=$('#laydate').val();
 
             $.ajax({
-                url: "__APP__/Home/Administration/replacesearch",
+                url: "/index.php/Home/Administration/replacesearch",
                 type: 'get',
                 data: {'car_number':car_number,'replace_name':replace_name,'laydate':laydate},
                 success: function (data) {
@@ -97,16 +95,14 @@
         </tr>
         </thead>
         <tbody>
-<foreach name="replace" item="rep">
-        <tr>
+<?php if(is_array($replace)): foreach($replace as $key=>$rep): ?><tr>
 
-            <td>{$rep.staff_name}</td>
-            <td>{$rep.replace_time|date="Y-m-d H:i:s",###}</td>
-            <td>{$rep.car_number}-->{$rep.after_number}</td>
-            <td>{$rep.replace_reason}</td>
-            <td>{$rep.deal_name}</td>
-        </tr>
-</foreach>
+            <td><?php echo ($rep["staff_name"]); ?></td>
+            <td><?php echo (date("Y-m-d H:i:s",$rep["replace_time"])); ?></td>
+            <td><?php echo ($rep["car_number"]); ?>--><?php echo ($rep["after_number"]); ?></td>
+            <td><?php echo ($rep["replace_reason"]); ?></td>
+            <td><?php echo ($rep["deal_name"]); ?></td>
+        </tr><?php endforeach; endif; ?>
 
         </tbody>
     </table>
@@ -133,8 +129,5 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-<script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>
-
-
-

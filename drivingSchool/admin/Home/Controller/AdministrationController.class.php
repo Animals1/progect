@@ -499,14 +499,6 @@ class AdministrationController extends Controller {
                 $this->display('servicerecordadd');
            }
         }
-    /*
-    * vehreplace
-     * 车辆更换
-    * */
-        public function vehreplace()
-        {
-            $this->display('vehreplace');
-        }
 
     /*
      * vehreplaceadd
@@ -514,7 +506,117 @@ class AdministrationController extends Controller {
      * */
         public function vehreplaceadd()
         {
-            $this->display('vehreplaceadd');
+            //实例化车辆更换
+            $replace=D('CarReplace');
+            //实例化车辆表
+            $car=D('Car');
+            //实例化车辆维修
+
+            //实例化教练表
+            $coach=D('Coach');
+            //有post值
+            if($_POST)
+            {
+                //接值
+                $check=$_POST['repair'];
+                $data['replace_name']=$_POST['replace_name'];
+                $data['replace_time']=time();
+                $data['replace_number_before']=$_POST['replace_number_before'];
+                $data['replace_number_after']=$_POST['replace_number_after'];
+                $data['replace_reason']=$_POST['change_reason'];
+
+                //如果点击了同时报修
+                if($check=='checked')
+                {
+                    $repair['repair_coachname']=$data['replace_name'];
+                    $repair['repair_carid']=$data['replace_number_before'];
+                    $repair['repair_desc']=$data['replace_reason'];
+                    $repair['repair_time']=$data['replace_time'];
+                    $repair_car=D('CarRepair');
+                    //报修
+                    $repair_add=$repair_car->addrepair($repair);
+                    //更换车辆
+                    $car_replace=$replace->addCarreplace($data);
+                    if($repair_add && $car_replace)
+                    {
+                        $this->success('更换车辆与报修成功','/Home/Administration/vehreplace');
+                    }
+                    else
+                    {
+                        $this->error('更换车辆或报修失败');
+                    }
+                }
+                else
+                {
+                    //更换车辆
+                    $car_replace=$replace->addCarreplace($data);
+                    if($car_replace)
+                    {
+                        $this->success('更换车辆申请成功','/Home/Administration/vehreplace');
+                    }
+                    else
+                    {
+                        $this->error('更换车辆申请失败');
+                    }
+                }
+            }
+            else
+            {
+                //获取车牌号
+                $car_number=$car->vehicles();
+
+                $coachMess=$coach->coachMessage();
+                $this->assign('coachMess',$coachMess);
+                $this->assign('car_number',$car_number);
+                $this->display('vehreplaceadd');
+            }
+
+        }
+    /*
+    * vehreplace
+     * 车辆更换
+    * */
+    public function vehreplace()
+    {
+        $coach=D('Coach');
+        $coachMess=$coach->coachMessage();
+        $replace=D('CarReplace');
+        $car_replace=$replace->selectReplace();
+        $this->assign('replace',$car_replace);
+        $this->assign('coachMess',$coachMess);
+        $this->display('vehreplace');
+    }
+
+    /*
+     * 车辆更换的搜索
+     * */
+        public function replacesearch()
+        {
+            /*接收值*/
+            $car_number=$_GET['car_number'];
+            $replace_name=$_GET['replace_name'];
+            $laydate=strtotime($_GET['laydate']);
+            /*开始拼接条件*/
+            $where=1;
+            if($car_number != null && $car_number != -1)
+            {
+                $where.=" and car.car_number like '%$car_number%'";
+            }
+            if($replace_name != null && $replace_name != -1)
+            {
+                $where.=" and staff.staff_id='$replace_name'";
+            }
+            if($laydate != null && $laydate != -1)
+            {
+                $where.=" and car_repair.repair_time='$laydate'";
+            }
+            $coach=D('Coach');
+            $coachMess=$coach->coachMessage();
+            $replace=D('CarReplace');
+            $car_replace=$replace->selectReplace($where);
+            $this->assign('replace',$car_replace);
+            $this->assign('coachMess',$coachMess);
+            $this->display('vehreplace');
         }
 
     /*
@@ -522,7 +624,34 @@ class AdministrationController extends Controller {
     * */
         public function gasadd()
         {
-            $this->display('gasadd');
+            if($_POST)
+            {
+                $data['applicant_name']=$_POST['applicant_name'];
+                $data['car_number']=$_POST['car_number'];
+                $data['gas_type_id']=$_POST['gas_type_id'];
+                $data['gas_volume']=$_POST['gas_volume'];
+                $data['gas_addtime']=time();
+                $gasadd=D('GasAdd');
+                $gas_add=$gasadd->addgas($data);
+                if($gas_add)
+                {
+                    $this->success('汽油申请成功','/Home/Administration/gasrecord');
+                }
+                else
+                {
+                    $this->error('汽油申请失败','/Home/Administration/gasadd');
+                }
+            }
+            else
+            {
+                $car=D('Car');
+                $car_number=$car->vehicles();
+                $gas=D('GasType');
+                $gas_type=$gas->getValue();
+                $this->assign('car_number',$car_number);
+                $this->assign('gas_type',$gas_type);
+                $this->display('gasadd');
+            }
         }
     /*
      * gasrecord
@@ -530,6 +659,9 @@ class AdministrationController extends Controller {
      * */
         public function gasrecord()
         {
+            $record=D('GasAdd');
+            $gas_record=$record->gasMessage();
+            $this->assign('record',$gas_record);
             $this->display('gasrecord');
         }
 
@@ -547,6 +679,7 @@ class AdministrationController extends Controller {
     * */
         public function bussetting()
         {
+
             $this->display('busseting');
         }
 

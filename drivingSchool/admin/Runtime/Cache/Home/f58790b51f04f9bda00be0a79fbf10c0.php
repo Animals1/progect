@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -47,18 +47,18 @@
     <div class="tools">
 
         <!--<ul class="toolbar">-->
-            <!--<li class="click1"><span><img src="__PUBLIC__/admin/images/t01.png" /></span><a href="__APP__/Home/Administration/addveh">添加</a></li>-->
-            <!--<li class="click1"><span><img src="__PUBLIC__/admin/images/t02.png" /></span><a href="">修改</a></li>-->
-            <!--<li><span><img src="__PUBLIC__/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>-->
-            <!--<li><span><img src="__PUBLIC__/admin/images/t04.png" /></span><a href="">统计</a></li>-->
+            <!--<li class="click1"><span><img src="/Public/admin/images/t01.png" /></span><a href="/index.php/Home/Administration/addveh">添加</a></li>-->
+            <!--<li class="click1"><span><img src="/Public/admin/images/t02.png" /></span><a href="">修改</a></li>-->
+            <!--<li><span><img src="/Public/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>-->
+            <!--<li><span><img src="/Public/admin/images/t04.png" /></span><a href="">统计</a></li>-->
 
 
         <!--</ul>-->
 
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span><a href="__APP__/Home/Administration/addveh"><a
-                    href="__APP__/Home/Administration/addbus">增开班车</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh"><a
+                    href="/index.php/Home/Administration/addbus">增开班车</a></li>
         </ul>
 
     </div>
@@ -108,7 +108,7 @@
         <div class="tiptop"><span>提示信息</span><a></a></div>
 
         <div class="tipinfo">
-            <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
+            <span><img src="/Public/admin/images/ticon.png" /></span>
             <div class="tipright">
                 <p>是否确认对信息的修改 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
@@ -132,6 +132,3 @@
 </script>
 
 </html>
-
-
-

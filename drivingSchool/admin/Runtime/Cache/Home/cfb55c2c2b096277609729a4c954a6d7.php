@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
 
 
@@ -17,7 +17,7 @@
 
     <div class="formtitle"><span>油气添加申请</span></div>
 
-    <form action="__APP__/Home/Administration/gasadd" method="post">
+    <form action="/index.php/Home/Administration/gasadd" method="post">
         <table>
             <tr>
                 <td>申请人:</td>
@@ -27,9 +27,7 @@
                 <td>申请车辆:</td>
                 <td><select name="car_number" id="">
                     <option value="-1">请选择</option>
-                <foreach name="car_number" item="number">
-                    <option value="{$number.car_number}">{$number.car_number}</option>
-                    </foreach>
+                <?php if(is_array($car_number)): foreach($car_number as $key=>$number): ?><option value="<?php echo ($number["car_number"]); ?>"><?php echo ($number["car_number"]); ?></option><?php endforeach; endif; ?>
 
                 </select></td>
             </tr>
@@ -38,9 +36,7 @@
                 <td>
                     <select name="gas_type_id" id="">
                         <option value="-1">请选择</option>
-                        <foreach name="gas_type" item="gas">
-                        <option value="{$gas.gas_type_id}">{$gas.gas_type_name}</option>
-</foreach>
+                        <?php if(is_array($gas_type)): foreach($gas_type as $key=>$gas): ?><option value="<?php echo ($gas["gas_type_id"]); ?>"><?php echo ($gas["gas_type_name"]); ?></option><?php endforeach; endif; ?>
                     </select>
                 </td>
             </tr>
@@ -87,6 +83,3 @@
 
 </script>
 </html>
-
-
-

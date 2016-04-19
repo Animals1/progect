@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
     </script>
 
@@ -18,33 +18,27 @@
 
     <div class="formtitle"><span>申请更换车辆</span></div>
 
-    <form action="__APP__/Home/Administration/vehreplaceadd" method="post">
+    <form action="/index.php/Home/Administration/vehreplaceadd" method="post">
         <table>
             <tr>
                 <td>申请人:</td>
                 <td><select name="replace_name" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="coachMess" item="msg">
-                        <option value="{$msg.coach_id}">{$msg.staff_name}</option>
-                    </foreach>
+                    <?php if(is_array($coachMess)): foreach($coachMess as $key=>$msg): ?><option value="<?php echo ($msg["coach_id"]); ?>"><?php echo ($msg["staff_name"]); ?></option><?php endforeach; endif; ?>
                 </select></td>
             </tr>
             <tr>
                 <td>被换车辆:</td>
                 <td><select name="replace_number_before" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="car_number" item="number">
-                    <option value="{$number.car_id}">{$number.car_number}</option>
-                        </foreach>
+                    <?php if(is_array($car_number)): foreach($car_number as $key=>$number): ?><option value="<?php echo ($number["car_id"]); ?>"><?php echo ($number["car_number"]); ?></option><?php endforeach; endif; ?>
                 </select></td>
             </tr>
             <tr>
                 <td>换成车辆:</td>
                 <td><select name="replace_number_after" id="">
                     <option value="-1">请选择</option>
-                    <foreach name="car_number" item="number">
-                        <option value="{$number.car_id}">{$number.car_number}</option>
-                    </foreach>
+                    <?php if(is_array($car_number)): foreach($car_number as $key=>$number): ?><option value="<?php echo ($number["car_id"]); ?>"><?php echo ($number["car_number"]); ?></option><?php endforeach; endif; ?>
                 </select></td>
             </tr>
             <tr>
@@ -69,6 +63,3 @@
 </body>
 
 </html>
-
-
-
