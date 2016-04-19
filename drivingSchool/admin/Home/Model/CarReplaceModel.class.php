@@ -21,11 +21,20 @@ class CarReplaceModel extends Model {
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$list = $this->where($where)
 					->limit($Page->firstRow.','.$Page->listRows)
+					->join("coach ON car_replace.replace_name = coach.coach_id")
+					->join("staff ON coach_staff_id = staff.staff_id")
+					->join("car ON car_replace.replace_number_before = car.car_id")
 					->select();
 		$arr = array($show,$list);
 		return $arr;
 		
     }
+	/**
+	*	查寻更换后的车牌号
+	*/
+	public function getlastnu($last_id){
+		return $this->join("car ON car_replace.replace_number_after = car.car_id")->find();
+	}
     /*
      * 删除一条数据
      * */

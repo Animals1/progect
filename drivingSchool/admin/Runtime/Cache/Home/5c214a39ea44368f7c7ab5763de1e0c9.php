@@ -5,7 +5,9 @@
 <title>无标题文档</title>
 <link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
-
+<style>
+.tech{background:url(/eleven/progect/drivingSchool/Public/admin/<?php echo ($arr['staff_photo']); ?>) no-repeat 70px 50px; height:250px;}
+</style>
 <script language="javascript">
     $(function(){
     $('.error').css({'position':'absolute','left':($(window).width()-490)/2});
@@ -36,9 +38,8 @@
         
 		
 	<dl> 
-	
+	<dt>信息档案</dt>
     <dd><b>姓名：</b>&nbsp;&nbsp;&nbsp;&nbsp;<?php echo ($arr['staff_name']); ?></dd>
-    <dd><b>头像：</b></dd><span><img src="/eleven/progect/drivingSchool/Public/admin/<?php echo ($arr['staff_photo']); ?>" width="118" height="122"/></span>
     <dd><b>性别：</b>&nbsp;&nbsp;&nbsp;&nbsp;
 	<?php  if($arr['staff_sex'] == 1){ echo "男"; } else if($arr['staff_sex'] == 0){ echo "女"; } ?>
 	</dd>

@@ -10,10 +10,9 @@ class GasAddModel extends Model {
     /**
      * 查询数据
      */
-    public function getValue($name)
+    public function getValue($where)
     {
-        return $this->where("applicant_name = '$name'")
-					->join('gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id')
+        return $this->where($where)
 					->select();
     }
     /*

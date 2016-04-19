@@ -31,7 +31,7 @@
 			<?php  ?>
         
         </ul>
-			<label>选择条件</label>
+			<label>选择条件&nbsp;&nbsp;:</label>
 			<select class='condition'>
 			<?php if($status == ''){ echo "<option value='' selected>请选择</option><option value='0'>审核未通过</option><option value='1'>审核通过</option>"; } if($status == '0'){ echo "<option value=''>请选择</option><option value='0' selected>审核未通过</option><option value='1'>审核通过</option>"; } if($status == '1'){ echo "<option value=''>请选择</option><option value='0'>审核未通过</option><option value='1' selected>审核通过</option>"; } ?>
 				
@@ -56,8 +56,8 @@
         <th>更换前车牌号</th>
         <th>更换后车牌号</th>
         <th>换车原因</th>
-        <th>审核状态（点击错号即可修改）</th>
-		<?php if($type == '1'){ echo "<th>处理人</th>"; } else{ } ?>
+        <th>审核状态（管理员才有权限修改）</th>
+		<th>处理人</th>
         
 		<?php if($type == '1'){ echo "<th>操作</th>"; } else{ } ?>
         
@@ -67,18 +67,19 @@
         <tbody id='sui'>
 	
         <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><tr>
-        <td><?php echo ($vo["replace_name"]); ?></td>
+        <td><?php echo ($vo["staff_name"]); ?></td>
         <td><?php echo date("Y-m-d",$vo['replace_time']);?></td>
-        <td><?php echo ($vo["replace_number_before"]); ?></td>
-        <td><?php echo ($vo["replace_number_after"]); ?></td>
+        <td><?php echo ($vo["car_number"]); ?></td>
+		
+        <td><?php echo ($vo["replace_number_after_num"]); ?></td>
+		
         <td><?php echo ($vo["replace_reason"]); ?></td>
         <td>
-		<?php  if($vo['replace_status'] == '0'){ echo "审核未通过<span style='cursor:pointer' class='status' value='".$vo['replace_id']."'>×</span>"; } else { echo "审核通过<span style='cursor:pointer'>√</span>"; } ?>
+		<?php  if($vo['replace_status'] == '0'){ echo "审核未通过<span style='cursor:pointer'>×</span>"; } else { echo "审核通过<span style='cursor:pointer'>√</span>"; } ?>
 		</td>
-		<?php
- if($type == '1'){ echo "<td><span  class='deal_name'>".$vo['deal_name']."</span></td>"; } else { } ?>
+		<td><span  class='deal_name'><?php echo ($vo['deal_name']); ?></span></td>
         
-		<?php if($type == '1'){ echo "<td><a href='javascript:void(0);' class='tablelink' value='".$vo.replace_id."' type='update'>修改</a> |  <a href='javascript:void(0);' class='tablelink' value='".$vo.replace_id."' type='delete'> 删除</a></td>"; } else{ } ?>
+		<?php if($type == '1'){ echo "<td><a href='javascript:void(0);' class='tablelink' value='".$vo['replace_id']."' type='update'>修改</a> |  <a href='javascript:void(0);' class='tablelink' value='".$vo['replace_id']."' type='delete'> 删除</a></td>"; } else{ } ?>
         
         </tr><?php endforeach; endif; ?>
 
@@ -126,24 +127,7 @@
 		$('#change').click(function(){
 			location.href="/eleven/progect/drivingSchool/index.php/Home/Service/addrepaircar";
 		})
-		//管理员审核状态
-		$('.status').click(function(){
-			$that = $(this);
-			var id = $(this).attr('value');
-			url = "/eleven/progect/drivingSchool/index.php/Home/Service/updrepaircar";
-			$.post(url,{'id' : id},function(data){
-				if(data == ''){
-					alert('修改失败');
-				}else if(data == '100'){
-					alert('没有权限');
-				}
-				else
-				{
-					$that.text("√");
-					$that.parent().next().text(data);
-				}
-			},'json')
-		})
+		
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();

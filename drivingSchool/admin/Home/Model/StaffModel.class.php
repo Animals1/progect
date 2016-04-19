@@ -403,6 +403,14 @@ class StaffModel extends Model {
 		return $img;
 
 	}
+	/**
+	*	通过用户名来查询教练id
+	*/
+	public function selcoachid($name){
+		return $this->where("staff_name = '$name'")
+					->join("coach ON staff.staff_id = coach.coach_staff_id")
+					->find();
+	}
 }
 
 ?>

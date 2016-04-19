@@ -16,11 +16,22 @@ class ServiceController extends Controller {
 		$rolename = $isrole[0]["role_name"];
 		// $rolename = '最高管理';
 		if($rolename == '教练'){
+			$models = D('Staff');
+			$res = $models->selcoachid($name);
+			$coachid = $res['coach_id'];
+			
 			$model = D('CarReplace');
-			$where = "replace_name = '$name'";
+			$where = "replace_name = '$coachid'";
 			$data = $model->getValue($where);
 			$page = $data['0'];
 			$arr = $data['1'];
+			foreach($arr as $k=>$v){
+				$last_id = $v['replace_number_after'];
+				$reseult[$k] = $model->getlastnu($last_id);
+				$arr[$k]['replace_number_after_num'] = $reseult[$k]['car_number'];
+			}
+			// print_r($arr);die;
+			
 			$status = '';
 			$this->assign('status',$status);
 			$this->assign('arr',$arr);
@@ -32,8 +43,13 @@ class ServiceController extends Controller {
 			$data = $model->getValue($where);
 			$page = $data['0'];
 			$arr = $data['1'];
-			$type = '1';
+			foreach($arr as $k=>$v){
+				$last_id = $v['replace_number_after'];
+				$reseult[$k] = $model->getlastnu($last_id);
+				$arr[$k]['replace_number_after_num'] = $reseult[$k]['car_number'];
+			}
 			$status = '';
+			$type = '1';
 			$this->assign('status',$status);
 			$this->assign('type',$type);
 			$this->assign('arr',$arr);
@@ -99,31 +115,7 @@ class ServiceController extends Controller {
 		$this->assign('data',$arr);
 		$this->display('uchangecar');
 	}
-	/**
-	*	修改状态
-	*/
-	public function updrepaircar(){
-		$name = $_COOKIE['username'];
-		$role = D("admin");
-		$isrole = $role->isrole();
-		$rolename = $isrole[0]["role_name"];
-		// $rolename = '最高管理';
-		if($rolename !='最高管理'){
-			echo "100";die;
-		}
-		$id = $_POST['id'];
-		$model = D('CarReplace');
-		$arr = $model->getoneValue($id);
-		$data['replace_status'] = '1';
-		$data['deal_name'] = $_COOKIE['username'];
-		$res = $model->where("replace_id = '$id'")->save($data);
-		if($res){
-			echo  json_encode($_COOKIE['username']);
-		}
-		else{
-			return false;
-		}
-	} 
+	
 	/**
 	*	关于审核状态的搜索
 	*/
@@ -170,24 +162,35 @@ class ServiceController extends Controller {
 		
 	}
 	/**
-	*	添加一条维修记录
+	*	添加一条换车记录
 	*/
 	public function addrepaircar(){
 		if($_POST){
-			
+			$name = $_COOKIE['username'];
+			$models = D('Staff');
+			$res = $models->selcoachid($name);
 			$model = D('CarReplace');
 			$arr['replace_time'] = time();
-			$arr['replace_name'] = $_COOKIE['username'];
+			$arr['replace_name'] = $res['coach_id'];
 			$arr['replace_number_before'] = $_POST['replace_number_before'];
 			$arr['replace_number_after'] = $_POST['replace_number_after'];
 			$arr['replace_reason'] = $_POST['replace_reason'];
 			$arr['deal_name'] = "";
 			$arr['replace_status'] = "0";
 			$res = $model->add($arr);
-			print_r($res);die;
+			if($res){
+				$this->redirect('Service/getrepaircar');
+			}
+			else
+			{
+				echo "<script>alert('申请提交失败');history.go(-1);</script>";die;
+			}
 		}
 		else
 		{
+				$model = D('Car');
+				$arr = $model->vehicles();
+				$this->assign('arr',$arr);
 				$this->display(addrepaircar);
 		}
 	}
@@ -195,10 +198,10 @@ class ServiceController extends Controller {
 	*	查询当前教练的全部油气申请信息
 	*/
     public function oil(){
-    	$name = "张三";
+    	$name = $_COOKIE['username'];
+		$where = "applicant_name = '$name'";
 		$model = D('GasAdd');
-		$type = $model->gasScreening();
-		$arr = $model->getValue($name);
+		$arr = $model->getValue($where);
 		print_r($arr);die;
     } 
 /**
@@ -230,9 +233,10 @@ class ServiceController extends Controller {
 		$role = D("admin");
 		$isrole = $role->isrole();
 		$rolename = $isrole[0]["role_name"];
+		$rolename = '最高管理';
 		if($rolename == '教练'){
 			$model = D('CarRepair');
-			$where = "repair_coachname = '$name'";
+			$where = "repair_name = '$name'";
 			$data = $model->getValue($where);
 			$page = $data['0'];
 			$arr = $data['1'];
