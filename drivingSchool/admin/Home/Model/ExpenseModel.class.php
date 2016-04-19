@@ -22,7 +22,7 @@ class ExpenseModel extends Model {
         $count      = $User->where('expense_id>0')->count();
         $page       = new \Think\Page($count,3);
         $show       = $page->show();
-        $data = array($list,$count,$show);
+        $data = array($list,$count,$show,$p);
         return $data;
     }
     /*
@@ -35,16 +35,59 @@ class ExpenseModel extends Model {
      * */
     public function addvalue()
     {
-        return $this->add($_POST);
+        $data['staff_id']=$_POST['staff_id'];
+        $data['expense_time']=$_POST['expense_time'];
+        $data['status_id']=$_POST['status_id'];
+        $data['expense_money']=$_POST['expense_money'];
+        $data['expense_desc']=$_POST['expense_desc'];
+        return $this->Table('expense')->add($data);
     }
+
+    /**
+     * 支出（删除）
+     */
+    public function delvalue(){
+
+        $id = $_GET['id'];
+
+        return $this->where("expense_id = $id")->delete();
+    }
+
+    /**
+     * 支出（查看）
+     */
+    public function selvalue(){
+
+        $id = $_GET['id'];
+
+        return $this->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->join("role on staff.role_id=role.role_id")->where("expense_id=$id")->find();
+    }
+
+
 
     /**
      * 支出报表 hanqiming
      */
     public function findvalue(){
-        $sql = "select status_id,SUM(expense_money) from expense group by status_id";
+        $sql = "select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id";
         $arr = $this->query($sql);
         return $arr;
+    }
+
+
+    /**
+     * 支出（添加）
+     */
+    public function addex(){
+        return $this->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->select();
+    }
+
+
+    /**
+     * 支出状态表
+     */
+    public function exstatus(){
+        return $this->Table('expense_status')->select();
     }
 }
 ?>

@@ -26,13 +26,47 @@ class SalaryModel extends Model {
         $data = array($list,$count,$show,$p);
         return $data;
     }
+
+
+
     /*
      * 删除数据
      *@$where   条件
      * */
-    public function delValue($where)
+    public function delvalue()
     {
-        return $this->where($where)->delete();
+        $id = $_GET['id'];
+        return $this->where("salary_id=$id")->delete();
+    }
+
+
+    /**
+     * 添加数据
+     */
+    public function addvalue(){
+        $date['role_id'] = $_POST['role_id'];
+        $date['staff_sn'] = $_POST['staff_sn'];
+        $date['staff_id'] = $_POST['staff_id'];
+        $date['salary_day'] = $_POST['salary_day'];
+        $date['salary_status_id'] = $_POST['salary_status_id'];
+        $date['salary_wages'] = $_POST['salary_wages'];
+        return $this->Table('salary')->add($date);
+    }
+
+    /**
+     * 工资明细（表）
+     */
+    public function selvalue(){
+        $id = $_GET['id'];
+        return $this->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where("salary_id=$id")->find();
+    }
+
+
+    /**
+     * 工资明细（状态表）
+     */
+    public function getstatus(){
+        return $this->Table('salary_status')->select();
     }
 }
 ?>

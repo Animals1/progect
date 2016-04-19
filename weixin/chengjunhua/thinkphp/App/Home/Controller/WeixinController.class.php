@@ -64,6 +64,9 @@ class WeixinController extends Controller {
                 case "event"://事件类型
                   $resultStr = $this->receiveEvent($postObj);
                     break;
+                case "location"://坐标显示
+                   $resultStr = $this->receiveLocation($postObj);
+                    break;
                default:
                     $resultStr = "";
                   break;
@@ -83,6 +86,7 @@ class WeixinController extends Controller {
        //  return $resultStr;
         $funcFlag = 0;
         $keyword = trim($object->Content);
+        
         //urlencode可以把城市转化为%北京%（$object->ToUserName为开发者的微信号）
         $url = "http://apix.sinaapp.com/weather/?appkey=".$object->ToUserName."&city=".urlencode($keyword); 
         $output = file_get_contents($url);
@@ -94,8 +98,16 @@ class WeixinController extends Controller {
         }
         else
         {
-           $contentStr = "你发送的内容为：".$keyword;
-           $result = $this->transmitText($object, $contentStr, $funcFlag);
+           //多客服人工回复模式
+          if (strstr($keyword, "您好") || strstr($keyword, "你好") || strstr($keyword, "在吗")){
+              $result = $this->transmitService($object);
+          }
+          else
+          {
+              $contentStr = "你发送的内容为：".$keyword;
+              $result = $this->transmitText($object, $contentStr, $funcFlag);
+          }
+  
         } 
         
         return $result;
@@ -185,6 +197,9 @@ class WeixinController extends Controller {
                         break;
                 }
                 break;
+                case "pic_sysphoto":
+                $contentStr = "系统拍照";
+                break;
             default:
                break;      
 
@@ -243,6 +258,56 @@ class WeixinController extends Controller {
 
         $resultStr = sprintf($newsTpl, $object->FromUserName, $object->ToUserName, time(), count($arr_item), $funcFlag);
         return $resultStr;
+    }
+    /**
+    *回复多客服消息
+    */
+
+     //回复多客服消息
+    private function transmitService($object)
+    {
+        $xmlTpl = " <xml>
+     <ToUserName><![CDATA[%s]]></ToUserName>
+     <FromUserName><![CDATA[%s]]></FromUserName>
+     <CreateTime>%s</CreateTime>
+     <MsgType><![CDATA[transfer_customer_service]]></MsgType>
+     <TransInfo>
+         <KfAccount><![CDATA[test1@llydsm]]></KfAccount>
+     </TransInfo>
+ </xml>";
+        $result = sprintf($xmlTpl, $object->FromUserName, $object->ToUserName, time());
+        return $result;
+    }
+
+  //接收位置消息
+    private function receiveLocation($object)
+    {
+        $content = "你发送的是位置，纬度为：".$object->Location_X."；经度为：".$object->Location_Y."；缩放级别为：".$object->Scale."；位置为：".$object->Label;
+        $result = $this->transmitText($object, $content);
+        return $result;
+    }
+    //获取用户基本信息
+    public function get_user_info($openid)
+    {
+        $url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=".$this->access_token."&openid=".$openid."&lang=zh_CN";
+        $res = $this->https_request($url);
+        return json_decode($res, true);
+    }
+      //https请求（支持GET和POST）
+    protected function https_request($url, $data = null)
+    {
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
+        if (!empty($data)){
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+        }
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+        $output = curl_exec($curl);
+        curl_close($curl);
+        return $output;
     }
     /***
     展示驾校知识页面

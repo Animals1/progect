@@ -51,7 +51,7 @@ class IndexController extends Controller {
         if (!empty($postStr))
         {
         	//装换xml格式为obj对象
-            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+          $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
         	$RX_TYPE = trim($postObj->MsgType);
 
           switch ($RX_TYPE)
@@ -73,47 +73,54 @@ class IndexController extends Controller {
         }
    }
    //文本类型推送消息
-   private function receiveText($object)
+    function receiveText($object)
    {
-       $keyword = trim($object->Content);
-       
-        //自动回复模式
-        if (strstr($keyword, "你好")){
-            $content = "欢迎来到远达驾校";
-        }else if(strstr($keyword,"驾校")){
-            $content = "欢迎来到远达驾校";
-        }else if (strstr($keyword, "表情")){
-            $content = "微笑：/::)\n乒乓：/:oo\n中国：".$this->bytes_to_emoji(0x1F1E8).$this->bytes_to_emoji(0x1F1F3)."\n仙人掌：".$this->bytes_to_emoji(0x1F335);
-        }else if (strstr($keyword, "科目一考试")){
-            $content = array();
-            $content[] = array("Title"=>"科目一考试",  "Description"=>"驾照考试科目一，又称科目一理论考试、驾驶员理论考试，是机动车驾驶证考核的一部分。根据《机动车驾驶证申领和使用规定》，考试内容包括驾车理论基础、道路安全法律法规、地方性法规等相关知识。考试形式为上机考试，100道题，90分及以上过关。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/kemuyi.jpg");
-        }else if (strstr($keyword, "科目二考试")){
-            $content = array();
-            $content[] = array("Title"=>"科目二考试",  "Description"=>"科目二，又称小路考，是机动车驾驶证考核的一部分，是场地驾驶技能考试科目的简称，考试项目包括倒车入库、侧方停车、坡道定点停车和起步、直角转弯、曲线行驶五项必考。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test2.jpg");
-        }else if (strstr($keyword, "科目三考试")){
-            $content = array();
-            $content[] = array("Title"=>"科目三考试",  "Description"=>"科目三，又称大路考，是机动车驾驶证考核的一部分，是机动车驾驶人考试中道路驾驶技能和安全文明驾驶常识考试科目的简称。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test3.jpg");
-        }else if(strstr($keyword, "天气")){
-            $content = array();
-            $content[] = array("Title"=>"天气",  "Description"=>"科目三，又称大路考，是机动车驾驶证考核的一部分，是机动车驾驶人考试中道路驾驶技能和安全文明驾驶常识考试科目的简称。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test3.jpg");
-        }
-        else{
-            $content = date("Y-m-d H:i:s",time())."\n\n".'<a href="http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index">远达驾校</a>';
-        }
+        $keyword = trim($object->Content);
+        //urlencode可以把城市转化为%北京%（$object->ToUserName为开发者的微信号）
+        $url = "http://apix.sinaapp.com/weather/?appkey=".$object->ToUserName."&city=".urlencode($keyword);
+        $output = file_get_contents($url);
+        $content = json_decode($output, true);
+        if($content!="没有该城市？")
+        {
+            $result = $this->transmitNews($object, $content);
 
-        if(is_array($content)){
-            if (isset($content[0])){
-                $result = $this->transmitNews($object, $content);
-            }else if (isset($content['MusicUrl'])){
-                $result = $this->transmitMusic($object, $content);
-            }
         }else{
-            $result = $this->transmitText($object, $content);
+            //自动回复模式
+            if (strstr($keyword, "你好")){
+                $content = '欢迎来到远达驾校
+                    您可以输入科目一考试、科目二考试、科目三考试，<a href="http://101.200.201.202/Tp/index.php/Home/Pay/index">付款</a>了解科目考试相关内容';
+            }else if(strstr($keyword,"驾校")){
+                $content = "欢迎来到远达驾校
+                    您可以输入科目一考试、科目二考试、科目三考试，了解科目考试相关内容";
+            }else if (strstr($keyword, "表情")){
+                $content = "微笑：/::)\n乒乓：/:oo\n中国：".$this->bytes_to_emoji(0x1F1E8).$this->bytes_to_emoji(0x1F1F3)."\n仙人掌：".$this->bytes_to_emoji(0x1F335);
+            }else if (strstr($keyword, "科目一考试")){
+                $content = array();
+                $content[] = array("Title"=>"科目一考试",  "Description"=>"驾照考试科目一，又称科目一理论考试、驾驶员理论考试，是机动车驾驶证考核的一部分。根据《机动车驾驶证申领和使用规定》，考试内容包括驾车理论基础、道路安全法律法规、地方性法规等相关知识。考试形式为上机考试，100道题，90分及以上过关。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/kemuyi.jpg");
+            }else if (strstr($keyword, "科目二考试")){
+                $content = array();
+                $content[] = array("Title"=>"科目二考试",  "Description"=>"科目二，又称小路考，是机动车驾驶证考核的一部分，是场地驾驶技能考试科目的简称，考试项目包括倒车入库、侧方停车、坡道定点停车和起步、直角转弯、曲线行驶五项必考。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test2.jpg");
+            }else if (strstr($keyword, "科目三考试")){
+                $content = array();
+                $content[] = array("Title"=>"科目三考试",  "Description"=>"科目三，又称大路考，是机动车驾驶证考核的一部分，是机动车驾驶人考试中道路驾驶技能和安全文明驾驶常识考试科目的简称。", "PicUrl"=>"http://101.200.201.202/Tp/Public/image/test3.jpg");
+            }
+            else{
+                $content = date("Y-m-d H:i:s",time())."\n\n".'<a href="http://101.200.202.203/weixin/thinkphp/index.php/Home/index/index">没有该关键词，您可以进入远达驾校首页</a>';
+            }
+
+            if(is_array($content)){
+              if (isset($content[0])){
+                    $result = $this->transmitNews($object, $content);
+                }
+            }else{
+                $result = $this->transmitText($object, $content);
+            }
+        
         }
         return $result;
    }
     
-   private function receiveEvent($object)
+    function receiveEvent($object)
    {
        $contentStr = "";
         switch ($object->Event)
@@ -122,7 +129,7 @@ class IndexController extends Controller {
                 $contentStr = "您好，为了给您提供更好的服务，确定从3月29日开始执行夏季训练模式。
 								点击查看→关于启用夏季训练时段的通知
 
-								我们还推出浪漫四月活动
+								我们还推出约会春天活动
 								romantic不断
 								点击右下角【劲爆活动】可查看
 
@@ -145,8 +152,9 @@ class IndexController extends Controller {
                        $contentStr[] = array("Title" =>"学车须知", 
                         "Description" =>"学车须知", 
                        "PicUrl" =>"http://101.200 .201.202/Tp/Public/image/studycar.jpg", 
-                       "Url" =>"http://101.200.201.202/Tp/Application/Home/View/Studycar/studycar.html");
+                       "Url" =>"http://101.200.201.202/Tp/index.php/Home/Studycar/studycar");
                        break;
+                   
                     case "phone":
                        $contentStr[] = array("Title" =>"手机官网", 
                         "Description" =>"远达驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，远达驾校永远欢迎您的到来!", 
@@ -173,9 +181,9 @@ class IndexController extends Controller {
                         break;
                     default:
                        $contentStr[] = array("Title" =>"驾考宝典", 
-                        "Description" =>"远程驾校在展览馆路地区、知春路大运村地区、安立路北苑地区、西三旗、安贞桥地区、北太平庄地区、学院路地区、紫竹桥地区、苏州桥地区健翔桥地区、清河地区、安宁庄地区、上地地区、史各庄地区设立了海淀驾校展览路报名中心、知春路报名中心、北苑路报名中心、西三旗报名中心、安贞桥报名中心、北太平庄报名中心、学院路报名中心、紫竹桥报名中心、苏州桥报名中心、健翔桥报名中心、清河报名中心、安宁庄报名管理处、永旺商城报名中心，为周边高校、科研院所和企事业单位的海驾学员提供现场报名、上门报名服务。工作时间为周一至周日早8:30至晚18:00，满意在海驾，海淀驾校永远欢迎您的到来!", 
-                       "PicUrl" =>"http://bishengforever.applinzi.com/images/logo.png", 
-                        "Url" =>"http://bishengforever.applinzi.com/about.html");
+                        "Description" =>"远程驾校在展览馆路地区，海淀驾校永远欢迎您的到来!", 
+                       "PicUrl" =>"http://bishengforever.applinzi.com/images/logo.png"
+                        );
                         break;
                 }
                 break;
@@ -205,6 +213,8 @@ class IndexController extends Controller {
         $resultStr = sprintf($textTpl, $object->FromUserName, $object->ToUserName, time(), $content, $funcFlag);
         return $resultStr;
     }
+
+
 
    private function transmitNews($object, $arr_item, $funcFlag = 0)
     {
@@ -253,6 +263,6 @@ class IndexController extends Controller {
         }
     }
 
-    //
+   
  
 }

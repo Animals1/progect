@@ -8,6 +8,7 @@ class StudentController extends Controller {
 	/*
 	 * （xueyunhuan）
 	 *调用stuorder中数据
+	 * 考证进度
 	 *$p = 当前页码
 	 *$list = 显示数据(当前用户信息)
 	 *$page = 翻页
@@ -15,10 +16,14 @@ class StudentController extends Controller {
        public function index(){
        	$model = D('Student');
        	$arr = $model->getshow();
+       	$progress = D('Progress');
+       	$progress = $progress->getshow();
+       	$this->assign('progress',$progress);
+       	//print_r($progress);die;
        	$this->assign('arr',$arr);
-       	//print_r($arr);die;
        	$this->display('personinfo');
         }
+
       /*
 	 * （xueyunhuan）
 	 *调用stuorder中数据
@@ -82,6 +87,54 @@ class StudentController extends Controller {
        	$this->assign('count',$count);
        	//print_r($list);die;
        	$this->display('noorder');
+        }
+        /*
+	 * （xueyunhuan）
+	 *预约申请
+	 *$arr[教练姓名，id]
+	 *$arr[教练姓名，id]
+	*/
+        public function applyorder(){
+        	$model = D('Coach');
+        	$arr = $model->coachinfo();
+        	$class = D('Class');
+        	$class_name = $class->getvalue();
+        	$time = D('TimeTable');
+        	$time_table = $time->getvalue();
+        	//print_r($time_table);die;
+			    $this->assign('staff_name',$arr);
+			    $this->assign('time_table',$time_table);
+			    $this->assign('class_name',$class_name);
+        	$this->display('applyorder');
+        }
+      /*
+	 * （xueyunhuan）
+	 *查询时间段是否有预约
+	*/
+        public function select_order(){
+
+        	$model = D('StuOrder');
+        	$arr = $model->time_table();
+        	if ($arr==null) {
+        		echo "1";
+        	}else{
+        		echo "0";
+        	}
+        }
+      /*
+	 * （xueyunhuan）
+	 *添加预约
+	 *$arr[教练姓名，id]
+	 *$arr[教练姓名，id]
+	*/
+        public function add_order(){
+        	$model = D('StuOrder');
+        	$arr = $model->getadd();
+        	if ($arr) {
+        		$this->success('预约成功',U("Student/applyorder"));
+        	}else{
+        		$this->success('预约失败',U("Student/applyorder"));
+        	}
         }
       /*
 	 * （xueyunhuan）

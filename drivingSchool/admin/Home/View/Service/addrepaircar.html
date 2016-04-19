@@ -26,8 +26,21 @@
     
     <ul class="forminfo">
 	<form method='post' action=''>
-    <li><label>更换前车牌号</label><input name="replace_number_before" type="text" class="dfinput" /></li>
-    <li><label>更换后车牌号</label><input name="replace_number_after" type="text" class="dfinput"/></li>
+    <li>
+		<label>更换前车牌号</label>
+		<select name='replace_number_before'>
+			<?php foreach($arr as $v){?>
+				<option value='<?php echo $v['car_id'];?>'><?php echo $v['car_number'];?></option>
+			<?php } ?>
+		</select>
+	</li>
+    <li>
+		<label>更换后车牌号</label>
+		<select name='replace_number_after'>
+			<?php foreach($arr as $v){?>
+				<option value='<?php echo $v['car_id'];?>'><?php echo $v['car_number'];?></option>
+			<?php } ?>
+		</select></li>
     <li><label>换车原因</label><input name="replace_reason" type="text" class="dfinput"/></li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="提交申请"/></li>
     </form>

@@ -37,7 +37,6 @@
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
         <th>申请人名字<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
         <th>申请时间</th>
         <th>车牌号</th>
@@ -49,8 +48,7 @@
         </thead>
         <tbody>
         <?php if(is_array($arr)): foreach($arr as $key=>$vo): ?><tr>
-        <td><input name="" type="checkbox" value="" /></td>
-        <td><?php echo ($vo["repair_coachname"]); ?></td>
+        <td><?php echo ($vo["repair_name"]); ?></td>
         <td><?php echo date("Y-m-d",$vo['repair_time']);?></td>
         <td><?php echo ($vo["car_number"]); ?></td>
         <td><?php echo ($vo["repair_desc"]); ?></td>
@@ -58,7 +56,6 @@
         <td><?php echo ($vo["repair_statusname"]); ?></td>
         <td><a href="javascript:void(0);" class="tablelink" value="<?php echo ($vo["replace_id"]); ?>" type='update'>修改</a> |  <a href="javascript:void(0);" class="tablelink" value="<?php echo ($vo["replace_id"]); ?>" type='delete'> 删除</a></td>
         </tr><?php endforeach; endif; ?>
-        
         </tbody>
     </table>
     
