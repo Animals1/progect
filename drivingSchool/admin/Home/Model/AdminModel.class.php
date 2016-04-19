@@ -104,5 +104,112 @@ class AdminModel extends Model {
             ->where("admin.admin_id=$cooid")
             ->select();
         }
+
+
+
+        /*
+        *   根据角色id查询权限
+        *   by 郭旭峰
+        */
+        public function privilegelook($roleid){          
+            $da=$this->Table("role")->join('role_privilege ON role.role_id = role_privilege.role_id')->join('privilege ON role_privilege.privilege_id = privilege.privilege_id')->where("role.role_id='$roleid'")->select();
+            //dump($da);die;
+            return $this->digui2($da,$pid=0);
+        }
+
+
+        public function privilegesee($roleid){          
+            $da=$this->Table("role")->join('role_privilege ON role.role_id = role_privilege.role_id')->join('privilege ON role_privilege.privilege_id = privilege.privilege_id')->where("role.role_id='$roleid'")->select();
+            //dump($da);die; 
+            foreach($da as $k=>$v){
+                $a = $this->digui3($v,$pid=0);
+                
+            }
+            return $a;
+
+        }
+
+        /****
+            递归调用
+        */
+        public function digui2($da,$pid=0)
+        {
+            $child=array();
+            foreach($da as $k=>$v)
+            {
+                if($pid==$v['parent_id'])
+                {
+                    $privilege=M('privilege');
+                    $two=$privilege->where('parent_id='.$v['privilege_id'])->select();
+                    $child=$two;
+                }
+            }
+            if(empty($child))
+            {
+                return null;
+            }
+
+            /*第三级*/
+            foreach($child as $key=>$val)
+            {
+                $privilege=M('privilege');
+                $three=$privilege->where('parent_id='.$val['privilege_id'])->select();
+                if($three)
+                {
+                    $child[$key]['child']=$three;
+                }
+            }
+
+            return $child;
+        }
+
+
+
+
+
+
+        /*最高管理员递归调用*/
+        public function digui3($da,$pid=0)
+        {
+             $child=array();
+           
+            if($pid==$da['parent_id'])
+            {
+                $privilege=M('privilege');
+                $two=$privilege->where('parent_id='.$pid)->select();
+                $child=$two;
+            }
+           
+            if(empty($child))
+            {
+                return null;
+            }
+
+             /*第三级*/
+            foreach($child as $key=>$val)
+            {
+                $privilege=M('privilege');
+                $three=$privilege->where('parent_id='.$val['privilege_id'])->select();
+                if($three)
+                {
+                    $child[$key]['child']=$three;//child表示第三级的名称代名词
+                }
+            }
+            //dump($child);die;
+
+            foreach ($child as $key => $value) {
+                $privilege=M('privilege');
+                foreach($value['child'] as $k=>$v)
+                {
+                    $four=$privilege->where('parent_id='.$v['privilege_id'])->select();
+                    $value['child'][$k]['childs']=$four;
+
+                }
+                
+                
+                $data[$key]=$value;//value赋值给了数组data，key表示数组键值
+            }
+            return $data;
+        }
 }
 ?>

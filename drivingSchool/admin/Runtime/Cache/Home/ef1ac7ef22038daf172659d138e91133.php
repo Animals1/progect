@@ -5,8 +5,8 @@
 	<title>Document</title>
 </head>
 <body>
-<h5>当前功能-----出勤信息</h5>
-	<a href="/index.php/Home/Personal/continuitydaysadd" style=" text-decoration: none;"><input type="button" value="点击打卡"></a><br/><br/><br/>
+<h5>当前功能>出勤信息</h5>
+	<a href="/index.php/Home/Personal/continuitydaysadd" style=" text-decoration: none;"><input type="button" value="点击打卡" style="cursor:pointer" title="打卡"></a><br/><br/><br/>
 	<h3 style="margin-left:800px;"><?php echo date('Y');?>年<?php echo date('m');?>月累计出勤<?php echo "<font color='red'>".$arr."</font>";?>天</h3>
 </body>
 </html>

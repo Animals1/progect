@@ -1,8 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit(); header("Content-type:text/html;charset=utf-8"); ?>
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <body>
-<h5>当前功能-----个人信息</h5>
+<h5>当前功能>个人信息</h5>
 	<h5>基本信息</h5><hr/>
 	<div style="float:left">
 	<table>
@@ -66,7 +65,7 @@
 	</div>
 	
 	<div style="margin-left:500px;">
-		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100">
+		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100" style="cursor:pointer" title="照片">
 	</div>
 </body>
 </html>
