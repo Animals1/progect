@@ -4,35 +4,63 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="__PUBLIC__/text/javascript">
+
+    </script>
+
+
 </head>
 
-<body>
 
-<div class="place">
-    <span>位置：</span>
-    <ul class="placeul">
-        <li><a href="#">首页</a></li>
-        <li><a href="#">表单</a></li>
-    </ul>
-</div>
+<body style="background:#FFF8ED;">
+
 
 <div class="formbody">
 
-    <div class="formtitle"><span>基本信息</span></div>
+    <div class="formtitle"><span>车辆维修登记</span></div>
 
-    <ul class="forminfo">
-        <li><label>文章标题</label><input name="" type="text" class="dfinput" /><i>标题不能超过30个字符</i></li>
-        <li><label>关键字</label><input name="" type="text" class="dfinput" /><i>多个关键字用,隔开</i></li>
-        <li><label>是否审核</label><cite><input name="" type="radio" value="" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />否</cite></li>
-        <li><label>引用地址</label><input name="" type="text" class="dfinput" value="http://www.uimaker.com/uimakerhtml/uidesign/" /></li>
-        <li><label>文章内容</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>
-        <li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/></li>
-    </ul>
-
+    <form action="__APP__/Home/Administration/servicerecordadd" method="post">
+    <table>
+        <tr>
+            <td>报修车辆:</td>
+            <td>
+                <select name="repair_carid" id="">
+                    <option value="-1">请选择</option>
+                    <foreach name="vehicles" item="car">
+                    <option value="{$car.car_id}">{$car.car_number}</option>
+                        </foreach>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>报修人:</td>
+            <td>
+                <select name="repair_coachname" id="">
+                    <option value="-1">请选择</option>
+                    <foreach name="coachMess" item="msg">
+                    <option value="{$msg.coach_id}">{$msg.staff_name}</option>
+                    </foreach>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>报修原因</td>
+            <td><textarea name="repair_desc" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="提交">
+                <input type="reset" value="取消">
+            </td>
+        </tr>
+    </table>
+    </form>
 
 </div>
-
-
 </body>
 
 </html>
+
+
+

@@ -1,0 +1,121 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <!--<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />-->
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+
+    <script language="javascript">
+        $(function(){
+            $('.error').css({'position':'absolute','left':($(window).width()-490)/2});
+            $(window).resize(function(){
+                $('.error').css({'position':'absolute','left':($(window).width()-490)/2});
+            })
+        });
+    </script>
+
+
+</head>
+
+
+<body style="background:#FFF8ED;" id="div">
+<h3>车辆出勤</h3>
+<table>
+    <tr>
+        <td>车型:<select name="driving_id" id="driving">
+            <option value="-1">请选择</option>
+<?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_id"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
+        </select></td>
+        <td>教练车类型:<select name="motor_id" id="motor">
+            <option value="-1">请选择</option>
+<?php if(is_array($motor)): foreach($motor as $key=>$motor): ?><option value="<?php echo ($motor["motor_id"]); ?>"><?php echo ($motor["motor_name"]); ?></option><?php endforeach; endif; ?>
+        </select></td>
+        <td>状态:<select name="status_id" id="status">
+            <option value="-1">请选择</option>
+<?php if(is_array($status)): foreach($status as $key=>$status): ?><option value="<?php echo ($status["status_id"]); ?>"><?php echo ($status["status_name"]); ?></option><?php endforeach; endif; ?>
+        </select></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>车牌号:<input type="text" name="car_number" id="car_number"></td>
+        <td>行驶证号<input type="text" name="license_number" id="license_number"></td>
+        <td>日期: <input class="laydate-icon" onclick="laydate()"></td>
+        <td><input type="button" value="查找" onclick="searchValue()"></td>
+    </tr>
+</table>
+
+<script>
+            function searchValue()
+            {
+                var driving=$('#driving').val();
+                var motor=$('#motor').val();
+                var status=$('#status').val();
+                var car_number=$('#car_number').val();
+                var license_number=$('#license_number').val();
+                $.ajax({
+                    url: "/index.php/Home/Administration/vehgooutsearch",
+                    type: 'get',
+                    data: {'coach_driving':driving,'coach_motor':motor,'car_status':status,'car_number':car_number,'license_number':license_number},
+                    success: function (data) {
+                        //alert(data)
+                        $("#div").html(data);
+                    }
+                })
+            }
+</script>
+
+<table border="1">
+
+    <tr>
+        <td>车辆</td>
+        <?php foreach($time as $k=>$v){ ?>
+        <td><?php echo $v['time_section']?>&nbsp;&nbsp;&nbsp;</td>
+        <?php }?>
+    </tr>
+    <?php foreach($goout as $kk=>$vv){ ?>
+    <tr>
+        <td><?php echo $vv['car_number']?></td>
+        <td>
+            <?php if($vv['time_section']=='07:00-08:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='08:00-09:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='08:00-09:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='08:00-09:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='09:00-10:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='11:00-12:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='12:30-13:30'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='13:30-14:30'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='14:30-15:30'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='16:30-17:30'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+        <td>
+            <?php if($vv['time_section']=='17:30-18:00'){ echo "已排课"; } else { echo "空闲"; } ?>
+        </td>
+
+    </tr>
+       <?php }?>
+</table>
+
+
+</body>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
+</html>

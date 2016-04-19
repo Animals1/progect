@@ -6,7 +6,7 @@
  * */
 namespace Home\Model;
 use Think\Model;
-class CarTypeModel extends Model {
+class CarStatusModel extends Model {
 	/*
 	 *显示类型
 	*/

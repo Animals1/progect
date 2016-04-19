@@ -10,9 +10,10 @@ class CoachController extends Controller {
 	*	查询当前教练的信息，返回一维数组
 	*/
 	public function personal_info(){
-		$name = "张三";
+		$name = $_COOKIE['username'];
 		$model = D('Staff');
 		$arr = $model->getvalue($name);
+		// print_r($arr);die;
 		$this->assign('arr',$arr);
     	$this->display('personal_info');
 		
@@ -21,12 +22,29 @@ class CoachController extends Controller {
 	*	查询关于该教练的评价
 	*/
     public function award(){
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		$id = $_COOKIE['userid'];
+		if($rolename=="最高管理"){
+			$where = '';
+		}
+		else
+		{
+			$where = "coach_id = '$id'";
+		}
 		
-		$id = "1";
 		$model = D('Review');
-		$arr = $model->getvalue($id);
+		$arr = $model->getvalue($where);
+		
+		// print_r($arr);die;
+		$where = "review.coach_id = '$id'";
+		$one = $model->getonevalue($where);
+		echo "<pre>";
+		print_r($one);die;
 		$show = $arr['0'];
 		$list = $arr['1'];
+		
 		$this->assign('list',$list);
 		$this->assign('page',$show);
 		$this->display('award'); 

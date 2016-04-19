@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/Public/text/javascript">
+    <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/progect/drivingSchool/Public/text/javascript">
 
-    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
-    <script type="/Public/text/javascript">
+    <script type="text/javascript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+    <script type="/progect/drivingSchool/Public/text/javascript">
 </script> 
 
 
@@ -20,7 +20,7 @@
         <thead>
         <tr>
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>预约教练姓名<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+            <th>预约教练姓名<i class="sort"><img src="/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
             <th>预约课程</th>
             <th>预约时刻</th>
             <th>预约时间</th>
@@ -61,7 +61,7 @@
         <div class="tiptop"><span>提示信息</span><a></a></div>
 
         <div class="tipinfo">
-            <span><img src="/Public/admin/images/ticon.png" /></span>
+            <span><img src="/progect/drivingSchool/Public/admin/images/ticon.png" /></span>
             <div class="tipright">
                 <p>是否确认对信息的修改 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>

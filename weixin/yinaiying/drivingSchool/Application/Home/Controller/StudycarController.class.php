@@ -11,11 +11,14 @@ use Think\Controller;
  */
 class StudycarController extends Controller 
 {
+
 	//渲染页面
 	public function studycar()
 	{
 		$this->display('studycar');
 	}
+
+	
 }
 
 ?>

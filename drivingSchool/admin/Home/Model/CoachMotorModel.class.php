@@ -13,9 +13,9 @@ class CoachMotorModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->join('coach_model on coach_motor.model_id=coach_model.model_id')->select();
     }
     /*
      * 删除数据

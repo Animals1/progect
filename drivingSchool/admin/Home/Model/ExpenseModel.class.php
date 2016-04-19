@@ -22,7 +22,7 @@ class ExpenseModel extends Model {
         $count      = $User->where('expense_id>0')->count();
         $page       = new \Think\Page($count,3);
         $show       = $page->show();
-        $data = array($list,$count,$show);
+        $data = array($list,$count,$show,$p);
         return $data;
     }
     /*
@@ -42,7 +42,7 @@ class ExpenseModel extends Model {
      * 支出报表 hanqiming
      */
     public function findvalue(){
-        $sql = "select status_id,SUM(expense_money) from expense group by status_id";
+        $sql = "select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id";
         $arr = $this->query($sql);
         return $arr;
     }

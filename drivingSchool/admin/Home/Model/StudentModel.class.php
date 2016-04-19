@@ -116,6 +116,12 @@ class StudentModel extends Model {
             return $this->join('class on student.class_id=class.class_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('progress on progress.stu_id=student.stu_id')->where($where)->select();
         }
 
-
+    /**
+     * author:hanqiming
+     * 查询学员姓名
+     */
+    public function allvalue(){
+        return $this->field('stu_id,stu_name,stu_sn')->select();
+    }
 }
 ?>

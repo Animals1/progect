@@ -8,9 +8,9 @@ return array(
 	'DEFAULT_ACTION'        =>  'index', // 默认操作名称
 
 	'DB_TYPE'   => 'mysql', // 数据库类型
-	'DB_HOST'   => '127.0.0.1', // 服务器地址
-	'DB_NAME'   => 'magr', // 数据库名
-	'DB_USER'   => 'root', // 用户名
+	'DB_HOST'   => '101.200.201.202', // 服务器地址
+	'DB_NAME'   => 'weather', // 数据库名
+	'DB_USER'   => 'yin', // 用户名
 	'DB_PWD'    => 'root', // 密码
 	'DB_PORT'   => 3306, // 端口
 	//'DB_PREFIX' => 'think_', // 数据库表前缀 
