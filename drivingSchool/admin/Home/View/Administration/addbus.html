@@ -15,7 +15,7 @@
 <div class="formbody">
 
     <div class="formtitle"><span>新增车辆</span></div>
-    <form action="__APP__/Home/Administration/addbus" method="post">
+    <form action="__APP__/Home/Administration/bussetting" method="post">
         <table>
             <tr>
                 <td>班车路线:</td>
@@ -33,7 +33,7 @@
                     <select name="time[]" id="">
                         <option value="-1">请选择小时</option>
                         <?php for($time=0;$time<=24;$time++){?>
-                        <option value="<?php $time ?>"><?php echo $time?></option>
+                        <option value="<?php echo $time ?>"><?php echo $time?></option>
                         <?php }?>
                     </select>
 

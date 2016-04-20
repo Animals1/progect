@@ -74,15 +74,17 @@
         </tr>
         </thead>
         <tbody>
+        <?php if(is_array($busset)): foreach($busset as $key=>$bus): ?><tr>
 
-            <tr>
+                <td><?php echo ($bus["bus_route"]); ?></td>
+                <td><?php echo ($bus["car_number"]); ?></td>
+                <td><?php echo ($bus["bus_station"]); ?></td>
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-
+                <td>
+                    <a href="/index.php/Home/Administartion/busupdate/id/<?php echo ($bus["bus_id"]); ?>">修改</a>
+                    <a href="/index.php/Home/Administration/busdel/id/<?php echo ($bus["bus_id"]); ?>">删除</a>
+                </td>
+            </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
 

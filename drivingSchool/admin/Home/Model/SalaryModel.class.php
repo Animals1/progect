@@ -19,12 +19,43 @@ class SalaryModel extends Model {
 		
         $User = M('salary'); // 实例化User对象
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list = $User->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where('salary_id>0')->order('salary_id desc')-> page($p.',3')->select();
+        $list = $User->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where('salary_id>0')->order('salary_id desc')-> page($p.',2')->select();
         $count      = $User->where('salary_id>0')->count();
-        $page       = new \Think\Page($count,3);
+        $page       = new \Think\Page($count,2);
         $show       = $page->show();
         $data = array($list,$count,$show,$p);
         return $data;
+    }
+
+
+    /**
+     * 多添件搜索
+     */
+    public function searchs(){
+        $arr = I('post.');
+
+        foreach ($arr as $k => $v) {
+            if ($v=='') {
+                unset($arr[$k]);
+            }
+        }
+        $sql='';
+        $i=0;
+        foreach ($arr as $k => $v) {
+            if($i!=0){
+                $sql.=' and ';
+            }
+            $sql.="$k like '%$v%'";
+            $i++;
+        }
+        $User = M("salary");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where($sql)->page($p,2)->select();
+        $count = $User->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where($sql)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
 
 
@@ -45,7 +76,6 @@ class SalaryModel extends Model {
      */
     public function addvalue(){
         $date['role_id'] = $_POST['role_id'];
-        $date['staff_sn'] = $_POST['staff_sn'];
         $date['staff_id'] = $_POST['staff_id'];
         $date['salary_day'] = $_POST['salary_day'];
         $date['salary_status_id'] = $_POST['salary_status_id'];
