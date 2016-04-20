@@ -40,7 +40,6 @@
     </style>
     <script src="/Public/laydate/laydate.js"></script>
     <style>
-        html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
         h2{line-height:30px; font-size:20px;}
         a,a:hover{ text-decoration:none;}
         pre{font-family:'微软雅黑'}
@@ -97,17 +96,6 @@
                         <option value="0">--请选择--</option>
                         <?php foreach($name as $v){?>
                         <option value="<?php echo $v['stu_id'];?>"><?php echo $v['stu_name'];?></option>
-                        <?php }?>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th>学员编号:</th>
-                <td>
-                    <select name="stu_sn">
-                        <option value="0">--请选择--</option>
-                        <?php foreach($name as $v2){?>
-                        <option value="<?php echo $v2['stu_sn'];?>"><?php echo $v2['stu_sn'];?></option>
                         <?php }?>
                     </select>
                 </td>

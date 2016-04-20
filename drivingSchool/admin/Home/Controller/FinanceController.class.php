@@ -16,7 +16,7 @@ class FinanceController extends Controller {
         $arr = D('charge');
 
         $re = $arr->getvalue();
-//        print_r($re);die;
+
         $list = $re['0'];
         $count = $re['1'];
         $page = $re['2'];
@@ -27,6 +27,28 @@ class FinanceController extends Controller {
         $this->assign('page',$page);
         $this->assign('p',$p);
         $this->display('charge');
+    }
+
+
+    /**
+     * 收费（根据多条件搜索）
+     */
+    public function search(){
+        $arr = D('charge');
+
+        $re = $arr->searchs();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('search');
     }
 
 
@@ -124,6 +146,29 @@ class FinanceController extends Controller {
 
 
     /**
+     * 欠费（根据多条件搜索）
+     */
+    public function search1(){
+        $arr = D('arrears');
+
+        $re = $arr->searchs();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('search1');
+    }
+
+
+
+    /**
      * 支出明细（添加）
      */
     public function addarrears(){
@@ -214,6 +259,28 @@ class FinanceController extends Controller {
         $this->assign('p',$p);
 
         $this->display('salary');
+    }
+
+
+    /**
+     * 工资（根据多条件搜索）
+     */
+    public function search2(){
+        $arr = D('salary');
+
+        $re = $arr->searchs();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('search2');
     }
 
 
@@ -313,6 +380,28 @@ class FinanceController extends Controller {
 
 
     /**
+     * 支出（根据多条件搜索）
+     */
+    public function search3(){
+        $arr = D('expense');
+
+        $re = $arr->searchs();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('search3');
+    }
+
+
+    /**
      * 支出明细（添加页面）
      */
     public function addexpen(){
@@ -374,6 +463,7 @@ class FinanceController extends Controller {
         
         $this->assign("sel",$sel);
         $this->display();
+
     }
 
     /**

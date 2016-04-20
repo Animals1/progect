@@ -26,6 +26,37 @@ class ArrearsModel extends Model {
 
 
     /**
+     * 多添件搜索
+     */
+    public function searchs(){
+        $arr = I('post.');
+
+        foreach ($arr as $k => $v) {
+            if ($v=='') {
+                unset($arr[$k]);
+            }
+        }
+        $sql='';
+        $i=0;
+        foreach ($arr as $k => $v) {
+            if($i!=0){
+                $sql.=' and ';
+            }
+            $sql.="$k like '%$v%'";
+            $i++;
+        }
+        $User = M("arrears");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where($sql)->page($p,2)->select();
+        $count = $User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where($sql)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
+
+    /**
      * @author:hanqiming
      * @date  :2016-4-18
      * @tablename:删除
