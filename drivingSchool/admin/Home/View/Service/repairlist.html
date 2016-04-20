@@ -37,7 +37,6 @@
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th><input name="" type="checkbox" value="" checked="checked"/></th>
         <th>申请人名字<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
         <th>申请时间</th>
         <th>车牌号</th>
@@ -50,8 +49,7 @@
         <tbody>
         <foreach name="arr" item="vo" >    
 		<tr>
-        <td><input name="" type="checkbox" value="" /></td>
-        <td>{$vo.repair_coachname}</td>
+        <td>{$vo.repair_name}</td>
         <td><?php echo date("Y-m-d",$vo['repair_time']);?></td>
         <td>{$vo.car_number}</td>
         <td>{$vo.repair_desc}</td>
@@ -60,7 +58,6 @@
         <td><a href="javascript:void(0);" class="tablelink" value="{$vo.replace_id}" type='update'>修改</a> |  <a href="javascript:void(0);" class="tablelink" value="{$vo.replace_id}" type='delete'> 删除</a></td>
         </tr> 
         </foreach>
-        
         </tbody>
     </table>
     

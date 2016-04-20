@@ -52,4 +52,16 @@ class StaffController extends Controller {
         $this->assign('staff',$staffdata);
         $this->display('show');
     }
+    public function search()
+    {
+        $staff = D('staff');
+        $data = $staff->staffsearch($_POST);
+        $coach = $data[0];
+        $staffs = $data[1];
+        $coachs = $staff->coachdatetime($coach);
+        $staffdata = $staff->staffdatetime($staffs);
+        $this->assign('coach',$coachs);
+        $this->assign('staff',$staffdata);
+        $this->display('search');
+    }
 }

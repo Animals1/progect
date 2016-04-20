@@ -8,7 +8,7 @@ namespace Home\Model;
 use Think\Model;
 class ReviewModel extends Model {
 	/**
-     * 	查询数据,分页
+     * 	查询关于该教练的数据,分页
      */
     public function getValue($where)
     {
@@ -28,7 +28,16 @@ class ReviewModel extends Model {
 		
     }
 	/**
-	*	查询教练的信息
+	*	查出该教练的分数
+	*/
+	public function getnum($where)
+    {
+		
+		return $this->where($where)->select();
+		
+    }
+	/**
+	*	查询教练的信息 
 	*/
 	public function getonevalue($where){
 		return $this->where($where)

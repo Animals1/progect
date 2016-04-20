@@ -3,11 +3,39 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/progect/drivingSchool/Public/text/javascript">
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
 </script> 
+<style>
+    ul li{
+     float: left;
+     overflow:hidden;
+     margin-top:20px;
+     list-style:none;
 
+ }
+
+ ul li a{
+    display:block;
+     height:30px;
+     min-width:30px;
+     text-align:center;
+     font-size:14px;
+     border:1px solid #d6d6d6;
+     float:left;
+     margin-left:10px;
+     padding:3px 5px;
+     line-height:30px;
+     text-decoration:none;
+     color:#666;
+ }
+ ul li a:hover,a.here{
+     background:#FF4500;
+     border-color:#FF4500;
+     color:#FFF;
+ }
+</style>
 
 </head>
 
@@ -18,7 +46,7 @@
         <thead>
         <tr>
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>预约教练姓名<i class="sort"><img src="/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+            <th>预约教练姓名<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>预约课程</th>
             <th>预约时刻</th>
             <th>预约时间</th>
@@ -42,12 +70,12 @@
         <?php  } ?>
         </tbody>
     </table>
-
-
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
         <ul class="paginList">
-            <?php echo ($page); ?>
+            <ul>
+                <li><?php echo ($page); ?></li>
+            </ul>
             <!-- <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
             <li class="paginItem"><a href="javascript:;"><?php echo ($page); ?></a></li>
             <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li> -->
@@ -59,7 +87,7 @@
         <div class="tiptop"><span>提示信息</span><a></a></div>
 
         <div class="tipinfo">
-            <span><img src="/progect/drivingSchool/Public/admin/images/ticon.png" /></span>
+            <span><img src="/Public/admin/images/ticon.png" /></span>
             <div class="tipright">
                 <p>是否确认对信息的修改 ？</p>
                 <cite>如果是请点击确定按钮 ，否则请点取消。</cite>

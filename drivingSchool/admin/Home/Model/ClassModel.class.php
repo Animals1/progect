@@ -9,13 +9,10 @@ use Think\Model;
 class ClassModel extends Model {
     /*
      * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getvalue()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->select();
     }
     /*
      * 删除数据

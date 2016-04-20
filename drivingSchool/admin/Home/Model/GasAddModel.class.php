@@ -10,10 +10,9 @@ class GasAddModel extends Model {
     /**
      * 查询数据
      */
-    public function getValue($name)
+    public function getValue($where)
     {
-        return $this->where("applicant_name = '$name'")
-					->join('gas_type_id on gas_add.gas_type_id=gas_type_id.gas_type_id')
+        return $this->where($where)
 					->select();
     }
     /*
@@ -37,7 +36,21 @@ class GasAddModel extends Model {
 
     }
 
-    
+    /*
+     * 汽油添加
+     * */
+    public function addgas($data)
+    {
+        return $this->add($data);
+    }
+
+    /*
+     * 汽油添加记录
+     * */
+    public function gasMessage()
+    {
+       return $this->select();
+    }
 
     /*
      * 查询汽油名称

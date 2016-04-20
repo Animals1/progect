@@ -11,7 +11,7 @@ class IndexController extends Controller {
           //echoStr存在 调用valid方法
           $this->valid();
         }else{
-       //用户首次关注我们的微信的时候走这一步
+			//用户首次关注我们的微信的时候走这一步
             $this->responseMsg();
         }
 	}
@@ -51,7 +51,7 @@ class IndexController extends Controller {
         if (!empty($postStr))
         {
         	//装换xml格式为obj对象
-          $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
+            $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
         	$RX_TYPE = trim($postObj->MsgType);
 
           switch ($RX_TYPE)
@@ -123,20 +123,25 @@ class IndexController extends Controller {
     function receiveEvent($object)
    {
        $contentStr = "";
+	   if($object->Event=='subscribe')
+	   {
+		    $fromusername=$object->FromUserName;//用户的openid
+			//获取关注用户的信息
+		    $appid="wx103f68932d2edb0d";
+			$appserect="f8f9804016ed8ab0bd0e86a6f2aa0d7b";
+			$token="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$appid."&secret=".$appserect;
+			$output=file_get_contents($token);
+			$jsoninfo=json_decode($output,true);
+			$access_oken=$jsoninfo['access_oken'];
+			$userUrl="https://api.weixin.qq.com/cgi-bin/user/info?access_token=".$access_oken."&openid=".$fromusername;
+			$result=file_get_contents($userUrl);
+			$userinfo=json_decode($result,true);		
+			
+	   }
         switch ($object->Event)
        {
            case "subscribe":
-                $contentStr = "您好，为了给您提供更好的服务，确定从3月29日开始执行夏季训练模式。
-								点击查看→关于启用夏季训练时段的通知
-
-								我们还推出约会春天活动
-								romantic不断
-								点击右下角【劲爆活动】可查看
-
-								有什么问题还可以直接在微信下面问我哦
-								我会尽快回复你哒
-
-								/抠鼻";
+                $contentStr = $userinfo;
            case "unsubscribe":
                 break;
             case "CLICK":

@@ -4,9 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
 
-    </script>
 
 
 </head>
@@ -16,21 +15,77 @@
 
 <div class="formbody">
 
-    <div class="formtitle"><span>基本信息</span></div>
+    <div class="formtitle"><span>油气添加申请</span></div>
 
-    <!--<ul class="forminfo">-->
-    <!--<li><label>文章标题</label><input name="" type="text" class="dfinput" /><i>标题不能超过30个字符</i></li>-->
-    <!--<li><label>关键字</label><input name="" type="text" class="dfinput" /><i>多个关键字用,隔开</i></li>-->
-    <!--<li><label>是否审核</label><cite><input name="" type="radio" value="" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />否</cite></li>-->
-    <!--<li><label>引用地址</label><input name="" type="text" class="dfinput" value="http://www.uimaker.com/uimakerhtml/uidesign/" /></li>-->
-    <!--<li><label>文章内容</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>-->
-    <!--<li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/></li>-->
-    <!--</ul>-->
+    <form action="__APP__/Home/Administration/gasadd" method="post">
+        <table>
+            <tr>
+                <td>申请人:</td>
+                <td><input type="text" name="applicant_name"></td>
+            </tr>
+            <tr>
+                <td>申请车辆:</td>
+                <td><select name="car_number" id="">
+                    <option value="-1">请选择</option>
+                <foreach name="car_number" item="number">
+                    <option value="{$number.car_number}">{$number.car_number}</option>
+                    </foreach>
+
+                </select></td>
+            </tr>
+            <tr>
+                <td>油气类型</td>
+                <td>
+                    <select name="gas_type_id" id="">
+                        <option value="-1">请选择</option>
+                        <foreach name="gas_type" item="gas">
+                        <option value="{$gas.gas_type_id}">{$gas.gas_type_name}</option>
+</foreach>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>申请数量:</td>
+                <td><input type="button" value="-" onclick="jian()"><input height="30px" type="text" name="gas_volume" id="gas_volume" value="1" style="width: 30px;line-height: 30px">L<input
+                        type="button" value="+" onclick="jia()"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="提交">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
 
 
 </div>
 </body>
+<script>
 
+    function jia()
+    {
+        var gas=$('#gas_volume').val();
+        var num=parseInt(gas)+1;
+       $('#gas_volume').val(num);
+    }
+    function jian()
+    {
+        var gas=$('#gas_volume').val();
+        var num=parseInt(gas)-1;
+        if(num<=0)
+        {
+            $('#gas_volume').val(0);
+        }
+        else
+        {
+            $('#gas_volume').val(num);
+        }
+
+    }
+
+</script>
 </html>
 
 

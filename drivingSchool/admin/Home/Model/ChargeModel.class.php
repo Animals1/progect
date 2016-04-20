@@ -103,12 +103,12 @@ class ChargeModel extends Model {
      *收费明细表、学员信息表、费用类型表、支付方式表。
     */
     public function chargeshow(){
-            $user = M('charge');
+            $user_id = $_COOKIE['userid'];
             isset($_GET['p'])?$p=$_GET['p']:$p=1;
-            $list =$user->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('user_id = 2')->page($p,2)->select();
-            $count      = $user->where('charge_id>0')->count();
-        $page       = new \Think\Page($count,2);
-        $show       = $page->show();
+            $list =$this->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where("charge.stu_id = $user_id")->page($p,2)->select();
+            $count      = $this->where("stu_id = $user_id")->count();
+            $page       = new \Think\Page($count,2);
+            $show       = $page->show();
             $arr = array($p,$list,$show,$count);
             return $arr;
     }

@@ -31,14 +31,14 @@
 </head>
 
 
-<body style="background:#FFF8ED;">
+<body style="background:#FFF8ED;" id="div">
 
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">首页</a></li>
-        <li><a href="#">数据表</a></li>
-        <li><a href="#">基本内容</a></li>
+        <li><a href="#">车辆管理</a></li>
+        <li><a href="#">车辆更换</a></li>
     </ul>
 </div>
 
@@ -47,132 +47,67 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="__PUBLIC__/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="__PUBLIC__/admin/images/t04.png" /></span>统计</li>
+            <li class="click">车牌号:<input type="text" name="car_number" id="car_number"></li>
+            <li class="click">申请人:<select name="replace_name" id="replace_name">
+                <option value="-1">请选择</option>
+                <foreach name="coachMess" item="coachMess">
+                    <option value="{$coachMess.staff_id}">{$coachMess.staff_name}</option>
+                </foreach>
+            </select></li>
+            <li>日期: <input class="laydate-icon" onclick="laydate()" id='laydate'></li>
+            <li><input type="button" value="查找" onclick="searchvalue()"></li>
         </ul>
 
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span>我要请假</li>
+            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span><a href="__APP__/Home/Administration/vehreplaceadd">申请换车</a></li>
         </ul>
 
     </div>
+    <script>
+        function searchvalue()
+        {
 
+            var car_number=$('#car_number').val();
+            var replace_name=$('#replace_name').val();
+            var laydate=$('#laydate').val();
+
+            $.ajax({
+                url: "__APP__/Home/Administration/replacesearch",
+                type: 'get',
+                data: {'car_number':car_number,'replace_name':replace_name,'laydate':laydate},
+                success: function (data) {
+                    //alert(data)
+                    $("#div").html(data);
+                }
+            })
+        }
+    </script>
 
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>请假时间<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
-            <th>销假时间</th>
-            <th>请假类型</th>
-            <th>请假天数</th>
-            <th>请假原因</th>
-            <th>状态</th>
-            <th>操作</th>
+
+            <th>申请人</th>
+            <th>更换时间</th>
+            <th>更换详情</th>
+            <th>换车原因</th>
+            <th>处理人</th>
+
         </tr>
         </thead>
         <tbody>
+<foreach name="replace" item="rep">
         <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130908</td>
-            <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-09 15:05</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
-        </tr>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130907</td>
-            <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
-            <td>uimaker</td>
-            <td>山东济南</td>
-            <td>2013-09-08 14:02</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
+            <td>{$rep.staff_name}</td>
+            <td>{$rep.replace_time|date="Y-m-d H:i:s",###}</td>
+            <td>{$rep.car_number}-->{$rep.after_number}</td>
+            <td>{$rep.replace_reason}</td>
+            <td>{$rep.deal_name}</td>
         </tr>
+</foreach>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130906</td>
-            <td>社科院:电子商务促进了农村经济结构和社会转型</td>
-            <td>user</td>
-            <td>江苏无锡</td>
-            <td>2013-09-07 13:16</td>
-            <td>已销假</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130905</td>
-            <td>江西&quot;局长违规建豪宅&quot;：局长检讨</td>
-            <td>admin</td>
-            <td>北京市</td>
-            <td>2013-09-06 10:36</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130904</td>
-            <td>中国2020年或迈入高收入国家行列</td>
-            <td>uimaker</td>
-            <td>江苏南京</td>
-            <td>2013-09-05 13:25</td>
-            <td>已拒绝</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130903</td>
-            <td>深圳地铁车门因乘客拉闸打开 3人被挤入隧道</td>
-            <td>user</td>
-            <td>广东深圳</td>
-            <td>2013-09-04 12:00</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130902</td>
-            <td>33次地表塌陷 村民不敢下地劳作(图)</td>
-            <td>admin</td>
-            <td>湖南长沙</td>
-            <td>2013-09-03 00:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130901</td>
-            <td>医患关系：医生在替改革不彻底背黑锅</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-02 15:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130900</td>
-            <td>山东章丘公车进饭店景点将自动向监控系统报警</td>
-            <td>uimaker</td>
-            <td>山东滨州</td>
-            <td>2013-09-01 10:26</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
         </tbody>
     </table>
 
@@ -193,33 +128,12 @@
     </div>
 
 
-    <div class="tip">
-        <div class="tiptop"><span>提示信息</span><a></a></div>
-
-        <div class="tipinfo">
-            <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
-            <div class="tipright">
-                <p>是否确认对信息的修改 ？</p>
-                <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-            </div>
-        </div>
-
-        <div class="tipbtn">
-            <input name="" type="button"  class="sure" value="确定" />&nbsp;
-            <input name="" type="button"  class="cancel" value="取消" />
-        </div>
-
-    </div>
-
-
-
-
 </div>
 </body>
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-
+<script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
 </html>
 
 
