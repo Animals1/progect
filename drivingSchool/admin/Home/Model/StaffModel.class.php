@@ -421,7 +421,7 @@ class StaffModel extends Model {
 		return $img;
 
 	}
-<<<<<<< HEAD
+
 	/**
 	*	通过用户名来查询教练id
 	*/
@@ -429,7 +429,8 @@ class StaffModel extends Model {
 		return $this->where("staff_name = '$name'")
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
-=======
+	}
+
 
 	/**
 	 * 查询全部的员工信息（部分字段）
