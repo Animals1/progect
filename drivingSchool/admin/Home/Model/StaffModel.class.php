@@ -421,6 +421,7 @@ class StaffModel extends Model {
 		return $img;
 
 	}
+
 	/**
 	*	通过用户名来查询教练id
 	*/
@@ -429,6 +430,7 @@ class StaffModel extends Model {
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
 	}
+
 
 	/**
 	 * 查询全部的员工信息（部分字段）
@@ -442,6 +444,78 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
+	}
+	/*
+	 * 查询月数
+	 * 作者：张捷
+	 */
+	public function month()
+	{
+		$db = D('month');
+		return $db->select();
+	}
+	/*
+	 * 查询签到数据
+	 * 作者：张捷
+	 */
+	public function salary()
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$mo = $month->select();
+		$row = $db->where("staff.role_id in (1,4,5,6)")->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				// $mid = $mv['month'];
+				$mon= $daka->where("staff_id = '$id' and month = '$i'")->select();
+				//$mont[]=$mon['']
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			//print_r($mo);
+			$row[$k]['month']=$mo;
+			
+		}
+		
+		return $row;
+	}
+	/*
+     * 考勤搜索
+     * 作者：张捷
+	 */
+	public function searsalary($data)
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$where = "role_id in (1,4,5,6) ";
+		if($data['sn'] != ''){
+			$where .= "AND  staff_sn like '%$data[sn]%'";
+		}
+		if ($data['name'] != '') {
+			$where .= "AND  staff_name like '%$data[name]%'";
+		}
+		$mo = $month->select();
+		$row = $db->where($where)->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				// $mid = $mv['month'];
+				$mon= $daka->where("staff_id = '$id' and month = '$i'")->select();
+				//$mont[]=$mon['']
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			//print_r($mo);
+			$row[$k]['month']=$mo;
+			
+		}
+		
+		return $row;
 	}
 }
 
