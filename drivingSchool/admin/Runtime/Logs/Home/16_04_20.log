@@ -1,0 +1,699 @@
+[ 2016-04-20T08:07:01+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008476s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.033341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.033395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000041s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000082s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.281597s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.281689s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006226s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005825s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005867s ]
+
+[ 2016-04-20T08:07:08+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0219s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0258s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0293s ]
+NOTIC: [8] Undefined index: checkbox F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0352s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0341s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=7 )  [ RunTime:0.0388s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0440s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id='3' )  [ RunTime:0.0448s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0342s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=1 )  [ RunTime:0.0322s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=7 )  [ RunTime:0.0363s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=8 )  [ RunTime:0.0177s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=9 )  [ RunTime:0.0236s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=10 )  [ RunTime:0.0225s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018877s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000749s ]
+
+[ 2016-04-20T08:07:08+08:00 ] 127.0.0.1 /index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000631s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000048s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000117s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043233s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043398s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000461s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000668s ]
+
+[ 2016-04-20T08:07:09+08:00 ] 127.0.0.1 /index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.108540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108632s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000553s ]
+
+[ 2016-04-20T08:07:12+08:00 ] 127.0.0.1 /index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0089s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' ) LIMIT 1   [ RunTime:0.0100s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000224s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059805s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001030s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001431s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001532s ]
+
+[ 2016-04-20T08:07:14+08:00 ] 127.0.0.1 /index.php/Home/Personal/chuqin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0307s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' )  [ RunTime:0.0552s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039526s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000707s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000777s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2016-04-20T08:07:15+08:00 ] 127.0.0.1 /index.php/Home/Personal/continuitydaysadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0374s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' ) ORDER BY id desc LIMIT 1   [ RunTime:0.0387s ]
+NOTIC: [8] Undefined offset: 0 F:\WWW\progect\drivingSchool\admin\Home\Controller\PersonalController.class.php 第 96 行.
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0277s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' ) ORDER BY id desc LIMIT 1   [ RunTime:0.0279s ]
+NOTIC: [8] Undefined offset: 0 F:\WWW\progect\drivingSchool\admin\Home\Controller\PersonalController.class.php 第 108 行.
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0194s ]
+SQL: INSERT INTO `continuity` (`time`,`uname`) VALUES ('1461110835','郭旭峰') [ RunTime:0.0754s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001650s ]
+
+[ 2016-04-20T08:07:17+08:00 ] 127.0.0.1 /index.php/Home/Personal/chuqin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0382s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' )  [ RunTime:0.0383s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008971s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009065s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000892s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000954s ]
+
+[ 2016-04-20T08:07:18+08:00 ] 127.0.0.1 /index.php/Home/Personal/continuitydaysadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000788s ]
+
+[ 2016-04-20T08:07:23+08:00 ] 127.0.0.1 /index.php/Home/Personal/chuqin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000619s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:2.3553s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0553s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' )  [ RunTime:0.0457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000845s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000902s ]
+
+[ 2016-04-20T08:07:26+08:00 ] 127.0.0.1 /index.php/Home/Personal/personleave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `year` [ RunTime:0.0143s ]
+SQL: SELECT * FROM `year`  [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0088s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0098s ]
+SQL: SELECT * FROM `staff_leave` ORDER BY leave_starttime desc LIMIT 0,6   [ RunTime:0.0105s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `staff_leave` WHERE ( work_id='7' ) LIMIT 1   [ RunTime:0.0116s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined variable: y F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 50 行.
+NOTIC: [8] Undefined variable: m F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078287s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078364s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000634s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000696s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000952s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001018s ]
+
+[ 2016-04-20T08:07:30+08:00 ] 127.0.0.1 /index.php/Home/Personal/salary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000575s ]
+ERR: 非法操作:salary
+
+[ 2016-04-20T08:07:31+08:00 ] 127.0.0.1 /index.php/Home/Personal/waitthing
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0305s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0538s ]
+SQL: SELECT * FROM `waitthing` ORDER BY id desc LIMIT 0,6   [ RunTime:0.0360s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `waitthing` WHERE ( uname='郭旭峰' ) LIMIT 1   [ RunTime:0.0395s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.074113s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000592s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2016-04-20T08:07:36+08:00 ] 127.0.0.1 /index.php/Home/Personal/createthinglist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000516s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000037s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000081s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060735s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060793s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2016-04-20T08:07:37+08:00 ] 127.0.0.1 /index.php/Home/Personal/cell-grey.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+
+[ 2016-04-20T08:07:38+08:00 ] 127.0.0.1 /index.php/Home/Personal/cell-blue.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000918s ]
+
+[ 2016-04-20T08:07:41+08:00 ] 127.0.0.1 /index.php/Home/Personal/waitthing
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0186s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0254s ]
+SQL: SELECT * FROM `waitthing` ORDER BY id desc LIMIT 0,6   [ RunTime:0.0205s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `waitthing` WHERE ( uname='郭旭峰' ) LIMIT 1   [ RunTime:0.0251s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001423s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001574s ]
+
+[ 2016-04-20T08:07:46+08:00 ] 127.0.0.1 /index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2276s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0956s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' ) LIMIT 1   [ RunTime:0.0652s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000228s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017232s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000898s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001971s ]
+
+[ 2016-04-20T08:08:19+08:00 ] 127.0.0.1 /index.php/Home/Personal/chuqin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.2507s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0151s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' )  [ RunTime:0.0137s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031344s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001548s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001652s ]
+
+[ 2016-04-20T08:08:24+08:00 ] 127.0.0.1 /index.php/Home/Personal/waitthing
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000562s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0243s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0187s ]
+SQL: SELECT * FROM `waitthing` ORDER BY id desc LIMIT 0,6   [ RunTime:0.0301s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `waitthing` WHERE ( uname='郭旭峰' ) LIMIT 1   [ RunTime:0.0265s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032484s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032601s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-04-20T08:08:25+08:00 ] 127.0.0.1 /index.php/Home/Personal/chuqin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0385s ]
+SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0413s ]
+SQL: SELECT * FROM `continuity` WHERE ( uname='郭旭峰' )  [ RunTime:0.0369s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000600s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-04-20T08:08:27+08:00 ] 127.0.0.1 /index.php/Home/Personal/personleave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000541s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0589s ]
+SQL: SHOW COLUMNS FROM `year` [ RunTime:0.0580s ]
+SQL: SELECT * FROM `year`  [ RunTime:0.0551s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0433s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0308s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0304s ]
+SQL: SELECT * FROM `staff_leave` ORDER BY leave_starttime desc LIMIT 0,6   [ RunTime:0.0187s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `staff_leave` WHERE ( work_id='7' ) LIMIT 1   [ RunTime:0.0276s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000255s ]
+NOTIC: [8] Undefined variable: y F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 50 行.
+NOTIC: [8] Undefined variable: m F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000903s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001625s ]
+
+[ 2016-04-20T08:08:34+08:00 ] 127.0.0.1 /index.php/Home/Personal/iwantgolist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0287s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0257s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' )  [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `go` [ RunTime:0.0351s ]
+SQL: SELECT * FROM `go`  [ RunTime:0.0425s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.088419s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000453s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2016-04-20T08:08:37+08:00 ] 127.0.0.1 /index.php/Home/Personal/personleave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0672s ]
+SQL: SHOW COLUMNS FROM `year` [ RunTime:0.0455s ]
+SQL: SELECT * FROM `year`  [ RunTime:0.0480s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0383s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0357s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0391s ]
+SQL: SELECT * FROM `staff_leave` ORDER BY leave_starttime desc LIMIT 0,6   [ RunTime:0.0374s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `staff_leave` WHERE ( work_id='7' ) LIMIT 1   [ RunTime:0.0374s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000258s ]
+NOTIC: [8] Undefined variable: y F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 50 行.
+NOTIC: [8] Undefined variable: m F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000901s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001425s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001532s ]
+
+[ 2016-04-20T08:09:10+08:00 ] 127.0.0.1 /index.php/Home/Personal/personleave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0513s ]
+SQL: SHOW COLUMNS FROM `year` [ RunTime:0.0548s ]
+SQL: SELECT * FROM `year`  [ RunTime:0.2928s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0421s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `staff_leave` ORDER BY leave_starttime desc LIMIT 0,6   [ RunTime:0.0384s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `staff_leave` WHERE ( work_id='7' ) LIMIT 1   [ RunTime:0.0325s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+NOTIC: [8] Undefined variable: y F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 50 行.
+NOTIC: [8] Undefined variable: m F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022352s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001115s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001044s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001123s ]
+
+[ 2016-04-20T08:09:13+08:00 ] 127.0.0.1 /index.php/Home/Personal/iwantgolist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0478s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0515s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' )  [ RunTime:0.0485s ]
+SQL: SHOW COLUMNS FROM `go` [ RunTime:0.0852s ]
+SQL: SELECT * FROM `go`  [ RunTime:0.0399s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000083s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035203s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035299s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000583s ]
+
+[ 2016-04-20T08:09:24+08:00 ] 127.0.0.1 /index.php/Home/Personal/personleave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0373s ]
+SQL: SHOW COLUMNS FROM `year` [ RunTime:0.0332s ]
+SQL: SELECT * FROM `year`  [ RunTime:0.0421s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0553s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0396s ]
+SQL: SHOW COLUMNS FROM `staff_leave` [ RunTime:0.0409s ]
+SQL: SELECT * FROM `staff_leave` ORDER BY leave_starttime desc LIMIT 0,6   [ RunTime:0.0325s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `staff_leave` WHERE ( work_id='7' ) LIMIT 1   [ RunTime:0.0277s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000217s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000396s ]
+NOTIC: [8] Undefined variable: y F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 50 行.
+NOTIC: [8] Undefined variable: m F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\d610e0d35ab87fde1850001ce109895a.php 第 59 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023609s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000920s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001767s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002011s ]
+
+[ 2016-04-20T08:09:27+08:00 ] 127.0.0.1 /index.php/Home/Personal/waitthing
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000544s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0360s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0482s ]
+SQL: SELECT * FROM `waitthing` ORDER BY id desc LIMIT 0,6   [ RunTime:0.0467s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `waitthing` WHERE ( uname='郭旭峰' ) LIMIT 1   [ RunTime:0.0372s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011488s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000564s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2016-04-20T08:09:29+08:00 ] 127.0.0.1 /index.php/Home/Personal/createthinglist
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000486s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000042s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000091s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015965s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000686s ]
+
+[ 2016-04-20T08:09:29+08:00 ] 127.0.0.1 /index.php/Home/Personal/cell-blue.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000398s ]
+
+[ 2016-04-20T08:09:30+08:00 ] 127.0.0.1 /index.php/Home/Personal/cell-grey.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000911s ]
+
+[ 2016-04-20T08:09:34+08:00 ] 127.0.0.1 /index.php/Home/Personal/waitthing
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0396s ]
+SQL: SHOW COLUMNS FROM `waitthing` [ RunTime:0.0346s ]
+SQL: SELECT * FROM `waitthing` ORDER BY id desc LIMIT 0,6   [ RunTime:0.0372s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `waitthing` WHERE ( uname='郭旭峰' ) LIMIT 1   [ RunTime:0.0326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056396s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000590s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000944s ]
+
+[ 2016-04-20T08:09:40+08:00 ] 127.0.0.1 /index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0221s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' ) LIMIT 1   [ RunTime:0.0316s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000368s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.047509s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.047685s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000975s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001071s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000998s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+

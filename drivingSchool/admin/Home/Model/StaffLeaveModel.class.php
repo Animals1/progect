@@ -73,6 +73,15 @@ class StaffLeaveModel extends Model {
 	}
 
 
+	public function leavelookidsee(){
+		$id = $_GET['id'];
+		return $this->Table("staff_leave")->where("leave_id='$id'")->select();
+	}
+
+
+
+
+
 	/*
 	*	我要请假信息添加
 	*	by 郭旭峰

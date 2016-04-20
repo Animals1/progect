@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/admin/laydate/laydate.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".click").click(function(){
+                $(".tip").fadeIn(200);
+            });
+
+            $(".tiptop a").click(function(){
+                $(".tip").fadeOut(200);
+            });
+
+            $(".sure").click(function(){
+                $(".tip").fadeOut(100);
+            });
+
+            $(".cancel").click(function(){
+                $(".tip").fadeOut(100);
+            });
+
+        });
+    </script>
+
+
+<style type="text/css">
+        table.imagetable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #999999;
+            border-collapse: collapse;
+        }
+        table.imagetable th {
+            background:#F99331 url('cell-blue.jpg');
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #EB5409;
+        }
+        table.imagetable td {
+            background:#dcddc0 url('cell-grey.jpg');
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #999999;
+        }
+
+        select{
+            width: 100px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body style="background:#FFF8ED;">
+
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">个人中心</a></li>
+        <li><a href="#">代办事项</a></li>
+        <li><a href="#">新建事项</a></li>
+    </ul>
+</div>
+    <br><br>
+    <div style="margin-left:25px;">
+        <form action="__APP__/Home/Personal/creatething" method="post">
+            <table class="imagetable">
+                <tr>
+                    <th>时间：</th>
+                    <td><input class="laydate-icon" onclick="laydate()" name="start"></td>
+                </tr>
+                <tr>
+                    <th>代办事项：</th>
+                    <td>
+                        <textarea name="reason" cols="5" rows="10" style=" width: 400px;    min-height: 120px;    max-height: 300px;    _height: 120px; border-style:solid; border-width:1px; border-color:gray;"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="提交">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="__APP__/Home/Personal/waitthing" style=" text-decoration: none;"><input type="button" value="取消"></a></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+    $('.tablelist tbody tr:odd').addClass('odd');
+</script>
+
+</html>
+
+
+
