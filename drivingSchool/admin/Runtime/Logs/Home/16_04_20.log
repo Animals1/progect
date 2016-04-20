@@ -1,0 +1,293 @@
+[ 2016-04-20T08:22:26+08:00 ] 127.0.0.1 /progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:22:31+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '张捷' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0200s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=4 )  [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id='5' )  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=4 )  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=19 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=20 )  [ RunTime:0.0340s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=21 )  [ RunTime:0.0290s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=22 )  [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-20T08:22:31+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:22:32+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:24:39+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.4190s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0260s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=7 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id='3' )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=1 )  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=7 )  [ RunTime:0.0150s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=8 )  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=9 )  [ RunTime:0.0410s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=10 )  [ RunTime:0.0200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:24:39+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:24:40+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:24:44+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:26:49+08:00 ] 127.0.0.1 /progect/drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:26:55+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0170s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '张捷' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 38 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0180s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin.admin_id=4 )  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id='5' )  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=4 )  [ RunTime:0.0290s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=19 )  [ RunTime:0.0270s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=20 )  [ RunTime:0.0240s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=21 )  [ RunTime:0.0380s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=22 )  [ RunTime:0.0280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-20T08:26:55+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-20T08:26:56+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-20T08:27:09+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
