@@ -137,74 +137,13 @@ $(function(){
             <?php if(is_array($v["child"])): foreach($v["child"] as $key=>$vv): ?><ul class="sub-menus">
             <li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
             
-            </ul>
-            </li>
-            <!--<li><a href="javascript:;"  target="rightFrame">预约申请</a></li>-->
-            <!--<li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>-->
-            <!--<li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>-->
-           <!--  </ul>
-           </li>
-           
-           
-           <li><a href="javascript:;"  target="rightFrame">预约申请</a></li>
-           <li><a href="/index.php/Home/Student/stuorder"  target="rightFrame">预约记录</a></li>
-           <li><a href="/index.php/Home/Student/noorder"  target="rightFrame">取消预约</a></li>
-           </ul>
-           </li>
-           <li><a href="/index.php/Home/Student/stuorder" target="rightFrame">预约申请</a></li>
-           <li><a href="/index.php/Home/Student/noorder" target="rightFrame">预约记录</a></li>
-           </ul>
-           </li>
- 
-=======
-           
-
->>>>>>> af9b7f7eb89a1d0be73fa4e7c44843224f834b4d
-=======
->>>>>>> 5a688202cef60f8aa4425a0f037aa21e06936156
-        </ul>
-
-        </dd>
-=======<?php endforeach; endif; ?>
+            </ul><?php endforeach; endif; ?>
            
         </li><?php endforeach; endif; ?>
         </ul>    
     </dd>
->>>>>>> f19838043bc4efc83bcfa2edb7ef49eb93037faf
     </dl>
-    <!--普通权限end-->
-
-
-</div>
-
-<script>
-    $("#school").click(function(){
-        var obj=document.getElementById('driving');
-        //alert(obj.style.display);
-        if(obj.style.display=='block')
-        {
-            $("#driving").hide();
-        }else
-        {
-            $("#driving").show();
-        }
-       
-    })
-
-    /*学员*/
-     $("#student").click(function(){
-        var obj=document.getElementById('stu');
-        //alert(obj.style.display);
-        if(obj.style.display=='block')
-        {
-            $("#stu").hide();
-        }else
-        {
-            $("#stu").show();
-        }
-       
-    })
-</script><?php endif; ?>
+    <!--普通权限end--><?php endif; ?>
     
 </body>
 </html>
