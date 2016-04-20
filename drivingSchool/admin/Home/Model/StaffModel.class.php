@@ -444,7 +444,6 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
->>>>>>> 62fcccd488169925f523a0878747547f9e5969fe
 	}
 }
 
