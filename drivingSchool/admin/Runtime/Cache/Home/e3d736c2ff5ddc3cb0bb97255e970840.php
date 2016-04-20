@@ -18,7 +18,7 @@
 
             $(".sure").click(function(){
                 $(".tip").fadeOut(100);
-                window.location.href="/index.php/Home/Finance/addsalary";
+                window.location.href="/index.php/Home/Finance/addarrears";
             });
 
             $(".cancel").click(function(){
@@ -27,6 +27,14 @@
 
         });
     </script>
+    <script src="/Public/laydate/laydate.js"></script>
+    <style>
+        h2{line-height:30px; font-size:20px;}
+        a,a:hover{ text-decoration:none;}
+        pre{font-family:'微软雅黑'}
+        .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
+        .box a{padding-right:20px;}
+    </style>
 
 </head>
 
@@ -38,16 +46,19 @@
 
         <ul class="toolbar">
             <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
-            <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
+            <li><a href="/index.php/Home/Finance/income"><span><img src="/Public/admin/images/t04.png" /></span>统计</a></li>
         </ul>
 
-        <form action="search2" method="post">
+        <form action="search1" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
                 <li>
-                    学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="staff_name">
+                    学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
                 </li>
                 <li>
-                    编号<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="staff_sn">
+                    编号<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
+                </li>
+                <li>
+                    日期<input class="laydate-icon" onclick="laydate()" style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="arrears_time">
                 </li>
                 <li>
                     <input style="margin-left: 10px; width: 50px;height: 20px;" type="submit" value="搜索">
@@ -56,7 +67,7 @@
         </form>
 
         <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>发工资</li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span>收费</li>
         </ul>
 
     </div>
@@ -65,11 +76,11 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th>岗位<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
-            <th>编号</th>
-            <th>姓名</th>
-            <th>出勤天数</th>
-            <th>实发工资</th>
+            <th>欠费学员<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+            <th>学员编号</th>
+            <th>费用日期</th>
+            <th>欠费类型</th>
+            <th>欠费金额（元）</th>
             <th>状态</th>
             <th>操作</th>
         </tr>
@@ -77,13 +88,13 @@
         <tbody>
         <?php foreach($list as $v){?>
         <tr>
-            <td><?php echo $v['role_name']; ?></td>
-            <td><?php echo $v['staff_sn']; ?></td>
-            <td><?php echo $v['staff_name']; ?></td>
-            <td><?php echo $v['salary_day']; ?></td>
-            <td><?php echo $v['salary_wages']; ?></td>
-            <td><?php echo $v['salary_status_name']; ?></td>
-            <td><a href="/index.php/Home/Finance/selsalasry?id=<?php echo $v['salary_id']?>" class="tablelink">查看</a>     <a href="/index.php/Home/Finance/delsalary?id=<?php echo $v['salary_id']?>" class="tablelink"> 删除</a></td>
+            <td><?php echo $v['stu_name']; ?></td>
+            <td><?php echo $v['stu_sn']; ?></td>
+            <td><?php echo $v['arrears_time']; ?></td>
+            <td><?php echo $v['money_name']; ?></td>
+            <td><?php echo $v['arrears_money']; ?></td>
+            <td><?php echo $v['status_name']; ?></td>
+            <td><a href="/index.php/Home/Finance/selarrears?id=<?php echo $v['arrears_id']; ?>" class="tablelink">查看</a>     <a href="/index.php/Home/Finance/delarrears?id=<?php echo $v['arrears_id']; ?>" class="tablelink"> 删除</a></td>
         </tr>
         <?php }?>
         </tbody>

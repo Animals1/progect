@@ -25,6 +25,37 @@ class ChargeModel extends Model {
     }
 
 
+
+    /**
+     * 多添件搜索
+     */
+    public function searchs(){
+        $arr = I('post.');
+
+        foreach ($arr as $k => $v) {
+            if ($v=='') {
+                unset($arr[$k]);
+            }
+        }
+        $sql='';
+        $i=0;
+        foreach ($arr as $k => $v) {
+            if($i!=0){
+                $sql.=' and ';
+            }
+            $sql.="$k like '%$v%'";
+            $i++;
+        }
+        $User = M("charge");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->page($p,2)->select();
+        $count = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
     /*
      * 收费明细-添加信息
      * 接受post的传值
@@ -37,7 +68,6 @@ class ChargeModel extends Model {
     public function addValue()
     {
         $date['stu_id'] = $_POST['stu_id'];
-        $date['stu_sn'] = $_POST['stu_sn'];
         $date['money_type_id'] = $_POST['money_type_id'];
         $date['charge_time'] = $_POST['charge_time'];
         $date['payment_id'] = $_POST['payment_id'];
