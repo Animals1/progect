@@ -1,0 +1,6 @@
+[ 2016-04-20T13:24:02+08:00 ] 127.0.0.1 /index.php/Hone/student/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+ERR: 无法加载模块:Hone
+

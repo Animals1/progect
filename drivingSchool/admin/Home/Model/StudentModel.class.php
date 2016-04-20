@@ -15,7 +15,7 @@ class StudentModel extends Model {
     public function getshow($user_id)
     {
         $user_id = $_COOKIE['userid'];
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("user_id=$user_id")->select();
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("user_id=$user_id")->find();
     }
 
     /*
@@ -152,7 +152,7 @@ class StudentModel extends Model {
         $i=0;
         foreach ($arr as $k => $v) {
           if($i!=0){
-              $sql.=' or ';
+              $sql.=' and ';
           }
            $sql.="$k like '%$v%'";
            $i++;
@@ -169,8 +169,8 @@ class StudentModel extends Model {
      *author：xueyunhuan
      *查询学生信息
     */
-    public function studentinfo($user_id){
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("user_id=$user_id")->select();
+    public function studentinfo($stu_id){
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("stu_id=$stu_id")->find();
     }
 }
 ?>

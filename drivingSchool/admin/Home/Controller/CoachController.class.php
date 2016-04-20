@@ -113,6 +113,7 @@ class CoachController extends Controller {
     public function mystudent(){
     	$model = D('Student');
     	$arr = $model->allstudent();
+    	//print_r($arr);die;
     	$p = $arr['0'];
        	$list = $arr['1'];
        	$page = $arr['2'];
@@ -141,11 +142,18 @@ class CoachController extends Controller {
        	$this->assign('list',$list);
     	$this->display('mystudent');
      }
+     /*
+	 * author:xueyunhuan
+	 *查询详细信息
+     */
      public function studentinfo(){
-     	$user_id = $_GET['user_id'];
+     	$stu_id = $_GET['stu_id'];
      	$model = D('Student');
-     	$arr = $model->studentinfo($user_id);
+     	$arr = $model->studentinfo($stu_id);
+     	$progress = D('Progress');
+       	$progress = $progress->stushow($stu_id);
      	$this->assign('arr',$arr);
+     	$this->assign('progress',$progress);
      	$this->display('studentinfo');
      }
 }
