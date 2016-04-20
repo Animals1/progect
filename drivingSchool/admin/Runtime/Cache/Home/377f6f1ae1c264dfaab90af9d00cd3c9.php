@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -55,9 +55,7 @@
         <ul class="toolbar">
             <li>车型:<select name="motor_id" id="motor_id" style="width: 80px;">
                 <option value="0">全部</option>
-<foreach name="driving" item="driving">
-                <option value="{$driving.driving_name}">{$driving.driving_name}</option>
-  </foreach>
+<?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_name"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
             </select></li>
             <li>
                 性别:<select name="sex_id" id="sex_id" style="width: 80px;">
@@ -70,9 +68,7 @@
                 状态:
                 <select name="stu_status_id" id="stu_status_id" style="width: 80px;">
                     <option value="0">全部</option>
-<foreach name="status" item="status">
-                    <option value="{$status.stu_status_id}">{$status.stu_status_name}</option>
-                    </foreach>
+<?php if(is_array($status)): foreach($status as $key=>$status): ?><option value="<?php echo ($status["stu_status_id"]); ?>"><?php echo ($status["stu_status_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
 
             </li>
@@ -90,7 +86,7 @@
                 var sex_id=$('#sex_id').val();
                 var stu_status_id=$('#stu_status_id').val();
                 $.ajax({
-                    url: "__APP__/Home/Administration/inschoolsearch",
+                    url: "/index.php/Home/Administration/inschoolsearch",
                     type: 'get',
                     data: {'stu_sn':stu_sn,'stu_name':stu_name,'stu_tel':stu_tel,'laydate':laydate,'motor_id':motor_id,'sex_id':sex_id,'stu_status_id':stu_status_id},
                     success: function (data) {
@@ -102,7 +98,7 @@
         </script>
 
         <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span><a href="__APP__/Home/Administration/regstu">登记新学生</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/regstu">登记新学生</a></li>
         </ul>
 
     </div>
@@ -112,7 +108,7 @@
         <thead>
         <tr>
             <th>序号</th>
-            <th>编号<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
+            <th>编号<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>姓名</th>
             <th>性别</th>
             <th>身份证号</th>
@@ -125,28 +121,25 @@
         </tr>
         </thead>
         <tbody>
-        <foreach name="student" item="stu">
-        <tr>
-            <td>{$stu.stu_id}</td>
-            <td>{$stu.stu_sn}</td>
-            <td>{$stu.stu_name}</td>
-            <td>{$stu.sex_name}</td>
-            <td>{$stu.stu_idcard}</td>
-            <td>{$stu.stu_tel}</td>
+        <?php if(is_array($student)): foreach($student as $key=>$stu): ?><tr>
+            <td><?php echo ($stu["stu_id"]); ?></td>
+            <td><?php echo ($stu["stu_sn"]); ?></td>
+            <td><?php echo ($stu["stu_name"]); ?></td>
+            <td><?php echo ($stu["sex_name"]); ?></td>
+            <td><?php echo ($stu["stu_idcard"]); ?></td>
+            <td><?php echo ($stu["stu_tel"]); ?></td>
             <td>
-                {$stu.cert_level}
+                <?php echo ($stu["cert_level"]); ?>
             </td>
-            <td><if condition="$stu.test_one eq 1">科一已完成
-                <elseif condition="$stu.test_two eq 1"/>科二已完成
-                <elseif condition="$stu.test_three eq 1"/>科三已完成
-                <elseif condition="$stu.test_four eq 1"/>科四已完成
-                <else/>毕业
-            </if></td>
-            <td>{$stu.stu_time}</td>
-            <td>{$stu.stu_status_name}</td>
-            <td><a href="__APP__/Home/Administration/updatestudent/id/{$stu.stu_id}">修改</a></td>
-        </tr>
-</foreach>
+            <td><?php if($stu["test_one"] == 1): ?>科一已完成
+                <?php elseif($stu["test_two"] == 1): ?>科二已完成
+                <?php elseif($stu["test_three"] == 1): ?>科三已完成
+                <?php elseif($stu["test_four"] == 1): ?>科四已完成
+                <?php else: ?>毕业<?php endif; ?></td>
+            <td><?php echo ($stu["stu_time"]); ?></td>
+            <td><?php echo ($stu["stu_status_name"]); ?></td>
+            <td><a href="/index.php/Home/Administration/updatestudent/id/<?php echo ($stu["stu_id"]); ?>">修改</a></td>
+        </tr><?php endforeach; endif; ?>
 
         </tbody>
     </table>
@@ -177,8 +170,5 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-<script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>
-
-
-

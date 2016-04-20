@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 
 </head>
 
@@ -23,7 +23,7 @@
 <div class="mainindex">
 
     <div class="formtitle"><span>入学登记</span></div>
-    <form action="__APP__/Home/Administration/regstu" enctype="multipart/form-data" method="post" >
+    <form action="/index.php/Home/Administration/regstu" enctype="multipart/form-data" method="post" >
         <ul class="forminfo">
             <li><label>报名时间:</label><input class="laydate-icon" onclick="laydate()" name="stu_time"></li>
             <li><label>姓名：</label><input name="stu_name" type="text" class="dfinput"  />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -38,9 +38,7 @@
             <li><label>户口所在地：</label>
                 <select name="stu_birthplace" id="select" class="site">
                     <option value="0">--请选择--</option>
-                    <foreach name="region" item="rev">
-                        <option value="{$rev.region_id}">{$rev.region_name}</option>
-                    </foreach>
+                    <?php if(is_array($region)): foreach($region as $key=>$rev): ?><option value="<?php echo ($rev["region_id"]); ?>"><?php echo ($rev["region_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
                 <select name="stu_birthplace1" id="select2" class="site">
                     <option value="0">--请选择--</option>
@@ -53,9 +51,7 @@
             <li><label>现住地址：</label>
                 <select name="stu_curaddress" id="select" class="site">
                     <option value="0">--请选择--</option>
-                    <foreach name="region" item="rev">
-                        <option value="{$rev.region_id}">{$rev.region_name}</option>
-                    </foreach>
+                    <?php if(is_array($region)): foreach($region as $key=>$rev): ?><option value="<?php echo ($rev["region_id"]); ?>"><?php echo ($rev["region_name"]); ?></option><?php endforeach; endif; ?>
                 </select>
                 <select name="stu_curaddress1" id="select2" class="site">
                     <option value="0">--请选择--</option>
@@ -85,18 +81,14 @@
                 <label>报名课程:</label>
                 <select name="stu_motor" id="">
                 <option value="">--请选择--</option>
-                <foreach name="motor" item="motor">
-                <option value="{$motor.motor_id}">{$motor.motor_name}</option>
-                </foreach>
+                <?php if(is_array($motor)): foreach($motor as $key=>$motor): ?><option value="<?php echo ($motor["motor_id"]); ?>"><?php echo ($motor["motor_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
                 <label>报名类型:</label>
                 <select name="cert_level" id="">
                 <option value="">--请选择--</option>
-                <foreach name="driving" item="driving">
-                <option value="{$driving.driving_name}">{$driving.driving_name}</option>
-                </foreach>
+                <?php if(is_array($driving)): foreach($driving as $key=>$driving): ?><option value="<?php echo ($driving["driving_name"]); ?>"><?php echo ($driving["driving_name"]); ?></option><?php endforeach; endif; ?>
             </select>
             </li>
             <li>
@@ -123,7 +115,7 @@
 </body>
 
 </html>
-<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
 <script>
     $(".site").live("change",function(){
@@ -134,7 +126,7 @@
         }else{
             $.ajax({
                 type:"get",
-                url:"__APP__/Home/staff/area",
+                url:"/index.php/Home/staff/area",
                 data:"id="+id,
                 dataType:"json",
                 success:function(msg){

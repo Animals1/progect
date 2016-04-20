@@ -74,15 +74,19 @@
         </tr>
         </thead>
         <tbody>
-
+        <foreach name="busset" item="bus">
             <tr>
 
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+                <td>{$bus.bus_route}</td>
+                <td>{$bus.car_number}</td>
+                <td>{$bus.bus_station}</td>
 
+                <td>
+                    <a href="__APP__/Home/Administartion/busupdate/id/{$bus.bus_id}">修改</a>
+                    <a href="__APP__/Home/Administration/busdel/id/{$bus.bus_id}">删除</a>
+                </td>
+            </tr>
+        </foreach>
         </tbody>
     </table>
 

@@ -1,6 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head >
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
@@ -31,63 +31,46 @@
 </head>
 
 
-<body style="background:#FFF8ED;" id="div">
+<body style="background:#FFF8ED;">
 
-<!--<div class="place">-->
-<!--<span>位置：</span>-->
-<!--<ul class="placeul">-->
-<!--<li><a href="#">首页</a></li>-->
-<!--<li><a href="#">数据表</a></li>-->
-<!--<li><a href="#">基本内容</a></li>-->
-<!--</ul>-->
-<!--</div>-->
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">数据表</a></li>
+        <li><a href="#">基本内容</a></li>
+    </ul>
+</div>
 
 <div class="rightinfo">
-
-    <div class="tools">
-
-        <!--<ul class="toolbar">-->
-            <!--<li class="click1"><span><img src="/Public/admin/images/t01.png" /></span><a href="/index.php/Home/Administration/addveh">添加</a></li>-->
-            <!--<li class="click1"><span><img src="/Public/admin/images/t02.png" /></span><a href="">修改</a></li>-->
-            <!--<li><span><img src="/Public/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>-->
-            <!--<li><span><img src="/Public/admin/images/t04.png" /></span><a href="">统计</a></li>-->
-
-
-        <!--</ul>-->
-
-
-        <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh"><a
-                    href="/index.php/Home/Administration/addbus">增开班车</a></li>
-        </ul>
-
-    </div>
-
+    
 
     <table class="tablelist">
         <thead>
         <tr>
-            <th>班车路线</th>
-            <th>车牌号</th>
-            <th>途经站</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>身份证号</th>
+            <th>报名课程</th>
+            <th>联系电话</th>
+            <th>户口所在地</th>
+            <th>备注</th>
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
-        <?php if(is_array($busset)): foreach($busset as $key=>$bus): ?><tr>
-
-                <td><?php echo ($bus["bus_route"]); ?></td>
-                <td><?php echo ($bus["car_number"]); ?></td>
-                <td><?php echo ($bus["bus_station"]); ?></td>
-
-                <td>
-                    <a href="/index.php/Home/Administartion/busupdate/id/<?php echo ($bus["bus_id"]); ?>">修改</a>
-                    <a href="/index.php/Home/Administration/busdel/id/<?php echo ($bus["bus_id"]); ?>">删除</a>
-                </td>
-            </tr><?php endforeach; endif; ?>
+    <?php if(is_array($student)): foreach($student as $key=>$stu): ?><tr>
+            <td><?php echo ($stu["stu_name"]); ?></td>
+            <td><?php echo ($stu["sex_name"]); ?></td>
+            <td><?php echo ($stu["stuidcard"]); ?></td>
+            <td><?php echo ($stu["class_name"]); ?></td>
+            <td><?php echo ($stu["stu_tel"]); ?></td>
+            <td><?php echo ($stu["stu_birthplace"]); ?></td>
+            <td></td>
+            <td><a href="/index.php/Home/Administration/regstu">入学登记</a></td>
+        </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
-
 
 
     <div class="pagin">
