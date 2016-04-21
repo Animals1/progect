@@ -1,10 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -49,9 +49,7 @@
         <ul class="toolbar">
             <li class="click">被投诉人:<select name="coach_name" id="coach_id" onchange="searchcoach()">
                 <option value="-1">请选择</option>
-<foreach name="coach" item="com">
-                <option value="{$com.staff_id}">{$com.staff_name}</option>
-</foreach>
+<?php if(is_array($coach)): foreach($coach as $key=>$com): ?><option value="<?php echo ($com["staff_id"]); ?>"><?php echo ($com["staff_name"]); ?></option><?php endforeach; endif; ?>
             </select></li>
         </ul>
 
@@ -61,7 +59,7 @@
             {
                 var coach=$('#coach_id').val();
                 $.ajax({
-                    url: "__APP__/Home/Administration/complaintsearch",
+                    url: "/index.php/Home/Administration/complaintsearch",
                     type: 'get',
                     data: {'coach':coach},
                     success: function (data) {
@@ -85,17 +83,15 @@
         </tr>
         </thead>
         <tbody>
-        <foreach name="complaint" item="val">
-        <tr>
+        <?php if(is_array($complaint)): foreach($complaint as $key=>$val): ?><tr>
 
-            <td>{$val.stu_name}</td>
-            <td>{$val.stu_idcard}</td>
-            <td>{$val.staff_name}</td>
-            <td>{$val.staff_sn}</td>
-            <td>{$val.complaint_reason}</td>
+            <td><?php echo ($val["stu_name"]); ?></td>
+            <td><?php echo ($val["stu_idcard"]); ?></td>
+            <td><?php echo ($val["staff_name"]); ?></td>
+            <td><?php echo ($val["staff_sn"]); ?></td>
+            <td><?php echo ($val["complaint_reason"]); ?></td>
 
-        </tr>
-</foreach>
+        </tr><?php endforeach; endif; ?>
 
         </tbody>
     </table>
@@ -123,6 +119,3 @@
 </script>
 
 </html>
-
-
-

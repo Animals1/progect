@@ -812,39 +812,158 @@ class AdministrationController extends Controller {
     * */
         public function regstu()
         {
-            $staff = D('staff');
-            $region = $staff->linkage();
-            $motor=D('CoachMotor');
-            $coach_motor=$motor->getValue();
-            $driving=D('CoachDriving');
-            $coach_driving=$driving->getValue();
-            $this->assign('driving',$coach_driving);
-            $this->assign('region',$region);
-            $this->assign('motor',$coach_motor);
-            $this->display('regstu');
-        }
+            if($_POST)
+            {
 
-    public function area(){
-        $id = $_GET['id'];
-        $staff = D('staff');
-        $region = $staff->linkage($id);
-        echo json_encode($region);
-    }
+                $staff=D('Staff');
+                $img=$staff->upload('stu_photo');
+                $data['stu_time']=$_POST['stu_time'];
+                $data['stu_name']=$_POST['stu_name'];
+                $data['stu_sn']=$_POST['stu_sn'];
+                $data['stu_sex']=$_POST['stu_sex'];
+                $data['stu_idcard']=$_POST['idcard'];
+                $data['stu_tel']=$_POST['stu_tel'];
+                $data['stu_email']=$_POST['stu_email'];
+                $data['motor_id']=$_POST['stu_motor'];
+                $data['cert_level']=$_POST['cert_level'];
+                $data['stu_test']=$_POST['stu_test'];
+
+                /*户口所在地*/
+                $stu_birthplace = $_POST['stu_birthplace'];
+                $stu_birthplace.= ','.$_POST['stu_birthplace1'];
+                $stu_birthplace.= ','.$_POST['stu_birthplace2'];
+
+                $stu_curaddress = $_POST['stu_curaddress'];
+                $stu_curaddress.= ','.$_POST['stu_curaddress1'];
+                $stu_curaddress.= ','.$_POST['stu_curaddress2'];
+                $curaddress=$_POST['curaddress'];
+                $area[]=$stu_birthplace;
+                $area[]=$stu_curaddress;
+
+                $stu=D('Student');
+                $student=$stu->area($area);
+                //print_r($student);die;
+                foreach($student as $key=>$val)
+                {
+                    foreach($val as $k=>$v)
+                    {
+                        $region_name[$key][$k]=$v['region_name'];
+                    }
+                    //dump($region_name);
+                }
+                foreach($region_name as $rk=>$rv)
+                {
+                    $region[]=implode(',',$rv);
+                }
+                $data['stu_birthplace']=$region[0];
+                $data['stu_currentplace']=$region[1].','.$curaddress;
+                $data['stu_photo']=$img;
+                $add=$stu->inschoolRecord($data);
+                if($add)
+                {
+                    $this->success('入学登记成功','/Home/Administration/regstu');
+                }
+                else
+                {
+                    $this->error('入学登记失败','/Home/Administration/regstu');
+                }
+
+            }
+            else
+            {
+                $staff = D('staff');
+                $region = $staff->linkage();
+                $motor=D('CoachMotor');
+                $coach_motor=$motor->getValue();
+                $driving=D('CoachDriving');
+                $coach_driving=$driving->getValue();
+                $this->assign('driving',$coach_driving);
+                $this->assign('region',$region);
+                $this->assign('motor',$coach_motor);
+                $this->display('regstu');
+            }
+        }
+    /*
+     * 地区联动
+     * */
+        public function area(){
+            $id = $_GET['id'];
+            $staff = D('staff');
+            $region = $staff->linkage($id);
+            echo json_encode($region);
+        }
 
     /*
     * suitcontrol 投诉管理
     * */
         public function suitcontrol()
         {
+            $com=D('Complaint');
+            $complaint=$com->getValue();
+            $coach=$com->getValue();
+            $this->assign('coach',$coach);
+            $this->assign('complaint',$complaint);
             $this->display('suitcontrol');
         }
-
+    /*
+     * 投诉搜索
+     * */
+        public function complaintsearch()
+        {
+            $val=$_GET['coach'];
+            $com=D('Complaint');
+            $where="staff.staff_id='$val'";
+            $complaint=$com->getValue($where);
+            $coach=$com->getValue();
+            $this->assign('coach',$coach);
+            $this->assign('complaint',$complaint);
+            $this->display('suitcontrol');
+        }
     /*
     * trainmsg 教练信息
     * */
         public function trainmsg()
         {
+            $coach=D('Coach');
+            $coach_message=$coach->coachMessage();
+            $group=$coach->groupName();
+            $this->assign('group',$group);
+            $this->assign('coach',$coach_message);
             $this->display('trainmsg');
+        }
+    /*
+     * 教练信息搜索
+     * */
+        public function searchgroup()
+        {
+            $staff_sn=$_GET['staff_sn'];
+            $staff_name=$_GET['staff_name'];
+            $staff_idcard=$_GET['staff_idcard'];
+            $group_id=$_GET['id'];
+            $where=1;
+            if($staff_sn != null)
+            {
+                $where.=" and staff.staff_sn='$staff_sn'";
+            }
+            if($staff_name != null)
+            {
+                $where.=" and staff.staff_name like'%$staff_name%'";
+            }
+            if($staff_idcard != null)
+            {
+                $where.=" and staff.staff_idcard='$staff_idcard'";
+            }
+            if($group_id != null && $group_id != -1)
+            {
+                $where.=" and coach.group_id='$group_id'";
+            }
+            $coach=D('Coach');
+            $coach_message=$coach->coachMessage($where);
+            $group=$coach->groupName();
+            $this->assign('group',$group);
+            $this->assign('coach',$coach_message);
+            $this->display('trainmsg');
+
         }
 
     /*
@@ -852,7 +971,28 @@ class AdministrationController extends Controller {
     * */
         public function traingroup()
         {
+            $group=D('CoachGroup');
+            $coach_group=$group->getValue();
+            $this->assign('group',$coach_group);
             $this->display('traingroup');
+        }
+    /*
+     * 分组删除
+     * */
+        public function delgroup()
+        {
+            $id=$_GET['id'];
+            $group=D('CoachGroup');
+            $where="group_id='$id' and parent_id='$id'";
+            $coach_group=$group->deletegroup($where);
+            if($coach_group)
+            {
+                $this->success('分组删除成功','/Home/Administration/traingroup');
+            }
+            else
+            {
+                $this->error('分组删除失败');
+            }
         }
 
     /*
@@ -860,7 +1000,46 @@ class AdministrationController extends Controller {
    * */
         public function traingroupadd()
         {
-            $this->display('traingroupadd');
+            $coach=D('Coach');
+           if($_POST)
+           {
+               $data['staffname']=$_POST['lander'];
+               $data['group_name']=$_POST['group_name'];
+               $data['parent_id']=0;
+               $data['phone']=$_POST['phone'];
+               $groupadd=D('CoachGroup');
+               $group=$groupadd->addgroup($data);
+               if($group)
+               {
+                   $where="staffname like '%$data[staffname]%'";
+                   //根据名字查询出来教练id,根据教练id去修改分组
+                   $coach_id=$coach->nogroupcoachMessage($where);
+                   $group_id=$groupadd->selectgroup($where);
+                   print_r($group_id);die;
+                   $child[]=$_POST['group_child'];
+                   $child[]=$group_id;
+                   $child=$groupadd->addchild($child);
+                   if($child)
+                   {
+                       $this->success();
+                   }
+                   else
+                   {
+                       $this->error();
+                   }
+               }
+
+           }
+            else
+            {
+
+                $where="coach.group_id='0'";
+                $coachMessage=$coach->coachMessage($where);
+                $this->assign('nogroup',$coachMessage);
+                //print_r($coachMessage);die;
+                $this->display('traingroupadd');
+            }
+
         }
 
     /*
