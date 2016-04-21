@@ -30,7 +30,7 @@ setInterval("changeColor()",200);
 
             $(".sure").click(function(){
                 $(".tip").fadeOut(100);
-                window.location.href="/index.php/Home/Personal/chuqin";
+                window.location.href="/index.php/Home/Personal/createthinglist";
             });
 
             $(".cancel").click(function(){
@@ -80,14 +80,14 @@ setInterval("changeColor()",200);
             <td><?php echo $v['time'];?></td>
             <td><?php echo $v['thing'];?></td>
             <td>
-            	<?php if($v['status'] == 0): ?>代办中    
+            	<?php if($v['status'] == 0): ?><div id="blink">代办中</div>
             	<?php else: ?> 
             	<div id="blink">已完成</div><?php endif; ?>
             </td>
             <td>
-            	<?php if($v['status'] == 0): ?><a href="#" class="tablelink">确认完成</a>  
+            	<?php if($v['status'] == 0): ?><a href="/index.php/Home/Personal/thingupdfield/id/<?php foreach($arr as $v){ echo $v['id'];}?>" class="tablelink">确认完成</a>  
             	<?php else: ?> 
-            	<a href="#" class="tablelink">删除</a><?php endif; ?>
+            	<a href="/index.php/Home/Personal/thingdele/id/<?php foreach($arr as $v){ echo $v['id'];}?>" class="tablelink">删除</a><?php endif; ?>
             	
             </td>
         </tr>
@@ -98,17 +98,9 @@ setInterval("changeColor()",200);
 
 
     <div class="pagin">
-        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
+        <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
         <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
-            <li class="paginItem"><a href="javascript:;">1</a></li>
-            <li class="paginItem current"><a href="javascript:;">2</a></li>
-            <li class="paginItem"><a href="javascript:;">3</a></li>
-            <li class="paginItem"><a href="javascript:;">4</a></li>
-            <li class="paginItem"><a href="javascript:;">5</a></li>
-            <li class="paginItem more"><a href="javascript:;">...</a></li>
-            <li class="paginItem"><a href="javascript:;">10</a></li>
-            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
+            <li class="paginItem"><?php echo ($page); ?></li>  
         </ul>
     </div>
 

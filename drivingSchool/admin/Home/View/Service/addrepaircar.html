@@ -40,7 +40,8 @@
 			<?php foreach($arr as $v){?>
 				<option value='<?php echo $v['car_id'];?>'><?php echo $v['car_number'];?></option>
 			<?php } ?>
-		</select></li>
+		</select>
+	</li>
     <li><label>换车原因</label><input name="replace_reason" type="text" class="dfinput"/></li>
     <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="提交申请"/></li>
     </form>

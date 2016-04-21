@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 
 
 </head>
@@ -23,7 +23,7 @@
     <div class="mainindex">
         
     <div class="formtitle"><span>基本信息</span></div>
-    <form action="/progect/drivingSchool/index.php/Home/Staff/adds" enctype="multipart/form-data" method="post" >
+    <form action="/index.php/Home/Staff/adds" enctype="multipart/form-data" method="post" >
     <ul class="forminfo">
     <li><label>员工照片</label><input name="img" type="file" /></li>
     <li><label>姓名：</label><input name="name" type="text" class="dfinput" />&nbsp;&nbsp;&nbsp;&nbsp;
@@ -145,8 +145,8 @@
 </body>
 
 </html>
-<script type="text/javascript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>        
-<script type="text/javascript" src="/progect/drivingSchool/Public/admin/js/datetime.js"></script>
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>        
+<script type="text/javascript" src="/Public/admin/js/datetime.js"></script>
 <script type="text/javascript">
         $(".site").live("change",function(){
             var obj = $(this)
@@ -156,7 +156,7 @@
             }else{
                 $.ajax({
                     type:"get",
-                    url:"/progect/drivingSchool/index.php/Home/staff/area",
+                    url:"/index.php/Home/staff/area",
                     data:"id="+id,
                     dataType:"json",
                     success:function(msg){

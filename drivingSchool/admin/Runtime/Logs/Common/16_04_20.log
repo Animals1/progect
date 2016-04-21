@@ -1,4 +1,12 @@
 <<<<<<< HEAD
+[ 2016-04-20T13:24:02+08:00 ] 127.0.0.1 /index.php/Hone/student/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+ERR: 无法加载模块:Hone
+
+=======
+<<<<<<< HEAD
 [ 2016-04-20T08:18:29+08:00 ] ::1 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
@@ -91,3 +99,4 @@ INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 ERR: 无法加载模块:Public
 
 >>>>>>> 2ccac5af075f89c94765c4a58568bbf0f0a2b155
+>>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435

@@ -132,30 +132,26 @@ $(function(){
 
 <!--普通权限start-->
     <div class="lefttop"><span></span>
-    <?php
-            if($_COOKIE['rolename']=="学员"){
-                echo "学员端";
-            }else{
-                echo "驾校端";
-            }
-        ?>
+    普通用户
     </div>
-    
+
+    <foreach name="arr" item="v">
+
     <dl class="leftmenu">   
     <dd>
     <div class="title">
-    <span><img src="__PUBLIC__/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+    <span><img src="__PUBLIC__/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
     </div>
         <ul class="menuson">
-        <foreach name="arr" item="v">
+        <foreach name="v.childs" item="vo">
         <li>
-        
+            
             <div class="header">
             <cite></cite>
-            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name'];?></a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $vo['privilege_name'];?></a>
             <i></i>
             </div>
-            <foreach name="v.child" item="vv">
+            <foreach name="vo.child" item="vv">
             <ul class="sub-menus">
             <li><a href="__APP__/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
             
@@ -167,6 +163,9 @@ $(function(){
         </ul>    
     </dd>
     </dl>
+    
+    </foreach>
+
     <!--普通权限end-->
 
 </if>

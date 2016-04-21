@@ -314,6 +314,17 @@ class PersonalController extends Controller {
 
 
 	/*
+	*	详情id查询
+	*/
+	public function leavelookidsee(){
+		$data2 = D("StaffLeave");
+		$arr2 = $data2->leavelookidsee();
+		$this->assign("arr",$arr2);
+		$this->display("leavelook");
+	}
+
+
+	/*
 	*	我要请假信息添加
 	*	by 郭旭峰
 	*/
@@ -389,9 +400,67 @@ class PersonalController extends Controller {
 	public function waitthing(){
 		$data = D("Waitthing");
 		$arr = $data->waitthing();
-		$this->assign("arr",$arr);
+		$arr3 = $arr[0];
+		$page = $arr[1];
+		$count = $arr[2];
+		$p = $arr[3];
+		$this->assign("arr",$arr3);
+		$this->assign("page",$page);
+		$this->assign("count",$count);
+		$this->assign("p",$p);
 		$this->display("waitthing");
 	}
-	
+
+
+
+	/*
+	*	删除代办事项
+	*	by 郭旭峰
+	*/
+	public function thingdele(){
+		$data = D("Waitthing");
+		$arr = $data->thingdele();
+		if($arr){
+			echo "<script>alert('删除成功');location.href='".__MODULE__."/Personal/waitthing'</script>";
+		}else{
+			echo "<script>alert('删除失败');location.href='".__MODULE__."/Personal/waitthing'</script>";
+		}
+	}
+
+
+	/*
+	*	新建事项列表页
+	*	by  郭旭峰
+	*/
+	public function createthinglist(){
+		$this->display("createthinglist");
+	}
+
+
+	public function creatething(){
+		$data = D("Waitthing");
+		$arr = $data->creatething();
+		if($arr){
+			echo "<script>alert('新建事项成功');location.href='".__MODULE__."/Personal/waitthing'</script>";
+		}else{
+			echo "<script>alert('新建事项失败');location.href='".__MODULE__."/Personal/createthinglist'</script>";
+		}
+	}
+
+
+	/*
+	*	代办事项确认完成
+	*	by  郭旭峰
+	*/
+	public function thingupdfield(){
+		$data = D("Waitthing");
+		$arr = $data->thingupdfield();
+		if($arr){
+			echo "<script>alert('已确认');location.href='".__MODULE__."/Personal/waitthing'</script>";
+		}else{
+			echo "<script>alert('确认失败');location.href='".__MODULE__."/Personal/waitthing'</script>";
+		}
+	}
+
 }
 ?>
