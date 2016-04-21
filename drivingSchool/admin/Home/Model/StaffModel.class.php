@@ -267,7 +267,7 @@ class StaffModel extends Model {
 				$time[$k]['coach_start_year'] = $coachyear;
 		}
 		return $time;
-	}
+	} 
 	/*
 	 * 教练员工查询
 	 * 作者：张捷
@@ -282,7 +282,7 @@ class StaffModel extends Model {
 	 */
 	public function staffselect(){
 		$db=D("staff");
-		return $db->where("role_id = 4 OR role_id = 5 OR role_id = 6")->select();
+		return $db->join("role ON staff.role_id = role.role_id")->where("staff.role_id in (4,5,6)")->select();
 	}
 	
 	/*
@@ -290,23 +290,41 @@ class StaffModel extends Model {
 	 * 作者：张捷
 	 */
 	public function staffsearch($data){
-	
+		//print_r($data);die;
 		$db = D('staff');
-		$datas = '';
-		if ($data['staff_sn'] != '') {
-			$datas .= 'staff_sn = '.$data['staff_sn'];
-		}else if ($data['staff_name' != '']){
-			$datas .= ' and staff_name = '.$data['staff_name'];
-		}else if ($data['staff_idcard' != '']) {
-			$datas .= 'and staff_idcard = '.$data['staff_idcard'];
-		}else if ($data['staff_tel'] != '') {
-			$datas .= ' and staff_tel = '.$data['staff_tel'];
-		}
-		$re = $db->join('staff.staff_id = coach.coach_staff_id')->where($datas)->select();
-		if ($re) {
-			return $re;
+		
+		if ($data['id'] == '1') {
+			$where = "staff.role_id = 1 "; 
+			$where1 = 'staff.role_id in (4,5,6) ';
 		}else{
-			return $db->where($datas)->select();
+			$where = 'staff.role_id in (4,5,6) ';
+			$where1 = "staff.role_id = 1 "; 
+		}
+		
+		if($data['sn']!=null)
+		{
+			$where.="AND  staff.staff_sn like '%$data[sn]%'";
+		}
+		if($data['name']!=null)
+		{
+            $where.="AND  staff.staff_name like '%$data[name]%'";
+		}
+		if($data['idcard']!=null)
+		{
+            $where.="AND  staff.staff_idcard like '%$data[idcard]%'";
+		}
+		if($data['tel']!=null)
+		{
+            $where.="AND  staff.staff_tel like '%$data[tel]%'";
+		}
+		if ($data['id'] == '1') {
+			$rows[0] = $db->join('coach ON staff.staff_id = coach.coach_staff_id')->where($where)->select();
+			$rows[1] = $db->join("role ON staff.role_id = role.role_id")->where($where1)->select();
+			return $rows;
+		}else{
+			$rows[0] = $db->join('coach ON staff.staff_id = coach.coach_staff_id')->where($where1)->select();
+			$rows[1] = $db->join("role ON staff.role_id = role.role_id")->where($where)->select();
+			return $rows;
 		}
 	
 	}
@@ -402,6 +420,102 @@ class StaffModel extends Model {
 	    return $img = $info[$name]['savepath'].$info[$name]['savename'];
 		return $img;
 
+	}
+
+	/**
+	*	通过用户名来查询教练id
+	*/
+
+	public function selcoachid($name){
+		return $this->where("staff_name = '$name'")
+					->join("coach ON staff.staff_id = coach.coach_staff_id")
+					->find();
+	}
+	/**
+	 * 查询全部的员工信息（部分字段）
+	 */
+	public function allvalue()
+	{
+		return $this->field('staff_id,staff_name,staff_sn')->select();
+	}
+
+	/**
+	 * 查询信息
+	 */
+	public function allpen(){
+		return $this->select();
+	}
+	/*
+	 * 查询月数
+	 * 作者：张捷
+	 */
+	public function month()
+	{
+		$db = D('month');
+		return $db->select();
+	}
+	/*
+	 * 查询签到数据
+	 * 作者：张捷
+	 */
+	public function salary()
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$mo = $month->select();
+		$row = $db->where("staff.role_id in (1,4,5,6)")->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				// $mid = $mv['month'];
+				$mon= $daka->where("staff_id = '$id' and month = '$i'")->select();
+				//$mont[]=$mon['']
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			//print_r($mo);
+			$row[$k]['month']=$mo;
+			
+		}
+		
+		return $row;
+	}
+	/*
+     * 考勤搜索
+     * 作者：张捷
+	 */
+	public function searsalary($data)
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$where = "role_id in (1,4,5,6) ";
+		if($data['sn'] != ''){
+			$where .= "AND  staff_sn like '%$data[sn]%'";
+		}
+		if ($data['name'] != '') {
+			$where .= "AND  staff_name like '%$data[name]%'";
+		}
+		$mo = $month->select();
+		$row = $db->where($where)->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				// $mid = $mv['month'];
+				$mon= $daka->where("staff_id = '$id' and month = '$i'")->select();
+				//$mont[]=$mon['']
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			//print_r($mo);
+			$row[$k]['month']=$mo;
+			
+		}
+		
+		return $row;
 	}
 }
 

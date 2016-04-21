@@ -4,8 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
-
     <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
 
 
@@ -16,13 +14,20 @@
 <div class="rightinfo">
 <table class="tablelist" border="1" cellspacing="0">
  <tr>
-     <th><a href="#">教练员</a></th>
-     <th><a href="#">其他员工</a></th>
+     <th><a href="javascript:void(0)" class="sear"><span value="1">教练员</span></a></th>
+     <th><a href="javascript:void(0)" class="sear"><span value="2">其他员工</span></a></th>
  </tr>
 </table>
-
+<div id="coach" style="display: block">
  <table class="tablelist">
- <div id="coach">
+     <form action="__APP__/Home/Staff/search" method="post">
+            <input type="hidden" name="id" value="1" />
+            编号：<input name="sn" type="text"  />
+            姓名：<input name="name" type="text"  />
+            身份证号：<input name="idcard" type="text"  />
+            手机号：<input name="tel" type="text"  />
+            <input type="submit"  value="查询" class="btn"/>
+     </form>
      <thead>
      <tr>
          <th>序号</th>
@@ -45,7 +50,13 @@
                   <td>{$vo.staff_name}</td>
                   <td>{$vo.staff_idcard}</td>
                   <td>{$vo.staff_year}</td>
-                  <td>{$vo.staff_sex}</td>
+                  <td>
+                      <if condition="$vo.staff_sex eq 1 ">
+                          男
+                      <else />
+                          女
+                      </if>
+                  </td>
                   <td>{$vo.coach_sn}</td>
                   <td>{$vo.coach_validity}</td>
                   <td>{$vo.staff_end_year}</td>
@@ -60,13 +71,74 @@
           
               </tr>
           </foreach>
-                  </div>
-        <div id="staff"></div>
+        </table>
+    </div>
+    <div id="staff" style="display: none">
+    <table class="tablelist">
+        <form action="__APP__/Home/Staff/search" method="post">
+            <input type="hidden" name="id" value="2" />        
+            编号：<input name="sn" type="text"  />
+            姓名：<input name="name" type="text"  />
+            身份证号：<input name="idcard" type="text"  />
+            手机号：<input name="tel" type="text"  />
+            <input type="submit"  value="查询" class="btn"/>
+        </form>
+         <tr class="staff">
+             <th>序号</th>
+             <th>编号</th>
+             <th>姓名</th>
+             <th>身份证号</th>
+             <th>出生年月</th>
+             <th>性别</th>
+             <th>岗位</th>
+             <th>合同结束日期</th>
+             <th>联系电话</th>
+             <th>操作</th>
+         </tr>
+               <foreach name="staff" item="v" >
+                  <tr>
+                      <td>{$v.staff_id}</td>
+                      <td>{$v.staff_sn}</td>
+                      <td>{$v.staff_name}</td>
+                      <td>{$v.staff_idcard}</td>
+                      <td>{$v.staff_year}</td>
+                      <td>
+                          <if condition="$v.staff_sex eq 1 ">
+                              男
+                          <else />
+                              女
+                          </if>
+                      </td>
+                      <td>{$v.role_name}</td>
+                      <td>{$v.staff_end_year}</td>
+                      <td>{$v.staff_tel}</td>
+                      <td>
+                          <if condition="$v.staff_job eq 1 ">
+                              删除
+                          <else />
+                              已离职
+                          </if>
+                      </td>
+              
+                  </tr>
+              </foreach>
     </table>
-
+</div>
 </div>
 
 </body>
 
 </html>
-
+<script>
+    $('.sear').click(function(){
+        var id = $(this).parent().find('span').attr('value');
+        if (id == '1') {
+            $('#staff').css('display','none')
+            $('#coach').css('display','block')
+        }else{
+            $('#staff').css('display','block')
+            $('#coach').css('display','none')
+        }
+    });
+        
+</script>

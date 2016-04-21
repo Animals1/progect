@@ -45,7 +45,7 @@ class BusModel extends Model {
      * */
     public function addBus($data)
     {
-        return $addbus=$this->add($data);
+        return $this->add($data);
     }
 
 }

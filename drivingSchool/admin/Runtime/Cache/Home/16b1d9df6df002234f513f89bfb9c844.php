@@ -6,7 +6,6 @@
 
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
-
 <script type="text/javascript">
 $(function(){   
     //导航切换

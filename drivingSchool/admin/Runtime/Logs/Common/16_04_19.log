@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+[ 2016-04-19T08:03:23+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+ERR: 无法加载模块:Favicon
+
+=======
 [ 2016-04-19T07:02:12+08:00 ] 127.0.0.1 /favicon.ico
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -10,3 +18,54 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 ERR: 无法加载模块:Favicon
 
+<<<<<<< HEAD
+[ 2016-04-19T14:40:30+08:00 ] 127.0.0.1 /index.php/Coach/query_student
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+ERR: 无法加载模块:Coach
+=======
+[ 2016-04-19T18:57:50+08:00 ] 127.0.0.1 /Public/Uploads/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T18:57:54+08:00 ] 127.0.0.1 /Public/Uploads/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T19:01:13+08:00 ] 127.0.0.1 /Public/Upload/Public/Uploads/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T19:01:18+08:00 ] 127.0.0.1 /Public/Upload/Public/Uploads/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T19:01:34+08:00 ] 127.0.0.1 /Public/Upload/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T19:01:38+08:00 ] 127.0.0.1 /Public/Upload/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-04-19T19:03:23+08:00 ] 127.0.0.1 /Public/Upload/Public/Uploads/5bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载模块:Public
+>>>>>>> f19838043bc4efc83bcfa2edb7ef49eb93037faf
+
+>>>>>>> b50dd8c1d1cec9dd840258384875aa6e11feb2b2

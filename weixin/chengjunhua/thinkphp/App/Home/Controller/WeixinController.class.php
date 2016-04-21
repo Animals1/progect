@@ -5,7 +5,48 @@
 */
 namespace Home\Controller;
 use Think\Controller;
+
 class WeixinController extends Controller {
+  public $appid="wx7172256529f9d0c2";
+  public $appsecret="43fc13371496f3ba3f10b1bdd891c16f";
+  public $lasttime='';
+  public $access_token='';
+  /**
+  *获取access_token值
+  */
+    public function __construct()
+    {
+        $redius    = new \Common\Org\Redis();
+      // $redius->set('aa','324367856');
+      //  echo $redius->get('aa');die;
+         $arr=$redius->get('access_token');
+         if(!empty($arr))
+         {
+            $this->lasttime = $arr['1'];
+            if(time()>$this->lasttime+7200)
+            {
+             // echo 1;
+              $this->get_tocken();
+            }
+
+         }
+         else
+         {
+           // echo 2;
+             $this-> get_tocken();
+         }  
+    }
+    public function get_tocken()
+    {
+            $redius    = new \Common\Org\Redis();
+            $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".$this->appid."&secret=".$this->appsecret;
+            $res = $this->https_request($url);
+            $result = json_decode($res, true);
+            // print_r($result);die;
+            //save to Database or Memcache or radis
+            //将生成的access_token值存储在redius中
+            $redius->set('access_token',array('0'=>$result["access_token"],'1'=>time()));
+    }
     public function index(){
         //获得4个参数开发前必须接的四个参数
         $signature = $_GET["signature"];
@@ -54,7 +95,7 @@ class WeixinController extends Controller {
         {
           //装换xml格式为obj对象
             $postObj = simplexml_load_string($postStr, 'SimpleXMLElement', LIBXML_NOCDATA);
-          $RX_TYPE = trim($postObj->MsgType);
+            $RX_TYPE = trim($postObj->MsgType);
 
           switch ($RX_TYPE)
            {
@@ -98,15 +139,15 @@ class WeixinController extends Controller {
         }
         else
         {
-           //多客服人工回复模式
-          if (strstr($keyword, "您好") || strstr($keyword, "你好") || strstr($keyword, "在吗")){
-              $result = $this->transmitService($object);
-          }
-          else
-          {
+          //  //多客服人工回复模式
+          // if (strstr($keyword, "您好") || strstr($keyword, "你好") || strstr($keyword, "在吗")){
+          //     $result = $this->transmitService($object);
+          // }
+          // else
+          // {
               $contentStr = "你发送的内容为：".$keyword;
               $result = $this->transmitText($object, $contentStr, $funcFlag);
-          }
+          // }
   
         } 
         
@@ -115,6 +156,10 @@ class WeixinController extends Controller {
     
    private function receiveEvent($object)
    {
+      if($object->Event=='subscribe')
+      {
+        $oop=$this->get_user_info($object);
+      }
        $contentStr = "";
         switch ($object->Event)
        {
@@ -263,21 +308,20 @@ class WeixinController extends Controller {
     *回复多客服消息
     */
 
-     //回复多客服消息
-    private function transmitService($object)
-    {
-        $xmlTpl = " <xml>
-     <ToUserName><![CDATA[%s]]></ToUserName>
-     <FromUserName><![CDATA[%s]]></FromUserName>
-     <CreateTime>%s</CreateTime>
-     <MsgType><![CDATA[transfer_customer_service]]></MsgType>
-     <TransInfo>
-         <KfAccount><![CDATA[test1@llydsm]]></KfAccount>
-     </TransInfo>
- </xml>";
-        $result = sprintf($xmlTpl, $object->FromUserName, $object->ToUserName, time());
-        return $result;
-    }
+ //    private function transmitService($object)
+ //    {
+ //        $xmlTpl = " <xml>
+ //     <ToUserName><![CDATA[%s]]></ToUserName>
+ //     <FromUserName><![CDATA[%s]]></FromUserName>
+ //     <CreateTime>%s</CreateTime>
+ //     <MsgType><![CDATA[transfer_customer_service]]></MsgType>
+ //     <TransInfo>
+ //         <KfAccount><![CDATA[test1@llydsm]]></KfAccount>
+ //     </TransInfo>
+ // </xml>";
+ //        $result = sprintf($xmlTpl, $object->FromUserName, $object->ToUserName, time());
+ //        return $result;
+ //    }
 
   //接收位置消息
     private function receiveLocation($object)
@@ -287,11 +331,21 @@ class WeixinController extends Controller {
         return $result;
     }
     //获取用户基本信息
-    public function get_user_info($openid)
-    {
-        $url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=".$this->access_token."&openid=".$openid."&lang=zh_CN";
+    public function get_user_info($object)
+    {                                                                                                       
+       $redis    = new \Common\Org\Redis();
+        $arr=$redis->get('access_token');
+
+        $openid=$object->FromUserName;
+       // $access_token="3OfYRHBA4Z5IjuaoTrpHVDd7-asgLdfzGb7m0U1S0AF1WpumylD39WCQ50TdayWvBheOm641DiV-D0XKvBwI4sM3B1eL-OwPbAIOod89SjXk9lGCVdfjzRN0Key8CWXYIIVbAHAYYL";
+        $url = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=".$arr['0']."&openid=".$openid."&lang=zh_CN";
         $res = $this->https_request($url);
-        return json_decode($res, true);
+        $content=json_decode($res, true);
+       // print_r($content);die;
+        if(is_array($content))
+        {
+          return $result = $this->transmitNews($object, $content);
+        }
     }
       //https请求（支持GET和POST）
     protected function https_request($url, $data = null)

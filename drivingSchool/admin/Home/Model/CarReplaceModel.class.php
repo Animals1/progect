@@ -21,11 +21,20 @@ class CarReplaceModel extends Model {
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$list = $this->where($where)
 					->limit($Page->firstRow.','.$Page->listRows)
+					->join("coach ON car_replace.replace_name = coach.coach_id")
+					->join("staff ON coach_staff_id = staff.staff_id")
+					->join("car ON car_replace.replace_number_before = car.car_id")
 					->select();
 		$arr = array($show,$list);
 		return $arr;
 		
     }
+	/**
+	*	查寻更换后的车牌号
+	*/
+	public function getlastnu($last_id){
+		return $this->join("car ON car_replace.replace_number_after = car.car_id")->find();
+	}
     /*
      * 删除一条数据
      * */
@@ -41,6 +50,26 @@ class CarReplaceModel extends Model {
     public function addCarreplace($data)
     {
         return $this->add($data);
+    }
+
+    /*
+     * 车辆更换查询
+     * 连接员工表查询更换人名称 coach  staff
+     * 连接车辆登记表查询车牌号码    car
+     * */
+    public function selectReplace($where=1)
+    {
+        $before=$this->join('coach on car_replace.replace_name=coach.coach_id')->join('staff on coach.coach_staff_id=staff.staff_id')->join('car on car_replace.replace_number_before=car.car_id')->where($where)->select();
+
+        $after=$this->join('coach on car_replace.replace_name=coach.coach_id')->join('staff on coach.coach_staff_id=staff.staff_id')->join('car on car_replace.replace_number_after=car.car_id')->where($where)->select();
+        foreach($before as $key=>$val)
+        {
+            foreach($after as $k=>$v)
+            {
+                $before[$key]['after_number']=$after[$key]['car_number'];
+            }
+        }
+        return $before;
     }
 	
 	/*

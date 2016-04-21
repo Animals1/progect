@@ -75,7 +75,7 @@ class AdministrationController extends Controller {
             if(!empty($_GET))
             {
                 $id=$_GET['id'];
-                $where="motor_id=$id";
+                $where="coach_motor.motor_id=$id";
                 $del=$coach_motor->delValue($where);
                 if($del)
                 {
@@ -499,14 +499,6 @@ class AdministrationController extends Controller {
                 $this->display('servicerecordadd');
            }
         }
-    /*
-    * vehreplace
-     * 车辆更换
-    * */
-        public function vehreplace()
-        {
-            $this->display('vehreplace');
-        }
 
     /*
      * vehreplaceadd
@@ -514,7 +506,117 @@ class AdministrationController extends Controller {
      * */
         public function vehreplaceadd()
         {
-            $this->display('vehreplaceadd');
+            //实例化车辆更换
+            $replace=D('CarReplace');
+            //实例化车辆表
+            $car=D('Car');
+            //实例化车辆维修
+
+            //实例化教练表
+            $coach=D('Coach');
+            //有post值
+            if($_POST)
+            {
+                //接值
+                $check=$_POST['repair'];
+                $data['replace_name']=$_POST['replace_name'];
+                $data['replace_time']=time();
+                $data['replace_number_before']=$_POST['replace_number_before'];
+                $data['replace_number_after']=$_POST['replace_number_after'];
+                $data['replace_reason']=$_POST['change_reason'];
+
+                //如果点击了同时报修
+                if($check=='checked')
+                {
+                    $repair['repair_coachname']=$data['replace_name'];
+                    $repair['repair_carid']=$data['replace_number_before'];
+                    $repair['repair_desc']=$data['replace_reason'];
+                    $repair['repair_time']=$data['replace_time'];
+                    $repair_car=D('CarRepair');
+                    //报修
+                    $repair_add=$repair_car->addrepair($repair);
+                    //更换车辆
+                    $car_replace=$replace->addCarreplace($data);
+                    if($repair_add && $car_replace)
+                    {
+                        $this->success('更换车辆与报修成功','/Home/Administration/vehreplace');
+                    }
+                    else
+                    {
+                        $this->error('更换车辆或报修失败');
+                    }
+                }
+                else
+                {
+                    //更换车辆
+                    $car_replace=$replace->addCarreplace($data);
+                    if($car_replace)
+                    {
+                        $this->success('更换车辆申请成功','/Home/Administration/vehreplace');
+                    }
+                    else
+                    {
+                        $this->error('更换车辆申请失败');
+                    }
+                }
+            }
+            else
+            {
+                //获取车牌号
+                $car_number=$car->vehicles();
+
+                $coachMess=$coach->coachMessage();
+                $this->assign('coachMess',$coachMess);
+                $this->assign('car_number',$car_number);
+                $this->display('vehreplaceadd');
+            }
+
+        }
+    /*
+    * vehreplace
+     * 车辆更换
+    * */
+    public function vehreplace()
+    {
+        $coach=D('Coach');
+        $coachMess=$coach->coachMessage();
+        $replace=D('CarReplace');
+        $car_replace=$replace->selectReplace();
+        $this->assign('replace',$car_replace);
+        $this->assign('coachMess',$coachMess);
+        $this->display('vehreplace');
+    }
+
+    /*
+     * 车辆更换的搜索
+     * */
+        public function replacesearch()
+        {
+            /*接收值*/
+            $car_number=$_GET['car_number'];
+            $replace_name=$_GET['replace_name'];
+            $laydate=strtotime($_GET['laydate']);
+            /*开始拼接条件*/
+            $where=1;
+            if($car_number != null && $car_number != -1)
+            {
+                $where.=" and car.car_number like '%$car_number%'";
+            }
+            if($replace_name != null && $replace_name != -1)
+            {
+                $where.=" and staff.staff_id='$replace_name'";
+            }
+            if($laydate != null && $laydate != -1)
+            {
+                $where.=" and car_repair.repair_time='$laydate'";
+            }
+            $coach=D('Coach');
+            $coachMess=$coach->coachMessage();
+            $replace=D('CarReplace');
+            $car_replace=$replace->selectReplace($where);
+            $this->assign('replace',$car_replace);
+            $this->assign('coachMess',$coachMess);
+            $this->display('vehreplace');
         }
 
     /*
@@ -522,7 +624,34 @@ class AdministrationController extends Controller {
     * */
         public function gasadd()
         {
-            $this->display('gasadd');
+            if($_POST)
+            {
+                $data['applicant_name']=$_POST['applicant_name'];
+                $data['car_number']=$_POST['car_number'];
+                $data['gas_type_id']=$_POST['gas_type_id'];
+                $data['gas_volume']=$_POST['gas_volume'];
+                $data['gas_addtime']=time();
+                $gasadd=D('GasAdd');
+                $gas_add=$gasadd->addgas($data);
+                if($gas_add)
+                {
+                    $this->success('汽油申请成功','/Home/Administration/gasrecord');
+                }
+                else
+                {
+                    $this->error('汽油申请失败','/Home/Administration/gasadd');
+                }
+            }
+            else
+            {
+                $car=D('Car');
+                $car_number=$car->vehicles();
+                $gas=D('GasType');
+                $gas_type=$gas->getValue();
+                $this->assign('car_number',$car_number);
+                $this->assign('gas_type',$gas_type);
+                $this->display('gasadd');
+            }
         }
     /*
      * gasrecord
@@ -530,6 +659,9 @@ class AdministrationController extends Controller {
      * */
         public function gasrecord()
         {
+            $record=D('GasAdd');
+            $gas_record=$record->gasMessage();
+            $this->assign('record',$gas_record);
             $this->display('gasrecord');
         }
 
@@ -547,7 +679,51 @@ class AdministrationController extends Controller {
     * */
         public function bussetting()
         {
-            $this->display('busseting');
+            $bus=D('Bus');
+            if($_POST)
+            {
+                $data['bus_route']=$_POST['bus_route'];
+                $data['car_number']=$_POST['car_number'];
+                $data['bus_station']=implode('/',$_POST['bus_station']);
+                $data['bus_starttime']=implode(',',$_POST['time']);
+                $data['bus_endtime']=implode(',',$_POST['min']);
+
+
+                $busadd=$bus->addBus($data);
+                if($busadd)
+                {
+                    $this->success('添加路线成功','/Home/Administration/bussetting');
+                }
+                else
+                {
+                    $this->error('添加路线失败');
+                }
+
+            }
+            else
+            {
+                $busseting=$bus->getValue();
+                $this->assign('busset',$busseting);
+                $this->display('busseting');
+            }
+        }
+    /*
+     * 班车路线删除
+     * */
+        public function busdel()
+        {
+            $id=$_GET['id'];
+            $bus=D('Bus');
+            $where="bus_id='$id'";
+            $del=$bus->delValue($where);
+            if($del)
+            {
+                $this->success('路线删除成功','/Home/Administration/bussetting');
+            }
+            else
+            {
+                $this->error('路线删除失败');
+            }
         }
 
     /*
@@ -555,6 +731,10 @@ class AdministrationController extends Controller {
     * */
         public function stureg()
         {
+            $stu=D('Student');
+            $where="student.stu_status_id='4'";
+            $student=$stu->studentinfo($where);
+            $this->assign('student',$student);
             $this->display('stureg');
         }
 
@@ -563,6 +743,67 @@ class AdministrationController extends Controller {
     * */
         public function stuinschool()
         {
+            $inschool=D('Student');
+            $student_inschool=$inschool->inschoolstu();
+            $status=$inschool->status();
+            $driving=$inschool->driving();
+            $this->assign('student',$student_inschool);
+            $this->assign('status',$status);
+            $this->assign('driving',$driving);
+            $this->display('stuinschool');
+        }
+    /*
+     * 在校学生搜索
+     * */
+        public function inschoolsearch()
+        {
+            /*
+             * 'stu_sn':stu_sn,'stu_name':stu_name,'stu_tel':stu_tel,'laydate':laydate,'motor_id':motor_id,'sex_id':sex_id,'stu_status_id':stu_status_id
+             * */
+            $stu_sn=$_GET['stu_sn'];
+            $stu_name=$_GET['stu_name'];
+            $stu_tel=$_GET['stu_tel'];
+            $laydate=$_GET['laydate'];
+            $motor_id=$_GET['motor_id'];
+            $sex_id=$_GET['sex_id'];
+            $stu_status_id=$_GET['stu_status_id'];
+            /*开始拼接条件*/
+            $where=1;
+            if($stu_sn != null)
+            {
+                $where.=" and student.stu_sn='$stu_sn'";
+            }
+            if($stu_name != null)
+            {
+                $where.=" and student.stu_name like'%$stu_name%'";
+            }
+            if($stu_tel != null)
+            {
+                $where.=" and student.stu_tel='$stu_tel'";
+            }
+            if($laydate != null)
+            {
+                $where.=" and student.stu_time='$laydate'";
+            }
+            if($motor_id != null && $motor_id != 0)
+            {
+                $where.=" and student.cert_level='$motor_id'";
+            }
+            if($sex_id != null && $sex_id != 0)
+            {
+                $where.=" and student.stu_sex='$sex_id'";
+            }
+            if($stu_status_id != null && $stu_status_id != 0)
+            {
+                $where.=" and student.stu_status_id='$stu_status_id'";
+            }
+            $inschool=D('Student');
+            $student_inschool=$inschool->inschoolstu($where);
+            $status=$inschool->status();
+            $driving=$inschool->driving();
+            $this->assign('student',$student_inschool);
+            $this->assign('status',$status);
+            $this->assign('driving',$driving);
             $this->display('stuinschool');
         }
 
@@ -571,8 +812,24 @@ class AdministrationController extends Controller {
     * */
         public function regstu()
         {
+            $staff = D('staff');
+            $region = $staff->linkage();
+            $motor=D('CoachMotor');
+            $coach_motor=$motor->getValue();
+            $driving=D('CoachDriving');
+            $coach_driving=$driving->getValue();
+            $this->assign('driving',$coach_driving);
+            $this->assign('region',$region);
+            $this->assign('motor',$coach_motor);
             $this->display('regstu');
         }
+
+    public function area(){
+        $id = $_GET['id'];
+        $staff = D('staff');
+        $region = $staff->linkage($id);
+        echo json_encode($region);
+    }
 
     /*
     * suitcontrol 投诉管理
