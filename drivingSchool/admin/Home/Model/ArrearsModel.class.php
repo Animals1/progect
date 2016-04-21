@@ -16,9 +16,9 @@ class ArrearsModel extends Model {
     {
         $User = M('arrears'); // 实例化User对象
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list = $User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where('arrears_id>0')->order('arrears_id desc')-> page($p.',3')->select();
+        $list = $User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where('arrears_id>0')->order('arrears_id desc')-> page($p.',5')->select();
         $count      = $User->where('arrears_id>0')->count();
-        $page       = new \Think\Page($count,3);
+        $page       = new \Think\Page($count,5);
         $show       = $page->show();
         $data = array($list,$count,$show,$p);
         return $data;
@@ -47,9 +47,9 @@ class ArrearsModel extends Model {
         }
         $User = M("arrears");
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where($sql)->page($p,2)->select();
+        $list=$User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where($sql)->page($p,5)->select();
         $count = $User->join('student on arrears.stu_id=student.stu_id')->join('money_type on arrears.money_type_id=money_type.money_type_id')->join('status on arrears.status_id=status.status_id')->where($sql)->count();
-        $page       = new \Think\Page($count,2);
+        $page       = new \Think\Page($count,5);
         $show       = $page->show();
         $arr = array($p,$list,$show,$count);
         return $arr;

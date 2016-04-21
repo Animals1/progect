@@ -20,8 +20,9 @@ class FinanceController extends Controller {
         $list = $re['0'];
         $count = $re['1'];
         $page = $re['2'];
-        $p = $re[3];
+        $p = $re['3'];
 
+//        print_r($show);die;
         $this->assign('list',$list);
         $this->assign('count',$count);
         $this->assign('page',$page);

@@ -3,8 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-
+    <style>
+        .list-page{padding:20px 0;text-align:center;}
+        .list-page a{margin:0 5px;padding:2px 7px;border:1px solid #ccc;background:#f3f3f3;}
+        .list-page a:num{background:#e4e4e4;border:1px solid #908f8f;}
+        .list-page .current{margin:0 5px;padding:2px 7px;background:#f60;border:1px solid #fe8101;color:#fff;}
+    </style>
     <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -35,7 +39,7 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
-
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
     </head>
 
 <body style="background:#FFF8ED;">
@@ -104,9 +108,9 @@
 
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
-        <div class="paginList">
-            <?php echo ($page); ?>
-        </div>
+    </div>
+    <div class="list-page">
+        <?php echo ($page); ?>
     </div>
 
     <div class="tip">
