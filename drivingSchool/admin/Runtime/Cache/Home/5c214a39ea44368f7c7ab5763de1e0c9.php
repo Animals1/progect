@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 <style>
-.tech{background:url(/eleven/progect/drivingSchool/Public/admin/<?php echo ($arr['staff_photo']); ?>) no-repeat 70px 50px; height:250px;}
+.tech{background:url(/Public/admin/<?php echo ($arr['staff_photo']); ?>) no-repeat 70px 50px; height:250px;}
 </style>
 <script language="javascript">
     $(function(){

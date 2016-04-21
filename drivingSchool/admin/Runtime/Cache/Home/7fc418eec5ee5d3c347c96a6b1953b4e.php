@@ -3,49 +3,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/eleven/progect/drivingSchool/Public/text/javascript">
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
 </script> 
-<style>
-    ul li{
-     float: left;
-     overflow:hidden;
-     margin-top:20px;
-     list-style:none;
-
- }
-
- ul li a{
-    display:block;
-     height:30px;
-     min-width:30px;
-     text-align:center;
-     font-size:14px;
-     border:1px solid #d6d6d6;
-     float:left;
-     margin-left:10px;
-     padding:3px 5px;
-     line-height:30px;
-     text-decoration:none;
-     color:#666;
- }
- ul li a:hover,a.here{
-     background:#FF4500;
-     border-color:#FF4500;
-     color:#FFF;
- }
-  #select{font-size: 18px;margin: 30px}
-  input{width: 150px;height: 30px;background-color:#dddddd;}
-</style>
-
 </head>
 
 
 <body style="background:#FFF8ED;">
    <div class="rightinfo">
    <div id="select">
-   <form action="/eleven/progect/drivingSchool/index.php/Home/Coach/query" method="post">
+   <form action="/index.php/Home/Coach/mystudent" method="post">
    	学员编号： <input type="text" name="stu_sn" />      学生姓名：  <input type="text" name="stu_name" />       
    	报名时间： <input type="date" name="stu_time" />     身份证号 ： <input type="text" name="stu_idcard" />       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="查找" />
    	</form>
@@ -53,7 +22,7 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th>序号<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+            <th>序号<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>编号</th>
             <th>姓名</th>
             <th>性别</th>
@@ -77,7 +46,7 @@
             <td><?php echo $v['class_name']; ?></td>
             <td><?php echo $v['stu_time']; ?></td>
             <td><?php echo $v['stu_status_name']; ?></td>
-            <td><a href="/eleven/progect/drivingSchool/index.php/Home/Coach/studentinfo?user_id=<?php echo $v['user_id']; ?>">查看</a></td>
+            <td><a href="/index.php/Home/Coach/studentinfo?stu_id=<?php echo $v['stu_id']; ?>">查看</a></td>
         </tr>
 		<?php  } ?>
         </tbody>
@@ -85,16 +54,13 @@
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
         <ul class="paginList">
-            <ul>
-                <li><?php echo ($page); ?></li>
-            </ul> 
+                <div class="list-page"><?php echo $page; ?></div>
             <!-- <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
             <li class="paginItem"><a href="javascript:;"><?php echo ($page); ?></a></li>
             <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li> -->
         </ul>
     </div>
 </div>
-
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 
