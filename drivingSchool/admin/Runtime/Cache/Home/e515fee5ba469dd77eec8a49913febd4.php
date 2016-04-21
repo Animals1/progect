@@ -13,8 +13,12 @@
 <body style="background:#FFF8ED;">
 <div class="rightinfo">
  <table class="tablelist">
-     <form action="/progect/drivingSchool/index.php/Home/Staff/sasearch" method="post">
-            <input type="hidden" name="id" value="1" />
+     <form action="/progect/drivingSchool/index.php/Home/Staff/hoursearch" method="post">
+            在职情况：
+              <select name="job" id="">
+                <option value="1">在职</option>
+                <option value="2">离职</option>
+              </select>
             员工编号：
             <?php if($search["sn"] != ''): ?><input name="sn" type="text" value="<?php echo ($search["sn"]); ?>" />
             <?php else: ?>
@@ -33,11 +37,14 @@
      <tr>
          <?php if(is_array($month)): foreach($month as $key=>$mv): ?><th><?php echo ($mv["month"]); ?>月</th><?php endforeach; endif; ?>
      </tr>
-     <?php if(is_array($salary)): foreach($salary as $key=>$vo): ?><tr>
+     <?php if(is_array($hours)): foreach($hours as $key=>$vo): ?><tr>
        <td><?php echo ($vo["staff_sn"]); ?></td>
        <td><?php echo ($vo["staff_name"]); ?></td>
        <?php for($i=1;$i<=count($vo['month']);$i++){ ?>
-           <td><?php echo $vo['month'][$i][0]['num']?></td>  
+           <td>
+              <?php if($vo['month'][$i][0]['hour'] == ''): else: ?>
+                <?php echo ($vo['month'][$i][0]['hour']); ?>小时<?php endif; ?>
+           </td>  
         <?php } ?>     
       
        </tr><?php endforeach; endif; ?>

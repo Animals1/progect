@@ -122,6 +122,7 @@ class StaffModel extends Model {
 			$codata['quality'] = $rows['qualityid'];
 			$codata['model'] = $rows['modelid'];
 			$codata['motor'] = $rows['motorid'];
+			$codata['group_id']='0';
 			$core = $coach->add($codata);
 			if ($re && $core){
 				return true;
@@ -517,6 +518,126 @@ class StaffModel extends Model {
 		
 		return $row;
 	}
+	/*
+	 * 查询请假页面数据
+	 * 作者：张捷
+	 */
+	public function leave()
+	{
+		$db = D('staff');
+		$row = $db->join('staff_leave on staff.staff_id = staff_leave.work_id')->where("staff.role_id in (1,4,5,6)")->select();
+		return $row;
+	}
+	/*
+	 * 请假页面搜索
+	 * 作者：张捷
+	 */
+	public function leasearch($data)
+	{
+		$db = D('staff');
+		$where = 'staff.role_id in (1,4,5,6) ';
+		if ($data['sn'] != '') {
+			$where .= "and staff.staff_sn like '%$data[sn]%'";
+		}
+		if($data['name'] != ''){
+			$where .= "and staff.staff_name like '%$data[name]%'";
+		}
+		if($data['starttime'] != ''){
+			$starttime = substr($data['starttime'],0,10);
+			$where .= "and staff_leave.leave_starttime like '%$starttime%'";
+		}
+		if($data['endtime'] != ''){
+			$endtime = substr($data['endtime'],0,10);
+			$where .= "and staff_leave.leave_endtime like '%$endtime%'";
+		}
+		$row = $db->join('staff_leave on staff.staff_id = staff_leave.work_id')->where($where)->select();
+		return $row;
+	}
+	/*
+	 * 教练学时查询
+	 * 作者：张捷
+	 */
+	public function hours()
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$mo = $month->select();
+		$row = $db->where("role_id = 1")->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				$mon = $daka->where("staff_id = '$id' and month = '$i'")->select();
+				$num = $mon[0]['num'];
+				$nums = ($num * 8);
+				if ($nums == '0') {
+					$nums = '';
+				}
+				$mon[0]['hour'] = $nums;
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			$row[$k]['month']=$mo;
+			
+		}
+		return $row;
+	}
+	/*
+	 * 教练学时搜索
+	 * 作者：张捷
+	 */
+	public function searhours($data)
+	{
+		// print_r($data);exit;
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$where = "role_id = 1 ";
+		if ($data['job'] != '') {
+			$where .= "and staff_job = '$data[job]'";
+		}
+		if ($data['sn'] != '') {
+			$where .= "and staff_sn like '%$data[sn]%'";
+		}
+		if($data['name'] != ''){
+			$where .= "and staff_name like '%$data[name]%'";
+		}
+		$mo = $month->select();
+		$row = $db->where($where)->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				$mon = $daka->where("staff_id = '$id' and month = '$i'")->select();
+				$num = $mon[0]['num'];
+				$nums = ($num * 8);
+				if ($nums == '0') {
+					$nums = '';
+				}
+				$mon[0]['hour'] = $nums;
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			$row[$k]['month']=$mo;
+			
+		}
+		return $row;
+	}
+	/*
+     * 员工请假审核状态
+     * 作者：张捷
+	 */
+	public function leavestatus($sid,$id)
+	{
+		$db = D('staff_leave');
+		if ($sid == '2') {
+			return $db->where("id = $id")->setField('leave_status','2');
+		}else{
+			$data['leave_status'] = '3';
+			return $db->where("id = $id")->setField('leave_status','3');
+		}
+	}	
 }
 
 ?>

@@ -6,7 +6,7 @@
 
 <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
-
+1
 <script type="text/javascript">
 $(function(){   
     //导航切换
