@@ -25,6 +25,39 @@ class ExpenseModel extends Model {
         $data = array($list,$count,$show,$p);
         return $data;
     }
+
+
+    /**
+     * 多添件搜索
+     */
+    public function searchs(){
+        $arr = I('post.');
+
+        foreach ($arr as $k => $v) {
+            if ($v=='') {
+                unset($arr[$k]);
+            }
+        }
+        $sql='';
+        $i=0;
+        foreach ($arr as $k => $v) {
+            if($i!=0){
+                $sql.=' and ';
+            }
+            $sql.="$k like '%$v%'";
+            $i++;
+        }
+        $User = M("expense");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->where($sql)->page($p,3)->select();
+        $count = $User->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->where($sql)->count();
+        $page       = new \Think\Page($count,3);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
+
     /*
      * 添加数据 hanqiming
      * $_POST['staff_id']=$staff_id

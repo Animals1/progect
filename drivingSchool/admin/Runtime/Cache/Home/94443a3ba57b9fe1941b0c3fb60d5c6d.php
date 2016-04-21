@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-<?php if (!defined('THINK_PATH')) exit(); header("Content-type:text/html;charset=utf-8"); ?>
-<!DOCTYPE HTML>
-<html>
-<body>
-<h5>当前功能-----个人信息</h5>
-=======
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <body>
 <h5>当前功能>个人信息</h5>
->>>>>>> dafeba4578440983dfee69bb7489b76e10ec06c5
 	<h5>基本信息</h5><hr/>
 	<div style="float:left">
 	<table>
@@ -73,9 +65,6 @@
 	</div>
 	
 	<div style="margin-left:500px;">
-<<<<<<< HEAD
-		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100">
-=======
 		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100" style="cursor:pointer" title="照片">
 	</div>
 
@@ -85,7 +74,6 @@
 		<?php
  if($arr['staff_photo']==''||$arr["staff_email"]==''||$arr["staff_tel"]==''||$arr["staff_curaddress"]==''||$arr["staff_start_year"]==''){ echo "<font size='2' color='red'>您的信息不完整，请尽快去服务台办理相关验证，否则将会影响您的操作！</font>"; } ?>
 
->>>>>>> dafeba4578440983dfee69bb7489b76e10ec06c5
 	</div>
 </body>
 </html>

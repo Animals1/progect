@@ -15,7 +15,7 @@
 <div class="formbody">
 
     <div class="formtitle"><span>新增车辆</span></div>
-    <form action="/index.php/Home/Administration/addbus" method="post">
+    <form action="/index.php/Home/Administration/bussetting" method="post">
         <table>
             <tr>
                 <td>班车路线:</td>
@@ -29,15 +29,15 @@
 
                 <td>途径站点:</td>
                 <td>
-                    <input type="text" name="bus_station">
-                    <select name="time" id="">
+                    <input type="text" name="bus_station[]">
+                    <select name="time[]" id="">
                         <option value="-1">请选择小时</option>
                         <?php for($time=0;$time<=24;$time++){?>
-                        <option value="<?php $time ?>"><?php echo $time?></option>
+                        <option value="<?php echo $time ?>"><?php echo $time?></option>
                         <?php }?>
                     </select>
 
-                    <select name="min" id="">
+                    <select name="min[]" id="">
                         <option value="-1">请选择分钟</option>
                         <?php for($min=0;$min<=60;$min++){?>
                         <option value="<?php echo $min?>"><?php echo $min?></option>
@@ -52,14 +52,14 @@
                 function adddd(obj)
                 {
                     var trq=$(obj).parent().parent();
-                    tr='<tr > <td>途径站点:</td> <td> <input type="text" name="bus_station">';
-                    tr+='<select name="time" id=""> <option value="-1">请选择小时</option>';
+                    tr='<tr > <td>途径站点:</td> <td> <input type="text" name="bus_station[]">';
+                    tr+='<select name="time[]" id=""> <option value="-1">请选择小时</option>';
                     tr+='<?php for($time=0;$time<=24;$time++){?>';
                     tr+='<option value="<?php echo $time?>"><?php echo $time?></option>';
                     tr+='<?php }?>';
                     tr+='</select>';
 
-                    tr+='<select name="min" id=""> <option value="-1">请选择小时</option>';
+                    tr+='<select name="min[]" id=""> <option value="-1">请选择分钟</option>';
                     tr+='<?php for($min=0;$min<=60;$min++){?>';
                     tr+='<option value="<?php echo $min?>"><?php echo $min?></option>';
                     tr+='<?php }?>';
