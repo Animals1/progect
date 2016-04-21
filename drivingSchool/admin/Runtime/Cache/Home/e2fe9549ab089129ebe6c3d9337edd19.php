@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -22,20 +22,13 @@
     <div class="formtitle"><span><a href="#" onclick="show(1)">企业介绍</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="show(2)">基础信息</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" onclick="show(3)">企业资质</a></span></div>
     
     <div id="di1">
-    <form action="__APP__/Home/Company/companyadd" method="post" enctype="multipart/form-data" onsubmit="return fun();">
+    <form action="/index.php/Home/Company/companyadd" method="post" enctype="multipart/form-data" onsubmit="return fun();">
 
     <ul class="forminfo">
     <li><label>*企业LOGO：</label><input name="img" type="file" class="dfinput" /><i>
-    <!-- <img src="__PUBLIC__/admin/images/jszc.png" width="100" height="100"> -->
+    <!-- <img src="/Public/admin/images/jszc.png" width="100" height="100"> -->
     <img src="<?php
-        foreach($arr as $v){
-            if($v['company_logo']==''){
-                echo '__PUBLIC__/admin/images/jszc.png';
-            }else{
-                echo '__PUBLIC__/'.$v['company_logo'];
-            }
-        }
-    ?>" width="100" height="100" title="企业LOGO">
+ foreach($arr as $v){ if($v['company_logo']==''){ echo '/Public/admin/images/jszc.png'; }else{ echo '/Public/'.$v['company_logo']; } } ?>" width="100" height="100" title="企业LOGO">
     </i></li>
     <li><label>*联系人：</label><input name="company_person" id="company_person" onblur="fun1();" type="text" class="dfinput" value="<?php foreach($arr as $v){ echo $v['company_person'];}?>" /><span id="span_person" style="margin-left:500px;"></span></li>
     <li><label>*联系电话：</label><input name="company_tel" id="company_tel" onblur="fun2();" type="text" class="dfinput" value="<?php foreach($arr as $v){ echo $v['company_tel'];}?>" /><span id="span_tel" style="margin-left:500px;"></span></li>
@@ -50,7 +43,7 @@
     </div>
 
     <div id="di2" style="display:none;">
-    <form action="__APP__/Home/Company/basics" method="post">
+    <form action="/index.php/Home/Company/basics" method="post">
         <ul>
             <li>
             <input type="hidden" name="id" value="<?php foreach($arr as $v){ echo $v['company_id'];}?>">
@@ -63,7 +56,7 @@
 
 
     <div id="di3" style="display:none;">
-        <form action="__APP__/Home/Company/qualityadd" method="post" enctype="multipart/form-data">
+        <form action="/index.php/Home/Company/qualityadd" method="post" enctype="multipart/form-data">
         <table>
         <tr>
         <td>公司资质：请上传您的公司资质及荣誉证书，提升信誉</td>
@@ -79,7 +72,7 @@
         </form>
 
         <br><br><br>
-        <form action="__APP__/Home/Company/companyshow" method="post" enctype="multipart/form-data">
+        <form action="/index.php/Home/Company/companyshow" method="post" enctype="multipart/form-data">
         <table>
         <tr>
         <td>公司展示：请上传您的公司办公或设备场景，提升信誉</td>

@@ -18,7 +18,7 @@ $(function(){
             if($parent.hasClass("open")){
                 $parent.removeClass("open").find('.sub-menus').hide();
             }else{
-                $parent.addClass("open").find('.sub-menus').show(); 
+                $parent.addClass("open").find('.sub-menus').show();
             }
             
             
