@@ -15,14 +15,14 @@ class CarRepairModel extends Model {
         
 		$count      = $this->where($where)->count();
 		// 查询满足要求的总记录数
-		$Page       = new \Think\Page($count,1);
+		$Page       = new \Think\Page($count,2);
 		// print_r($Page);die;
 		// 实例化分页类 传入总记录数和每页显示的记录数(25)
 		$show       = $Page->show();// 分页显示输出
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$list = $this->where($where)
 					->limit($Page->firstRow.','.$Page->listRows)
-					->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')
+					->join('repair_status on car_repair.repair_status=repair_status.repair_statusid')
 					->join('car on car_repair.repair_carid=car.car_id')
 					->select();
 		$arr = array($show,$list);
@@ -38,12 +38,15 @@ class CarRepairModel extends Model {
     }
 
     /*
-     * 维修记录添加
+     * 查询一条数据
      *
      * */
-    public function addrepair($data)
+    public function getoneValue($where)
     {
-		return $this->add($data);
+		return $this->where($where)
+					->join('repair_status on car_repair.repair_status=repair_status.repair_statusid')
+					->join('car on car_repair.repair_carid=car.car_id')
+					->find();
     }
 
     

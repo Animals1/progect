@@ -100,7 +100,7 @@
             </td>
             <td>
             	<?php if($vi['leave_status'] == 0): ?><a href="/index.php/Home/Personal/revoke" class="tablelink" title="撤销">撤销</a>
-            	<?php else: ?> <a href="/index.php/Home/Personal/leavelook" class="tablelink" title="查看">查看</a><?php endif; ?>
+            	<?php else: ?> <a href="/index.php/Home/Personal/leavelookidsee/id/<?php echo $vi['leave_id']?>" class="tablelink" title="查看">查看</a><?php endif; ?>
             </td>
         </tr>
         <?php }?>

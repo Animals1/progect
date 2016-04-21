@@ -12,9 +12,9 @@ class StaffController extends Controller {
     	$coach = $staff->satffcoach();
     	$region = $staff->linkage();
     	$this->assign('role',$role);
-        $this->assign('region',$region);
+      $this->assign('region',$region);
     	$this->assign('coach',$coach);
-        $this->display('add');
+      $this->display('add');
     }
     public function area(){
     	$id = $_GET['id'];
@@ -60,8 +60,35 @@ class StaffController extends Controller {
         $staffs = $data[1];
         $coachs = $staff->coachdatetime($coach);
         $staffdata = $staff->staffdatetime($staffs);
+        $this->assign('id',$_POST['id']);
         $this->assign('coach',$coachs);
         $this->assign('staff',$staffdata);
         $this->display('search');
+    }
+    public function salary()
+    {
+
+        $staff = D('staff');
+        $month = $staff->month();
+        $salary = $staff->salary();
+        //print_r($salary);exit;
+        $this->assign('month',$month);
+        $this->assign('salary',$salary);
+        $this->display('salary');
+        
+
+    }
+    public function sasearch()
+    {
+        $staff = D('staff');
+        $month = $staff->month();
+        $salary = $staff->searsalary($_POST);
+        $this->assign('month',$month);
+        $this->assign('salary',$salary);
+        $this->display('salary');
+    }
+    public function leave()
+    {
+        $this->display('leave');
     }
 }

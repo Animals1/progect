@@ -169,8 +169,34 @@ class StudentModel extends Model {
      *author：xueyunhuan
      *查询学生信息
     */
+
     public function studentinfo($stu_id){
         return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("stu_id=$stu_id")->find();
+
+    public function studentinfo($where=1){
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->join('sex on student.stu_sex=sex.sex_id')->where($where)->select();
+    }
+
+
+    /*
+     * 在校学员状态
+     * */
+
+    public function inschoolstu($where=1)
+    {
+        return $this->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->select();
+    }
+
+    public function status()
+    {
+        $status=M('student_status');
+        return $status->select();
+    }
+
+    public function driving()
+    {
+        $driving=M('coach_driving');
+        return $driving->select();
     }
 }
 ?>

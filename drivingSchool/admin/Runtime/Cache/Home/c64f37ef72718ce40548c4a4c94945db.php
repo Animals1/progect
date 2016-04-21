@@ -108,6 +108,7 @@
 				location.href="/index.php/Home/Service/updaterepaircar/id/"+value;
 			}
 			else if(type == "delete"){
+<<<<<<< HEAD
 				url = "/index.php/Home/Service/delrepaircar"
 				$.post(url,{'id' : value},function(data){
 					if(data == 1){
@@ -118,6 +119,25 @@
 						return false;
 					}
 				})
+=======
+				if(confirm('你确定要删除吗？')){
+					url = "/eleven/progect/drivingSchool/index.php/Home/Service/delrepaircar"
+					$.post(url,{'id' : value},function(data){
+						if(data == 1){
+							$that.parent().parent().remove();
+						}
+						else
+						{
+							return false;
+						}
+					})
+				}
+				else
+				{
+					return false;
+				}
+				
+>>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
 			}else
 			{
 				return false;

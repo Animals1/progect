@@ -43,6 +43,7 @@
 </div>
 
 <div class="rightinfo">
+<<<<<<< HEAD
 
     <div class="tools">
 
@@ -60,10 +61,14 @@
 
     </div>
 
+=======
+    
+>>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
 
     <table class="tablelist">
         <thead>
         <tr>
+<<<<<<< HEAD
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
             <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>销假时间</th>
@@ -71,10 +76,20 @@
             <th>请假天数</th>
             <th>请假原因</th>
             <th>状态</th>
+=======
+            <th>姓名</th>
+            <th>性别</th>
+            <th>身份证号</th>
+            <th>报名课程</th>
+            <th>联系电话</th>
+            <th>户口所在地</th>
+            <th>备注</th>
+>>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
             <th>操作</th>
         </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
         <tr>
             <td><input name="" type="checkbox" value="" /></td>
             <td>20130908</td>
@@ -173,6 +188,18 @@
             <td>已审核</td>
             <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
         </tr>
+=======
+    <?php if(is_array($student)): foreach($student as $key=>$stu): ?><tr>
+            <td><?php echo ($stu["stu_name"]); ?></td>
+            <td><?php echo ($stu["sex_name"]); ?></td>
+            <td><?php echo ($stu["stuidcard"]); ?></td>
+            <td><?php echo ($stu["class_name"]); ?></td>
+            <td><?php echo ($stu["stu_tel"]); ?></td>
+            <td><?php echo ($stu["stu_birthplace"]); ?></td>
+            <td></td>
+            <td><a href="/index.php/Home/Administration/regstu">入学登记</a></td>
+        </tr><?php endforeach; endif; ?>
+>>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
         </tbody>
     </table>
 

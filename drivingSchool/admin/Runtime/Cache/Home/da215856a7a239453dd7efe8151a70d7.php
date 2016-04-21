@@ -3,7 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="text/javascript">
@@ -27,7 +28,14 @@
 
     });
 </script>
-
+    <script src="/Public/laydate/laydate.js"></script>
+    <style>
+        h2{line-height:30px; font-size:20px;}
+        a,a:hover{ text-decoration:none;}
+        pre{font-family:'微软雅黑'}
+        .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
+        .box a{padding-right:20px;}
+    </style>
 
 </head>
 
@@ -42,6 +50,22 @@
             <li><a href="/index.php/Home/Finance/income"><span><img src="/Public/admin/images/t04.png" /></span>统计</a></li>
         </ul>
 
+        <form action="search1" method="post">
+            <ul class="toolbar" style="margin-left: 180px;">
+                <li>
+                    学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
+                </li>
+                <li>
+                    编号<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
+                </li>
+                <li>
+                    日期<input class="laydate-icon" onclick="laydate()" style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="arrears_time">
+                </li>
+                <li>
+                    <input style="margin-left: 10px; width: 50px;height: 20px;" type="submit" value="搜索">
+                </li>
+            </ul>
+        </form>
 
         <ul class="toolbar1">
             <li><span><img src="/Public/admin/images/t05.png" /></span>收费</li>
@@ -80,7 +104,7 @@
 
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
-        <div class="paginList">
+        <div class="list-page">
             <?php echo ($page); ?>
         </div>
     </div>
