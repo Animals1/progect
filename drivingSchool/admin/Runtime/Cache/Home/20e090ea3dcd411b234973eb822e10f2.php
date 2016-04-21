@@ -34,7 +34,7 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
     </head>
 
 <body style="background:#FFF8ED;">
