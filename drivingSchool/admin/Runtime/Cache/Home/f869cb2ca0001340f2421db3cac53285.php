@@ -29,7 +29,7 @@
 
 
 <div class="logintop">    
-    <span>欢迎使用-驾校管理系统-管理员登录平台</span>    
+    <span>驾校管理系统</span>    
     <ul>
     <li><a href="/index.php/Home/Login/index">回首页</a></li>
     <li><a href="#">帮助</a></li>
@@ -46,7 +46,7 @@
     <ul>
     <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>
     <li><input name="upwd" id="upwd" type="password" class="loginpwd" placeholder="请输入密码" onblur="fun2();" /><span id="span_pwd"></span></li>
-    <li><input  type="submit" class="loginbtn" value="登录"    /><label>
+    <li><input  type="submit" class="loginbtn" value="登录" name="sub"/><label>
     <input type="checkbox" name="checkbox" id="checkbox" value="7" />
     记住密码</label><label><a href="#">忘记密码？</a>
     </label></li>

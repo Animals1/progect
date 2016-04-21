@@ -39,6 +39,7 @@
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">个人中心</a></li>
+        <li><a href="#">请假管理</a></li>
         <li><a href="#">我要请假</a></li>
     </ul>
 </div>

@@ -18,7 +18,7 @@ class StuOrderModel extends Model {
         $user_id = $_COOKIE['userid'];
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
         $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("staff on staff.staff_id  = coach.coach_staff_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_id = $user_id")->field('staff_name,class_name,add_time,time_section,stu_order_status')->page($p,2)->select();
-        $count      = $this->where("stu_id=1")->count();
+        $count      = $this->join("coach on coach.coach_id = stu_order.coach_id")->where("stu_id=$user_id")->count();
         $page       = new \Think\Page($count,2);
         $show       = $page->show();
         $arr = array($p,$list,$show,$count);
@@ -47,7 +47,7 @@ class StuOrderModel extends Model {
     public function noorder(){
         $user_id = $_COOKIE['userid'];
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("staff on staff.staff_id  = coach.coach_staff_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_order_status=0 AND stu_id = 2")->field('staff_name,class_name,add_time,time_section,stu_order_status')->page($p,2)->select();
+        $list=$this->join("coach on coach.coach_id = stu_order.coach_id")->join("staff on staff.staff_id  = coach.coach_staff_id")->join("class on class.class_id = stu_order.class_id")->join("time_table on time_table.time_id = stu_order.time_id")->where("stu_order_status=0 AND stu_id = 2")->field('staff_name,class_name,add_time,time_section,stu_order_status')->where("stu_order_status = 0 && stu_id = $user_id")->page($p,2)->select();
         $count      = $this->where("stu_order_status = 0 && stu_id = $user_id")->count();
         $page       = new \Think\Page($count,2);
         $show       = $page->show();

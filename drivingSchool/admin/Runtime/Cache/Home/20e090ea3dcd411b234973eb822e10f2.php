@@ -3,8 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -35,7 +34,7 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
-
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
     </head>
 
 <body style="background:#FFF8ED;">
@@ -50,7 +49,7 @@
         </ul>
 
 
-        <form action="search" method="post">
+        <form action="charge" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
             <li>
                 学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
@@ -104,10 +103,11 @@
 
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
-        <div class="paginList">
+        <div class="list-page">
             <?php echo ($page); ?>
         </div>
     </div>
+
 
     <div class="tip">
         <div class="tiptop"><span>提示信息</span><a></a></div>
