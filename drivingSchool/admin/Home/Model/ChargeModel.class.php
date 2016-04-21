@@ -9,27 +9,10 @@ use Think\Model;
 class ChargeModel extends Model {
     /*
      * 查询数据 收费明细表、学员信息表、费用类型表、支付方式表，四表联查；
-     *
-     * */
-    public function getvalue()
-    {
-        $User = M('charge'); // 实例化User对象
-        isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        // 进行分页数据查询 注意page方法的参数的前面部分是当前的页数使用 $_GET[p]获取
-        $list = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where('charge_id>0')->order('charge_id desc')-> page($p.',5')->select();
-        $count      = $User->where('charge_id>0')->count();
-        $page       = new \Think\Page($count,5);
-        $show       = $page->show();
-        $data = array($list,$count,$show,$p);
-        return $data;
-    }
-
-
-
-    /**
      * 多添件搜索
      */
     public function searchs(){
+
         $arr = I('post.');
 
         foreach ($arr as $k => $v) {
@@ -48,8 +31,8 @@ class ChargeModel extends Model {
         }
         $User = M("charge");
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->page($p,5)->select();
-        $count = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->count();
+        $list=$User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->order('charge_id desc')->page($p,5)->select();
+        $count = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->order('charge_id desc')->count();
         $page       = new \Think\Page($count,5);
         $show       = $page->show();
         $arr = array($p,$list,$show,$count);
