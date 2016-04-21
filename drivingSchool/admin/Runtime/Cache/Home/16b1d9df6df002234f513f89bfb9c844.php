@@ -117,24 +117,23 @@ $(function(){
 
 <!--普通权限start-->
     <div class="lefttop"><span></span>
-    <?php
- if($_COOKIE['rolename']=="学员"){ echo "学员端"; }else{ echo "驾校端"; } ?>
+    普通用户
     </div>
-    
-    <dl class="leftmenu">   
+
+    <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><dl class="leftmenu">   
     <dd>
     <div class="title">
-    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
     </div>
         <ul class="menuson">
-        <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
-        
+        <?php if(is_array($v["childs"])): foreach($v["childs"] as $key=>$vo): ?><li>
+            
             <div class="header">
             <cite></cite>
-            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name'];?></a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $vo['privilege_name'];?></a>
             <i></i>
             </div>
-            <?php if(is_array($v["child"])): foreach($v["child"] as $key=>$vv): ?><ul class="sub-menus">
+            <?php if(is_array($vo["child"])): foreach($vo["child"] as $key=>$vv): ?><ul class="sub-menus">
             <li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
             
             </ul><?php endforeach; endif; ?>
@@ -142,7 +141,8 @@ $(function(){
         </li><?php endforeach; endif; ?>
         </ul>    
     </dd>
-    </dl>
+    </dl><?php endforeach; endif; ?>
+
     <!--普通权限end--><?php endif; ?>
     
 </body>
