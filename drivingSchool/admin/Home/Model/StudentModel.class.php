@@ -129,52 +129,42 @@ class StudentModel extends Model {
      *查询学生信息
     */
     public function allstudent(){
-        isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->page($p,2)->select();
-        $count      = $this->count();
-        $page       = new \Think\Page($count,2);
-        $show       = $page->show();
-        $arr = array($p,$list,$show,$count);
-        return $arr;
+            $arr = I('post.');
+            $aa = $_GET['textfield'];
+            if(!empty($aa)) {
+                $arr = I('get.');
+            }
+            foreach ($arr as $k => $v) {
+              if ($v=='') {
+                 unset($arr[$k]);
+              }
+            }
+
+            $sql='';
+            $i=0;
+            foreach ($arr as $k => $v) {
+              if($i!=0){
+                  $sql.=' and ';
+              }
+               $sql.="$k like '%$v%'";
+               $i++;
+            }
+            
+            isset($_GET['p'])?$p=$_GET['p']:$p=1;
+            $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id") ->where($sql)->page($p,2)->select();
+            $count      = $this->where($sql)->count();
+            $page       = new \Think\Page($count,2);
+            $show       = $page->show();
+            $arr1 = array($p,$list,$show,$count);
+            return $arr1;
     }
     /*
      *author：xueyunhuan
-     *多条件查询后分页
-    */
-    public function query(){
-        $arr = I('post.');
-        foreach ($arr as $k => $v) {
-          if ($v=='') {
-             unset($arr[$k]);
-          }
-        }
-        $sql='';
-        $i=0;
-        foreach ($arr as $k => $v) {
-          if($i!=0){
-              $sql.=' and ';
-          }
-           $sql.="$k like '%$v%'";
-           $i++;
-        }
-        isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where($sql)->page($p,2)->select();
-        $count      = $this->where($sql)->count();
-        $page       = new \Think\Page($count,2);
-        $show       = $page->show();
-        $arr = array($p,$list,$show,$count);
-        return $arr;
-    }
-    /*
-     *author：xueyunhuan
-     *查询学生信息
+     *查询学生信息 
     */
 
     public function studentinfo($stu_id){
         return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("stu_id=$stu_id")->find();
-
-    public function studentinfo($where=1){
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->join('sex on student.stu_sex=sex.sex_id')->where($where)->select();
     }
 
 

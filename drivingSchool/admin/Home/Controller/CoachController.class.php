@@ -125,24 +125,6 @@ class CoachController extends Controller {
     	$this->display('mystudent');
     }
      /*
-	  *author:xueyunhuan
-	  *条件查询
-	  *多条件查询
-     */
-     public function query(){
-     	$model = D('Student');
-     	$arr = $model->query();
-     	$p = $arr['0'];
-       	$list = $arr['1'];
-       	$page = $arr['2'];
-       	$count = $arr['3'];
-       	$this->assign('count',$count);
-       	$this->assign('page',$page);
-       	$this->assign('p',$p);
-       	$this->assign('list',$list);
-    	$this->display('mystudent');
-     }
-     /*
 	 * author:xueyunhuan
 	 *查询详细信息
      */

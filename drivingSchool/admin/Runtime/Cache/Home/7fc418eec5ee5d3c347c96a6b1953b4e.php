@@ -3,14 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<<<<<<< HEAD
     <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
     <script type="/Public/text/javascript">
-=======
-    <link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/eleven/progect/drivingSchool/Public/text/javascript">
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
 
 </script> 
 </head>
@@ -19,7 +14,7 @@
 <body style="background:#FFF8ED;">
    <div class="rightinfo">
    <div id="select">
-   <form action="/eleven/progect/drivingSchool/index.php/Home/Coach/query" method="post">
+   <form action="/index.php/Home/Coach/mystudent" method="post">
    	学员编号： <input type="text" name="stu_sn" />      学生姓名：  <input type="text" name="stu_name" />       
    	报名时间： <input type="date" name="stu_time" />     身份证号 ： <input type="text" name="stu_idcard" />       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="查找" />
    	</form>
@@ -27,7 +22,7 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th>序号<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+            <th>序号<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>编号</th>
             <th>姓名</th>
             <th>性别</th>
@@ -51,11 +46,7 @@
             <td><?php echo $v['class_name']; ?></td>
             <td><?php echo $v['stu_time']; ?></td>
             <td><?php echo $v['stu_status_name']; ?></td>
-<<<<<<< HEAD
             <td><a href="/index.php/Home/Coach/studentinfo?stu_id=<?php echo $v['stu_id']; ?>">查看</a></td>
-=======
-            <td><a href="/eleven/progect/drivingSchool/index.php/Home/Coach/studentinfo?user_id=<?php echo $v['user_id']; ?>">查看</a></td>
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
         </tr>
 		<?php  } ?>
         </tbody>

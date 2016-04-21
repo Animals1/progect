@@ -3,9 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 
-    <script type="/eleven/progect/drivingSchool/Public/text/javascript"></script> 
+    <script type="/Public/text/javascript"></script> 
    <style>
 		.aa{font-size:24px}
    </style>
@@ -55,7 +55,7 @@
     <table class="tablelist">
         <thead>
         <tr>
-            <th>报名驾校<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+            <th>报名驾校<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>是否受理</th>
             <th>科目一是否通过</th>
             <th>科目二是否通过</th>
