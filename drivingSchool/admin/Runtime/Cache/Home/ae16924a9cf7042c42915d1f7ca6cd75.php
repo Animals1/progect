@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
 
 </head>
@@ -20,7 +20,7 @@
 </table>
 <div id="coach" style="display: block">
  <table class="tablelist">
-     <form action="/progect/drivingSchool/index.php/Home/Staff/search" method="post">
+     <form action="/index.php/Home/Staff/search" method="post">
             <input type="hidden" name="id" value="1" />
             编号：<input name="sn" type="text"  />
             姓名：<input name="name" type="text"  />
@@ -69,7 +69,7 @@
     </div>
     <div id="staff" style="display: none">
     <table class="tablelist">
-        <form action="/progect/drivingSchool/index.php/Home/Staff/search" method="post">
+        <form action="/index.php/Home/Staff/search" method="post">
             <input type="hidden" name="id" value="2" />        
             编号：<input name="sn" type="text"  />
             姓名：<input name="name" type="text"  />

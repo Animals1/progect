@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/admin/css/page.css" rel="stylesheet" type="text/css" />
 
     <script type="__PUBLIC__/text/javascript"></script> 
    <style>
@@ -17,36 +17,36 @@
 <span class="aa">基本信息</span>
 <table class="tablelist">
         <tr>
-          <td rowspan="4"><img src="" width="200px" height="200px" alt="照片" /></td>
-          <td>姓名：<?php echo $arr[0]['stu_name'];  ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php   if ($arr[0]['stu_sex']==1) {echo "男"; }else{echo "女";}  ?></td>
+          <td rowspan="4" width="150"><img src="__PUBLIC__/<?php  echo $arr['stu_photo']; ?>" width="100px" height="100px" alt="照片" /></td>
+          <td>姓名：<?php echo $arr['stu_name'];  ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php   if ($arr['stu_sex']==1) {echo "男"; }else{echo "女";}  ?></td>
           <td></td>
           <td></td>
-          <td align="center" >报名时间：<?php echo $arr[0]['stu_time'];  ?></td>
+          <td align="center" >报名时间：<?php echo $arr['stu_time'];  ?></td>
         </tr>
         <tr>
-          <td>身份证号：<?php echo $arr[0]['stu_idcard'];  ?></td>
-          <td>电话：<?php echo $arr[0]['stu_tel'];  ?></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>户口所在地：<?php echo $arr[0]['stu_birthplace'];  ?></td>
-          <td>现居住地：<?php echo $arr[0]['stu_currentplace'];  ?></td>
+          <td>身份证号：<?php echo $arr['stu_idcard'];  ?></td>
+          <td>电话：<?php echo $arr['stu_tel'];  ?></td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td>邮箱：<?php echo $arr[0]['stu_email'];  ?></td>
+          <td>户口所在地：<?php echo $arr['stu_birthplace'];  ?></td>
+          <td>现居住地：<?php echo $arr['stu_currentplace'];  ?></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>邮箱：<?php echo $arr['stu_email'];  ?></td>
           <td>所在驾校：宏强驾校</td>
           <td></td>
           <td></td>
         </tr>
         <tr>
-          <td><?php echo $arr[0]['stu_sn'];  ?></td>
-          <td>报考类型：<?php echo $arr[0]['cert_level'];  ?></td>
-          <td>报考课程：<?php echo $arr[0]['class_name'];  ?></td>
+          <td><?php echo $arr['stu_sn'];  ?></td>
+          <td>报考类型：<?php echo $arr['cert_level'];  ?></td>
+          <td>报考课程：<?php echo $arr['class_name'];  ?></td>
           <td></td>
-          <td align="center"><?php echo $arr[0]['stu_status_name'];  ?></td>
+          <td align="center"><?php echo $arr['stu_status_name'];  ?></td>
         </tr>
     </table>
     
@@ -66,15 +66,13 @@
         </thead>
         <tbody>
         <tr>
-        <?php foreach ($progress as $v) {  ?>
             <td>已完成</td>
-            <td><?php if ($v['progress_isaccept']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-            <td><?php if ($v['test_one']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-            <td><?php if ($v['test_two']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-            <td><?php if ($v['test_threee']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-            <td><?php if ($v['test_four']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-            <td><?php if ($v['mylicense']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
-       <?php   }  ?>
+            <td><?php if ($progress['progress_isaccept']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
+            <td><?php if ($progress['test_one']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
+            <td><?php if ($progress['test_two']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
+            <td><?php if ($progress['test_threee']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
+            <td><?php if ($progress['test_four']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
+            <td><?php if ($progress['mylicense']==1) { echo "已完成"; }else{echo "未完成";}  ?></td>
         </tr>
         </tbody>
     </table>

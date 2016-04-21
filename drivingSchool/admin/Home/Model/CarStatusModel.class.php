@@ -10,7 +10,7 @@ class CarStatusModel extends Model {
 	/*
 	 *显示类型
 	*/
-		public function show(){
+		public function getallValue(){
 			return $this->select();
 		}
 		/*
