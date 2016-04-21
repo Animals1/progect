@@ -26,11 +26,19 @@
     <div class="rightinfo">
     
     <div class="tools">
-		
+		</ul>
+			<label>选择条件&nbsp;&nbsp;:</label>
+			<select class='condition'>
+			<?php if($status == ''){ echo "<option value='' selected>请选择</option><option value='1'>审核通过</option><option value='2'>审核未通过</option>"; } if($status == '1'){ echo "<option value=''>请选择</option><option value='1' selected>审核通过</option><option value='2'>审核未通过</option>"; } if($status == '2'){ echo "<option value=''>请选择</option><option value='1'>审核通过</option><option value='2' selected>审核未通过</option>"; } ?>
+				
+				
+				
+			</select>
+		</li>
+		</ul>
         <ul class="toolbar1">
-        <li><span><img src="/eleven/progect/drivingSchool/Public/admin/images/t05.png" /></span>我要修车</li>
-        </ul>
-    
+		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要换车</span></li>"; } ?>
+		</ul>
     </div>
     
     
@@ -43,7 +51,8 @@
         <th>保修原因</th>
         <th>处理人</th>
         <th>状态</th>
-        <th>操作</th>
+		<?php
+ if($type == 1){ echo "<th>操作</th>"; } else { } ?>
         </tr>
         </thead>
         <tbody>
@@ -54,7 +63,12 @@
         <td><?php echo ($vo["repair_desc"]); ?></td>
         <td><?php echo ($vo["repair_rename"]); ?></td>
         <td><?php echo ($vo["repair_statusname"]); ?></td>
-        <td><a href="javascript:void(0);" class="tablelink" value="<?php echo ($vo["replace_id"]); ?>" type='update'>修改</a> |  <a href="javascript:void(0);" class="tablelink" value="<?php echo ($vo["replace_id"]); ?>" type='delete'> 删除</a></td>
+		<td>
+		<?php
+ if($type == 1){ echo "<a href='javascript:void(0);' class='tablelink' value='".$vo['repair_id']."' type='update'>修改</a> |
+				<a href='javascript:void(0);' class='tablelink' value='".$vo['repair_id']."' type='delete'> 删除</a>"; } else { } ?>
+        
+		</td>
         </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
@@ -76,23 +90,43 @@
 			var type = $(this).attr('type');
 			var value = $(this).attr('value');
 			if(type == "update"){
-				location.href="/eleven/progect/drivingSchool/index.php/Home/Service/updaterepaircar/id/"+value;
+				location.href="/eleven/progect/drivingSchool/index.php/Home/Service/updaterepair/id/"+value;
 			}
 			else if(type == "delete"){
-				url = "/eleven/progect/drivingSchool/index.php/Home/Service/delrepaircar"
-				$.post(url,{'id' : value},function(data){
-					if(data == 1){
-						$that.parent().parent().remove();
-					}
-					else
-					{
-						return false;
-					}
-				})
+				
+				if(confirm('你确定要删除吗？')){
+					url = "/eleven/progect/drivingSchool/index.php/Home/Service/delrepaircar"
+					$.post(url,{'reapairid' : value},function(data){
+						if(data == 1){
+							$that.parent().parent().remove();
+						}
+						else
+						{
+							return false;
+						}
+					})
+				}
+				else
+				{
+					return false;
+				}
+				
 			}else
 			{
 				return false;
 			}
+		})
+		
+		//教练添加维修申请
+		$('#change').click(function(){
+			location.href="/eleven/progect/drivingSchool/index.php/Home/Service/addrepair";
+		})
+		
+		//筛选条件，审核未审核
+		$('.condition').change(function(){
+			var value = $(this).val();
+			location.href = "/eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/status/"+value;
+			
 		})
 	})
 	</script>

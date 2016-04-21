@@ -26,25 +26,20 @@
     
     <ul class="forminfo">
 	<form method='post' action=''>
-    <li><label>申请人名字</label><input name="replace_name" type="text" class="dfinput" value="<?php echo ($arr["staff_name"]); ?>"/></li>
-    <li><input name="replace_id" type="hidden" class="dfinput" value="<?php echo ($arr["replace_id"]); ?>"/></li>
+    <li><label>申请人名字</label><input name="replace_name" type="text" class="dfinput" value="<?php echo ($arr["repair_name"]); ?>"/></li>
+    <li><input name="repair_id" type="hidden" class="dfinput" value="<?php echo ($arr["repair_id"]); ?>"/></li>
     <li>
-		<label>更换前车牌号</label>
-		<select name='replace_number_before'>
-			<?php foreach($data as $v){ if($arr['replace_number_before'] == $v['car_id']){ echo "<option value='".$v['car_id']."' selected>". $v['car_number']."</option>"; }else{ echo "<option value='".$v['car_id']."'>". $v['car_number']."</option>"; } } ?>
+		<label>车牌号</label>
+		<select name='repair_number'>
+			<?php foreach($car as $v){ if($arr['repair_carid'] == $v['car_id']){ echo "<option value='".$v['car_id']."' selected>". $v['car_number']."</option>"; }else{ echo "<option value='".$v['car_id']."'>". $v['car_number']."</option>"; } } ?>
 		</select>
 	</li>
-    <li>
-		<label>更换后车牌号</label>
-		<select name='replace_number_after'>
-			<?php foreach($data as $v){ if($arr['replace_number_after'] == $v['car_id']){ echo "<option value='".$v['car_id']."' selected>". $v['car_number']."</option>"; }else{ echo "<option value='".$v['car_id']."'>". $v['car_number']."</option>"; } } ?>
-		</select>
-	</li>
-    <li><label>换车原因</label><input name="replace_reason" type="text" class="dfinput" value="<?php echo ($arr["replace_reason"]); ?>"/></li>
+    
+    <li><label>换车原因</label><input name="replace_reason" type="text" class="dfinput" value="<?php echo ($arr["repair_desc"]); ?>"/></li>
 	<li><label>状态</label>
 		<select name='status'>
-			<?php foreach($status as $s){ ?>
-				<option value="<?php echo $s['status_id'];?>"><?php echo $s['status_name'];?></option>
+			<?php foreach($car_status as $s){ ?>
+				<option value="<?php echo $s['repair_statusid'];?>"><?php echo $s['repair_statusname'];?></option>
 			<?php } ?>
 		</select>
 	</li>

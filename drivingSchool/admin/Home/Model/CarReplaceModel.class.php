@@ -33,7 +33,8 @@ class CarReplaceModel extends Model {
 	*	查寻更换后的车牌号
 	*/
 	public function getlastnu($last_id){
-		return $this->join("car ON car_replace.replace_number_after = car.car_id")->find();
+		return $this->where("replace_number_after = '$last_id'")
+					->join("car ON car_replace.replace_number_after = car.car_id")->find();
 	}
     /*
      * 删除一条数据
@@ -76,9 +77,13 @@ class CarReplaceModel extends Model {
      * 查询一条换车记录
      *
      * */
-    public function getoneValue($id)
+    public function getoneValue($where)
     {
-        return $this->where("replace_id = '$id'")->find();
+        return $this->where($where)
+					->join("coach ON car_replace.replace_name = coach.coach_id")
+					->join("staff ON coach_staff_id = staff.staff_id")
+					->join("car ON car_replace.replace_number_before = car.car_id")
+					->find();
     }
 	
 }

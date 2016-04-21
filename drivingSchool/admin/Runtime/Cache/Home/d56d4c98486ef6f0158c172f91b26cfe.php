@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,15 +17,6 @@
 });  
 </script> 
 <style>
-=======
-<?php if (!defined('THINK_PATH')) exit();?><!-- 引入分页样式 start-->
-<<<<<<< HEAD
-<link href="/Public/admin/css/mypage.css" rel="stylesheet" type="text/css"/>
-=======
-<link href="/eleven/progect/drivingSchool/Public/admin/css/mypage.css" rel="stylesheet" type="text/css"/>
->>>>>>> 5a688202cef60f8aa4425a0f037aa21e06936156
-<!--  分页样式 end -->
->>>>>>> 62fcccd488169925f523a0878747547f9e5969fe
 
 </style>
 
