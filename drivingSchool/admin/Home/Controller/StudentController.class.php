@@ -143,7 +143,6 @@ class StudentController extends Controller {
         $model = D('Student');
         $arr = $model->getshow();
         $this->assign('arr',$arr);
-        //print_r($arr);die;
       	$this->display('ke1');
       }
 }

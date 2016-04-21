@@ -3,10 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
     <script src="/Public/admin/js/jquery.js"></script>
 </head>
-
+<style type="text/css">
+select{ width:150px; height:30px; font-size: 15px; line-height:25px;}
+input{widows: 200px; height: 30px;font-size: 15px;}
+</style>
 
 <body he style="background:#FFF8ED;">
    <div class="rightinfo">
