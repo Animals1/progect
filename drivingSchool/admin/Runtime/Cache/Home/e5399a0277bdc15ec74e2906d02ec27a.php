@@ -118,6 +118,15 @@
 
 </html>
 <script>
+    $(document).ready(function () {
+      if (<?php echo ($id); ?> == '1') {
+          $('#staff').css('display','none')
+          $('#coach').css('display','block')
+      }else{
+          $('#staff').css('display','block')
+          $('#coach').css('display','none')
+      }
+    });
     $('.sear').click(function(){
         var id = $(this).parent().find('span').attr('value');
         if (id == '1') {

@@ -4,9 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 
+<<<<<<< HEAD
+<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+
+=======
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
-
+>>>>>>> ea3b441632431bcbef8f27b98e4307c57fb57eeb
 <script type="text/javascript">
 $(function(){   
     //导航切换
@@ -88,7 +93,7 @@ $(function(){
     <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><dl class="leftmenu">   
     <dd>
     <div class="title">
-    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
+    <span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
     </div>
         <ul class="menuson">
 
@@ -100,7 +105,7 @@ $(function(){
             </div>
 
             <?php if(is_array($vv["childs"])): foreach($vv["childs"] as $key=>$vo): ?><ul class="sub-menus">
-            <li><a href="/index.php/Home/<?php echo $vo['privilege_controller'];?>/<?php echo $vo['privilege_method'];?>" target="rightFrame"><?php echo $vo['privilege_name'];?></a></li>
+            <li><a href="/eleven/progect/drivingSchool/index.php/Home/<?php echo $vo['privilege_controller'];?>/<?php echo $vo['privilege_method'];?>" target="rightFrame"><?php echo $vo['privilege_name'];?></a></li>
             </ul><?php endforeach; endif; ?>
 
         </li><?php endforeach; endif; ?>
@@ -117,32 +122,41 @@ $(function(){
 
 <!--普通权限start-->
     <div class="lefttop"><span></span>
-    <?php
- if($_COOKIE['rolename']=="学员"){ echo "学员端"; }else{ echo "驾校端"; } ?>
+    普通用户
     </div>
-    
-    <dl class="leftmenu">   
+
+    <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><dl class="leftmenu">   
     <dd>
     <div class="title">
-    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+<<<<<<< HEAD
+    <span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico01.png" /></span><?php echo $_COOKIE['rolename'];?>
+=======
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
+>>>>>>> ea3b441632431bcbef8f27b98e4307c57fb57eeb
     </div>
         <ul class="menuson">
-        <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><li>
-        
+        <?php if(is_array($v["childs"])): foreach($v["childs"] as $key=>$vo): ?><li>
+            
             <div class="header">
             <cite></cite>
-            <a href="javascript:void(0);" target="rightFrame"><?php echo $v['privilege_name'];?></a>
+            <a href="javascript:void(0);" target="rightFrame"><?php echo $vo['privilege_name'];?></a>
             <i></i>
             </div>
+<<<<<<< HEAD
             <?php if(is_array($v["child"])): foreach($v["child"] as $key=>$vv): ?><ul class="sub-menus">
+            <li><a href="/eleven/progect/drivingSchool/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
+=======
+            <?php if(is_array($vo["child"])): foreach($vo["child"] as $key=>$vv): ?><ul class="sub-menus">
             <li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
+>>>>>>> ea3b441632431bcbef8f27b98e4307c57fb57eeb
             
             </ul><?php endforeach; endif; ?>
            
         </li><?php endforeach; endif; ?>
         </ul>    
     </dd>
-    </dl>
+    </dl><?php endforeach; endif; ?>
+
     <!--普通权限end--><?php endif; ?>
     
 </body>

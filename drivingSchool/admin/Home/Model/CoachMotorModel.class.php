@@ -15,7 +15,7 @@ class CoachMotorModel extends Model {
      * */
     public function getValue()
     {
-        return $this->join('coach_model on coach_motor.model_id=coach_model.model_id')->select();
+        return $this->join('coach_model on coach_motor.model_id=coach_model.model_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->select();
     }
     /*
      * 删除数据
