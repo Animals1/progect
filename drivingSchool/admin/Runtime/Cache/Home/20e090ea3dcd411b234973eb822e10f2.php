@@ -4,6 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -34,7 +35,7 @@
         .box{width:970px; padding:10px 20px; background-color:#fff; margin:10px auto;}
         .box a{padding-right:20px;}
     </style>
-    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+
     </head>
 
 <body style="background:#FFF8ED;">
@@ -52,16 +53,16 @@
         <form action="/index.php/Home/Finance/search" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
             <li>
-                学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
+                学员<input style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
             </li>
             <li>
-                编号<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
+                编号<input style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
             </li>
             <li>
-                日期<input class="laydate-icon" onclick="laydate()" style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="charge_time">
+                日期<input class="laydate-icon" onclick="laydate()" style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="charge_time">
             </li>
             <li>
-                <input style="margin-left: 10px; width: 50px;height: 20px;" type="submit" value="搜索">
+                <input style="margin-bottom:2px;margin-left: 10px; width: 50px;height: 25px;" type="submit" value="搜索">
             </li>
         </ul>
         </form>

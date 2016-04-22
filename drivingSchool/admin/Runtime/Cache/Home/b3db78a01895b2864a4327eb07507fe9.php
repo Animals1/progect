@@ -134,7 +134,7 @@
                     <?php echo $sel['stu_email']; ?>
                 </td>
                 <td>
-                    <?php echo $sel['stu_photo']; ?>
+                    <img style="width: 100px;height: 50px;" src="/Public/<?php echo $sel['stu_photo']; ?>" alt="">
                 </td>
                 <td>
                     <?php echo $sel['arrears_time']; ?>

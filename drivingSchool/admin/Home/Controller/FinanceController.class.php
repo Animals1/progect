@@ -37,7 +37,7 @@ class FinanceController extends Controller {
         $arr = D('charge');
 
         $re = $arr->searchs();
-        
+
         $p = $re['0'];
         $list = $re['1'];
         $page = $re['2'];
@@ -533,4 +533,5 @@ class FinanceController extends Controller {
         $this->assign('money5',$money5);
         $this->display('expenditure');
     }
+
 }

@@ -4,13 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 
-<<<<<<< HEAD
-<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
-=======
-<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
->>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
 <script type="text/javascript">
 $(function(){   
     //导航切换
@@ -92,7 +87,7 @@ $(function(){
     <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><dl class="leftmenu">   
     <dd>
     <div class="title">
-    <span><img src="/progect/drivingSchool/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
     </div>
         <ul class="menuson">
 
@@ -104,7 +99,7 @@ $(function(){
             </div>
 
             <?php if(is_array($vv["childs"])): foreach($vv["childs"] as $key=>$vo): ?><ul class="sub-menus">
-            <li><a href="/progect/drivingSchool/index.php/Home/<?php echo $vo['privilege_controller'];?>/<?php echo $vo['privilege_method'];?>" target="rightFrame"><?php echo $vo['privilege_name'];?></a></li>
+            <li><a href="/index.php/Home/<?php echo $vo['privilege_controller'];?>/<?php echo $vo['privilege_method'];?>" target="rightFrame"><?php echo $vo['privilege_name'];?></a></li>
             </ul><?php endforeach; endif; ?>
 
         </li><?php endforeach; endif; ?>
@@ -127,11 +122,7 @@ $(function(){
     <?php if(is_array($arr)): foreach($arr as $key=>$v): ?><dl class="leftmenu">   
     <dd>
     <div class="title">
-<<<<<<< HEAD
-    <span><img src="/eleven/progect/drivingSchool/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
-=======
-    <span><img src="/progect/drivingSchool/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
->>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
+    <span><img src="/Public/admin/images/leftico01.png" /></span><?php echo $v['privilege_name'];?>
     </div>
         <ul class="menuson">
         <?php if(is_array($v["childs"])): foreach($v["childs"] as $key=>$vo): ?><li>
@@ -142,11 +133,7 @@ $(function(){
             <i></i>
             </div>
             <?php if(is_array($vo["child"])): foreach($vo["child"] as $key=>$vv): ?><ul class="sub-menus">
-<<<<<<< HEAD
-            <li><a href="/eleven/progect/drivingSchool/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
-=======
-            <li><a href="/progect/drivingSchool/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
->>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
+            <li><a href="/index.php/Home/<?php echo $vv['privilege_controller'];?>/<?php echo $vv['privilege_method'];?>" target="rightFrame"><?php echo $vv['privilege_name'];?></a></li>
             
             </ul><?php endforeach; endif; ?>
            
