@@ -136,10 +136,10 @@
             <td>
                 {$stu.cert_level}
             </td>
-            <td><if condition="$stu.test_one eq 1">科一已完成
-                <elseif condition="$stu.test_two eq 1"/>科二已完成
-                <elseif condition="$stu.test_three eq 1"/>科三已完成
-                <elseif condition="$stu.test_four eq 1"/>科四已完成
+            <td><if condition="$stu.test_one eq 0">科一未完成
+                <elseif condition="$stu.test_two eq 0"/>科二未完成
+                <elseif condition="$stu.test_three eq 0"/>科三未完成
+                <elseif condition="$stu.test_four eq 0"/>科四未完成
                 <else/>毕业
             </if></td>
             <td>{$stu.stu_time}</td>

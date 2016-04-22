@@ -26,5 +26,13 @@ class ProgressModel extends Model {
         $arr=$this->join('student on student.stu_id = progress.stu_id')->where("progress.stu_id = $stu_id")->find();
         return $arr;
     }
+
+    /*
+    * 登记完成后添加一个学习进度
+    * */
+    public function addprogress($data)
+    {
+        return $this->add($data);
+    }
 }
 ?>

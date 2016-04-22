@@ -120,6 +120,7 @@ class StudentModel extends Model {
 
     }
 
+
         /*
          * author:hechengwei
          * 减少冗余代码,封装方法*/
@@ -174,8 +175,8 @@ class StudentModel extends Model {
      *查询学生信息 
     */
 
-    public function studentinfo($stu_id){
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("stu_id=$stu_id")->find();
+    public function studentinfo($where){
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where($where)->select();
     }
 
 

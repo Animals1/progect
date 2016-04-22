@@ -4,3 +4,9 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000656s ]
 ERR: 无法加载模块:Favicon
 
+[ 2016-04-22T15:52:59+08:00 ] ::1 /Public/admin/Uploads/2016-04-19/5715bd69bf5d8.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+ERR: 无法加载模块:Public
+
