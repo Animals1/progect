@@ -140,8 +140,8 @@ class StaffController extends Controller {
     public function leavestatus()
     {
         $staff = D('staff');
-        print_r($_GET);exit;
-        $id = $_GET['sid'];
+        // print_r($_GET);exit;
+        $sid = $_GET['sid'];
         $id = $_GET['id'];
         $re = $staff->leavestatus($sid,$id);
         $month = $staff->month();
@@ -153,5 +153,16 @@ class StaffController extends Controller {
         }else{
           $this->error('审核失败');
         }
+    }
+    /*
+     * 工资设置页面
+     * 作者：张捷
+     */
+    public function set()
+    {
+        $staff = D('staff');
+        $wage = $staff->wage();
+        $this->assign('wage',$wage);
+        $this->display('wage');
     }
 }

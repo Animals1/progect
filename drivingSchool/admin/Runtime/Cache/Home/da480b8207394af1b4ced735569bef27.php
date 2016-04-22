@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
 
 
@@ -37,7 +37,7 @@
 		</li>
 		</ul>
         <ul class="toolbar1">
-		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要维修</span></li>"; } ?>
+		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要维修</span></li>"; } ?>
 		</ul>
     </div>
     
@@ -45,7 +45,7 @@
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th>申请人名字<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
+        <th>申请人名字<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
         <th>申请时间</th>
         <th>车牌号</th>
         <th>保修原因</th>
@@ -90,12 +90,12 @@
 			var type = $(this).attr('type');
 			var value = $(this).attr('value');
 			if(type == "update"){
-				location.href="/eleven/progect/drivingSchool/index.php/Home/Service/updaterepair/id/"+value;
+				location.href="/index.php/Home/Service/updaterepair/id/"+value;
 			}
 			else if(type == "delete"){
 				
 				if(confirm('你确定要删除吗？')){
-					url = "/eleven/progect/drivingSchool/index.php/Home/Service/delrepaircar"
+					url = "/index.php/Home/Service/delrepaircar"
 					$.post(url,{'reapairid' : value},function(data){
 						if(data == 1){
 							$that.parent().parent().remove();
@@ -119,13 +119,13 @@
 		
 		//教练添加维修申请
 		$('#change').click(function(){
-			location.href="/eleven/progect/drivingSchool/index.php/Home/Service/addrepair";
+			location.href="/index.php/Home/Service/addrepair";
 		})
 		
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();
-			location.href = "/eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/status/"+value;
+			location.href = "/index.php/Home/Service/searchcondition/status/"+value;
 			
 		})
 	})
