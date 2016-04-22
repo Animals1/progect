@@ -14,7 +14,6 @@ class ServiceController extends Controller {
 		$role = D("admin");
 		$isrole = $role->isrole();
 		$rolename = $isrole[0]["role_name"];
-		// $rolename = '最高管理';
 		if($rolename == '教练'){
 			$models = D('Staff');
 			$res = $models->selcoachid($name);
@@ -138,7 +137,6 @@ class ServiceController extends Controller {
 			$role = D("admin");
 			$isrole = $role->isrole();
 			$rolename = $isrole[0]["role_name"];
-			// $rolename = '最高管理';
 			
 			$status = $_GET['value'];
 			$model = D('CarReplace');
@@ -193,26 +191,23 @@ class ServiceController extends Controller {
 			$role = D("admin");
 			$isrole = $role->isrole();
 			$rolename = $isrole[0]["role_name"];
-			// $rolename = '最高管理';
 			$status = $_GET['status'];
 			if($status == ''){
 				$where = "";
 			}
 			else if($status == '1'){
-				$where = "repair_status = '$status'";
+				$where = "car_repair.repair_statusid = '$status'";
 			}
 			else if($status == '2'){
-				$where = "repair_status = '$status'";
+				$where = "car_repair.repair_statusid = '$status'";
 			}
 			else{
 				echo "<script>alert('不合法');history.go(-1);</script>";die;
 			}
-			// print_r($where);die;
 			$car_repair = D('CarRepair');
 			$data = $car_repair->getValue($where);
 			$arr = $data['1'];
 			$page = $data['0'];
-			// print_r($arr);die;
 			if($rolename == '最高管理'){
 				$type = '1';
 				$this->assign('type',$type);
@@ -271,11 +266,46 @@ class ServiceController extends Controller {
 	*	查询当前教练的全部油气申请信息
 	*/
     public function oil(){
-    	$name = $_COOKIE['username'];
-		$where = "applicant_name = '$name'";
-		$model = D('GasAdd');
-		$arr = $model->getValue($where);
-		print_r($arr);die;
+    	// 汽油类型表
+		$Gas_type = D('GasType');
+		$Type = $Gas_type->getValue();
+		// 月份表
+		$Gas_month = D('GasMonth');
+		$Month = $Gas_month->getValue();
+		// 查询出月份，并转换成指定格式
+		// $month = "'1月', '2月', '3月','4月'";
+		foreach($Month as $k=>$m){
+			if(($k+1)==count($Month)){
+				$month .= "'".$m['m_name']."'";
+			}
+			else if($k == 0)
+			{
+				$month .= "'".$m['m_name']."',";	
+			}
+			else{
+				$month .= "'".$m['m_name']."',";
+			}
+			
+		}
+		//查询出指定月份下的各个类型的油气数量
+		$Gas_num = D('GasNum');
+		$Num = $Gas_num->getValue();
+		// print_r($Num);die;
+		foreach($Num as $k=>$n){
+			if($n['gas_type_id'] == ($k+1)){
+				$arr[] = $n['gas_type_name'];
+			}
+			else
+			{
+				
+			}
+		}
+		// print_r($arr);die;
+		$data = array('0'=>"suiyuan",'1'=>"suixin",'2'=>"sui");
+		
+		$this->assign('month',$month);
+		$this->assign('data',$data);
+		$this->display('oillist');
     } 
 /**
 	*	删除一条油气记录
@@ -310,7 +340,9 @@ class ServiceController extends Controller {
 		if($rolename == '教练'){
 			$model = D('CarRepair');
 			$where = "repair_name = '$name'";
+			// echo "suixin";die;
 			$data = $model->getValue($where);
+			// print_r($data);die;
 			$page = $data['0'];
 			$arr = $data['1'];
 			$this->assign('arr',$arr);
@@ -354,7 +386,7 @@ class ServiceController extends Controller {
 			$repair_id = $_POST['repair_id'];
 			$carpair['repair_rename'] = $_COOKIE['username'];
 			$carpair['repair_retime'] = time();
-			$carpair['repair_status'] = $_POST['status'];
+			$carpair['repair_statusid'] = $_POST['status'];
 			$res = $car_repair->where("repair_id = '$repair_id'")->save($carpair);
 			// $status = $_POST['status'];
 			if($res){
@@ -385,7 +417,7 @@ class ServiceController extends Controller {
 			$arr['repair_desc'] = $_POST['replace_reason'];
 			$arr['repair_name'] = $name;
 			$arr['record_time'] = time();
-			$arr['repair_status'] = "2";
+			$arr['repair_statusid'] = "2";
 			$repair = D('CarRepair');
 			$res = $repair->add($arr);
 			if($res){

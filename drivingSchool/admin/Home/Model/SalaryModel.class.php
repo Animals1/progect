@@ -9,6 +9,22 @@ use Think\Model;
 class SalaryModel extends Model {
     /*
      * 查询数据
+     */
+    public function getvalue(){
+
+        $User = M("salary");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on salary.staff_id=staff.staff_id')->join('role on staff.role_id=role.role_id')->join('salary_status on salary.salary_status_id=salary_status.salary_status_id')->where('salary_id>0')->order('salary_id desc')->page($p,5)->select();
+        $count = $User->where('salary_id>0')->count();
+        $page       = new \Think\Page($count,5);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
+
+
+     /*
      * @$where  多条件搜索
      * @$order  排序字段
      * @$limit  限制几条数据
@@ -30,6 +46,11 @@ class SalaryModel extends Model {
             }
             $sql.="$k like '%$v%'";
             $i++;
+        }
+        if($sql){
+            cookie("sql",$sql);
+        }else{
+            $sql = cookie('sql');
         }
         $User = M("salary");
         isset($_GET['p'])?$p=$_GET['p']:$p=1;

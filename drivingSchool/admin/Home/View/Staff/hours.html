@@ -13,8 +13,12 @@
 <body style="background:#FFF8ED;">
 <div class="rightinfo">
  <table class="tablelist">
-     <form action="__APP__/Home/Staff/sasearch" method="post">
-            <input type="hidden" name="id" value="1" />
+     <form action="__APP__/Home/Staff/hoursearch" method="post">
+            在职情况：
+              <select name="job" id="">
+                <option value="1">在职</option>
+                <option value="2">离职</option>
+              </select>
             员工编号：
             <if condition="$search.sn neq ''">
               <input name="sn" type="text" value="{$search.sn}" />
@@ -39,12 +43,18 @@
             <th>{$mv.month}月</th>
          </foreach>
      </tr>
-     <foreach name="salary" item="vo" >
+     <foreach name="hours" item="vo" >
         <tr>
        <td>{$vo.staff_sn}</td>
        <td>{$vo.staff_name}</td>
        <?php for($i=1;$i<=count($vo['month']);$i++){ ?>
-           <td><?php echo $vo['month'][$i][0]['num']?></td>  
+           <td>
+              <if condition="$vo['month'][$i][0]['hour'] eq ''">
+                
+              <else />
+                {$vo['month'][$i][0]['hour']}小时
+              </if>
+           </td>  
         <?php } ?>     
       
        </tr>

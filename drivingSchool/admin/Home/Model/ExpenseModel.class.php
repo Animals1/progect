@@ -9,6 +9,24 @@ use Think\Model;
 class ExpenseModel extends Model {
     /*
      * 查询数据
+     * @$order  排序字段
+     * @$limit  限制几条数据
+     */
+    public function getvalue(){
+
+        $User = M("expense");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on expense.staff_id=staff.staff_id')->join('expense_status on expense.status_id=expense_status.status_id')->where('expense_id>0')->order('expense_id desc')->page($p,5)->select();
+        $count = $User->where('expense_id>0')->count();
+        $page       = new \Think\Page($count,5);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
+
+
+    /*
      * @$where  多条件搜索
      * @$order  排序字段
      * @$limit  限制几条数据
@@ -30,6 +48,11 @@ class ExpenseModel extends Model {
             }
             $sql.="$k like '%$v%'";
             $i++;
+        }
+        if($sql){
+            cookie("sql",$sql);
+        }else{
+            $sql = cookie('sql');
         }
         $User = M("expense");
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
