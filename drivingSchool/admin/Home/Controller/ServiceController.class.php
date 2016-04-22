@@ -292,17 +292,40 @@ class ServiceController extends Controller {
 		$Num = $Gas_num->getValue();
 		// print_r($Num);die;
 		foreach($Num as $k=>$n){
-			if($n['gas_type_id'] == ($k+1)){
-				$arr[] = $n['gas_type_name'];
-			}
-			else
-			{
+				foreach($Type as $y=>$t){
+					if($n['gas_type_name'] == $t['gas_type_name']){
+						
+						$arr1[$t['gas_type_name']][] = $n['gas_num'];
+					}
+				}
+				
+		}
+		
+		
+		foreach($Type as $k=>$t){
+			$type_name = $t['gas_type_name'];
+		}
+		foreach($arr1 as $k=>$a){
+			$num = '';
+			foreach($a as $y=>$s){
+				
+				if(count($a) == ($y+1)){
+					$num .= $s; 
+				}
+				else
+				{
+					$num .= $s.','; 
+				}
 				
 			}
+			
+			$arr2[$k][] = $num;
+				
 		}
-		// print_r($arr);die;
-		$data = array('0'=>"suiyuan",'1'=>"suixin",'2'=>"sui");
 		
+		
+		
+		$this->assign('arr2',$arr2);
 		$this->assign('month',$month);
 		$this->assign('data',$data);
 		$this->display('oillist');
