@@ -13,9 +13,9 @@ class ComplaintModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function getValue($where=1)
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->join('staff on complaint.complaint_name=staff.staff_id')->join('student on complaint.stu_id=student.stu_id')->where($where)->select();
     }
     /*
      * 删除数据

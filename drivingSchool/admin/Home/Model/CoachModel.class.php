@@ -26,12 +26,13 @@ class CoachModel extends Model {
         return $this->where($where)->delete();
     }
 
+
     /*
-     *教练信息
-     * */
+    *教练信息
+    * */
     public function coachMessage($where=1)
     {
-        return $this->join('staff on coach.coach_staff_id=staff.staff_id')->where($where)->select();
+        return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->select();
     }
     /*
      * 修改join('coach_group on coach.group_id=coach_group.group_id')->
@@ -48,13 +49,7 @@ class CoachModel extends Model {
     {
         return $this->add($data);
     }
-    /*查询没有分组的人*/
-    public function noGroup()
-    {
 
-        $where="group_id=0";
-        return $coach_group=$this->coachMessage($where);
-    }
     /*查询所有组名*/
     public function groupName()
     {

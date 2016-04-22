@@ -426,10 +426,16 @@ class StaffModel extends Model {
 	*	通过用户名来查询教练id
 	*/
 
+<<<<<<< HEAD
+	public function selcoachid($name)
+	{
+		return $this->where("staff_name = '$name'")->join("coach ON staff.staff_id = coach.coach_staff_id")->find();
+=======
 	public function selcoachid($name){
 		return $this->where("staff_name = '$name'")
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
+>>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 	}
 	/**
 	 * 查询全部的员工信息（部分字段）
@@ -444,6 +450,9 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
+<<<<<<< HEAD
+
+=======
 	}
 	/*
 	 * 查询月数
@@ -516,6 +525,7 @@ class StaffModel extends Model {
 		}
 		
 		return $row;
+>>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 	}
 }
 

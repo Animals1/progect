@@ -31,23 +31,14 @@
 </head>
 
 
-<<<<<<< HEAD
-<body style="background:#FFF8ED;" id="div">
-=======
 <body style="background:#FFF8ED;">
->>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">首页</a></li>
-<<<<<<< HEAD
-        <li><a href="#">学员管理</a></li>
-        <li><a href="#">投诉管理</a></li>
-=======
         <li><a href="#">数据表</a></li>
         <li><a href="#">基本内容</a></li>
->>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
     </ul>
 </div>
 
@@ -56,30 +47,6 @@
     <div class="tools">
 
         <ul class="toolbar">
-<<<<<<< HEAD
-            <li class="click">被投诉人:<select name="coach_name" id="coach_id" onchange="searchcoach()">
-                <option value="-1">请选择</option>
-<?php if(is_array($coach)): foreach($coach as $key=>$com): ?><option value="<?php echo ($com["staff_id"]); ?>"><?php echo ($com["staff_name"]); ?></option><?php endforeach; endif; ?>
-            </select></li>
-        </ul>
-
-    </div>
-    <script>
-            function searchcoach()
-            {
-                var coach=$('#coach_id').val();
-                $.ajax({
-                    url: "/index.php/Home/Administration/complaintsearch",
-                    type: 'get',
-                    data: {'coach':coach},
-                    success: function (data) {
-                        //alert(data)
-                        $("#div").html(data);
-                    }
-                })
-            }
-    </script>
-=======
             <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
             <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
             <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
@@ -93,33 +60,10 @@
 
     </div>
 
->>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 
     <table class="tablelist">
         <thead>
         <tr>
-<<<<<<< HEAD
-
-            <th>投诉人</th>
-            <th>身份证号</th>
-            <th>被投诉人</th>
-            <th>被投诉人编号</th>
-            <th>投诉事由</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <?php if(is_array($complaint)): foreach($complaint as $key=>$val): ?><tr>
-
-            <td><?php echo ($val["stu_name"]); ?></td>
-            <td><?php echo ($val["stu_idcard"]); ?></td>
-            <td><?php echo ($val["staff_name"]); ?></td>
-            <td><?php echo ($val["staff_sn"]); ?></td>
-            <td><?php echo ($val["complaint_reason"]); ?></td>
-
-        </tr><?php endforeach; endif; ?>
-
-=======
             <th><input name="" type="checkbox" value="" checked="checked"/></th>
             <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>销假时间</th>
@@ -229,7 +173,6 @@
             <td>已审核</td>
             <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
         </tr>
->>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
         </tbody>
     </table>
 
@@ -249,8 +192,6 @@
         </ul>
     </div>
 
-<<<<<<< HEAD
-=======
 
     <div class="tip">
         <div class="tiptop"><span>提示信息</span><a></a></div>
@@ -273,7 +214,6 @@
 
 
 
->>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 </div>
 </body>
 <script type="text/javascript">

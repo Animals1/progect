@@ -45,6 +45,9 @@
 <div class="rightinfo">
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
     <div class="tools">
 
         <ul class="toolbar">
@@ -64,6 +67,7 @@
 =======
     
 >>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
+>>>>>>> 276c1ea1eca590d8b16310ac6032945d87b32a1e
 
     <table class="tablelist">
         <thead>

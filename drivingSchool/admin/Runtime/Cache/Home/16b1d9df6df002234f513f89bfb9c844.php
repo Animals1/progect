@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,6 +6,7 @@
 
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+
 <script type="text/javascript">
 $(function(){   
     //导航切换
@@ -18,7 +19,7 @@ $(function(){
             if($parent.hasClass("open")){
                 $parent.removeClass("open").find('.sub-menus').hide();
             }else{
-                $parent.addClass("open").find('.sub-menus').show();
+                $parent.addClass("open").find('.sub-menus').show(); 
             }
             
             
