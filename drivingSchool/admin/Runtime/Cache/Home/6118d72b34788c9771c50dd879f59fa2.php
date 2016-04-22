@@ -78,7 +78,7 @@
         var id = $("#leaveid").attr('value');
         // alert(id);
         var name = $('#name').attr('value');
-        if (sid == '2') {
+        if (sid == '1') {
           if (confirm("你确定要给"+name+"批假吗？")) {
             location.href = "/progect/drivingSchool/index.php/Home/Staff/leavestatus/sid/"+sid+"/id/"+id;
           }else{

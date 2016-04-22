@@ -140,6 +140,7 @@ class StaffController extends Controller {
     public function leavestatus()
     {
         $staff = D('staff');
+        print_r($_GET);exit;
         $id = $_GET['sid'];
         $id = $_GET['id'];
         $re = $staff->leavestatus($sid,$id);
