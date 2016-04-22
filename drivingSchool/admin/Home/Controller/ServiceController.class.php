@@ -350,7 +350,7 @@ class ServiceController extends Controller {
 			$this->display('repairlist');
 		}else if($rolename == '最高管理'){
 			$model = D('CarRepair');
-			$where = '';
+			$where = "";
 			$data = $model->getValue($where);
 			$page = $data['0'];
 			$arr = $data['1'];
