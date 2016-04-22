@@ -49,7 +49,7 @@
         </ul>
 
 
-        <form action="charge" method="post">
+        <form action="/index.php/Home/Finance/search" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
             <li>
                 学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">

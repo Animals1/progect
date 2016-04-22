@@ -9,6 +9,22 @@ use Think\Model;
 class ChargeModel extends Model {
     /*
      * 查询数据 收费明细表、学员信息表、费用类型表、支付方式表，四表联查；
+    */
+    public function getvalue(){
+
+        $User = M("charge");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->page($p,5)->select();
+        $count = $User->count();
+        $page       = new \Think\Page($count,5);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
+
+
+
+    /*
      * 多添件搜索
      */
     public function searchs(){
@@ -29,10 +45,15 @@ class ChargeModel extends Model {
             $sql.="$k like '%$v%'";
             $i++;
         }
+        if($sql){
+            cookie("sql",$sql);
+        }else{
+            $sql = cookie('sql');
+        }
         $User = M("charge");
         isset($_GET['p'])?$p=$_GET['p']:$p=1;
         $list=$User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->order('charge_id desc')->page($p,5)->select();
-        $count = $User->join('student on charge.stu_id=student.stu_id')->join('money_type on charge.money_type_id=money_type.money_type_id')->join('payment_method on charge.payment_id=payment_method.payment_id')->where($sql)->order('charge_id desc')->count();
+        $count = $User->join('student on charge.stu_id=student.stu_id')->where($sql)->order('charge_id desc')->count();
         $page       = new \Think\Page($count,5);
         $show       = $page->show();
         $arr = array($p,$list,$show,$count);

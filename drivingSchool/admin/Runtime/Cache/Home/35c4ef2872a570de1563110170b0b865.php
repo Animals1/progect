@@ -50,7 +50,7 @@
             <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
         </ul>
 
-        <form action="expense" method="post">
+        <form action="search3" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
                 <li>
                     经手人<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="staff_name">
