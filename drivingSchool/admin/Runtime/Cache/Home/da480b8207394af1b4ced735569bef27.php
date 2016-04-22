@@ -37,7 +37,7 @@
 		</li>
 		</ul>
         <ul class="toolbar1">
-		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要换车</span></li>"; } ?>
+		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要维修</span></li>"; } ?>
 		</ul>
     </div>
     
