@@ -14,7 +14,6 @@ class ServiceController extends Controller {
 		$role = D("admin");
 		$isrole = $role->isrole();
 		$rolename = $isrole[0]["role_name"];
-		// $rolename = '最高管理';
 		if($rolename == '教练'){
 			$models = D('Staff');
 			$res = $models->selcoachid($name);
@@ -138,7 +137,6 @@ class ServiceController extends Controller {
 			$role = D("admin");
 			$isrole = $role->isrole();
 			$rolename = $isrole[0]["role_name"];
-			// $rolename = '最高管理';
 			
 			$status = $_GET['value'];
 			$model = D('CarReplace');
@@ -193,7 +191,6 @@ class ServiceController extends Controller {
 			$role = D("admin");
 			$isrole = $role->isrole();
 			$rolename = $isrole[0]["role_name"];
-			$rolename = '最高管理';
 			$status = $_GET['status'];
 			if($status == ''){
 				$where = "";
@@ -207,12 +204,10 @@ class ServiceController extends Controller {
 			else{
 				echo "<script>alert('不合法');history.go(-1);</script>";die;
 			}
-			// print_r($where);die;
 			$car_repair = D('CarRepair');
 			$data = $car_repair->getValue($where);
 			$arr = $data['1'];
 			$page = $data['0'];
-			// print_r($arr);die;
 			if($rolename == '最高管理'){
 				$type = '1';
 				$this->assign('type',$type);
@@ -391,7 +386,7 @@ class ServiceController extends Controller {
 			$repair_id = $_POST['repair_id'];
 			$carpair['repair_rename'] = $_COOKIE['username'];
 			$carpair['repair_retime'] = time();
-			$carpair['repair_status'] = $_POST['status'];
+			$carpair['repair_statusid'] = $_POST['status'];
 			$res = $car_repair->where("repair_id = '$repair_id'")->save($carpair);
 			// $status = $_POST['status'];
 			if($res){
