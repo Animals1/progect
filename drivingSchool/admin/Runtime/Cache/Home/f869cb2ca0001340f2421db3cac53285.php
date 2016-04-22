@@ -3,9 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理员登录</title>
-<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
-<script src="/Public/admin/js/cloud.js" type="text/javascript"></script>
+<<<<<<< HEAD
+<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<script src="/eleven/progect/drivingSchool/Public/admin/js/cloud.js" type="text/javascript"></script>
+=======
+<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<script src="/progect/drivingSchool/Public/admin/js/cloud.js" type="text/javascript"></script>
+>>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
 
 <script language="javascript">
 	$(function(){
@@ -18,7 +24,11 @@
 
 </head>
 
-<body style="background-color:#df7611; background-image:url(/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+<<<<<<< HEAD
+<body style="background-color:#df7611; background-image:url(/eleven/progect/drivingSchool/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+=======
+<body style="background-color:#df7611; background-image:url(/progect/drivingSchool/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
+>>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
 
 
 
@@ -31,7 +41,11 @@
 <div class="logintop">    
     <span>驾校管理系统</span>    
     <ul>
-    <li><a href="/index.php/Home/Login/index">回首页</a></li>
+<<<<<<< HEAD
+    <li><a href="/eleven/progect/drivingSchool/index.php/Home/Login/index">回首页</a></li>
+=======
+    <li><a href="/progect/drivingSchool/index.php/Home/Login/index">回首页</a></li>
+>>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
     <li><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
     </ul>    
@@ -42,7 +56,11 @@
     <span class="systemlogo"></span> 
        
     <div class="loginbox">
-    <form action="/index.php/Home/Index/index" method="post" onsubmit="return funall();">
+<<<<<<< HEAD
+    <form action="/eleven/progect/drivingSchool/index.php/Home/Index/index" method="post" onsubmit="return funall();">
+=======
+    <form action="/progect/drivingSchool/index.php/Home/Index/index" method="post" onsubmit="return funall();">
+>>>>>>> 771dd1961b628fc84fe2ce0e4eeb8fa4987b23cf
     <ul>
     <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>
     <li><input name="upwd" id="upwd" type="password" class="loginpwd" placeholder="请输入密码" onblur="fun2();" /><span id="span_pwd"></span></li>

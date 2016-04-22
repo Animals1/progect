@@ -31,14 +31,15 @@
 </head>
 
 
-<body style="background:#FFF8ED;">
+<body style="background:#FFF8ED;" id="div">
 
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">首页</a></li>
-        <li><a href="#">数据表</a></li>
-        <li><a href="#">基本内容</a></li>
+        <li><a href="#">行政</a></li>
+        <li><a href="#">教练管理</a></li>
+        <li><a href="#">教练信息</a></li>
     </ul>
 </div>
 
@@ -47,132 +48,67 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
+            <li class="click">编号:<input type="text" name="staff_sn" id="staff_sn"></li>
+            <li class="click">姓名:<input type="text" name="staff_name" id="staff_name"></li>
+            <li>身份证号:<input type="text" name="staff_idcard" id="staff_idcard"></li>
+            <li>教练分组:<select name="group_id" id="group" onchange="group()">
+                <option value="-1">请选择</option>
+<?php if(is_array($group)): foreach($group as $key=>$group): ?><option value="<?php echo ($group["group_id"]); ?>"><?php echo ($group["group_name"]); ?></option><?php endforeach; endif; ?>
+            </select></li>
+            <li><input type="button"  value="搜索"></li>
         </ul>
-
-
-        <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
-        </ul>
-
     </div>
+    <script>
+        function group()
+        {
+            var staff_sn=$('#staff_sn').val();
+            var staff_name=$('#staff_name').val();
+            var staff_idcard=$('#staff_idcard').val();
+            var id=$('#group').val();
 
+            $.ajax({
+                url: "/index.php/Home/Administration/searchgroup",
+                type: 'get',
+                data: {'id':id,'staff_sn':staff_sn,'staff_name':staff_name,'staff_idcard':staff_idcard},
+                success: function (data) {
+                    //alert(data)
+                    $("#div").html(data);
+                }
+            })
+
+        }
+    </script>
 
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
-            <th>销假时间</th>
-            <th>请假类型</th>
-            <th>请假天数</th>
-            <th>请假原因</th>
-            <th>状态</th>
-            <th>操作</th>
+            <th>序号</th>
+            <th>编号</th>
+            <th>姓名</th>
+            <th>身份证号</th>
+            <th>出生年月</th>
+            <th>性别</th>
+            <th>教练证编号</th>
+            <th>教练证有效期</th>
+            <th>合同结束日期</th>
+            <th>联系电话</th>
+            <th>教练组别</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130908</td>
-            <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-09 15:05</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130907</td>
-            <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
-            <td>uimaker</td>
-            <td>山东济南</td>
-            <td>2013-09-08 14:02</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130906</td>
-            <td>社科院:电子商务促进了农村经济结构和社会转型</td>
-            <td>user</td>
-            <td>江苏无锡</td>
-            <td>2013-09-07 13:16</td>
-            <td>已销假</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130905</td>
-            <td>江西&quot;局长违规建豪宅&quot;：局长检讨</td>
-            <td>admin</td>
-            <td>北京市</td>
-            <td>2013-09-06 10:36</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130904</td>
-            <td>中国2020年或迈入高收入国家行列</td>
-            <td>uimaker</td>
-            <td>江苏南京</td>
-            <td>2013-09-05 13:25</td>
-            <td>已拒绝</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130903</td>
-            <td>深圳地铁车门因乘客拉闸打开 3人被挤入隧道</td>
-            <td>user</td>
-            <td>广东深圳</td>
-            <td>2013-09-04 12:00</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130902</td>
-            <td>33次地表塌陷 村民不敢下地劳作(图)</td>
-            <td>admin</td>
-            <td>湖南长沙</td>
-            <td>2013-09-03 00:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130901</td>
-            <td>医患关系：医生在替改革不彻底背黑锅</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-02 15:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130900</td>
-            <td>山东章丘公车进饭店景点将自动向监控系统报警</td>
-            <td>uimaker</td>
-            <td>山东滨州</td>
-            <td>2013-09-01 10:26</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+    <?php if(is_array($coach)): foreach($coach as $key=>$coach): ?><tr>
+            <td><?php echo ($coach["coach_id"]); ?></td>
+            <td><?php echo ($coach["staff_sn"]); ?></td>
+            <td><?php echo ($coach["staff_name"]); ?></td>
+            <td><?php echo ($coach["staff_idcard"]); ?></td>
+            <td><?php echo (date("Y-m-d",$coach["staff_year"])); ?></td>
+            <td><?php echo ($coach["sex_name"]); ?></td>
+            <td><?php echo ($coach["coach_sn"]); ?></td>
+            <td><?php echo (date("Y-m-d",$coach["coach_validity"])); ?></td>
+            <td><?php echo (date("Y-m-d",$coach["staff_end_year"])); ?></td>
+            <td><?php echo ($coach["staff_tel"]); ?></td>
+            <td><?php echo ($coach["group_name"]); ?></td>
+        </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
 
@@ -191,29 +127,6 @@
             <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
         </ul>
     </div>
-
-
-    <div class="tip">
-        <div class="tiptop"><span>提示信息</span><a></a></div>
-
-        <div class="tipinfo">
-            <span><img src="/Public/admin/images/ticon.png" /></span>
-            <div class="tipright">
-                <p>是否确认对信息的修改 ？</p>
-                <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-            </div>
-        </div>
-
-        <div class="tipbtn">
-            <input name="" type="button"  class="sure" value="确定" />&nbsp;
-            <input name="" type="button"  class="cancel" value="取消" />
-        </div>
-
-    </div>
-
-
-
-
 </div>
 </body>
 <script type="text/javascript">

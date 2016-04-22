@@ -31,14 +31,14 @@
 </head>
 
 
-<body style="background:#FFF8ED;">
+<body style="background:#FFF8ED;" id="div">
 
 <div class="place">
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">首页</a></li>
-        <li><a href="#">数据表</a></li>
-        <li><a href="#">基本内容</a></li>
+        <li><a href="#">学员管理</a></li>
+        <li><a href="#">投诉管理</a></li>
     </ul>
 </div>
 
@@ -47,132 +47,52 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>
-        </ul>
-
-
-        <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span>我要请假</li>
+            <li class="click">被投诉人:<select name="coach_name" id="coach_id" onchange="searchcoach()">
+                <option value="-1">请选择</option>
+<?php if(is_array($coach)): foreach($coach as $key=>$com): ?><option value="<?php echo ($com["staff_id"]); ?>"><?php echo ($com["staff_name"]); ?></option><?php endforeach; endif; ?>
+            </select></li>
         </ul>
 
     </div>
-
+    <script>
+            function searchcoach()
+            {
+                var coach=$('#coach_id').val();
+                $.ajax({
+                    url: "/index.php/Home/Administration/complaintsearch",
+                    type: 'get',
+                    data: {'coach':coach},
+                    success: function (data) {
+                        //alert(data)
+                        $("#div").html(data);
+                    }
+                })
+            }
+    </script>
 
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>请假时间<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
-            <th>销假时间</th>
-            <th>请假类型</th>
-            <th>请假天数</th>
-            <th>请假原因</th>
-            <th>状态</th>
-            <th>操作</th>
+
+            <th>投诉人</th>
+            <th>身份证号</th>
+            <th>被投诉人</th>
+            <th>被投诉人编号</th>
+            <th>投诉事由</th>
+
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130908</td>
-            <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-09 15:05</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
-        </tr>
+        <?php if(is_array($complaint)): foreach($complaint as $key=>$val): ?><tr>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130907</td>
-            <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
-            <td>uimaker</td>
-            <td>山东济南</td>
-            <td>2013-09-08 14:02</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <td><?php echo ($val["stu_name"]); ?></td>
+            <td><?php echo ($val["stu_idcard"]); ?></td>
+            <td><?php echo ($val["staff_name"]); ?></td>
+            <td><?php echo ($val["staff_sn"]); ?></td>
+            <td><?php echo ($val["complaint_reason"]); ?></td>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130906</td>
-            <td>社科院:电子商务促进了农村经济结构和社会转型</td>
-            <td>user</td>
-            <td>江苏无锡</td>
-            <td>2013-09-07 13:16</td>
-            <td>已销假</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+        </tr><?php endforeach; endif; ?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130905</td>
-            <td>江西&quot;局长违规建豪宅&quot;：局长检讨</td>
-            <td>admin</td>
-            <td>北京市</td>
-            <td>2013-09-06 10:36</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130904</td>
-            <td>中国2020年或迈入高收入国家行列</td>
-            <td>uimaker</td>
-            <td>江苏南京</td>
-            <td>2013-09-05 13:25</td>
-            <td>已拒绝</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130903</td>
-            <td>深圳地铁车门因乘客拉闸打开 3人被挤入隧道</td>
-            <td>user</td>
-            <td>广东深圳</td>
-            <td>2013-09-04 12:00</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130902</td>
-            <td>33次地表塌陷 村民不敢下地劳作(图)</td>
-            <td>admin</td>
-            <td>湖南长沙</td>
-            <td>2013-09-03 00:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130901</td>
-            <td>医患关系：医生在替改革不彻底背黑锅</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-02 15:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
-
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130900</td>
-            <td>山东章丘公车进饭店景点将自动向监控系统报警</td>
-            <td>uimaker</td>
-            <td>山东滨州</td>
-            <td>2013-09-01 10:26</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
         </tbody>
     </table>
 
@@ -191,28 +111,6 @@
             <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
         </ul>
     </div>
-
-
-    <div class="tip">
-        <div class="tiptop"><span>提示信息</span><a></a></div>
-
-        <div class="tipinfo">
-            <span><img src="/Public/admin/images/ticon.png" /></span>
-            <div class="tipright">
-                <p>是否确认对信息的修改 ？</p>
-                <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-            </div>
-        </div>
-
-        <div class="tipbtn">
-            <input name="" type="button"  class="sure" value="确定" />&nbsp;
-            <input name="" type="button"  class="cancel" value="取消" />
-        </div>
-
-    </div>
-
-
-
 
 </div>
 </body>

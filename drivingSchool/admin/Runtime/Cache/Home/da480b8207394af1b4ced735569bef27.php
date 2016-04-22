@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
 
 
 
@@ -37,21 +37,15 @@
 		</li>
 		</ul>
         <ul class="toolbar1">
-<<<<<<< HEAD
-        <li><span><img src="/Public/admin/images/t05.png" /></span>我要修车</li>
-        </ul>
-    
-=======
-		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要换车</span></li>"; } ?>
+		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要维修</span></li>"; } ?>
 		</ul>
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
     </div>
     
     
     <table class="tablelist">
     	<thead>
     	<tr>
-        <th>申请人名字<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
+        <th>申请人名字<i class="sort"><img src="/eleven/progect/drivingSchool/Public/admin/images/px.gif" /></i></th>
         <th>申请时间</th>
         <th>车牌号</th>
         <th>保修原因</th>
@@ -96,21 +90,6 @@
 			var type = $(this).attr('type');
 			var value = $(this).attr('value');
 			if(type == "update"){
-<<<<<<< HEAD
-				location.href="/index.php/Home/Service/updaterepaircar/id/"+value;
-			}
-			else if(type == "delete"){
-				url = "/index.php/Home/Service/delrepaircar"
-				$.post(url,{'id' : value},function(data){
-					if(data == 1){
-						$that.parent().parent().remove();
-					}
-					else
-					{
-						return false;
-					}
-				})
-=======
 				location.href="/eleven/progect/drivingSchool/index.php/Home/Service/updaterepair/id/"+value;
 			}
 			else if(type == "delete"){
@@ -132,7 +111,6 @@
 					return false;
 				}
 				
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
 			}else
 			{
 				return false;

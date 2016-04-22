@@ -21,11 +21,30 @@
 <div id="coach" style="display: block">
  <table class="tablelist">
      <form action="__APP__/Home/Staff/search" method="post">
-            <input type="hidden" name="id" value="1" />
-            编号：<input name="sn" type="text"  />
-            姓名：<input name="name" type="text"  />
-            身份证号：<input name="idcard" type="text"  />
-            手机号：<input name="tel" type="text"  />
+            编号：
+            <if condition="$search.sn neq ''">
+              <input name="name" type="text" value="{$search.sn}" />
+            <else />
+              <input name="sn" type="text" />
+            </if>
+            姓名：
+            <if condition="$search.name neq ''">
+              <input name="name" type="text" value="{$search.name}" />
+            <else />
+              <input name="name" type="text" />
+            </if>
+            身份证号：
+            <if condition="$search.idcard neq ''">
+              <input name="idcard" type="text" value="{$search.idcard}" />
+            <else />
+              <input name="idcard" type="text" />
+            </if>
+            手机号：
+            <if condition="$search.tel neq ''">
+              <input name="tel" type="text" value="{$search.tel}" />
+            <else />
+              <input name="tel" type="text" />
+            </if>
             <input type="submit"  value="查询" class="btn"/>
      </form>
      <thead>
