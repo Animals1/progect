@@ -37,14 +37,8 @@
 		</li>
 		</ul>
         <ul class="toolbar1">
-<<<<<<< HEAD
-        <li><span><img src="/Public/admin/images/t05.png" /></span>我要修车</li>
-        </ul>
-    
-=======
-		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/eleven/progect/drivingSchool/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要换车</span></li>"; } ?>
+		<?php if($type == '1'){ echo ""; } else{ echo "<li><span><img src='/Public/admin/images/t05.png' /></span><span id='change' style='cursor:pointer' >我要维修</span></li>"; } ?>
 		</ul>
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
     </div>
     
     
@@ -96,27 +90,12 @@
 			var type = $(this).attr('type');
 			var value = $(this).attr('value');
 			if(type == "update"){
-<<<<<<< HEAD
-				location.href="/index.php/Home/Service/updaterepaircar/id/"+value;
-			}
-			else if(type == "delete"){
-				url = "/index.php/Home/Service/delrepaircar"
-				$.post(url,{'id' : value},function(data){
-					if(data == 1){
-						$that.parent().parent().remove();
-					}
-					else
-					{
-						return false;
-					}
-				})
-=======
-				location.href="/eleven/progect/drivingSchool/index.php/Home/Service/updaterepair/id/"+value;
+				location.href="/index.php/Home/Service/updaterepair/id/"+value;
 			}
 			else if(type == "delete"){
 				
 				if(confirm('你确定要删除吗？')){
-					url = "/eleven/progect/drivingSchool/index.php/Home/Service/delrepaircar"
+					url = "/index.php/Home/Service/delrepaircar"
 					$.post(url,{'reapairid' : value},function(data){
 						if(data == 1){
 							$that.parent().parent().remove();
@@ -132,7 +111,6 @@
 					return false;
 				}
 				
->>>>>>> 02c55c9766aa90a08ab05bda2ad9bdc5c0cc3435
 			}else
 			{
 				return false;
@@ -141,13 +119,13 @@
 		
 		//教练添加维修申请
 		$('#change').click(function(){
-			location.href="/eleven/progect/drivingSchool/index.php/Home/Service/addrepair";
+			location.href="/index.php/Home/Service/addrepair";
 		})
 		
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();
-			location.href = "/eleven/progect/drivingSchool/index.php/Home/Service/searchcondition/status/"+value;
+			location.href = "/index.php/Home/Service/searchcondition/status/"+value;
 			
 		})
 	})

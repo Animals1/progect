@@ -48,9 +48,22 @@ class CoachGroupModel extends Model {
         return $child;
     }
 
-        public function addchild($child)
+        public function addchild($data)
         {
+            foreach($data[1] as $k=>$v)
+            {
+                $coach=M('Staff');
+                for($i=0;$i<count($v);$i++)
+                {
+                    $coach_tel=$coach->where("staff_name like '$v'")->field('staff_tel')->select();
+                    foreach($coach_tel as $key=>$tel)
+                    {
+                        $arr[]=array('parent_id'=>$data[0],'staffname'=>$v,'phone'=>$tel['staff_tel']);
+                    }
 
+                }
+            }
+            return $this->addAll($arr);
         }
 
     /*
@@ -72,7 +85,7 @@ class CoachGroupModel extends Model {
      * 删除数据
      *@$where   条件
      * */
-    public function delValue($where)
+    public function deletegroup($where)
     {
         return $this->where($where)->delete();
     }

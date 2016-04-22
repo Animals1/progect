@@ -661,6 +661,7 @@ class AdministrationController extends Controller {
         {
             $record=D('GasAdd');
             $gas_record=$record->gasMessage();
+            print_r($gas_record);die;
             $this->assign('record',$gas_record);
             $this->display('gasrecord');
         }
@@ -745,6 +746,7 @@ class AdministrationController extends Controller {
         {
             $inschool=D('Student');
             $student_inschool=$inschool->inschoolstu();
+           // print_r($student_inschool);die;
             $status=$inschool->status();
             $driving=$inschool->driving();
             $this->assign('student',$student_inschool);
@@ -758,7 +760,7 @@ class AdministrationController extends Controller {
         public function inschoolsearch()
         {
             /*
-             * 'stu_sn':stu_sn,'stu_name':stu_name,'stu_tel':stu_tel,'laydate':laydate,'motor_id':motor_id,'sex_id':sex_id,'stu_status_id':stu_status_id
+             *
              * */
             $stu_sn=$_GET['stu_sn'];
             $stu_name=$_GET['stu_name'];
@@ -814,7 +816,6 @@ class AdministrationController extends Controller {
         {
             if($_POST)
             {
-
                 $staff=D('Staff');
                 $img=$staff->upload('stu_photo');
                 $data['stu_time']=$_POST['stu_time'];
@@ -858,8 +859,20 @@ class AdministrationController extends Controller {
                 $data['stu_birthplace']=$region[0];
                 $data['stu_currentplace']=$region[1].','.$curaddress;
                 $data['stu_photo']=$img;
+                /*添加*/
                 $add=$stu->inschoolRecord($data);
-                if($add)
+                /*驾照进度*/
+                $progress=D('Progress');
+                $prog['stu_id']=$add;
+                $prog['progress_isaccept']=1;
+                $prog['test_one']=0;
+                $prog['test_two']=0;
+                $prog['test_three']=0;
+                $prog['test_four']=0;
+                $prog['mylicense']=0;
+
+                $insert=$progress->addprogress($prog);
+                if($insert)
                 {
                     $this->success('入学登记成功','/Home/Administration/regstu');
                 }
@@ -973,6 +986,7 @@ class AdministrationController extends Controller {
         {
             $group=D('CoachGroup');
             $coach_group=$group->getValue();
+
             $this->assign('group',$coach_group);
             $this->display('traingroup');
         }
@@ -983,7 +997,7 @@ class AdministrationController extends Controller {
         {
             $id=$_GET['id'];
             $group=D('CoachGroup');
-            $where="group_id='$id' and parent_id='$id'";
+            $where="group_id='$id'";
             $coach_group=$group->deletegroup($where);
             if($coach_group)
             {
@@ -1009,23 +1023,32 @@ class AdministrationController extends Controller {
                $data['phone']=$_POST['phone'];
                $groupadd=D('CoachGroup');
                $group=$groupadd->addgroup($data);
+
                if($group)
                {
-                   $where="staffname like '%$data[staffname]%'";
-                   //根据名字查询出来教练id,根据教练id去修改分组
-                   $coach_id=$coach->nogroupcoachMessage($where);
-                   $group_id=$groupadd->selectgroup($where);
-                   print_r($group_id);die;
+                   $child[]=$group;
                    $child[]=$_POST['group_child'];
-                   $child[]=$group_id;
-                   $child=$groupadd->addchild($child);
-                   if($child)
+                   //组员的父级id
+                   $addchild=$groupadd->addchild($child);
+
+                   if($addchild)
                    {
-                       $this->success();
+                       $where="parent_id='$group'";
+                       $group_team=$coach->selectgroup($where);
+                       $group_team[]=$data;
+                       $update_coach_gropu_id=$coach->UpdateCoachGropuId($group_team);
+                       if($update_coach_gropu_id)
+                       {
+                           $this->success('分组添加成功','/Home/Administration/traingroupadd');
+                       }
+                       else
+                       {
+                           $this->error('分组添加失败');
+                       }
                    }
                    else
                    {
-                       $this->error();
+                       $this->error('分组添加失败');
                    }
                }
 
@@ -1033,10 +1056,10 @@ class AdministrationController extends Controller {
             else
             {
 
-                $where="coach.group_id='0'";
-                $coachMessage=$coach->coachMessage($where);
+                $where="coach.group_id=0";
+                $coachMessage=$coach->nogroupcoachmessage($where);
+                //dump($coachMessage);die;
                 $this->assign('nogroup',$coachMessage);
-                //print_r($coachMessage);die;
                 $this->display('traingroupadd');
             }
 
@@ -1047,6 +1070,9 @@ class AdministrationController extends Controller {
     * */
         public function teachtime()
         {
+            $salary=A('Staff');
+            $data=$salary->salary();
+            print_r($data);die;
             $this->display('teachtime');
         }
 

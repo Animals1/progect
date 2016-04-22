@@ -34,12 +34,41 @@ class CoachModel extends Model {
     {
         return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->select();
     }
-    /*
-     * 修改join('coach_group on coach.group_id=coach_group.group_id')->
-     * */
-    public function updatecoach($data,$where)
+
+    public function nogroupcoachMessage($where=1)
     {
-        $this->where($where)->save($data);
+        return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->where($where)->select();
+    }
+    /*
+     * 修改
+     * */
+    public function UpdateCoachGropuId($data)
+    {
+        foreach($data as $key=>$coachName)
+        {
+            $where="staff.staff_name like '%$coachName[staffname]%'";
+            $staff_id[]=$this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->where($where)->field('staff_id')->select();
+        }
+
+        foreach($staff_id as $k=>$val)
+        {
+            $group_id[]=$val[0];
+        }
+        foreach($group_id as $kk=>$vv)
+        {
+            $id[]=$vv['staff_id'];
+        }
+        $ids=implode(',',$id);
+        $arr=array_column($data,'parent_id');
+        $group['group_id']=$arr[0];
+        $sql="update coach set group_id='$arr[0]' where coach_staff_id in ($ids)";
+       return $this->execute($sql);
+    }
+
+    public function selectgroup($where=1)
+    {
+        $group=M('coach_group');
+        return $group->where($where)->select();
     }
     /*
      * 新增分组

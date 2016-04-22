@@ -50,19 +50,19 @@
             <li><a href="/index.php/Home/Finance/income"><span><img src="/Public/admin/images/t04.png" /></span>统计</a></li>
         </ul>
 
-        <form action="arrears" method="post">
+        <form action="/index.php/Home/Finance/search1" method="post">
             <ul class="toolbar" style="margin-left: 180px;">
                 <li>
-                    学员<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
+                    学员<input style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_name">
                 </li>
                 <li>
-                    编号<input style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
+                    编号<input style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="stu_sn">
                 </li>
                 <li>
-                    日期<input class="laydate-icon" onclick="laydate()" style="margin-left: 10px; width: 100px;height: 20px;" type="text" name="arrears_time">
+                    日期<input class="laydate-icon" onclick="laydate()" style="margin-bottom:2px;margin-left: 10px; width: 100px;height: 20px;" type="text" name="arrears_time">
                 </li>
                 <li>
-                    <input style="margin-left: 10px; width: 50px;height: 20px;" type="submit" value="搜索">
+                    <input style="margin-bottom:2px;margin-left: 10px; width: 50px;height: 25px;" type="submit" value="搜索">
                 </li>
             </ul>
         </form>
