@@ -131,10 +131,10 @@
             <td>
                 <?php echo ($stu["cert_level"]); ?>
             </td>
-            <td><?php if($stu["test_one"] == 1): ?>科一已完成
-                <?php elseif($stu["test_two"] == 1): ?>科二已完成
-                <?php elseif($stu["test_three"] == 1): ?>科三已完成
-                <?php elseif($stu["test_four"] == 1): ?>科四已完成
+            <td><?php if($stu["test_one"] == 0): ?>科一未完成
+                <?php elseif($stu["test_two"] == 0): ?>科二未完成
+                <?php elseif($stu["test_three"] == 0): ?>科三未完成
+                <?php elseif($stu["test_four"] == 0): ?>科四未完成
                 <?php else: ?>毕业<?php endif; ?></td>
             <td><?php echo ($stu["stu_time"]); ?></td>
             <td><?php echo ($stu["stu_status_name"]); ?></td>
