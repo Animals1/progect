@@ -15,7 +15,7 @@ class StudentModel extends Model {
     public function getshow($user_id)
     {
         $user_id = $_COOKIE['userid'];
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("user_id=$user_id")->select();
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("user_id=$user_id")->find();
     }
 
     /*
@@ -106,7 +106,18 @@ class StudentModel extends Model {
      * */
     public function inschoolRecord($data)
     {
-        return $this->add($data);
+        $stu=$this->where("stu_sn='$data[stu_sn]'")->find();
+        if($stu['stu_status_id']=='4')
+        {
+            $data['stu_status_id']=1;
+            return $this->where("stu_sn='$data[stu_sn]'")->save($data);
+        }
+        else
+        {
+            $data['stu_status_id']=1;
+            return $this->add($data);
+        }
+
     }
 
         /*
@@ -129,48 +140,42 @@ class StudentModel extends Model {
      *查询学生信息
     */
     public function allstudent(){
-        isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->page($p,2)->select();
-        $count      = $this->count();
-        $page       = new \Think\Page($count,2);
-        $show       = $page->show();
-        $arr = array($p,$list,$show,$count);
-        return $arr;
+            $arr = I('post.');
+            $aa = $_GET['textfield'];
+            if(!empty($aa)) {
+                $arr = I('get.');
+            }
+            foreach ($arr as $k => $v) {
+              if ($v=='') {
+                 unset($arr[$k]);
+              }
+            }
+
+            $sql='';
+            $i=0;
+            foreach ($arr as $k => $v) {
+              if($i!=0){
+                  $sql.=' and ';
+              }
+               $sql.="$k like '%$v%'";
+               $i++;
+            }
+            
+            isset($_GET['p'])?$p=$_GET['p']:$p=1;
+            $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id") ->where($sql)->page($p,2)->select();
+            $count      = $this->where($sql)->count();
+            $page       = new \Think\Page($count,2);
+            $show       = $page->show();
+            $arr1 = array($p,$list,$show,$count);
+            return $arr1;
     }
     /*
      *author：xueyunhuan
-     *多条件查询后分页
+     *查询学生信息 
     */
-    public function query(){
-        $arr = I('post.');
-        foreach ($arr as $k => $v) {
-          if ($v=='') {
-             unset($arr[$k]);
-          }
-        }
-        $sql='';
-        $i=0;
-        foreach ($arr as $k => $v) {
-          if($i!=0){
-              $sql.=' or ';
-          }
-           $sql.="$k like '%$v%'";
-           $i++;
-        }
-        isset($_GET['p'])?$p=$_GET['p']:$p=1;
-        $list=$this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where($sql)->page($p,2)->select();
-        $count      = $this->where($sql)->count();
-        $page       = new \Think\Page($count,2);
-        $show       = $page->show();
-        $arr = array($p,$list,$show,$count);
-        return $arr;
-    }
-    /*
-     *author：xueyunhuan
-     *查询学生信息
-    */
-    public function studentinfo($where=1){
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->join('sex on student.stu_sex=sex.sex_id')->where($where)->select();
+
+    public function studentinfo($stu_id){
+        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where("stu_id=$stu_id")->find();
     }
 
 
@@ -182,17 +187,32 @@ class StudentModel extends Model {
     {
         return $this->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->select();
     }
-
+    /*状态*/
     public function status()
     {
         $status=M('student_status');
         return $status->select();
     }
-
+    /*驾照*/
     public function driving()
     {
         $driving=M('coach_driving');
         return $driving->select();
     }
+    /*
+     * 地区
+     * */
+    public function area($area)
+    {
+        $region=M('region');
+
+        $stu_birthplace=$region->where("region_id in ($area[0])")->select();
+        $stu_curaddress=$region->where("region_id in ($area[1])")->select();
+        $birthplace[]=$stu_birthplace;
+        $birthplace[]=$stu_curaddress;
+        return $birthplace;
+
+    }
+
 }
 ?>

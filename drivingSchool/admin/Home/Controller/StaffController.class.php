@@ -62,6 +62,7 @@ class StaffController extends Controller {
         $staffdata = $staff->staffdatetime($staffs);
         $this->assign('id',$_POST['id']);
         $this->assign('coach',$coachs);
+        $this->assign('search',$_POST);
         $this->assign('staff',$staffdata);
         $this->display('search');
     }
@@ -71,11 +72,9 @@ class StaffController extends Controller {
         $staff = D('staff');
         $month = $staff->month();
         $salary = $staff->salary();
-        //print_r($salary);exit;
         $this->assign('month',$month);
         $this->assign('salary',$salary);
-        $this->display('salary');
-        
+        $this->display('salary'); 
 
     }
     public function sasearch()
@@ -85,10 +84,74 @@ class StaffController extends Controller {
         $salary = $staff->searsalary($_POST);
         $this->assign('month',$month);
         $this->assign('salary',$salary);
+        $this->assign('search',$_POST);
         $this->display('salary');
     }
     public function leave()
     {
+        $staff = D('staff');
+        $data = $staff->leave();
+        $this->assign('data',$data);
         $this->display('leave');
+    }
+    /*
+     * 请假页面搜索
+     * 作者：张捷
+     */
+    public function leasearch()
+    {
+        $staff = D('staff');
+        $data = $staff->leasearch($_POST);
+        $this->assign('data',$data);
+        $this->assign('search',$_POST);
+        $this->display('leave');
+    }
+    /*
+     * 教练学时
+     * 作者：张捷
+     */
+    public function hours()
+    {
+        $staff = D('staff');
+        $month = $staff->month();
+        $hours = $staff->hours();
+        $this->assign('month',$month);
+        $this->assign('hours',$hours);
+        $this->display('hours'); 
+    }
+    /*
+     * 教练学时查询
+     * 作者：张捷
+     */
+    public function hoursearch()
+    {
+        $staff = D('staff');
+        $month = $staff->month();
+        $hours = $staff->searhours($_POST);
+        $this->assign('month',$month);
+        $this->assign('search',$_POST);
+        $this->assign('hours',$hours);
+        $this->display('hours'); 
+    }
+    /*
+     * 员工请假审核状态
+     * 作者：张捷
+     */
+    public function leavestatus()
+    {
+        $staff = D('staff');
+        print_r($_GET);exit;
+        $id = $_GET['sid'];
+        $id = $_GET['id'];
+        $re = $staff->leavestatus($sid,$id);
+        $month = $staff->month();
+        $hours = $staff->hours();
+        $this->assign('month',$month);
+        $this->assign('hours',$hours);
+        if($re){
+          $this->success('审核成功',__CONTROLLER__."/leave",3);
+        }else{
+          $this->error('审核失败');
+        }
     }
 }

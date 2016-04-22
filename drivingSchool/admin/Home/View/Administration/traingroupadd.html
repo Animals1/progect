@@ -4,10 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="__PUBLIC__/text/javascript">
 
-    </script>
-
+    <script src="__PUBLIC__/admin/js/jquery.js"></script>
 
 </head>
 
@@ -16,21 +14,44 @@
 
 <div class="formbody">
 
-    <div class="formtitle"><span>基本信息</span></div>
+    <div class="formtitle"><span>新增小组</span></div>
+    <form action="__APP__/Home/Administration/traingroupadd" method="post">
+        <table>
+            <tr>
+                <td>小组名称:</td>
+                <td><input type="text" name="group_name"></td>
+            </tr>
+            <tr>
+                <td>组长:</td>
+                <td><select name="lander" id="">
+                    <option value="-1">请选择</option>
+                <foreach name="nogroup" item="group">
+                    <option value="{$group.staff_name}">{$group.staff_name}</option>
+                </foreach>
+                </select></td>
+                <td>组长电话:</td>
+                <td><input type="text" name="phone"></td>
+            </tr>
+            <tr>
+                <td>小组成员:</td>
+                <td><foreach name="nogroup" item="group">
+                    <input type="checkbox" name="group_child[]" value="{$group.staff_name}">{$group.staff_name}<br>
+                </foreach></td>
 
-    <!--<ul class="forminfo">-->
-    <!--<li><label>文章标题</label><input name="" type="text" class="dfinput" /><i>标题不能超过30个字符</i></li>-->
-    <!--<li><label>关键字</label><input name="" type="text" class="dfinput" /><i>多个关键字用,隔开</i></li>-->
-    <!--<li><label>是否审核</label><cite><input name="" type="radio" value="" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;<input name="" type="radio" value="" />否</cite></li>-->
-    <!--<li><label>引用地址</label><input name="" type="text" class="dfinput" value="http://www.uimaker.com/uimakerhtml/uidesign/" /></li>-->
-    <!--<li><label>文章内容</label><textarea name="" cols="" rows="" class="textinput"></textarea></li>-->
-    <!--<li><label>&nbsp;</label><input name="" type="button" class="btn" value="确认保存"/></li>-->
-    <!--</ul>-->
-
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="保存">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
 
 </div>
 </body>
-
+<script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
 </html>
 
 

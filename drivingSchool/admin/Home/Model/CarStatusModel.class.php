@@ -33,4 +33,9 @@ class CarStatusModel extends Model {
 		public function delete_cartype($type_id){
 			return $this->where("type_id = $type_id")->delete();
 		}
+
+		public function show()
+		{
+			return $this->select();
+		}
 }

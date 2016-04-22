@@ -3,10 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/Public/text/javascript">
-
-</script> 
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
 <style>
     ul li{
      float: left;
@@ -73,9 +71,9 @@
     <div class="pagin">
         <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
         <ul class="paginList">
-            <ul>
-                <li><?php echo ($page); ?></li>
-            </ul>
+            
+            <div class="list-page"><?php echo ($page); ?></div>
+            
             <!-- <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
             <li class="paginItem"><a href="javascript:;"><?php echo ($page); ?></a></li>
             <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li> -->

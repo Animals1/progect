@@ -19,7 +19,7 @@ class StudentController extends Controller {
        	$progress = D('Progress');
        	$progress = $progress->getshow();
        	$this->assign('progress',$progress);
-       	//print_r($progress);die;
+       	//print_r($arr);die;
        	$this->assign('arr',$arr);
        	$this->display('personinfo');
         }
@@ -38,7 +38,6 @@ class StudentController extends Controller {
        	$list = $arr['1'];
        	$page = $arr['2'];
        	$count = $arr['3'];
-       	//print_r($list);die;
        	$this->assign('count',$count);
        	$this->assign('page',$page);
        	$this->assign('p',$p);
@@ -138,16 +137,12 @@ class StudentController extends Controller {
         }
       /*
 	 * （xueyunhuan）
-	 *科1考题
-	*/
+	 *科1考题(考试人信息)
+	 */
       public function one(){
+        $model = D('Student');
+        $arr = $model->getshow();
+        $this->assign('arr',$arr);
       	$this->display('ke1');
-      }
-      /*
-	 * （xueyunhuan）
-	 *科1考题
-	*/
-      public function two(){
-      	$this->display('ke2');
       }
 }
