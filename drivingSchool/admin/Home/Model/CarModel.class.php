@@ -23,6 +23,25 @@ class CarModel extends Model
     {
         return $this->join("coach_model on car.model_id=coach_model.model_id")->join("coach_motor on car.motor_id=coach_motor.motor_id")->join("car_goout on car.out_id=car_goout.out_id")->join("car_status on car_goout.out_status_id=car_status.status_id")->join('car_repair on car.repair_id=car_repair.repair_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->where($where)->select();
     }
+
+    /*
+    * 多添件搜索
+     * @ $p     当前页
+     * @ $list  查询的数据
+     * @ $show  第几页
+     * @ $count 总条数
+    */
+    public function searchs($where){
+
+        $User = M("Car");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join("coach_model on car.model_id=coach_model.model_id")->join("coach_motor on car.motor_id=coach_motor.motor_id")->join("car_goout on car.out_id=car_goout.out_id")->join("car_status on car_goout.out_status_id=car_status.status_id")->join('car_repair on car.repair_id=car_repair.repair_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->where($where)->page($p,5)->select();
+        $count = $User->join("coach_model on car.model_id=coach_model.model_id")->join("coach_motor on car.motor_id=coach_motor.motor_id")->join("car_goout on car.out_id=car_goout.out_id")->join("car_status on car_goout.out_status_id=car_status.status_id")->join('car_repair on car.repair_id=car_repair.repair_id')->join('coach_driving on coach_motor.driving_type=coach_driving.driving_id')->where($where)->count();
+        $page       = new \Think\Page($count,5);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
+    }
     /*
      * 车辆状态
      * 预约为预约,预约时间短
@@ -38,8 +57,14 @@ class CarModel extends Model
      * */
     public function vehrepair($where=1)
     {
-        $repair=M('car_repair');
-        return $repair->join('coach on car_repair.repair_coachname=coach.coach_id')->join('staff on coach.coach_staff_id=staff.staff_id')->join('car on car_repair.repair_carid=car.car_id')->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')->where($where)->select();
+        $User = M("car_repair");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('coach on car_repair.repair_coachname=coach.coach_id')->join('staff on coach.coach_staff_id=staff.staff_id')->join('car on car_repair.repair_carid=car.car_id')->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')->where($where)->page($p,2)->select();
+        $count = $User->join('coach on car_repair.repair_coachname=coach.coach_id')->join('staff on coach.coach_staff_id=staff.staff_id')->join('car on car_repair.repair_carid=car.car_id')->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
 
     /*
