@@ -106,7 +106,18 @@ class StudentModel extends Model {
      * */
     public function inschoolRecord($data)
     {
-        return $this->add($data);
+        $stu=$this->where("stu_sn='$data[stu_sn]'")->find();
+        if($stu['stu_status_id']=='4')
+        {
+            $data['stu_status_id']=1;
+            return $this->where("stu_sn='$data[stu_sn]'")->save($data);
+        }
+        else
+        {
+            $data['stu_status_id']=1;
+            return $this->add($data);
+        }
+
     }
 
         /*
@@ -176,17 +187,32 @@ class StudentModel extends Model {
     {
         return $this->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->select();
     }
-
+    /*状态*/
     public function status()
     {
         $status=M('student_status');
         return $status->select();
     }
-
+    /*驾照*/
     public function driving()
     {
         $driving=M('coach_driving');
         return $driving->select();
     }
+    /*
+     * 地区
+     * */
+    public function area($area)
+    {
+        $region=M('region');
+
+        $stu_birthplace=$region->where("region_id in ($area[0])")->select();
+        $stu_curaddress=$region->where("region_id in ($area[1])")->select();
+        $birthplace[]=$stu_birthplace;
+        $birthplace[]=$stu_curaddress;
+        return $birthplace;
+
+    }
+
 }
 ?>
