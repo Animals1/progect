@@ -3,23 +3,23 @@ namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
 	
-		/*@author:éƒ­æ—­å³°
-		@module:ç®¡ç†å‘˜-ä¸ªäººä¸­å¿ƒ
-		@ä¸ªäººä¿¡æ¯*/
+		/*@author:¹ùÐñ·å
+		@module:¹ÜÀíÔ±-¸öÈËÖÐÐÄ
+		@¸öÈËÐÅÏ¢*/
 	
 	public function staffsele($staffid){
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_id=$staffid")->select();
 	}
 	
 	/*
-	*	@ä¸ªäººä¿¡æ¯å­—ç¬¦ä¿®æ”¹
+	*	@¸öÈËÐÅÏ¢×Ö·ûÐÞ¸Ä
 	*/
 	public function stafffieldsave($field){
 		if($field=="staff_curaddress"){
-			$province = $_POST['province'];//çœ
-			$city = $_POST['city'];//å¸‚
-			$county = $_POST['county'];//åŽ¿
-			$other = $_POST['other'];//å¤‡æ³¨
+			$province = $_POST['province'];//Ê¡
+			$city = $_POST['city'];//ÊÐ
+			$county = $_POST['county'];//ÏØ
+			$other = $_POST['other'];//±¸×¢
 			$newstaffcuraddress = $province.$city.$county.$other;
 			return $this->Table("staff")->where("$field=$newstaffcuraddress")->update();
 		}else if($field=="staff_tel"){
@@ -33,8 +33,8 @@ class StaffModel extends Model {
 	}
 	
 	/*
-	 * å‘˜å·¥åœ°åŒºè”åŠ¨æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤µØÇøÁª¶¯²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function linkage($id){
 
@@ -49,8 +49,8 @@ class StaffModel extends Model {
 
 	}
 	/*
-	 * è§’è‰²æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÇÉ«²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function roleselect(){
 		$db = D('role');
@@ -61,8 +61,8 @@ class StaffModel extends Model {
 		
 	
 	/*
-	 * æ·»åŠ æ•™ç»ƒæ—¶æŸ¥è¯¢çš„æ•°æ®
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ìí¼Ó½ÌÁ·Ê±²éÑ¯µÄÊý¾Ý
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function satffcoach(){
 	
@@ -81,8 +81,8 @@ class StaffModel extends Model {
 	
 	}
 	/*
-	 * å‘˜å·¥æ·»åŠ 
-	 * ä½œè€…ï¼šå¼ æ·	
+	 * Ô±¹¤Ìí¼Ó
+	 * ×÷Õß£ºÕÅ½Ý	
 	 */
 	public function staffadd($rows){
 		$db=D("staff");
@@ -120,9 +120,9 @@ class StaffModel extends Model {
 			$codata['coach_sn'] = $rows['coachsn'];
 			$codata['grade_id'] = $rows['gradeid'];
 			$codata['quality'] = $rows['qualityid'];
-			$codata['model'] = $rows['modelid'];
+			$codata['model'] = $rows['modelid']; 
 			$codata['motor'] = $rows['motorid'];
-			$codata['group_id']='0';
+			$codata['group_id']=0;
 			$core = $coach->add($codata);
 			if ($re && $core){
 				return true;
@@ -134,8 +134,8 @@ class StaffModel extends Model {
 		}
 	}
 	/*
-	 * å¯¹ä¼ è¿‡æ¥çš„å›¾ç‰‡è¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô´«¹ýÀ´µÄÍ¼Æ¬½øÐÐ´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function img($data)
 	{
@@ -144,8 +144,8 @@ class StaffModel extends Model {
 		return $srcimg;
 	}
 	/*
-	 * å¯¹åœ°åŒºè¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔµØÇø½øÐÐ´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function area($area){
 		$region = D('region');
@@ -176,8 +176,8 @@ class StaffModel extends Model {
 		return $area;
 	}
 	/*
-	 * å¯¹æŽ¥è¿‡æ¥çš„idè¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô½Ó¹ýÀ´µÄid½øÐÐ´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function iddeal($iddeal){
 		foreach ($iddeal['qualityid'] as $quk => $quv) {
@@ -198,8 +198,8 @@ class StaffModel extends Model {
 		return $iddeal;
 	}
 	/*
-	 * å¯¹æ—¶é—´è¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔÊ±¼ä½øÐÐ´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function dealtime($time){
 		if ($time['role'] == '1') {
@@ -229,8 +229,8 @@ class StaffModel extends Model {
 		
 	}
 	/*
-	 * å¯¹æ•™ç»ƒè§’è‰²æ—¶é—´è¿›è¡Œæ ¼å¼åŒ–å¤„ç†å¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô½ÌÁ·½ÇÉ«Ê±¼ä½øÐÐ¸ñÊ½»¯´¦Àí´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function coachdatetime($time){
 
@@ -253,8 +253,8 @@ class StaffModel extends Model {
 		return $time;
 	}
 	/*
-	 * å¯¹å…¶ä»–è§’è‰²æ—¶é—´è¿›è¡Œæ ¼å¼åŒ–å¤„ç†å¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔÆäËû½ÇÉ«Ê±¼ä½øÐÐ¸ñÊ½»¯´¦Àí´¦Àí
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function staffdatetime($time){
 
@@ -270,16 +270,16 @@ class StaffModel extends Model {
 		return $time;
 	} 
 	/*
-	 * æ•™ç»ƒå‘˜å·¥æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÌÁ·Ô±¹¤²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function staffcoachselect(){
 		$db=D("staff");
 		return $db->join('coach ON staff.staff_id = coach.coach_staff_id')->where("staff.role_id = 1")->select();
 	}
 	/*
-	 * å…¶ä»–å‘˜å·¥è¿›è¡ŒæŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ÆäËûÔ±¹¤½øÐÐ²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function staffselect(){
 		$db=D("staff");
@@ -287,8 +287,8 @@ class StaffModel extends Model {
 	}
 	
 	/*
-	 * å‘˜å·¥å¤šæ¡ä»¶æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤¶àÌõ¼þ²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function staffsearch($data){
 		//print_r($data);die;
@@ -330,8 +330,8 @@ class StaffModel extends Model {
 	
 	}
 	/*
-	 * å‘˜å·¥çŠ¶æ€ä¿®æ”¹
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤×´Ì¬ÐÞ¸Ä
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function jobstatus($id){
 	
@@ -343,8 +343,8 @@ class StaffModel extends Model {
 	}
 	
 	/**
-	*	å…³è”è§’è‰²è¡¨ï¼ŒæŸ¥å‡ºä¸€ä¸ªæ•™ç»ƒçš„ä¿¡æ¯
-	*	authorï¼šyaobowen
+	*	¹ØÁª½ÇÉ«±í£¬²é³öÒ»¸ö½ÌÁ·µÄÐÅÏ¢
+	*	author£ºyaobowen
 	*/
 	public function getvalue($name){
 		return $this->where("staff.staff_name = '$name'")
@@ -354,8 +354,8 @@ class StaffModel extends Model {
 					->find();
 	}
 	/**
-	*	å…³è”è§’è‰²è¡¨ï¼ŒæŸ¥å‡ºä¸€ä¸ªæ•™ç»ƒçš„é¢„çº¦çŠ¶æ€å’Œå§“å
-	*	authorï¼šxueyunhuan
+	*	¹ØÁª½ÇÉ«±í£¬²é³öÒ»¸ö½ÌÁ·µÄÔ¤Ô¼×´Ì¬ºÍÐÕÃû
+	*	author£ºxueyunhuan
 	*/
 	public function getshow(){
 		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
@@ -363,34 +363,34 @@ class StaffModel extends Model {
 
 
 	/*
-	*	ä¸ªäººä¸­å¿ƒ-ä¸ªäººä¿¡æ¯
-	*	by éƒ­æ—­å³°
+	*	¸öÈËÖÐÐÄ-¸öÈËÐÅÏ¢
+	*	by ¹ùÐñ·å
 	*/
 	public function everyoneabout(){
-		//æŽ¥æ”¶cookie
+		//½ÓÊÕcookie
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
 	}
 
 
 	/*
-	*	ä¸ªäººä¿¡æ¯--å­—æ®µä¿®æ”¹
-	*	by éƒ­æ—­å³°
+	*	¸öÈËÐÅÏ¢--×Ö¶ÎÐÞ¸Ä
+	*	by ¹ùÐñ·å
 	*/
 	public function updatefield($field){
 		$username = $_COOKIE["username"];
 		if($field==1){
-			//æŽ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_curaddress = $_POST["staff_curaddress"];
 			$data["staff_curaddress"] = $newstaff_curaddress;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
 		}else if($field==2){
-			//æŽ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_tel = $_POST["staff_tel"];
 			$data["staff_tel"] = $newstaff_tel;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
 		}else{
-			//æŽ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_email = $_POST["staff_email"];
 			$data["staff_email"] = $newstaff_email;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
@@ -400,15 +400,15 @@ class StaffModel extends Model {
 
 
 	/*
-	*	ä¸ªäººä¿¡æ¯--å­—æ®µä¿®æ”¹ç•Œé¢æ˜¾ç¤º
+	*	¸öÈËÐÅÏ¢--×Ö¶ÎÐÞ¸Ä½çÃæÏÔÊ¾
 	*/
 	public function showupdatefield(){
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->where("staff_name='$username'")->select();
 	}
 	/*
-	 * æ–‡ä»¶ä¸Šä¼ å…¬å…±ç±»
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ÎÄ¼þÉÏ´«¹«¹²Àà
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function upload($name){
 
@@ -418,13 +418,13 @@ class StaffModel extends Model {
 	    $upload->rootPath  =      './';
 	    $upload->savePath  =      './Public/Uploads/';  
 	    $info   =   $upload->upload(); 
-	    return $img = $info[$name]['savepath'].$info[$name]['savename'];
-		return $img;
-
+	    $img = $info[$name]['savepath'].$info[$name]['savename'];
+	    $img = substr($img,8);
+	    return $img;
 	}
 
 	/**
-	*	é€šè¿‡ç”¨æˆ·åæ¥æŸ¥è¯¢æ•™ç»ƒid
+	*	Í¨¹ýÓÃ»§ÃûÀ´²éÑ¯½ÌÁ·id
 	*/
 
 
@@ -436,7 +436,7 @@ class StaffModel extends Model {
 
 	}
 	/**
-	 * æŸ¥è¯¢å…¨éƒ¨çš„å‘˜å·¥ä¿¡æ¯ï¼ˆéƒ¨åˆ†å­—æ®µï¼‰
+	 * ²éÑ¯È«²¿µÄÔ±¹¤ÐÅÏ¢£¨²¿·Ö×Ö¶Î£©
 	 */
 	public function allvalue()
 	{
@@ -444,14 +444,14 @@ class StaffModel extends Model {
 	}
 
 	/**
-	 * æŸ¥è¯¢ä¿¡æ¯
+	 * ²éÑ¯ÐÅÏ¢
 	 */
 	public function allpen(){
 		return $this->select();
 	}
 	/*
-	 * æŸ¥è¯¢æœˆæ•°
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ²éÑ¯ÔÂÊý
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function month()
 	{
@@ -459,8 +459,8 @@ class StaffModel extends Model {
 		return $db->select();
 	}
 	/*
-	 * æŸ¥è¯¢ç­¾åˆ°æ•°æ®
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ²éÑ¯Ç©µ½Êý¾Ý
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function salary()
 	{
@@ -487,8 +487,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-     * è€ƒå‹¤æœç´¢
-     * ä½œè€…ï¼šå¼ æ·
+     * ¿¼ÇÚËÑË÷
+     * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function searsalary($data)
 	{
@@ -522,8 +522,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-	 * æŸ¥è¯¢è¯·å‡é¡µé¢æ•°æ®
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ²éÑ¯Çë¼ÙÒ³ÃæÊý¾Ý
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function leave()
 	{
@@ -532,8 +532,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-	 * è¯·å‡é¡µé¢æœç´¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Çë¼ÙÒ³ÃæËÑË÷
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function leasearch($data)
 	{
@@ -557,8 +557,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-	 * æ•™ç»ƒå­¦æ—¶æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÌÁ·Ñ§Ê±²éÑ¯
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function hours()
 	{
@@ -587,8 +587,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-	 * æ•™ç»ƒå­¦æ—¶æœç´¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÌÁ·Ñ§Ê±ËÑË÷
+	 * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function searhours($data)
 	{
@@ -628,19 +628,27 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-     * å‘˜å·¥è¯·å‡å®¡æ ¸çŠ¶æ€
-     * ä½œè€…ï¼šå¼ æ·
+     * Ô±¹¤Çë¼ÙÉóºË×´Ì¬
+     * ×÷Õß£ºÕÅ½Ý
 	 */
 	public function leavestatus($sid,$id)
 	{
 		$db = D('staff_leave');
 		if ($sid == '2') {
-			return $db->where("id = $id")->setField('leave_status','2');
+			return $db->where("leave_id = $id")->setField('leave_status','2');
 		}else{
 			$data['leave_status'] = '3';
-			return $db->where("id = $id")->setField('leave_status','3');
+			return $db->where("leave_id = $id")->setField('leave_status','3');
 		}
 	}	
+	public function wage()
+	{
+		$db = D('in_out');
+		$fa = $db->where('parent_id = 1')->select();
+		$fa1 = $db->where('parent_id = 2')->select();
+		$arr[] = $fa;
+		$arr[] = $fa1;
+		return $arr;
+	}
 }
-
 ?>
