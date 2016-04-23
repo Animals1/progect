@@ -31357,3 +31357,31 @@ INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
 =======
 >>>>>>> 3a2b9e95e86fdb910b281dadc131c5b04302987a
 >>>>>>> 930cc374233061ec7f70a1932df272b4b1b1c113
+[ 2016-04-22T19:10:22+08:00 ] 127.0.0.1 /index.php/Home/Service/oil
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `gas_type` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `gas_type`  [ RunTime:0.0420s ]
+SQL: SHOW COLUMNS FROM `gas_month` [ RunTime:0.0460s ]
+SQL: SELECT * FROM `gas_month`  [ RunTime:0.0350s ]
+NOTIC: [8] Undefined variable: month D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 283 行.
+SQL: SHOW COLUMNS FROM `gas_num` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `gas_num` INNER JOIN gas_type ON gas_num.t_id = gas_type.gas_type_id INNER JOIN gas_month ON gas_num.m_id = gas_month.m_id   [ RunTime:0.0350s ]
+NOTIC: [8] Undefined variable: data D:\xiaoqiao\eleven\progect\drivingSchool\admin\Home\Controller\ServiceController.class.php 第 330 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

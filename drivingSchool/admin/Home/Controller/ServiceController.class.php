@@ -87,10 +87,11 @@ class ServiceController extends Controller {
 		// 获取申请
 		$id = $_GET['id'];
 		$model = D('CarReplace');
-		$where = "replace_id = '$id'";
+		$where = "car_replace.replace_id = '$id'";
 		$arr = $model->getoneValue($where);
-		
+		// print_r($arr);die;
 		if($_POST){
+			// echo $_COOKIE['username'];;die;
 			// print_r($_POST);die;
 			$replace_id = $_POST['replace_id'];
 			// echo $replace_id;die;
@@ -100,9 +101,11 @@ class ServiceController extends Controller {
 			$status = $_POST['status'];
 			
 			$car_replace = D('CarReplace');
-			$arr['deal_name'] = $_COOKIE['username'];
-			$arr['replace_status'] = "1";
-			$res = $car_replace->where("replace_id = '$replace_id'")->save($arr);
+			$arr1['deal_name'] = $_COOKIE['username'];
+			$arr1['replace_status'] = "1";
+			// print_r($arr1);die;
+			$res = $car_replace->where("replace_id = '$replace_id'")->save($arr1);
+			// print_r($res);die;
 			$car = D('Car');
 			$sta['car_status'] = $status; 
 			$res1 = $car->where("car_id = '$replace_number_after'")->save($sta);
@@ -131,8 +134,8 @@ class ServiceController extends Controller {
 	*	关于审核状态的搜索
 	*/
 	public function searchcondition(){
-		
-		if($_GET['value']){
+		echo "<script>".$_GET['type']."</script>";
+		if($_GET['type']==1){
 			$name = $_COOKIE['username'];
 			$role = D("admin");
 			$isrole = $role->isrole();
@@ -142,7 +145,9 @@ class ServiceController extends Controller {
 			$model = D('CarReplace');
 			$models = D('Staff');
 			$res = $models->selcoachid($name);
+			// print_r($res);die;
 			$coachid = $res['coach_id'];
+			// echo $coachid;die;
 			if($status == ''){
 				$where = "replace_name = '$coachid'";
 			}
@@ -160,6 +165,7 @@ class ServiceController extends Controller {
 			
 			$model = D('CarReplace');
 			$data = $model->getValue($where);
+			// print_r($data);die;
 			$page = $data['0'];
 			$arr = $data['1'];
 			foreach($arr as $k=>$v){
@@ -185,7 +191,7 @@ class ServiceController extends Controller {
 				$this->display('changecar');
 			}
 		}
-		else
+		else if($_GET['type']==2)
 		{
 			$name = $_COOKIE['username'];
 			$role = D("admin");
@@ -223,6 +229,10 @@ class ServiceController extends Controller {
 				$this->assign('page',$page);
 				$this->display('repairlist');
 			}
+		}
+		else
+		{
+			echo "<script>alert('不合法');history.go(-1);</script>";die;
 		}
 
 				

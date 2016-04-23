@@ -10,12 +10,22 @@ class CoachController extends Controller {
 	*	查询当前教练的信息，返回一维数组
 	*/
 	public function personal_info(){
-		$name = $_COOKIE['username'];
-		$model = D('Staff');
-		$arr = $model->getvalue($name);
-		// print_r($arr);die;
-		$this->assign('arr',$arr);
-    	$this->display('personal_info');
+		$role = D("admin");
+		$isrole = $role->isrole();
+		$rolename = $isrole[0]["role_name"];
+		if($rolename=="最高管理"){
+			echo "最高管理员";
+		}
+		else
+		{
+			$name = $_COOKIE['username'];
+			$model = D('Staff');
+			$arr = $model->getvalue($name);
+			// print_r($arr);die;
+			$this->assign('arr',$arr);
+			$this->display('personal_info');
+		}
+		
 		
 	}
 	/**
@@ -28,7 +38,8 @@ class CoachController extends Controller {
 		$id = $_COOKIE['userid'];
 		$model = D('Review');
 		if($rolename=="最高管理"){
-			$where = '';
+			echo "最高管理员";
+			
 		}
 		else
 		{
@@ -61,31 +72,13 @@ class CoachController extends Controller {
 			$where = "review.coach_id = '$id'";
 			$one = $model->getonevalue($where);
 			//判断总分，给出满意级别
-			if($cnum['zong_total_num']>16){
-					$one['zong_total_num']="非常满意";
-				}else if($cnum['zong_total_num']>12){
-					$one['zong_total_num']="满意";
-				}else if($cnum['zong_total_num']>8){
-					$one['zong_total_num']="一般";
-				}else if($cnum['zong_total_num']>4){
-					$one['zong_total_num']="差";
-				}else{
-					$one['zong_total_num']="很差";
-				}
+			$one['zong_total_num'] = $this->coachreward($cnum['zong_total_num']);
+			
 			$show = $arr['0'];
 			$list = $arr['1'];
 			foreach($list as $k=>$v){
-				if($v['total_num']>16){
-					$list[$k]['total_num']='非常满意';
-				}else if($v['total_num']>12){
-					$list[$k]['total_num']="满意";
-				}else if($v['total_num']>8){
-					$list[$k]['total_num']="一般";
-				}else if($v['total_num']>4){
-					$list[$k]['total_num']="差";
-				}else{
-					$list[$k]['total_num']="很差";
-				}
+				$list[$k]['total_num'] = $this->coachreward($v['total_num']);
+				
 			}
 			
 			// print_r($list);die;
@@ -138,4 +131,22 @@ class CoachController extends Controller {
      	$this->assign('progress',$progress);
      	$this->display('studentinfo');
      }
+	 
+	 /**
+	 *	封装 教练的评价级别
+	 */
+	 public function coachreward($reward){
+		 //判断总分，给出满意级别
+			if($reward>16){
+					return "非常满意";
+				}else if($reward>12){
+					return "满意";
+				}else if($reward>8){
+					return "一般";
+				}else if($reward>4){
+					return "差";
+				}else{
+					return "很差";
+				}
+	 }
 }
