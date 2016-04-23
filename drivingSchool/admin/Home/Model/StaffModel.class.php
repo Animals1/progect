@@ -641,6 +641,10 @@ class StaffModel extends Model {
 			return $db->where("leave_id = $id")->setField('leave_status','3');
 		}
 	}	
+	/*
+     * 工资设置查询
+     * 作者：张捷
+	 */
 	public function wage()
 	{
 		$db = D('in_out');
@@ -649,6 +653,28 @@ class StaffModel extends Model {
 		$arr[] = $fa;
 		$arr[] = $fa1;
 		return $arr;
+	}
+	/*
+     * 工资设置添加
+     * 作者：张捷
+	 */
+	public function wageadd($data)
+	{
+		$db = D('in_out');
+		$list = array();
+		foreach ($data['name'] as $k => $v) {
+			$list[] = array("name" => $v , 'parent_id' => $data['pid']);
+		}
+		return $db->addAll($list);
+	}
+	/*
+     * 工资设置删除
+     * 作者：张捷
+	 */
+	public function wagedel($id)
+	{
+		$db = D('in_out');
+		return $db->where("in_out_id = $id")->delete();
 	}
 }
 ?>
