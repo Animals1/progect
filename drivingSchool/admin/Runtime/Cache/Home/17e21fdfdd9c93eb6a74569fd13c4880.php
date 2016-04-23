@@ -20,11 +20,12 @@
 	            }
 	        },
 	        series: [
-			<?php foreach($data as $k=>$v){ ?>
+			<?php foreach($arr2 as $k=>$v){ ?>
 			
 			{
-	            name: '<?php echo $v;?>',
-	            data: [10, 62, 44,62]
+	            name: '<?php echo $k;?>',
+	            data: [<?php
+ foreach($v as $sui){ echo $sui; } ?>]
 	        }
 			<?php  if($k+1=='3'){ echo ""; } else { echo ","; } ?>
 			<?php	} ?>

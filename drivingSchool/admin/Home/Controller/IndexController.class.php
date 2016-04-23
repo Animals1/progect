@@ -24,6 +24,9 @@ class IndexController extends Controller {
             $intermediateSalt = md5($upwd);
             $salt = substr($intermediateSalt, 0, 6);
             $nupwd = hash("sha256", $upwd . $salt);//最终密码
+            //echo $nupwd;die;
+            $userip = $_SERVER["REMOTE_ADDR"];//登录ip
+            $logstarttime = date("Y-m-d H:i:s",time());//登录时间
 
             //临时会话（目的是登陆后刷新地址栏不会出现查不到数据导致刷新失败）
             cookie("username",$uname);
@@ -32,8 +35,10 @@ class IndexController extends Controller {
             //验证用户信息
             $data = D("Admin");
             $arr = $data->adminmatching($uname,$nupwd);
+            if($arr)
+            {
 
-            //验证是否选择了记住密码功能
+                //验证是否选择了记住密码功能
             $check = $_POST['checkbox'];
 
             //如果选择了记住密码那么增加相应记住密码功能  
@@ -43,7 +48,7 @@ class IndexController extends Controller {
                 $userid = $arr[0]["admin_id"];
                 $username= $arr[0]["admin_name"];
                 $userpwd = $ar[0]['admin_pwd'];
-                $userip = $_SERVER["REMOTE_ADDR"];
+                
 
                 //存入cookie
                 cookie('userid',$userid,3600*24);
@@ -89,16 +94,23 @@ class IndexController extends Controller {
                 //取出需要的信息从而方便接收用户id
                 $userid = $arr[0]["admin_id"];
                 $username= $arr[0]["admin_name"];
-                $userip = $_SERVER["REMOTE_ADDR"];
+
+                //$logstarttime = date("Y-m-d H:i:s",time());
+                
 
                 //存入cookie
                 cookie('userid',$userid);
                 cookie('username',$username);
-                cookie('userip',$userip);
 
+                
                 //判断角色取出角色id
                 $role = D("admin");
                 $isrole = $role->isrole();
+
+
+                //$dengluse = $role->logadd();
+
+
                 foreach($isrole as $k=>$v){
                     $newisrole[] = $v['role_id'];
                 }
@@ -111,9 +123,9 @@ class IndexController extends Controller {
 
                     $arr = $role->privilegesee($roleid);
                     $ar = base64_encode(gzcompress(serialize($arr)));
-                    cookie('arr',$ar,time()+3600*24*7);
-                    cookie('rolename',$rolename,time()+3600*24*7);
-                    cookie('roleid',$roleid,time()+3600*24*7);
+                    cookie('arr',$ar);
+                    cookie('rolename',$rolename);
+                    cookie('roleid',$roleid);
                     $this->display("main");
                 }else{
                     
@@ -122,12 +134,18 @@ class IndexController extends Controller {
                     //根据字符串进行统一的查询
                     $arr1 = $role->privilegelook($rbac);
                     $ar = base64_encode(gzcompress(serialize($arr1)));
+                    $logshow = $role->logsele();
+                    //print_r($logshow);die;
                     cookie('arr',$ar);
                     cookie('rolename',$rolename);
                     cookie('roleid',$roleid);
                     $this->display("main");
 
                 }
+            }
+
+            }else{
+                echo "<script>alert(' You are a SB !');location.href='".__MODULE__."/Login/index'</script>";
             }
 
         }else{
@@ -156,6 +174,15 @@ class IndexController extends Controller {
                 $this->display("left");
             
             
+        }
+
+
+        /*
+        *   显示上边界面
+        */
+        public function showtop(){
+            
+            $this->display("top");
         }
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [ 2016-04-23T08:18:25+08:00 ] 127.0.0.1 /
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -97,27 +98,235 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T08:18:32+08:00 ] 127.0.0.1 /index.php/Home/Index/showleft
+=======
+<<<<<<< HEAD
+[ 2016-04-23T06:58:54+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.013292s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015279s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015360s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000040s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000093s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130866s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130934s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006977s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007018s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006132s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006176s ]
+
+[ 2016-04-23T07:05:38+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001052s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001151s ]
+
+[ 2016-04-23T09:19:43+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000713s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000138s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031661s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031734s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-04-23T09:19:50+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001412s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001514s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0705s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0520s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001174s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001253s ]
+
+[ 2016-04-23T09:19:51+08:00 ] 127.0.0.1 /index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000422s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000092s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015903s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000655s ]
+
+[ 2016-04-23T09:22:50+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0674s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0398s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '2ff7fd46b2dec0f597b9c7a5cca7e87c2d9657b46110f58539ab326e215f745f'  [ RunTime:0.0615s ]
+NOTIC: [8] Undefined index: checkbox F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0316s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0337s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=7 )  [ RunTime:0.0272s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0312s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(3,2) )  [ RunTime:0.0365s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0331s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =6 )  [ RunTime:0.0508s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =1 )  [ RunTime:0.0388s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=27 )  [ RunTime:0.0394s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=28 )  [ RunTime:0.0348s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=29 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=30 )  [ RunTime:0.0465s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=7 )  [ RunTime:0.0365s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=8 )  [ RunTime:0.0393s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=9 )  [ RunTime:0.0354s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=10 )  [ RunTime:0.0374s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0384s ]
+SQL: SELECT * FROM `log` ORDER BY id desc LIMIT 1   [ RunTime:0.0296s ]
+NOTIC: [8] Undefined variable: rolename F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 140 行.
+NOTIC: [8] Undefined variable: roleid F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 141 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042522s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001204s ]
+
+[ 2016-04-23T09:22:50+08:00 ] 127.0.0.1 /index.php/Home/Index/showtop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007026s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007102s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+
+[ 2016-04-23T09:22:51+08:00 ] 127.0.0.1 /index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000664s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] Undefined index: roleid F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 169 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+NOTIC: [8] Undefined index: roleid F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.589616s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.589672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-04-23T09:22:51+08:00 ] 127.0.0.1 /index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007812s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007884s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000496s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000615s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+=======
+<<<<<<< HEAD
+[ 2016-04-23T08:04:47+08:00 ] 127.0.0.1 /progect/drivingSchool/
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 NOTIC: [8] Undefined index: roleid D:\Learning software\phpstudy\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 151 行.
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 NOTIC: [8] Undefined index: roleid D:\Learning software\phpstudy\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 82 行.
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033002s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.033002s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T08:18:36+08:00 ] 127.0.0.1 /index.php/Home/Personal/everyoneabout
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -128,10 +337,37 @@ INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0140s ]
 SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0140s ]
 SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='韩启明' ) LIMIT 1   [ RunTime:0.0220s ]
+=======
+[ 2016-04-23T08:04:53+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0330s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '张捷' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0320s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=4 )  [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(5) )  [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =4 )  [ RunTime:0.0320s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=19 )  [ RunTime:0.0310s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=20 )  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=21 )  [ RunTime:0.0400s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=22 )  [ RunTime:0.0350s ]
+NOTIC: [8] Undefined variable: rolename D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 127 行.
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.036002s ]
 INFO: [ view_filter ] --START--
@@ -151,10 +387,29 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
 SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0340s ]
 SQL: SHOW COLUMNS FROM `continuity` [ RunTime:0.0410s ]
 SQL: SELECT * FROM `continuity` WHERE ( uname='韩启明' )  [ RunTime:0.0330s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-23T08:04:53+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
 INFO: [ view_filter ] --START--
@@ -165,20 +420,39 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
 [ 2016-04-23T08:18:40+08:00 ] 127.0.0.1 /index.php/Home/Finance/salary
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2016-04-23T08:04:55+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 SQL: SHOW COLUMNS FROM `salary` [ RunTime:0.0260s ]
 SQL: SHOW COLUMNS FROM `salary` [ RunTime:0.0260s ]
 SQL: SELECT * FROM `salary` INNER JOIN staff on salary.staff_id=staff.staff_id INNER JOIN role on staff.role_id=role.role_id INNER JOIN salary_status on salary.salary_status_id=salary_status.salary_status_id  WHERE ( salary_id>0 ) ORDER BY salary_id desc LIMIT 0,5   [ RunTime:0.0270s ]
 SQL: SELECT COUNT(*) AS tp_count FROM `salary` WHERE ( salary_id>0 ) LIMIT 1   [ RunTime:0.0180s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 151 行.
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
 INFO: [ view_filter ] --START--
@@ -213,29 +487,79 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
 [ 2016-04-23T08:35:39+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:04:55+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:05:00+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 SQL: SHOW COLUMNS FROM `charge` [ RunTime:0.0060s ]
 SQL: select charge.money_type_id,sum(charge_money),money_name from charge join money_type on charge.money_type_id=money_type.money_type_id group by charge.money_type_id [ RunTime:0.0060s ]
 SQL: SHOW COLUMNS FROM `arrears` [ RunTime:0.0070s ]
 SQL: select sum(arrears_money),money_name from arrears join money_type on arrears.money_type_id=money_type.money_type_id  [ RunTime:0.0060s ]
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 168 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.3510s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0530s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0430s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0350s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T08:35:39+08:00 ] 127.0.0.1 /index.php/Home/Finance/js/jqbar.js
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -246,12 +570,16 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 ERR: 非法操作:js
 
 [ 2016-04-23T08:35:39+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/jqbar.css
+=======
+[ 2016-04-23T08:05:32+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 ERR: 非法操作:css
 
 [ 2016-04-23T08:35:39+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/demo.css
@@ -273,11 +601,33 @@ INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 ERR: 非法操作:js
 
 [ 2016-04-23T08:35:39+08:00 ] 127.0.0.1 /index.php/Home/Finance/js/jqbar.js
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 168 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.4900s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1780s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0500s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.1200s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:05:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
 ERR: 非法操作:js
 
@@ -292,19 +642,46 @@ SQL: SHOW COLUMNS FROM `charge` [ RunTime:0.0270s ]
 SQL: select charge.money_type_id,sum(charge_money),money_name from charge join money_type on charge.money_type_id=money_type.money_type_id group by charge.money_type_id [ RunTime:0.0310s ]
 SQL: SHOW COLUMNS FROM `arrears` [ RunTime:0.0220s ]
 SQL: select sum(arrears_money),money_name from arrears join money_type on arrears.money_type_id=money_type.money_type_id  [ RunTime:0.0150s ]
+=======
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 168 行.
+ERR: 非法操作:wageadd
+
+[ 2016-04-23T08:06:29+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 168 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1890s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1290s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0580s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0420s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T08:35:56+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/demo.css
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -324,38 +701,109 @@ INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 ERR: 非法操作:js
 
 [ 2016-04-23T08:35:56+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/jqbar.css
+=======
+[ 2016-04-23T08:08:38+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0410s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0350s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0420s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:08:39+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-23T08:08:46+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+<<<<<<< HEAD
 INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
 ERR: 非法操作:css
 
 [ 2016-04-23T08:35:56+08:00 ] 127.0.0.1 /index.php/Home/Finance/js/jqbar.js
+=======
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:09:22+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 ERR: 非法操作:js
 
 [ 2016-04-23T08:36:38+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:09:49+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+<<<<<<< HEAD
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `charge` [ RunTime:0.0080s ]
 SQL: select charge.money_type_id,sum(charge_money),money_name from charge join money_type on charge.money_type_id=money_type.money_type_id group by charge.money_type_id [ RunTime:0.0070s ]
 SQL: SHOW COLUMNS FROM `arrears` [ RunTime:0.0080s ]
 SQL: select sum(arrears_money),money_name from arrears join money_type on arrears.money_type_id=money_type.money_type_id  [ RunTime:0.0100s ]
+=======
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
 INFO: [ view_filter ] --START--
@@ -366,12 +814,22 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
 [ 2016-04-23T08:36:38+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/demo.css
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:11:42+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 ERR: 非法操作:css
 
 [ 2016-04-23T08:36:38+08:00 ] 127.0.0.1 /index.php/Home/Finance/js/jqbar.js
@@ -393,10 +851,34 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 ERR: 非法操作:js
 
 [ 2016-04-23T08:36:38+08:00 ] 127.0.0.1 /index.php/Home/Finance/css/jqbar.css
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 180 行.
+
+[ 2016-04-23T08:11:46+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 180 行.
+
+[ 2016-04-23T08:11:55+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 180 行.
+
+[ 2016-04-23T08:13:23+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 ERR: 非法操作:css
@@ -427,18 +909,78 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
-INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
-[ 2016-04-23T08:37:45+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+[ 2016-04-23T08:13:27+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 179 行.
+
+[ 2016-04-23T08:24:19+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 181 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2050s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1250s ]
+
+[ 2016-04-23T08:25:46+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1090s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0350s ]
+SQL: INSERT INTO `in_out` (`name`,`parent_id`) VALUES ('啊啊','1'),('巴别','1') [ RunTime:0.0350s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.052003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.052003s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+<<<<<<< HEAD
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-23T08:37:45+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:25:48+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wage
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `charge` [ RunTime:0.0120s ]
@@ -2371,26 +2913,60 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: wage D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 11 行.
+NOTIC: [8] Undefined variable: wage D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 24 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_end ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:41:06+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-23T08:26:07+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wageadd
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2020s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1890s ]
+SQL: INSERT INTO `in_out` (`name`,`parent_id`) VALUES ('查查','1') [ RunTime:0.0820s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.006000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
@@ -2398,6 +2974,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:41:12+08:00 ] 127.0.0.1 /index.php/Home/Finance/histogram
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -2445,30 +3022,54 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:56:03+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+[ 2016-04-23T08:26:09+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0680s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0370s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:56:05+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+[ 2016-04-23T08:27:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 INFO: [ view_parse ] --START--
@@ -2477,10 +3078,26 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1860s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0790s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0730s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0760s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_end ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
@@ -2491,20 +3108,49 @@ INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-23T08:27:43+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 185 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1150s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0550s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0460s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0300s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:56:08+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+[ 2016-04-23T08:28:03+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home//
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
@@ -2514,27 +3160,46 @@ INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+=======
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:56:10+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+=======
+[ 2016-04-23T08:33:12+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home//
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
 INFO: [ view_filter ] --START--
@@ -2545,10 +3210,23 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:56:55+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-23T08:33:13+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 INFO: [ view_parse ] --START--
@@ -2557,6 +3235,26 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0530s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0420s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0220s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.1330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
@@ -2564,6 +3262,7 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:57:07+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
@@ -2585,12 +3284,16 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:57:28+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+[ 2016-04-23T08:33:15+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2645,18 +3348,42 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
 
 [ 2016-04-23T09:57:53+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0100s ]
+
+[ 2016-04-23T08:33:17+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0730s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0450s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0390s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0450s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+=======
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+NOTIC: [8] Undefined variable: v D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\fb0933c9f679d36a0990ec83a6753058.php 第 12 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
@@ -2664,13 +3391,18 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:57:56+08:00 ] 127.0.0.1 /index.php/Home/Finance/income
+=======
+[ 2016-04-23T08:33:19+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
@@ -2717,24 +3449,73 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
-INFO: [ view_filter ] --START--
-INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
-INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
-INFO: [ app_end ] --START--
-INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
-INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0400s ]
 
-[ 2016-04-23T09:58:15+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+[ 2016-04-23T08:33:44+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1270s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1270s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0520s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0520s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025002s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+<<<<<<< HEAD
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T09:58:15+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-23T08:33:46+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/1
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 195 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0130s ]
+
+[ 2016-04-23T08:36:12+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.4130s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1240s ]
+NOTIC: [2] Illegal string offset 'name' D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 665 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 665 行.
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007000s ]
 INFO: [ view_filter ] --START--
@@ -2753,10 +3534,31 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
 SQL: SHOW COLUMNS FROM `expense` [ RunTime:0.0450s ]
 SQL: select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id [ RunTime:0.2800s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:36:16+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0150s ]
+NOTIC: [2] Illegal string offset 'name' D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 665 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 665 行.
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
 INFO: [ view_filter ] --START--
@@ -2767,22 +3569,44 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:58:51+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-23T08:36:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/6
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0100s ]
+SQL: DELETE FROM `in_out` WHERE ( in_out_id = 6 ) [ RunTime:0.0360s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_end ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
 
@@ -2795,10 +3619,28 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 SQL: SHOW COLUMNS FROM `expense` [ RunTime:0.0400s ]
 SQL: select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id [ RunTime:0.0330s ]
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-23T08:36:36+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0190s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0170s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0140s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
 INFO: [ view_filter ] --START--
@@ -2809,10 +3651,23 @@ INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
 [ 2016-04-23T09:59:11+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-23T08:36:39+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/5
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
 INFO: [ view_parse ] --START--
@@ -2821,6 +3676,20 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.007001s ]
+=======
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0070s ]
+SQL: DELETE FROM `in_out` WHERE ( in_out_id = 5 ) [ RunTime:0.0160s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
@@ -2828,35 +3697,62 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:59:12+08:00 ] 127.0.0.1 /index.php/Home/Finance/charts
+=======
+[ 2016-04-23T08:36:41+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 SQL: SHOW COLUMNS FROM `expense` [ RunTime:0.0360s ]
 SQL: select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id [ RunTime:0.0370s ]
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.2220s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1650s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.0250s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.0250s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+<<<<<<< HEAD
 [ 2016-04-23T09:59:15+08:00 ] 127.0.0.1 /index.php/Home/Finance/expenditure
 INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+=======
+[ 2016-04-23T08:36:45+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/wagedel/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_begin ] --START--
 INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+<<<<<<< HEAD
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
@@ -2879,16 +3775,28 @@ INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
 SQL: SHOW COLUMNS FROM `expense` [ RunTime:0.0370s ]
 SQL: select expense.status_id,sum(expense_money),status_name from expense join expense_status on expense.status_id=expense_status.status_id group by expense.status_id [ RunTime:0.0390s ]
+=======
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1040s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.1000s ]
+SQL: DELETE FROM `in_out` WHERE ( in_out_id = 4 ) [ RunTime:0.0420s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_parse ] --START--
 INFO: [ template_filter ] --START--
 INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+<<<<<<< HEAD
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+=======
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
 INFO: [ app_end ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
@@ -2907,10 +3815,34 @@ INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
 INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
 INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
 INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-23T08:36:47+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/set
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 201 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `in_out` [ RunTime:0.0430s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 1 )  [ RunTime:0.2880s ]
+SQL: SELECT * FROM `in_out` WHERE ( parent_id = 2 )  [ RunTime:0.1670s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5
 INFO: [ view_filter ] --START--
 INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
 INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
 INFO: [ app_end ] --START--
+<<<<<<< HEAD
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
 
@@ -3268,3 +4200,506 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+=======
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+=======
+[ 2016-04-23T06:54:55+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000280s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003951s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004090s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038301s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038412s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002871s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004527s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004785s ]
+
+[ 2016-04-23T07:12:57+08:00 ] ::1 /drivingSchool/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000047s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003933s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003925s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000254s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000426s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031036s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031181s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001802s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001937s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002003s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002154s ]
+
+[ 2016-04-23T07:13:03+08:00 ] ::1 /drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0125s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '赫程伟' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0077s ]
+NOTIC: [8] Undefined index: checkbox /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/IndexController.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=6 )  [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(4) )  [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =3 )  [ RunTime:0.0055s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=15 )  [ RunTime:0.0055s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=16 )  [ RunTime:0.0058s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=17 )  [ RunTime:0.0056s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=18 )  [ RunTime:0.0062s ]
+NOTIC: [8] Undefined variable: rolename /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: roleid /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/IndexController.class.php 第 127 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000241s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016191s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016325s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001253s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001376s ]
+
+[ 2016-04-23T07:13:03+08:00 ] ::1 /drivingSchool/index.php/Home/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001792s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018488s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018656s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000869s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000898s ]
+
+[ 2016-04-23T07:13:03+08:00 ] ::1 /drivingSchool/index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010163s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000196s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2016-04-23T07:13:03+08:00 ] ::1 /drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001078s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001218s ]
+NOTIC: [8] Undefined index: roleid /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/IndexController.class.php 第 151 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: roleid /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Runtime/Cache/Home/16b1d9df6df002234f513f89bfb9c844.php 第 82 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032849s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000667s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000731s ]
+
+[ 2016-04-23T07:13:06+08:00 ] ::1 /drivingSchool/index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0284s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0314s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='赫程伟' ) LIMIT 1   [ RunTime:0.0326s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019215s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019354s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2016-04-23T07:13:09+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/vehsettingadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `coach_motor` [ RunTime:0.0408s ]
+SQL: SHOW COLUMNS FROM `coach_driving` [ RunTime:0.0278s ]
+SQL: SELECT * FROM `coach_driving`  [ RunTime:0.0254s ]
+SQL: SHOW COLUMNS FROM `coach_model` [ RunTime:0.0309s ]
+SQL: SELECT * FROM `coach_model`  [ RunTime:0.0268s ]
+SQL: SELECT * FROM `coach_motor` INNER JOIN coach_model on coach_motor.model_id=coach_model.model_id INNER JOIN coach_driving on coach_motor.driving_type=coach_driving.driving_id   [ RunTime:0.0279s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000110s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018380s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000195s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000510s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000562s ]
+
+[ 2016-04-23T07:13:11+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/registration
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.2576s ]
+NOTIC: [2] Missing argument 1 for Home\Model\CarModel::getValues(), called in /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php on line 98 and defined /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/CarModel.class.php 第 22 行.
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/CarModel.class.php 第 24 行.
+SQL: SELECT * FROM `car` INNER JOIN coach_model on car.model_id=coach_model.model_id INNER JOIN coach_motor on car.motor_id=coach_motor.motor_id INNER JOIN car_goout on car.out_id=car_goout.out_id INNER JOIN car_status on car_goout.out_status_id=car_status.status_id INNER JOIN car_repair on car.repair_id=car_repair.repair_id INNER JOIN coach_driving on coach_motor.driving_type=coach_driving.driving_id   [ RunTime:0.0339s ]
+SQL: SHOW COLUMNS FROM `coach_driving` [ RunTime:0.0407s ]
+SQL: SELECT * FROM `coach_driving`  [ RunTime:0.0375s ]
+SQL: SHOW COLUMNS FROM `coach_motor` [ RunTime:0.0325s ]
+SQL: SELECT * FROM `coach_motor` INNER JOIN coach_model on coach_motor.model_id=coach_model.model_id INNER JOIN coach_driving on coach_motor.driving_type=coach_driving.driving_id   [ RunTime:0.0308s ]
+SQL: SHOW COLUMNS FROM `car_status` [ RunTime:0.0321s ]
+SQL: SELECT * FROM `car_status`  [ RunTime:0.0355s ]
+SQL: SHOW COLUMNS FROM `vehicles` [ RunTime:0.0410s ]
+NOTIC: [2] Missing argument 1 for Home\Model\VehiclesModel::getvalue(), called in /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php on line 113 and defined /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/VehiclesModel.class.php 第 27 行.
+SQL: SHOW COLUMNS FROM `vehicles` [ RunTime:0.0414s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/VehiclesModel.class.php 第 31 行.
+SQL: SELECT * FROM `vehicles` INNER JOIN coach_driving on vehicles.driving_id=coach_driving.driving_id INNER JOIN coach_motor on vehicles.motor_id=coach_motor.motor_id INNER JOIN car_status on vehicles.car_status=car_status.status_id INNER JOIN car_type on vehicles.type_id=car_type.type_id  LIMIT 0,2   [ RunTime:0.0317s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/VehiclesModel.class.php 第 32 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `vehicles` INNER JOIN coach_driving on vehicles.driving_id=coach_driving.driving_id INNER JOIN coach_motor on vehicles.motor_id=coach_motor.motor_id INNER JOIN car_status on vehicles.car_status=car_status.status_id INNER JOIN car_type on vehicles.type_id=car_type.type_id  LIMIT 1   [ RunTime:0.0315s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022953s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000552s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2016-04-23T07:13:12+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/addveh
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `vehicles` [ RunTime:0.0335s ]
+SQL: SHOW COLUMNS FROM `coach_driving` [ RunTime:0.0297s ]
+SQL: SELECT * FROM `coach_driving`  [ RunTime:0.0348s ]
+SQL: SHOW COLUMNS FROM `coach_motor` [ RunTime:0.0354s ]
+SQL: SELECT * FROM `coach_motor`  [ RunTime:0.0391s ]
+SQL: SHOW COLUMNS FROM `car_status` [ RunTime:0.0395s ]
+SQL: SELECT * FROM `car_status`  [ RunTime:0.0424s ]
+SQL: SHOW COLUMNS FROM `car_type` [ RunTime:0.0359s ]
+SQL: SELECT * FROM `car_type`  [ RunTime:0.0371s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015464s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015557s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000183s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000551s ]
+
+[ 2016-04-23T07:13:15+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/vehgoout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000413s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.2295s ]
+SQL: SELECT * FROM `car` INNER JOIN car_status on car.car_status=car_status.status_id INNER JOIN car_type on car.type_id=car_type.type_id INNER JOIN car_goout on car.out_id=car_goout.out_id INNER JOIN coach on car_goout.out_coachid=coach.coach_id INNER JOIN time_table on car_goout.out_time=time_table.time_id INNER JOIN student on car_goout.out_user_id=student.stu_id  WHERE (  car_status.status_id='2' or car_status.status_id='5' )  [ RunTime:0.0486s ]
+SQL: SHOW COLUMNS FROM `time_table` [ RunTime:0.0490s ]
+SQL: SELECT * FROM `time_table`  [ RunTime:0.0413s ]
+SQL: SHOW COLUMNS FROM `coach_driving` [ RunTime:0.0349s ]
+SQL: SELECT * FROM `coach_driving`  [ RunTime:0.0387s ]
+SQL: SHOW COLUMNS FROM `coach_motor` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `coach_motor`  [ RunTime:0.0389s ]
+SQL: SHOW COLUMNS FROM `car_status` [ RunTime:0.0381s ]
+SQL: SELECT * FROM `car_status`  [ RunTime:0.2694s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024242s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-04-23T07:13:16+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/vehservice
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.0136s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0274s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  LIMIT 0,2   [ RunTime:0.0319s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  LIMIT 1   [ RunTime:0.0295s ]
+SQL: SHOW COLUMNS FROM `repair_status` [ RunTime:0.0357s ]
+SQL: SELECT * FROM `repair_status`  [ RunTime:0.0379s ]
+SQL: SHOW COLUMNS FROM `coach` [ RunTime:0.0414s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `coach` INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN sex on staff.staff_sex=sex.sex_id LEFT JOIN coach_group on coach.group_id=coach_group.group_id   [ RunTime:0.0390s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000156s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000205s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000556s ]
+
+[ 2016-04-23T07:13:40+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/servicerecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+NOTIC: [8] Undefined index: id /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php 第 541 行.
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.0418s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0368s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( car.car_number like '%%' ) LIMIT 0,2   [ RunTime:0.0374s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( car.car_number like '%%' ) LIMIT 1   [ RunTime:0.0347s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019409s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000686s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-04-23T07:13:43+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/servicerecord/p/2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000587s ]
+NOTIC: [8] Undefined index: id /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php 第 522 行.
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.0324s ]
+SQL: SHOW COLUMNS FROM `car_repair` [ RunTime:0.0346s ]
+SQL: SELECT * FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( car.car_number like '%%' ) LIMIT 2,2   [ RunTime:0.5447s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `car_repair` INNER JOIN coach on car_repair.repair_coachname=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_repair.repair_carid=car.car_id INNER JOIN repair_status on car_repair.repair_statusid=repair_status.repair_statusid  WHERE ( car.car_number like '%%' ) LIMIT 1   [ RunTime:0.0310s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000056s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013911s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000201s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000257s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000493s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-04-23T07:13:55+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/vehreplace
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+SQL: SHOW COLUMNS FROM `coach` [ RunTime:0.0354s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `coach` INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN sex on staff.staff_sex=sex.sex_id LEFT JOIN coach_group on coach.group_id=coach_group.group_id   [ RunTime:0.0376s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0394s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `car_replace` INNER JOIN coach on car_replace.replace_name=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_replace.replace_number_before=car.car_id   [ RunTime:0.0403s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `car_replace` INNER JOIN coach on car_replace.replace_name=coach.coach_id INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN car on car_replace.replace_number_after=car.car_id   [ RunTime:0.0406s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000218s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000545s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000603s ]
+
+[ 2016-04-23T07:13:59+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/gasrecord
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000631s ]
+SQL: SHOW COLUMNS FROM `gas_add` [ RunTime:0.0411s ]
+SQL: SELECT * FROM `gas_add`  [ RunTime:0.0371s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017567s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000492s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000545s ]
+
+[ 2016-04-23T07:14:01+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/bussetting
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000529s ]
+SQL: SHOW COLUMNS FROM `bus` [ RunTime:0.0267s ]
+NOTIC: [2] Missing argument 1 for Home\Model\BusModel::getValue(), called in /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php on line 804 and defined /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `bus` [ RunTime:0.0291s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 20 行.
+SQL: SELECT * FROM `bus` LIMIT 0,2   [ RunTime:0.0328s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bus` LIMIT 1   [ RunTime:0.0358s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018993s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019112s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000203s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000798s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000923s ]
+
+[ 2016-04-23T07:14:02+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/vehreplaceadd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+SQL: SHOW COLUMNS FROM `car_replace` [ RunTime:0.0417s ]
+SQL: SHOW COLUMNS FROM `car` [ RunTime:0.0303s ]
+SQL: SHOW COLUMNS FROM `coach` [ RunTime:0.0237s ]
+SQL: SELECT * FROM `car`  [ RunTime:0.0238s ]
+NOTIC: [2] Invalid argument supplied for foreach() /Users/hechengwei/Desktop/git/progect/drivingSchool/ThinkPHP/Library/Think/Db/Driver.class.php 第 493 行.
+SQL: SELECT * FROM `coach` INNER JOIN staff on coach.coach_staff_id=staff.staff_id INNER JOIN sex on staff.staff_sex=sex.sex_id LEFT JOIN coach_group on coach.group_id=coach_group.group_id   [ RunTime:0.0334s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019969s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000199s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000591s ]
+
+[ 2016-04-23T07:14:04+08:00 ] ::1 /drivingSchool/index.php/Home/Administration/bussetting
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000593s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000686s ]
+SQL: SHOW COLUMNS FROM `bus` [ RunTime:0.0352s ]
+NOTIC: [2] Missing argument 1 for Home\Model\BusModel::getValue(), called in /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Controller/AdministrationController.class.php on line 804 and defined /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `bus` [ RunTime:0.0350s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 20 行.
+SQL: SELECT * FROM `bus` LIMIT 0,2   [ RunTime:0.0338s ]
+NOTIC: [8] Undefined variable: where /Users/hechengwei/Desktop/git/progect/drivingSchool/admin/Home/Model/BusModel.class.php 第 21 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bus` LIMIT 1   [ RunTime:0.0329s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017224s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000399s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001214s ]
+
+>>>>>>> a5dac5005d7b0cc3621de731066a524def955779
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
+>>>>>>> 8c4afc204fef2c5d1991b9ffb5b9050a37a58ea5

@@ -14,7 +14,6 @@ class UsermanagerController extends Controller {
     	//联查admin/role/admin_role
     	$data = D("admin");
     	$arr = $data->usermanagerlist();
-    	//print_r($arr);die;
     	$arr1 = $arr[0];//数据
 		$page = $arr[1];//页数
 		$count = $arr[2];//总数

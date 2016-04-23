@@ -109,9 +109,20 @@ class AdministrationController extends Controller {
             $status=$coach_status->show();
             //车辆登记表
             $veh=D('Vehicles');
-            $vehicles=$veh->getValues();
+            //分页
+            $vehicles=$veh->getvalue();
+           // print_r($vehicles);die;
+            //分页
+            $p = $vehicles['0'];
+            $list = $vehicles['1'];
+            $page = $vehicles['2'];
+            $count = $vehicles['3'];
 
-            $this->assign('car',$vehicles);
+            $this->assign('car',$list);
+//print_r($list);die;
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
             //驾照表
             $this->assign('driving',$driving);
             //教练车类型
@@ -129,11 +140,12 @@ class AdministrationController extends Controller {
             //接收id
             $id=$_GET['id'];
             //删除条件
-            $where=array('car_id'=>array('in',$id));
-            $car=D('Car');
-            $del=$car->delCar($where);
+            $where=array('veh_id'=>array('in',$id));
+            $veh=D('Vehicles');
+            $del=$veh->delCar($where);
             if($del)
             {
+                //实例化车辆登记表
                 $car=D('Car');
                 $car_model=$car->getValues();
                 //实例化驾照表
@@ -148,7 +160,21 @@ class AdministrationController extends Controller {
                 //查询车辆状态
                 $status=$coach_status->show();
                 //车辆登记表
-                $this->assign('car',$car_model);
+                $veh=D('Vehicles');
+                //分页
+                $vehicles=$veh->getvalue();
+                // print_r($vehicles);die;
+                //分页
+                $p = $vehicles['0'];
+                $list = $vehicles['1'];
+                $page = $vehicles['2'];
+                $count = $vehicles['3'];
+
+                $this->assign('car',$list);
+//print_r($list);die;
+                $this->assign('count',$count);
+                $this->assign('page',$page);
+                $this->assign('p',$p);
                 //驾照表
                 $this->assign('driving',$driving);
                 //教练车类型
@@ -159,6 +185,7 @@ class AdministrationController extends Controller {
             }
             else
             {
+                //实例化车辆登记表
                 $car=D('Car');
                 $car_model=$car->getValues();
                 //实例化驾照表
@@ -173,7 +200,21 @@ class AdministrationController extends Controller {
                 //查询车辆状态
                 $status=$coach_status->show();
                 //车辆登记表
-                $this->assign('car',$car_model);
+                $veh=D('Vehicles');
+                //分页
+                $vehicles=$veh->getvalue();
+                // print_r($vehicles);die;
+                //分页
+                $p = $vehicles['0'];
+                $list = $vehicles['1'];
+                $page = $vehicles['2'];
+                $count = $vehicles['3'];
+
+                $this->assign('car',$list);
+//print_r($list);die;
+                $this->assign('count',$count);
+                $this->assign('page',$page);
+                $this->assign('p',$p);
                 //驾照表
                 $this->assign('driving',$driving);
                 //教练车类型
@@ -192,7 +233,6 @@ class AdministrationController extends Controller {
         {
             $coach_driving=$_GET['coach_driving'];
             $coach_motor=$_GET['coach_motor'];
-           //print_r($coach_motor);die;
             $car_status=$_GET['car_status'];
             $car_number=$_GET['car_number'];
             $license_number=$_GET['license_number'];
@@ -217,9 +257,9 @@ class AdministrationController extends Controller {
             {
                 $where.=" and vehicles.license_number like '%$license_number%'";
             }
-            $veh=D('Vehicles');
+            //实例化车辆登记表
             $car=D('Car');
-
+            $car_model=$car->getValues();
             //实例化驾照表
             $coach_driving=D('CoachDriving');
             $driving=$coach_driving->getValue();
@@ -231,14 +271,28 @@ class AdministrationController extends Controller {
             $coach_status=D('CarStatus');
             //查询车辆状态
             $status=$coach_status->show();
+            //车辆登记表
+            $veh=D('Vehicles');
+            //分页
+            $vehicles=$veh->getvalue($where);
+            // print_r($vehicles);die;
+            //分页
+            $p = $vehicles['0'];
+            $list = $vehicles['1'];
+            $page = $vehicles['2'];
+            $count = $vehicles['3'];
+
+            $this->assign('car',$list);
+//print_r($list);die;
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
             //驾照表
             $this->assign('driving',$driving);
             //教练车类型
             $this->assign('motor',$motor_val);
             //状态
             $this->assign('status',$status);
-            $search=$veh->searchValue($where);
-            $this->assign('car',$search);
             $this->display("vehsettinglist");
         }
 
@@ -387,9 +441,19 @@ class AdministrationController extends Controller {
             $coach=D('Coach');
             $coachMess=$coach->coachMessage();
 
+            $p = $repair['0'];
+            $list = $repair['1'];
+            $page = $repair['2'];
+            $count = $repair['3'];
+
+
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+
             $this->assign('coachMess',$coachMess);
             $this->assign('status',$repair_status);
-            $this->assign('repair',$repair);
+            $this->assign('repair',$list);
             $this->display('vehservice');
         }
     /*
@@ -424,15 +488,26 @@ class AdministrationController extends Controller {
             /*实例化车辆登记表model,调用方法查询*/
             $car=D('Car');
             $repair=$car->vehrepair($where);
-            /*查询状态*/
+            //查询状态下拉用
             $status=D('RepairStatus');
             $repair_status=$status->getValue();
-            /*查询员工*/
+            //查询员工,下拉用
             $coach=D('Coach');
             $coachMess=$coach->coachMessage();
+
+            $p = $repair['0'];
+            $list = $repair['1'];
+            $page = $repair['2'];
+            $count = $repair['3'];
+
+
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+
             $this->assign('coachMess',$coachMess);
             $this->assign('status',$repair_status);
-            $this->assign('repair',$repair);
+            $this->assign('repair',$list);
             $this->display('vehservice');
 
         }
@@ -448,14 +523,36 @@ class AdministrationController extends Controller {
                 $where="car.car_number like '%$car_number%'";
                 $car=D('Car');
                 $repair_record=$car->vehrepair($where);
-                $this->assign('repair_record',$repair_record);
+                $p = $repair_record['0'];
+                $list = $repair_record['1'];
+                $page = $repair_record['2'];
+                $count = $repair_record['3'];
+
+
+                $this->assign('count',$count);
+                $this->assign('page',$page);
+                $this->assign('p',$p);
+
+                $this->assign('repair_record',$list);
                 $this->display('servicerecord');
             }
             else
             {
+                $car_number=$_GET['id'];
+                $where="car.car_number like '%$car_number%'";
                 $car=D('Car');
-                $repair_record=$car->vehrepair();
-                $this->assign('repair_record',$repair_record);
+                $repair_record=$car->vehrepair($where);
+                $p = $repair_record['0'];
+                $list = $repair_record['1'];
+                $page = $repair_record['2'];
+                $count = $repair_record['3'];
+
+
+                $this->assign('count',$count);
+                $this->assign('page',$page);
+                $this->assign('p',$p);
+
+                $this->assign('repair_record',$list);
                 $this->display('servicerecord');
             }
 
@@ -582,6 +679,7 @@ class AdministrationController extends Controller {
         $coachMess=$coach->coachMessage();
         $replace=D('CarReplace');
         $car_replace=$replace->selectReplace();
+       // print_r($car_replace);die;
         $this->assign('replace',$car_replace);
         $this->assign('coachMess',$coachMess);
         $this->display('vehreplace');
@@ -661,6 +759,7 @@ class AdministrationController extends Controller {
         {
             $record=D('GasAdd');
             $gas_record=$record->gasMessage();
+            //print_r($gas_record);die;
             $this->assign('record',$gas_record);
             $this->display('gasrecord');
         }
@@ -703,7 +802,16 @@ class AdministrationController extends Controller {
             else
             {
                 $busseting=$bus->getValue();
-                $this->assign('busset',$busseting);
+                $p = $busseting['0'];
+                $list = $busseting['1'];
+                $page = $busseting['2'];
+                $count = $busseting['3'];
+
+
+                $this->assign('count',$count);
+                $this->assign('page',$page);
+                $this->assign('p',$p);
+                $this->assign('busset',$list);
                 $this->display('busseting');
             }
         }
@@ -745,6 +853,7 @@ class AdministrationController extends Controller {
         {
             $inschool=D('Student');
             $student_inschool=$inschool->inschoolstu();
+           // print_r($student_inschool);die;
             $status=$inschool->status();
             $driving=$inschool->driving();
             $this->assign('student',$student_inschool);
@@ -758,7 +867,7 @@ class AdministrationController extends Controller {
         public function inschoolsearch()
         {
             /*
-             * 'stu_sn':stu_sn,'stu_name':stu_name,'stu_tel':stu_tel,'laydate':laydate,'motor_id':motor_id,'sex_id':sex_id,'stu_status_id':stu_status_id
+             *
              * */
             $stu_sn=$_GET['stu_sn'];
             $stu_name=$_GET['stu_name'];
@@ -814,7 +923,6 @@ class AdministrationController extends Controller {
         {
             if($_POST)
             {
-
                 $staff=D('Staff');
                 $img=$staff->upload('stu_photo');
                 $data['stu_time']=$_POST['stu_time'];
@@ -858,8 +966,20 @@ class AdministrationController extends Controller {
                 $data['stu_birthplace']=$region[0];
                 $data['stu_currentplace']=$region[1].','.$curaddress;
                 $data['stu_photo']=$img;
+                /*添加*/
                 $add=$stu->inschoolRecord($data);
-                if($add)
+                /*驾照进度*/
+                $progress=D('Progress');
+                $prog['stu_id']=$add;
+                $prog['progress_isaccept']=1;
+                $prog['test_one']=0;
+                $prog['test_two']=0;
+                $prog['test_three']=0;
+                $prog['test_four']=0;
+                $prog['mylicense']=0;
+
+                $insert=$progress->addprogress($prog);
+                if($insert)
                 {
                     $this->success('入学登记成功','/Home/Administration/regstu');
                 }
@@ -973,6 +1093,7 @@ class AdministrationController extends Controller {
         {
             $group=D('CoachGroup');
             $coach_group=$group->getValue();
+
             $this->assign('group',$coach_group);
             $this->display('traingroup');
         }
@@ -983,7 +1104,7 @@ class AdministrationController extends Controller {
         {
             $id=$_GET['id'];
             $group=D('CoachGroup');
-            $where="group_id='$id' and parent_id='$id'";
+            $where="group_id='$id'";
             $coach_group=$group->deletegroup($where);
             if($coach_group)
             {
@@ -1009,23 +1130,32 @@ class AdministrationController extends Controller {
                $data['phone']=$_POST['phone'];
                $groupadd=D('CoachGroup');
                $group=$groupadd->addgroup($data);
+
                if($group)
                {
-                   $where="staffname like '%$data[staffname]%'";
-                   //根据名字查询出来教练id,根据教练id去修改分组
-                   $coach_id=$coach->nogroupcoachMessage($where);
-                   $group_id=$groupadd->selectgroup($where);
-                   print_r($group_id);die;
+                   $child[]=$group;
                    $child[]=$_POST['group_child'];
-                   $child[]=$group_id;
-                   $child=$groupadd->addchild($child);
-                   if($child)
+                   //组员的父级id
+                   $addchild=$groupadd->addchild($child);
+
+                   if($addchild)
                    {
-                       $this->success();
+                       $where="parent_id='$group'";
+                       $group_team=$coach->selectgroup($where);
+                       $group_team[]=$data;
+                       $update_coach_gropu_id=$coach->UpdateCoachGropuId($group_team);
+                       if($update_coach_gropu_id)
+                       {
+                           $this->success('分组添加成功','/Home/Administration/traingroupadd');
+                       }
+                       else
+                       {
+                           $this->error('分组添加失败');
+                       }
                    }
                    else
                    {
-                       $this->error();
+                       $this->error('分组添加失败');
                    }
                }
 
@@ -1033,10 +1163,10 @@ class AdministrationController extends Controller {
             else
             {
 
-                $where="coach.group_id='0'";
-                $coachMessage=$coach->coachMessage($where);
+                $where="coach.group_id=0";
+                $coachMessage=$coach->nogroupcoachmessage($where);
+                //dump($coachMessage);die;
                 $this->assign('nogroup',$coachMessage);
-                //print_r($coachMessage);die;
                 $this->display('traingroupadd');
             }
 
@@ -1047,6 +1177,9 @@ class AdministrationController extends Controller {
     * */
         public function teachtime()
         {
+            $salary=A('Staff');
+            $data=$salary->salary();
+            print_r($data);die;
             $this->display('teachtime');
         }
 
