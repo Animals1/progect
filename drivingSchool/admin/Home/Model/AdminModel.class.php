@@ -290,5 +290,36 @@ class AdminModel extends Model {
             //dump($data);die;
             return $data;
         }
+
+
+
+
+
+
+        /*
+        *   用户登录页面操作
+        */
+        public function logadd($uname,$userip,$logstarttime){
+            //echo $uname.$userip.$logstarttime;die;
+            $data['logname'] = $uname;
+            $data['logip'] = $userip;
+            $data['logstarttime'] = $logstarttime;
+           // print_r($data);die;
+
+            return $this->Table("log")->add($data);
+        }
+
+
+        public function logsele(){
+            return $this->Table("log")->order("id desc")->limit(1)->select();
+        }
+
+        public function logout(){
+            //接收id信息
+            $id = $_GET['id'];
+            $logendtime = date("Y-m-d H:i:s",time());
+            $data['logendtime'] = $logendtime;
+            return $this->Table("log")->where("id='$id'")->save($data);
+        }
 }
 ?>

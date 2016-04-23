@@ -4,7 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
     <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
 
 

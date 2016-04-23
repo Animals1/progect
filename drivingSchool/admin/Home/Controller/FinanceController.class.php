@@ -470,10 +470,19 @@ class FinanceController extends Controller {
 
     }
 
+
     /**
      * 收入报表
      */
     public function income(){
+        $this->display('income');
+    }
+
+
+    /**
+     * 收入报表(收入报表饼状统计图)
+     */
+    public function chart(){
 
         $arr = D('charge');
 
@@ -492,46 +501,107 @@ class FinanceController extends Controller {
         $this->assign('money1',$money1);
         $this->assign('money2',$money2);
         $this->assign('money3',$money3);
-        $this->display('income');
+        $this->display('chart');
     }
 
+
+    /**
+     * 收入报表(收入报表饼状统计图)
+     */
+    public function histogram(){
+
+        $arr = D('charge');
+
+        $re = $arr->findvalue();
+
+        $row = D('arrears');
+
+        $all = $row->findvalue();
+
+
+        $money = $re[0]['sum(charge_money)'];
+        $money1 = $re[1]['sum(charge_money)'];
+        $money2 = $re[2]['sum(charge_money)'];
+        $money3 = $all[0]['sum(arrears_money)'];
+        $sum = $money+$money1+$money2+$money3;
+        $sum1 = ($money/$sum)*100;
+        $sum2 = ($money1/$sum)*100;
+        $sum3 = ($money2/$sum)*100;
+        $sum4 = ($money3/$sum)*100;
+
+        $this->assign('sum1',$sum1);
+        $this->assign('sum2',$sum2);
+        $this->assign('sum3',$sum3);
+        $this->assign('sum4',$sum4);
+        $this->display('histogram');
+    }
 
 
     /**
      * 支出报表
      */
     public function expenditure(){
+        $this->display("expenditure");
+    }
+
+
+    /**
+     * 支出报表（支出报表饼状统计图）
+     */
+    public function charts(){
 
         $arr = D('expense');
 
         $re = $arr->findvalue();
 
-        $name = $re[0]['status_name'];
         $money = $re[0]['sum(expense_money)'];
-        $name1 = $re[1]['status_name'];
         $money1 = $re[1]['sum(expense_money)'];
-        $name2 = $re[2]['status_name'];
         $money2 = $re[2]['sum(expense_money)'];
-        $name3 = $re[3]['status_name'];
         $money3 = $re[3]['sum(expense_money)'];
-        $name4 = $re[4]['status_name'];
         $money4 = $re[4]['sum(expense_money)'];
-        $name5 = $re[5]['status_name'];
         $money5 = $re[5]['sum(expense_money)'];
 
-        $this->assign('name',$name);
         $this->assign('money',$money);
-        $this->assign('name1',$name1);
         $this->assign('money1',$money1);
-        $this->assign('name2',$name2);
         $this->assign('money2',$money2);
-        $this->assign('name3',$name3);
         $this->assign('money3',$money3);
-        $this->assign('name4',$name4);
         $this->assign('money4',$money4);
-        $this->assign('name5',$name5);
         $this->assign('money5',$money5);
-        $this->display('expenditure');
+        $this->display('charts');
     }
 
+
+
+    /**
+     * 支出报表(支出报表柱状统计图)
+     */
+    public function histograms(){
+
+        $arr = D('expense');
+
+        $re = $arr->findvalue();
+
+        $money = $re[0]['sum(expense_money)'];
+        $money1 = $re[1]['sum(expense_money)'];
+        $money2 = $re[2]['sum(expense_money)'];
+        $money3 = $re[3]['sum(expense_money)'];
+        $money4 = $re[4]['sum(expense_money)'];
+        $money5 = $re[5]['sum(expense_money)'];
+
+        $sum = $money+$money1+$money2+$money3+$money4+$money5;
+        $sum1 = ($money/$sum)*100;
+        $sum2 = ($money1/$sum)*100;
+        $sum3 = ($money2/$sum)*100;
+        $sum4 = ($money3/$sum)*100;
+        $sum5 = ($money4/$sum)*100;
+        $sum6 = ($money5/$sum)*100;
+
+        $this->assign('sum1',$sum1);
+        $this->assign('sum2',$sum2);
+        $this->assign('sum3',$sum3);
+        $this->assign('sum4',$sum4);
+        $this->assign('sum5',$sum5);
+        $this->assign('sum6',$sum6);
+        $this->display('histograms');
+    }
 }

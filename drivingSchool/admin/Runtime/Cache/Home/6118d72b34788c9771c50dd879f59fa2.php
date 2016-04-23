@@ -76,9 +76,8 @@
     $('.status').click(function(){
         var sid = $(this).attr('value');
         var id = $("#leaveid").attr('value');
-        // alert(id);
         var name = $('#name').attr('value');
-        if (sid == '1') {
+        if (sid == '2') {
           if (confirm("你确定要给"+name+"批假吗？")) {
             location.href = "/progect/drivingSchool/index.php/Home/Staff/leavestatus/sid/"+sid+"/id/"+id;
           }else{
@@ -87,7 +86,7 @@
           
         }else{
           if (confirm("你确定要拒绝"+name+"批假吗？")) {
-            location.href = "/progect/drivingSchool/index.php/Home/Staff/leavestatus/id/"+sid+"/id/"+id;
+            location.href = "/progect/drivingSchool/index.php/Home/Staff/leavestatus/sid/"+sid+"/id/"+id;
           }else{
             return false;
           }

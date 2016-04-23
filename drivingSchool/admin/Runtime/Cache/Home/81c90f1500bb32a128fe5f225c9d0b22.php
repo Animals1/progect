@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/Public/text/javascript">
+    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/drivingSchool/Public/text/javascript">
 
 </script> 
 
@@ -17,7 +17,7 @@
 <div class="formbody">
 
     <div class="formtitle"><span>车辆管理</span></div>
-    <form action="/index.php/Home/Administration/vehsettingadd" method="post">
+    <form action="/drivingSchool/index.php/Home/Administration/vehsettingadd" method="post">
         <h4>车辆类型(考试类型)配置</h4>
         <?php if(is_array($driving_type)): foreach($driving_type as $key=>$v): ?><td><input type="checkbox" name="driving_type[]" value="<?php echo ($v["driving_id"]); ?>"><?php echo ($v["driving_name"]); ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </td><?php endforeach; endif; ?>
         <hr>
@@ -40,8 +40,8 @@
                 <td><?php echo ($vv["motor_name"]); ?></td>
                 <td><?php echo ($vv["model_name"]); ?></td>
                 <td>
-                    <a href="/index.php/Home/Administration/vehsettingadd/id/<?php echo ($vv["motor_id"]); ?>">修改</a>&nbsp;&nbsp;
-                    <a href="/index.php/Home/Administration/delvehsetting/id/<?php echo ($vv["motor_id"]); ?>">删除</a>
+                    <a href="/drivingSchool/index.php/Home/Administration/vehsettingadd/id/<?php echo ($vv["motor_id"]); ?>">修改</a>&nbsp;&nbsp;
+                    <a href="/drivingSchool/index.php/Home/Administration/delvehsetting/id/<?php echo ($vv["motor_id"]); ?>">删除</a>
                 </td>
             </tr><?php endforeach; endif; ?>
         </table>

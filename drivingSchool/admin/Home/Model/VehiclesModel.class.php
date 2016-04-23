@@ -19,10 +19,23 @@ class VehiclesModel extends Model
      * @car_type 可预约类型
      * @
      * */
-    public function getValues()
-    {
-        return $this->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->select();
+//    public function getValues()
+//    {
+//        return $this->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->select();
+//    }
+
+    public function getvalue($where){
+
+        $User = M("Vehicles");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->where($where)->page($p,2)->select();
+        $count = $User->join('coach_driving on vehicles.driving_id=coach_driving.driving_id')->join('coach_motor on vehicles.motor_id=coach_motor.motor_id')->join('car_status on vehicles.car_status=car_status.status_id')->join('car_type on vehicles.type_id=car_type.type_id')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
+
 
     /*
      * 修改数据

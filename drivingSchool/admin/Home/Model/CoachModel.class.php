@@ -35,6 +35,7 @@ class CoachModel extends Model {
         return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->select();
     }
 
+
     public function nogroupcoachMessage($where=1)
     {
         return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->where($where)->select();

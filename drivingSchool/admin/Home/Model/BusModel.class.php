@@ -13,9 +13,16 @@ class BusModel extends Model {
      * @$order  排序字段
      * @$limit  限制几条数据
      * */
-    public function getValue()
+    public function getValue($where)
     {
-        return $this->select();
+        $User = M("Bus");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->where($where)->page($p,2)->select();
+        $count = $User->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
     /*
      * 删除数据
