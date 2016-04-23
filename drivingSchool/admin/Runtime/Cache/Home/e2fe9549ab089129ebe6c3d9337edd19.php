@@ -61,8 +61,17 @@
         <tr>
         <td>公司资质：请上传您的公司资质及荣誉证书，提升信誉</td>
         </tr>
+
         <tr>
-        <td>
+        <td><br/>
+        <div style=" float:left; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_quality0;?>" width="70" height="70"></div>
+        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_quality1;?>" width="70" height="70"></div>
+        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_quality2;?>" width="70" height="70"></div>
+        </td>
+        </tr>
+
+        <tr>
+        <td><br/>
         <div style=" float:left; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="hidden" name="id" value="<?php foreach($arr as $v){ echo $v['company_id'];}?>"><input type="file" name="img"></div>
         <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="file" name="img1"></div>
         <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="file" name="img2"></div></td>
@@ -77,11 +86,21 @@
         <tr>
         <td>公司展示：请上传您的公司办公或设备场景，提升信誉</td>
         </tr>
+
         <tr>
-        <td>
+        <td><br/>
+        <div style=" float:left; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_show0;?>" width="70" height="70"></div>
+        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_show1;?>" width="70" height="70"></div>
+        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><img src="/Public/<?php echo $newcompany_show2;?>" width="70" height="70"></div>
+        </td>
+        </tr>
+
+        <tr>
+        <td><br/>
         <div style=" float:left; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="hidden" name="id" value="<?php foreach($arr as $v){ echo $v['company_id'];}?>"><input type="file" name="img3"></div>
         <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="file" name="img4"></div>
-        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="file" name="img5"></div></td>
+        <div style=" float:left; margin-left:15px; width: 70px;    min-height: 70px;    max-height: 70px;    _height: 70px; border-style:solid; border-width:1px; border-color:gray;"><br/><input type="file" name="img5"></div>
+        </td>
         </tr>
         </table>
         <input name="sub" type="submit" class="btn" value="保存" style="margin-left:150px;" />

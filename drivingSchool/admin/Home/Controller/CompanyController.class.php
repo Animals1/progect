@@ -9,7 +9,29 @@ class CompanyController extends Controller {
     public function index(){
         $data = D("Company");
         $arr = $data->indexsele();
+        //print_r($arr);die;
+        $company_quality = $arr[0]['company_quality'];
+        //echo $company_quality;die;
+        $newcompany_quality = explode(',',$company_quality);
+        $newcompany_quality0 = $newcompany_quality[0];
+        $newcompany_quality1 = $newcompany_quality[1];
+        $newcompany_quality2 = $newcompany_quality[2];
+
+        $company_show = $arr[0]['company_show'];
+        //echo $company_quality;die;
+        $newcompany_show = explode(',',$company_show);
+        $newcompany_show0 = $newcompany_show[0];
+        $newcompany_show1 = $newcompany_show[1];
+        $newcompany_show2 = $newcompany_show[2];
+
+
         $this->assign("arr",$arr);
+        $this->assign("newcompany_quality0",$newcompany_quality0);
+        $this->assign("newcompany_quality1",$newcompany_quality1);
+        $this->assign("newcompany_quality2",$newcompany_quality2);
+        $this->assign("newcompany_show0",$newcompany_show0);
+        $this->assign("newcompany_show1",$newcompany_show1);
+        $this->assign("newcompany_show2",$newcompany_show2);
     	$this->display('company');
         }
 
