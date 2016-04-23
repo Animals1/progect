@@ -36,8 +36,8 @@
         出生年月：<input type="text" class="sang_Calender" name="year" />
     </li>
     <li><label>婚否：</label><select name="marriage" id="">
-        <option value='1'>是</option>
-        <option value='2'>不是</option>
+        <option value='1'>已婚</option>
+        <option value='2'>未婚</option>
     </select>
     </li>
     <li><label>籍贯：</label>

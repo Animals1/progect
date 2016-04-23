@@ -1,24 +1,42 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
     <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
-
-
 </head>
 
 
 <body style="background:#FFF8ED;">
 <div class="rightinfo">
  <table class="tablelist">
-     <form action="__APP__/Home/Staff/search" method="post">
+     <form action="__APP__/Home/Staff/leasearch" method="post">
             <input type="hidden" name="id" value="1" />
-            编号：<input name="sn" type="text"  />
-            姓名：<input name="name" type="text"  />
-            身份证号：<input name="idcard" type="text"  />
-            手机号：<input name="tel" type="text"  />
+            编号：
+            <if condition="$search.sn neq ''">
+              <input name="sn" type="text" value="{$search.sn}" />
+            <else />
+              <input name="sn" type="text" />
+            </if>
+            姓名：
+            <if condition="$search.name neq ''">
+              <input name="name" type="text" value="{$search.name}" />
+            <else />
+              <input name="name" type="text" />
+            </if>
+            请假时间：
+            <if condition="$search.starttime neq ''">
+              <input name="starttime" type="text" class="sang_Calender" value="{$search.starttime}" />
+            <else />
+              <input name="starttime" type="text" class="sang_Calender" />
+            </if>
+            销假时间：
+            <if condition="$search.endtime neq ''">
+              <input name="endtime" type="text" class="sang_Calender" value="{$search.endtime}" />
+            <else />
+              <input name="endtime" type="text" class="sang_Calender" />
+            </if>
             <input type="submit"  value="查询" class="btn"/>
      </form>
      <thead>
@@ -33,22 +51,57 @@
          <th>状态</th>
      </tr>
      </thead> 
+     <foreach name="data" item="vo" >
+       <tr>
+          <input type="hidden" id="leaveid" value="{$vo.leave_id}" />
+         <td><span value="{$vo.staff_name}" id="name">{$vo.staff_name}</span></td>
+         <td>{$vo.staff_sn}</td>
+         <td>{$vo.leave_starttime}</td>
+         <td>{$vo.leave_endtime}</td>
+         <td>{$vo.leave_type}</td>
+         <td>{$vo.leave_days}</td>
+         <td>{$vo.leave_desc}</td>
+         <td>
+           <if condition="$vo.leave_status eq 0">
+              <a href="javascript:void(0)" class="status" value="2" >批假</a>
+              <a href="javascript:void(0)" class="status" value="3" >拒绝</a>
+           <elseif condition="$vo.leave_status eq 1"/>
+              已撤销
+           <elseif condition="$vo.leave_status eq 2"/>
+              已批假
+           <elseif condition="$vo.leave_status eq 3"/>
+              已拒绝
+           <else />
+              已销假
+           </if>
+         </td>
+       </tr>
+     </foreach>
         </table>
 </div>
 
 </body>
 
 </html>
+<script type="text/javascript" src="__PUBLIC__/admin/js/datetime.js"></script>
 <script>
-    $('.sear').click(function(){
-        var id = $(this).parent().find('span').attr('value');
-        if (id == '1') {
-            $('#staff').css('display','none')
-            $('#coach').css('display','block')
+    $('.status').click(function(){
+        var sid = $(this).attr('value');
+        var id = $("#leaveid").attr('value');
+        var name = $('#name').attr('value');
+        if (sid == '2') {
+          if (confirm("你确定要给"+name+"批假吗？")) {
+            location.href = "__APP__/Home/Staff/leavestatus/sid/"+sid+"/id/"+id;
+          }else{
+            return false;
+          }
+          
         }else{
-            $('#staff').css('display','block')
-            $('#coach').css('display','none')
+          if (confirm("你确定要拒绝"+name+"批假吗？")) {
+            location.href = "__APP__/Home/Staff/leavestatus/sid/"+sid+"/id/"+id;
+          }else{
+            return false;
+          }
         }
     });
-        
 </script>

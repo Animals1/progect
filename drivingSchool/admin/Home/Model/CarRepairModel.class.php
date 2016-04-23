@@ -13,7 +13,7 @@ class CarRepairModel extends Model {
     public function getValue($where)
     {
         
-		$count      = $this->where($where)->count();
+		$count      = $this->where($where)->count();                      
 		// 查询满足要求的总记录数
 		$Page       = new \Think\Page($count,2);
 		// print_r($Page);die;
@@ -22,16 +22,17 @@ class CarRepairModel extends Model {
 		// 进行分页数据查询 注意limit方法的参数要使用Page类的属性
 		$list = $this->where($where)
 					->limit($Page->firstRow.','.$Page->listRows)
-					->join('repair_status on car_repair.repair_status=repair_status.repair_statusid')
+					->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')
 					->join('car on car_repair.repair_carid=car.car_id')
+					->field('car.car_id,car.car_number,car_repair.*,repair_status.*')
 					->select();
 		$arr = array($show,$list);
 		return $arr;
 		
     }
-    /*
+    /*	
      * 删除一条数据
-     * */
+     **/
     public function delValue($where)
     {
         return $this->where($where)->delete();
@@ -44,7 +45,7 @@ class CarRepairModel extends Model {
     public function getoneValue($where)
     {
 		return $this->where($where)
-					->join('repair_status on car_repair.repair_status=repair_status.repair_statusid')
+					->join('repair_status on car_repair.repair_statusid=repair_status.repair_statusid')
 					->join('car on car_repair.repair_carid=car.car_id')
 					->find();
     }

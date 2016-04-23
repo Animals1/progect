@@ -3,23 +3,23 @@ namespace Home\Model;
 use Think\Model;
 class StaffModel extends Model {
 	
-		/*@author:éƒ­æ—­å³°
-		@module:ç®¡ç†å‘˜-ä¸ªäººä¸­å¿ƒ
-		@ä¸ªäººä¿¡æ¯*/
+		/*@author:¹ùĞñ·å
+		@module:¹ÜÀíÔ±-¸öÈËÖĞĞÄ
+		@¸öÈËĞÅÏ¢*/
 	
 	public function staffsele($staffid){
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_id=$staffid")->select();
 	}
 	
 	/*
-	*	@ä¸ªäººä¿¡æ¯å­—ç¬¦ä¿®æ”¹
+	*	@¸öÈËĞÅÏ¢×Ö·ûĞŞ¸Ä
 	*/
 	public function stafffieldsave($field){
 		if($field=="staff_curaddress"){
-			$province = $_POST['province'];//çœ
-			$city = $_POST['city'];//å¸‚
-			$county = $_POST['county'];//å¿
-			$other = $_POST['other'];//å¤‡æ³¨
+			$province = $_POST['province'];//Ê¡
+			$city = $_POST['city'];//ÊĞ
+			$county = $_POST['county'];//ÏØ
+			$other = $_POST['other'];//±¸×¢
 			$newstaffcuraddress = $province.$city.$county.$other;
 			return $this->Table("staff")->where("$field=$newstaffcuraddress")->update();
 		}else if($field=="staff_tel"){
@@ -33,8 +33,8 @@ class StaffModel extends Model {
 	}
 	
 	/*
-	 * å‘˜å·¥åœ°åŒºè”åŠ¨æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤µØÇøÁª¶¯²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function linkage($id){
 
@@ -49,8 +49,8 @@ class StaffModel extends Model {
 
 	}
 	/*
-	 * è§’è‰²æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÇÉ«²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function roleselect(){
 		$db = D('role');
@@ -61,8 +61,8 @@ class StaffModel extends Model {
 		
 	
 	/*
-	 * æ·»åŠ æ•™ç»ƒæ—¶æŸ¥è¯¢çš„æ•°æ®
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ìí¼Ó½ÌÁ·Ê±²éÑ¯µÄÊı¾İ
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function satffcoach(){
 	
@@ -81,8 +81,8 @@ class StaffModel extends Model {
 	
 	}
 	/*
-	 * å‘˜å·¥æ·»åŠ 
-	 * ä½œè€…ï¼šå¼ æ·	
+	 * Ô±¹¤Ìí¼Ó
+	 * ×÷Õß£ºÕÅ½İ	
 	 */
 	public function staffadd($rows){
 		$db=D("staff");
@@ -120,8 +120,9 @@ class StaffModel extends Model {
 			$codata['coach_sn'] = $rows['coachsn'];
 			$codata['grade_id'] = $rows['gradeid'];
 			$codata['quality'] = $rows['qualityid'];
-			$codata['model'] = $rows['modelid'];
+			$codata['model'] = $rows['modelid']; 
 			$codata['motor'] = $rows['motorid'];
+			$codata['group_id']=0;
 			$core = $coach->add($codata);
 			if ($re && $core){
 				return true;
@@ -133,8 +134,8 @@ class StaffModel extends Model {
 		}
 	}
 	/*
-	 * å¯¹ä¼ è¿‡æ¥çš„å›¾ç‰‡è¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô´«¹ıÀ´µÄÍ¼Æ¬½øĞĞ´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function img($data)
 	{
@@ -143,8 +144,8 @@ class StaffModel extends Model {
 		return $srcimg;
 	}
 	/*
-	 * å¯¹åœ°åŒºè¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔµØÇø½øĞĞ´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function area($area){
 		$region = D('region');
@@ -175,8 +176,8 @@ class StaffModel extends Model {
 		return $area;
 	}
 	/*
-	 * å¯¹æ¥è¿‡æ¥çš„idè¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô½Ó¹ıÀ´µÄid½øĞĞ´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function iddeal($iddeal){
 		foreach ($iddeal['qualityid'] as $quk => $quv) {
@@ -197,8 +198,8 @@ class StaffModel extends Model {
 		return $iddeal;
 	}
 	/*
-	 * å¯¹æ—¶é—´è¿›è¡Œå¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔÊ±¼ä½øĞĞ´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function dealtime($time){
 		if ($time['role'] == '1') {
@@ -228,8 +229,8 @@ class StaffModel extends Model {
 		
 	}
 	/*
-	 * å¯¹æ•™ç»ƒè§’è‰²æ—¶é—´è¿›è¡Œæ ¼å¼åŒ–å¤„ç†å¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶Ô½ÌÁ·½ÇÉ«Ê±¼ä½øĞĞ¸ñÊ½»¯´¦Àí´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function coachdatetime($time){
 
@@ -252,8 +253,8 @@ class StaffModel extends Model {
 		return $time;
 	}
 	/*
-	 * å¯¹å…¶ä»–è§’è‰²æ—¶é—´è¿›è¡Œæ ¼å¼åŒ–å¤„ç†å¤„ç†
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ¶ÔÆäËû½ÇÉ«Ê±¼ä½øĞĞ¸ñÊ½»¯´¦Àí´¦Àí
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function staffdatetime($time){
 
@@ -269,16 +270,16 @@ class StaffModel extends Model {
 		return $time;
 	} 
 	/*
-	 * æ•™ç»ƒå‘˜å·¥æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ½ÌÁ·Ô±¹¤²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function staffcoachselect(){
 		$db=D("staff");
 		return $db->join('coach ON staff.staff_id = coach.coach_staff_id')->where("staff.role_id = 1")->select();
 	}
 	/*
-	 * å…¶ä»–å‘˜å·¥è¿›è¡ŒæŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ÆäËûÔ±¹¤½øĞĞ²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function staffselect(){
 		$db=D("staff");
@@ -286,8 +287,8 @@ class StaffModel extends Model {
 	}
 	
 	/*
-	 * å‘˜å·¥å¤šæ¡ä»¶æŸ¥è¯¢
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤¶àÌõ¼ş²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function staffsearch($data){
 		//print_r($data);die;
@@ -329,8 +330,8 @@ class StaffModel extends Model {
 	
 	}
 	/*
-	 * å‘˜å·¥çŠ¶æ€ä¿®æ”¹
-	 * ä½œè€…ï¼šå¼ æ·
+	 * Ô±¹¤×´Ì¬ĞŞ¸Ä
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function jobstatus($id){
 	
@@ -342,8 +343,8 @@ class StaffModel extends Model {
 	}
 	
 	/**
-	*	å…³è”è§’è‰²è¡¨ï¼ŒæŸ¥å‡ºä¸€ä¸ªæ•™ç»ƒçš„ä¿¡æ¯
-	*	authorï¼šyaobowen
+	*	¹ØÁª½ÇÉ«±í£¬²é³öÒ»¸ö½ÌÁ·µÄĞÅÏ¢
+	*	author£ºyaobowen
 	*/
 	public function getvalue($name){
 		return $this->where("staff.staff_name = '$name'")
@@ -353,8 +354,8 @@ class StaffModel extends Model {
 					->find();
 	}
 	/**
-	*	å…³è”è§’è‰²è¡¨ï¼ŒæŸ¥å‡ºä¸€ä¸ªæ•™ç»ƒçš„é¢„çº¦çŠ¶æ€å’Œå§“å
-	*	authorï¼šxueyunhuan
+	*	¹ØÁª½ÇÉ«±í£¬²é³öÒ»¸ö½ÌÁ·µÄÔ¤Ô¼×´Ì¬ºÍĞÕÃû
+	*	author£ºxueyunhuan
 	*/
 	public function getshow(){
 		return $this->join("role on role.role_id = staff.role_id")->join("coach on coach.role_id = role.role_id")->field('staff_name,coach_status')->select();
@@ -362,34 +363,34 @@ class StaffModel extends Model {
 
 
 	/*
-	*	ä¸ªäººä¸­å¿ƒ-ä¸ªäººä¿¡æ¯
-	*	by éƒ­æ—­å³°
+	*	¸öÈËÖĞĞÄ-¸öÈËĞÅÏ¢
+	*	by ¹ùĞñ·å
 	*/
 	public function everyoneabout(){
-		//æ¥æ”¶cookie
+		//½ÓÊÕcookie
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->join('role ON staff.role_id = role.role_id')->where("staff_name='$username'")->find();
 	}
 
 
 	/*
-	*	ä¸ªäººä¿¡æ¯--å­—æ®µä¿®æ”¹
-	*	by éƒ­æ—­å³°
+	*	¸öÈËĞÅÏ¢--×Ö¶ÎĞŞ¸Ä
+	*	by ¹ùĞñ·å
 	*/
 	public function updatefield($field){
 		$username = $_COOKIE["username"];
 		if($field==1){
-			//æ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_curaddress = $_POST["staff_curaddress"];
 			$data["staff_curaddress"] = $newstaff_curaddress;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
 		}else if($field==2){
-			//æ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_tel = $_POST["staff_tel"];
 			$data["staff_tel"] = $newstaff_tel;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
 		}else{
-			//æ¥æ”¶å­—æ®µ
+			//½ÓÊÕ×Ö¶Î
 			$newstaff_email = $_POST["staff_email"];
 			$data["staff_email"] = $newstaff_email;
 			return $this->Table("staff")->where("staff_name = '$username'")->save($data);
@@ -399,15 +400,15 @@ class StaffModel extends Model {
 
 
 	/*
-	*	ä¸ªäººä¿¡æ¯--å­—æ®µä¿®æ”¹ç•Œé¢æ˜¾ç¤º
+	*	¸öÈËĞÅÏ¢--×Ö¶ÎĞŞ¸Ä½çÃæÏÔÊ¾
 	*/
 	public function showupdatefield(){
 		$username = $_COOKIE["username"];
 		return $this->Table("staff")->where("staff_name='$username'")->select();
 	}
 	/*
-	 * æ–‡ä»¶ä¸Šä¼ å…¬å…±ç±»
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ÎÄ¼şÉÏ´«¹«¹²Àà
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function upload($name){
 
@@ -417,15 +418,16 @@ class StaffModel extends Model {
 	    $upload->rootPath  =      './';
 	    $upload->savePath  =      './Public/Uploads/';  
 	    $info   =   $upload->upload(); 
-	    return $img = $info[$name]['savepath'].$info[$name]['savename'];
-		return $img;
-
+	    $img = $info[$name]['savepath'].$info[$name]['savename'];
+	    $img = substr($img,8);
+	    return $img;
 	}
 
 	/**
-	*	é€šè¿‡ç”¨æˆ·åæ¥æŸ¥è¯¢æ•™ç»ƒid
+	*	Í¨¹ıÓÃ»§ÃûÀ´²éÑ¯½ÌÁ·id
 	*/
 
+<<<<<<< HEAD
 	public function selcoachid($name)
 	{
 		return $this->where("staff_name = '$name'")->join("coach ON staff.staff_id = coach.coach_staff_id")->find();
@@ -436,8 +438,18 @@ class StaffModel extends Model {
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
 	}*/
+=======
+
+
+	public function selcoachid($name){
+		return $this->where("staff_name = '$name'")
+					->join("coach ON staff.staff_id = coach.coach_staff_id")
+					->find();
+
+	}
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	/**
-	 * æŸ¥è¯¢å…¨éƒ¨çš„å‘˜å·¥ä¿¡æ¯ï¼ˆéƒ¨åˆ†å­—æ®µï¼‰
+	 * ²éÑ¯È«²¿µÄÔ±¹¤ĞÅÏ¢£¨²¿·Ö×Ö¶Î£©
 	 */
 	public function allvalue()
 	{
@@ -445,15 +457,18 @@ class StaffModel extends Model {
 	}
 
 	/**
-	 * æŸ¥è¯¢ä¿¡æ¯
+	 * ²éÑ¯ĞÅÏ¢
 	 */
 	public function allpen(){
 		return $this->select();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	}
 	/*
-	 * æŸ¥è¯¢æœˆæ•°
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ²éÑ¯ÔÂÊı
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function month()
 	{
@@ -461,8 +476,8 @@ class StaffModel extends Model {
 		return $db->select();
 	}
 	/*
-	 * æŸ¥è¯¢ç­¾åˆ°æ•°æ®
-	 * ä½œè€…ï¼šå¼ æ·
+	 * ²éÑ¯Ç©µ½Êı¾İ
+	 * ×÷Õß£ºÕÅ½İ
 	 */
 	public function salary()
 	{
@@ -489,8 +504,8 @@ class StaffModel extends Model {
 		return $row;
 	}
 	/*
-     * è€ƒå‹¤æœç´¢
-     * ä½œè€…ï¼šå¼ æ·
+     * ¿¼ÇÚËÑË÷
+     * ×÷Õß£ºÕÅ½İ
 	 */
 	public function searsalary($data)
 	{
@@ -522,8 +537,165 @@ class StaffModel extends Model {
 		}
 		
 		return $row;
+<<<<<<< HEAD
 
+=======
+	}
+	/*
+	 * ²éÑ¯Çë¼ÙÒ³ÃæÊı¾İ
+	 * ×÷Õß£ºÕÅ½İ
+	 */
+	public function leave()
+	{
+		$db = D('staff');
+		$row = $db->join('staff_leave on staff.staff_id = staff_leave.work_id')->where("staff.role_id in (1,4,5,6)")->select();
+		return $row;
+	}
+	/*
+	 * Çë¼ÙÒ³ÃæËÑË÷
+	 * ×÷Õß£ºÕÅ½İ
+	 */
+	public function leasearch($data)
+	{
+		$db = D('staff');
+		$where = 'staff.role_id in (1,4,5,6) ';
+		if ($data['sn'] != '') {
+			$where .= "and staff.staff_sn like '%$data[sn]%'";
+		}
+		if($data['name'] != ''){
+			$where .= "and staff.staff_name like '%$data[name]%'";
+		}
+		if($data['starttime'] != ''){
+			$starttime = substr($data['starttime'],0,10);
+			$where .= "and staff_leave.leave_starttime like '%$starttime%'";
+		}
+		if($data['endtime'] != ''){
+			$endtime = substr($data['endtime'],0,10);
+			$where .= "and staff_leave.leave_endtime like '%$endtime%'";
+		}
+		$row = $db->join('staff_leave on staff.staff_id = staff_leave.work_id')->where($where)->select();
+		return $row;
+	}
+	/*
+	 * ½ÌÁ·Ñ§Ê±²éÑ¯
+	 * ×÷Õß£ºÕÅ½İ
+	 */
+	public function hours()
+	{
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$mo = $month->select();
+		$row = $db->where("role_id = 1")->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				$mon = $daka->where("staff_id = '$id' and month = '$i'")->select();
+				$num = $mon[0]['num'];
+				$nums = ($num * 8);
+				if ($nums == '0') {
+					$nums = '';
+				}
+				$mon[0]['hour'] = $nums;
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			$row[$k]['month']=$mo;
+			
+		}
+		return $row;
+	}
+	/*
+	 * ½ÌÁ·Ñ§Ê±ËÑË÷
+	 * ×÷Õß£ºÕÅ½İ
+	 */
+	public function searhours($data)
+	{
+		// print_r($data);exit;
+		$db = D('staff');
+		$daka = D('dakanum');
+		$month = D('month');
+		$where = "role_id = 1 ";
+		if ($data['job'] != '') {
+			$where .= "and staff_job = '$data[job]'";
+		}
+		if ($data['sn'] != '') {
+			$where .= "and staff_sn like '%$data[sn]%'";
+		}
+		if($data['name'] != ''){
+			$where .= "and staff_name like '%$data[name]%'";
+		}
+		$mo = $month->select();
+		$row = $db->where($where)->select();
+		foreach ($row as $k => $v) {
+			$id = $v['staff_id'];
+			for($i=1;$i<=12;$i++){
+				$mon = $daka->where("staff_id = '$id' and month = '$i'")->select();
+				$num = $mon[0]['num'];
+				$nums = ($num * 8);
+				if ($nums == '0') {
+					$nums = '';
+				}
+				$mon[0]['hour'] = $nums;
+				$mo[$i]=$mon;
+				unset($mo[0]);
+				
+			}
+			$row[$k]['month']=$mo;
+			
+		}
+		return $row;
+	}
+	/*
+     * Ô±¹¤Çë¼ÙÉóºË×´Ì¬
+     * ×÷Õß£ºÕÅ½İ
+	 */
+	public function leavestatus($sid,$id)
+	{
+		$db = D('staff_leave');
+		if ($sid == '2') {
+			return $db->where("leave_id = $id")->setField('leave_status','2');
+		}else{
+			$data['leave_status'] = '3';
+			return $db->where("leave_id = $id")->setField('leave_status','3');
+		}
+	}	
+	/*
+     * ¹¤×ÊÉèÖÃ²éÑ¯
+     * ×÷Õß£ºÕÅ½İ
+	 */
+	public function wage()
+	{
+		$db = D('in_out');
+		$fa = $db->where('parent_id = 1')->select();
+		$fa1 = $db->where('parent_id = 2')->select();
+		$arr[] = $fa;
+		$arr[] = $fa1;
+		return $arr;
+	}
+	/*
+     * ¹¤×ÊÉèÖÃÌí¼Ó
+     * ×÷Õß£ºÕÅ½İ
+	 */
+	public function wageadd($data)
+	{
+		$db = D('in_out');
+		$list = array();
+		foreach ($data['name'] as $k => $v) {
+			$list[] = array("name" => $v , 'parent_id' => $data['pid']);
+		}
+		return $db->addAll($list);
+	}
+	/*
+     * ¹¤×ÊÉèÖÃÉ¾³ı
+     * ×÷Õß£ºÕÅ½İ
+	 */
+	public function wagedel($id)
+	{
+		$db = D('in_out');
+		return $db->where("in_out_id = $id")->delete();
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	}
 }
-
 ?>

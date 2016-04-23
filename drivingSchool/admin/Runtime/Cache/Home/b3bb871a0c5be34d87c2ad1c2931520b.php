@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -58,7 +58,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/vehreplaceadd">申请换车</a></li>
+            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/vehreplaceadd">申请换车</a></li>
         </ul>
 
     </div>
@@ -71,7 +71,7 @@
             var laydate=$('#laydate').val();
 
             $.ajax({
-                url: "/index.php/Home/Administration/replacesearch",
+                url: "/drivingSchool/index.php/Home/Administration/replacesearch",
                 type: 'get',
                 data: {'car_number':car_number,'replace_name':replace_name,'laydate':laydate},
                 success: function (data) {
@@ -107,21 +107,7 @@
         </tbody>
     </table>
 
-
-    <div class="pagin">
-        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
-        <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
-            <li class="paginItem"><a href="javascript:;">1</a></li>
-            <li class="paginItem current"><a href="javascript:;">2</a></li>
-            <li class="paginItem"><a href="javascript:;">3</a></li>
-            <li class="paginItem"><a href="javascript:;">4</a></li>
-            <li class="paginItem"><a href="javascript:;">5</a></li>
-            <li class="paginItem more"><a href="javascript:;">...</a></li>
-            <li class="paginItem"><a href="javascript:;">10</a></li>
-            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
-        </ul>
-    </div>
+    
 
 
 </div>
@@ -129,5 +115,5 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
 </html>

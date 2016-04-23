@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+	<link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	应发工资项
+	<br />
+	<foreach name="wage[0]" item="vo">
+		<input type="text" value="{$vo.name}"  class="dfinput"/>
+		<a href="__APP__/Home/Staff/wagedel/id/{$vo.in_out_id}">删除</a>
+		<br />
+	</foreach>
+	<form action="__APP__/Home/Staff/wageadd" method="post">
+		<div id="ad"></div>
+		<input type="hidden" name="pid" value="1" />
+		<input name="" type="submit" class="btn" value="保存"/>
+	</form>
+	<a href="javascript:void(0)" id="add">增加应发工资线</a>
+	<br />
+	<br />
+	<br />
+	应扣工资项
+	<br />
+	<foreach name="wage[1]" item="v">
+		<input type="text" value="{$v.name}"  class="dfinput"/>
+		<a href="__APP__/Home/Staff/wagedel/id/{$v.in_out_id}">删除</a>
+		<br />
+	</foreach>
+	<form action="__APP__/Home/Staff/wageadd" method="post">
+		<div id="ads"></div>
+		<input type="hidden" name="pid" value="2" />
+		<input name="" type="submit" class="btn" value="保存"/>
+	</form>
+	<a href="javascript:void(0)" id="adds">增加应扣工资线</a>
+</body>
+</html>
+<script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>   
+<script type="text/javascript">
+	$(function(){
+		$('#add').click(function(){
+			$('#ad').append('<input type="text" name="name[]" class="dfinput"/><br />')
+		})
+		$('#adds').click(function(){
+			$('#ads').append('<input type="text" name="name[]" class="dfinput"/><br />')
+		})
+	})
+</script>

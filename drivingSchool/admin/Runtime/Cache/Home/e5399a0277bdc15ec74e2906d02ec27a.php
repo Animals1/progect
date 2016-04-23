@@ -21,11 +21,22 @@
 <div id="coach" style="display: block">
  <table class="tablelist">
      <form action="/progect/drivingSchool/index.php/Home/Staff/search" method="post">
-            <input type="hidden" name="id" value="1" />
-            编号：<input name="sn" type="text"  />
-            姓名：<input name="name" type="text"  />
-            身份证号：<input name="idcard" type="text"  />
-            手机号：<input name="tel" type="text"  />
+            编号：
+            <?php if($search["sn"] != ''): ?><input name="name" type="text" value="<?php echo ($search["sn"]); ?>" />
+            <?php else: ?>
+              <input name="sn" type="text" /><?php endif; ?>
+            姓名：
+            <?php if($search["name"] != ''): ?><input name="name" type="text" value="<?php echo ($search["name"]); ?>" />
+            <?php else: ?>
+              <input name="name" type="text" /><?php endif; ?>
+            身份证号：
+            <?php if($search["idcard"] != ''): ?><input name="idcard" type="text" value="<?php echo ($search["idcard"]); ?>" />
+            <?php else: ?>
+              <input name="idcard" type="text" /><?php endif; ?>
+            手机号：
+            <?php if($search["tel"] != ''): ?><input name="tel" type="text" value="<?php echo ($search["tel"]); ?>" />
+            <?php else: ?>
+              <input name="tel" type="text" /><?php endif; ?>
             <input type="submit"  value="查询" class="btn"/>
      </form>
      <thead>

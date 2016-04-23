@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
     <style>
         .wrapper{width:500px; height:300px; padding:20px; margin:0px auto}
     </style>
-    <script src="/Public/admin/js/jquery-1-5-1-min.js" type="text/javascript"></script>
-    <script src="/Public/admin/js/jquery-jqChart-min.js" type="text/javascript"></script>
-    <!--[if IE]><script lang="javascript" type="text/javascript" src="/Public/admin/js/excanvas.js"></script><![endif]-->
+    <script src="/drivingSchool/Public/admin/js/jquery-1-5-1-min.js" type="text/javascript"></script>
+    <script src="/drivingSchool/Public/admin/js/jquery-jqChart-min.js" type="text/javascript"></script>
+    <!--[if IE]><script lang="javascript" type="text/javascript" src="/drivingSchool/Public/admin/js/excanvas.js"></script><![endif]-->
     <script lang="javascript" type="text/javascript">
         $(document).ready(function(){
             $(".click").click(function(){
@@ -101,7 +101,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/gasadd">油气添加</a></li>
+            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/gasadd">油气添加</a></li>
         </ul>
 
 
@@ -144,20 +144,7 @@
     </table>
 
 
-    <div class="pagin">
-        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
-        <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
-            <li class="paginItem"><a href="javascript:;">1</a></li>
-            <li class="paginItem current"><a href="javascript:;">2</a></li>
-            <li class="paginItem"><a href="javascript:;">3</a></li>
-            <li class="paginItem"><a href="javascript:;">4</a></li>
-            <li class="paginItem"><a href="javascript:;">5</a></li>
-            <li class="paginItem more"><a href="javascript:;">...</a></li>
-            <li class="paginItem"><a href="javascript:;">10</a></li>
-            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
-        </ul>
-    </div>
+
 </div>
 </body>
 <script type="text/javascript">

@@ -15,8 +15,18 @@
  <table class="tablelist">
      <form action="__APP__/Home/Staff/sasearch" method="post">
             <input type="hidden" name="id" value="1" />
-            员工编号：<input name="sn" type="text"  />
-            员工姓名：<input name="name" type="text"  />
+            员工编号：
+            <if condition="$search.sn neq ''">
+              <input name="sn" type="text" value="{$search.sn}" />
+            <else />
+              <input name="sn" type="text" />
+            </if>
+            员工姓名：
+            <if condition="$search.name neq ''">
+              <input name="name" type="text" value="{$search.name}" />
+            <else />
+              <input name="name" type="text" />
+            </if>
             <input type="submit"  value="查询" class="btn"/>
      </form>
      <tr>

@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/Public/text/javascript">
+    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/drivingSchool/Public/text/javascript">
 
     </script>
 
@@ -17,7 +17,7 @@
 <div class="formbody">
 
     <div class="formtitle"><span>新增车辆</span></div>
-    <form action="/index.php/Home/Administration/addveh" method="post">
+    <form action="/drivingSchool/index.php/Home/Administration/addveh" method="post">
     <table>
         <tr>
             <td>车牌号:</td>
@@ -84,5 +84,5 @@
 
 </div>
 </body>
-<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
 </html>

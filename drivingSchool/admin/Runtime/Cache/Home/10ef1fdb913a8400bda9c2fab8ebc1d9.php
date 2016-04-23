@@ -15,8 +15,14 @@
  <table class="tablelist">
      <form action="/progect/drivingSchool/index.php/Home/Staff/sasearch" method="post">
             <input type="hidden" name="id" value="1" />
-            员工编号：<input name="sn" type="text"  />
-            员工姓名：<input name="name" type="text"  />
+            员工编号：
+            <?php if($search["sn"] != ''): ?><input name="sn" type="text" value="<?php echo ($search["sn"]); ?>" />
+            <?php else: ?>
+              <input name="sn" type="text" /><?php endif; ?>
+            员工姓名：
+            <?php if($search["name"] != ''): ?><input name="name" type="text" value="<?php echo ($search["name"]); ?>" />
+            <?php else: ?>
+              <input name="name" type="text" /><?php endif; ?>
             <input type="submit"  value="查询" class="btn"/>
      </form>
      <tr>

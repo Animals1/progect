@@ -14,6 +14,28 @@ class FinanceController extends Controller {
     public function charge(){
         $arr = D('charge');
 
+        $re = $arr->getvalue();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('charge');
+    }
+
+    /**
+     * 收费（多条件搜索）
+     */
+    public function search(){
+
+        $arr = D('charge');
+
         $re = $arr->searchs();
 
         $p = $re['0'];
@@ -108,7 +130,7 @@ class FinanceController extends Controller {
 
         $arr = D('arrears');
 
-        $re = $arr->searchs();
+        $re = $arr->getvalue();
 
         $p = $re['0'];
         $list = $re['1'];
@@ -123,6 +145,28 @@ class FinanceController extends Controller {
         $this->display('arrears');
     }
 
+
+    /**
+     * 支出（搜索）
+     */
+    public function search1(){
+
+        $arr = D('arrears');
+
+        $re = $arr->searchs();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('arrears');
+    }
 
 
     /**
@@ -198,9 +242,32 @@ class FinanceController extends Controller {
 
 
     /**
-     * 工资明细
-     */
+ * 工资明细
+ */
     public function salary(){
+
+        $arr = D('salary');
+
+        $re = $arr->getvalue();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('salary');
+    }
+
+
+    /**
+     * 工资明细(搜索)
+     */
+    public function search2(){
 
         $arr = D('salary');
 
@@ -299,6 +366,29 @@ class FinanceController extends Controller {
 
         $arr = D('expense');
 
+        $re = $arr->getvalue();
+
+        $p = $re['0'];
+        $list = $re['1'];
+        $page = $re['2'];
+        $count = $re['3'];
+
+        $this->assign('list',$list);
+        $this->assign('count',$count);
+        $this->assign('page',$page);
+        $this->assign('p',$p);
+
+        $this->display('expense');
+    }
+
+
+    /**
+     * 支出（搜索）
+     */
+    public function search3(){
+
+        $arr = D('expense');
+
         $re = $arr->searchs();
 
         $p = $re['0'];
@@ -313,6 +403,7 @@ class FinanceController extends Controller {
 
         $this->display('expense');
     }
+
 
     /**
      * 支出明细（添加页面）
@@ -442,4 +533,5 @@ class FinanceController extends Controller {
         $this->assign('money5',$money5);
         $this->display('expenditure');
     }
+
 }
