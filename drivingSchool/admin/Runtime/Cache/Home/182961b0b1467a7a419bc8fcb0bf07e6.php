@@ -8,7 +8,11 @@
   <frame src="top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
 
+<<<<<<< HEAD
     <frame src="/progect/drivingSchool/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+=======
+    <frame src="/drivingSchool/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+>>>>>>> a5dac5005d7b0cc3621de731066a524def955779
 <<<<<<< HEAD
     <frame src="right.html" name="rightFrame" id="rightFrame" title="rightFrame" />
     

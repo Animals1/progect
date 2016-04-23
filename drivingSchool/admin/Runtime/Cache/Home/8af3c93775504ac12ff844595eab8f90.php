@@ -3,8 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
+    <link href="/drivingSchool/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/drivingSchool/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -64,6 +65,13 @@
 
         </tbody>
     </table>
+    <div class="pagin">
+        <div class="message">共<i class="blue"><?php echo ($count); ?></i>条记录，当前显示第&nbsp;<i class="blue"><?php echo ($p); ?>&nbsp;</i>页</div>
+        <div class="list-page">
+            <?php echo ($page); ?>
+        </div>
+    </div>
+
 </div>
 </body>
 <script type="text/javascript">
