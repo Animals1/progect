@@ -12,13 +12,10 @@ class CompanyModel extends Model {
 
     /*
      * 查询数据
-     * @$where  条件
-     * @$order  排序字段
-     * @$limit  限制几条数据
      * */
-    public function getValue($where,$order,$limit)
+    public function indexsele()
     {
-        return $this->where($where)->order("$order")->limit($limit)->find();
+        return $this->Table("company")->order("company_id desc")->limit(1)->select();
     }
     /*
      * 删除数据
@@ -62,17 +59,17 @@ class CompanyModel extends Model {
     /*
     *   基础信息
     */
-    public function basics($sesid){
+    public function basics($id){
         $company_desc = $_POST['company_desc'];
         $data["company_desc"] = $company_desc;
-        return $this->Table("company")->where("company_id=$sesid")->add($data);
+        return $this->Table("company")->where("company_id=$id")->save($data);
     }
 
 
     /*
     *   企业资质(多文件上传)
     */
-    public function qualifications($sesid){
+    public function qualifications($id){
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -81,20 +78,21 @@ class CompanyModel extends Model {
         // 上传文件
         $info   =   $upload->upload();
 
-        $img=$info['logo1']['savepath'].$info['logo1']['savename'];
+        $img=$info['img']['savepath'].$info['img']['savename'];
         $img2=substr($img,9);
 
-        $img3=$info['logo2']['savepath'].$info['logo2']['savename'];
+        $img3=$info['img1']['savepath'].$info['img1']['savename'];
         $img4=substr($img3,9);
 
-        $img5=$info['logo3']['savepath'].$info['logo3']['savename'];
+        $img5=$info['img2']['savepath'].$info['img2']['savename'];
         $img6=substr($img5,9);
 
         $company_quality = $img2.",".$img4.",".$img6;
 
-        $data=array("company_quality"=>$company_quality);
+
+        $data['company_quality'] = $company_quality;
         if($info) {
-            return $this->Table("company")->where("company_id=$sesid")->add($data);
+            return $this->Table("company")->where("company_id='$id'")->save($data);
         }
     }
 
@@ -102,7 +100,7 @@ class CompanyModel extends Model {
     /*
     *   公司展示
     */
-    public function companyshow($sesid){
+    public function companyshow($id){
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize   =     3145728 ;// 设置附件上传大小
         $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
@@ -111,21 +109,24 @@ class CompanyModel extends Model {
         // 上传文件
         $info   =   $upload->upload();
 
-        $img=$info['show1']['savepath'].$info['show1']['savename'];
+        $img=$info['img3']['savepath'].$info['img3']['savename'];
         $img2=substr($img,9);
 
-        $img3=$info['show2']['savepath'].$info['show2']['savename'];
+        $img3=$info['img4']['savepath'].$info['img4']['savename'];
         $img4=substr($img3,9);
 
-        $img5=$info['show3']['savepath'].$info['show3']['savename'];
+        $img5=$info['img5']['savepath'].$info['img5']['savename'];
         $img6=substr($img5,9);
 
-        $company_quality = $img2.",".$img4.",".$img6;
+        $company_show = $img2.",".$img4.",".$img6;
 
-        $data=array("company_show"=>$company_show);
+        $data['company_show'] = $company_show;
         if($info) {
-            return $this->Table("company")->where("company_id=$sesid")->add($data);
+            return $this->Table("company")->where("company_id='$id'")->save($data);
         }
     }
+
+
+
 }
 ?>

@@ -24,6 +24,7 @@ class CarReplaceModel extends Model {
 					->join("coach ON car_replace.replace_name = coach.coach_id")
 					->join("staff ON coach_staff_id = staff.staff_id")
 					->join("car ON car_replace.replace_number_before = car.car_id")
+					->field('car.car_id,car.car_number,car_replace.*,staff.*')
 					->select();
 		$arr = array($show,$list);
 		return $arr;
@@ -83,6 +84,7 @@ class CarReplaceModel extends Model {
 					->join("coach ON car_replace.replace_name = coach.coach_id")
 					->join("staff ON coach_staff_id = staff.staff_id")
 					->join("car ON car_replace.replace_number_before = car.car_id")
+					->field('car.car_id,car.car_number,car_replace.*,staff.*,coach.*')
 					->find();
     }
 	

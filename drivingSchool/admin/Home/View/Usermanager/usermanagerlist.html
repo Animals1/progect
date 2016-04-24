@@ -53,7 +53,7 @@ $(document).ready(function(){
     </div>
     
     
-    <table class="tablelist">
+    <table class="tablelist" id="va">
         <thead>
         <tr>
         <th>序号</th>
@@ -84,6 +84,10 @@ $(document).ready(function(){
         <?php }?>
         </tbody>
     </table>
+    <script type="text/javascript">
+        
+
+    </script>
     
    
     <div class="pagin">

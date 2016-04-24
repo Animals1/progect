@@ -1,75 +1,23 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>jQuery饼状图</title>
-
-
-<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
-<script type="text/javascript" src="/Public/admin/js/jsapi.js"></script>
-<script type="text/javascript" src="/Public/admin/js/corechart.js"></script>
-<script type="text/javascript" src="/Public/admin/js/jquery.gvChart-1.0.1.min.js"></script>
-<script type="text/javascript" src="/Public/admin/js/jquery.ba-resize.min.js"></script>
-
-<script type="text/javascript">
-gvChartInit();
-$(document).ready(function(){
-	$('#myTable5').gvChart({
-		chartType: 'PieChart',
-		gvSettings: {
-			vAxis: {title: 'No of players'},
-			hAxis: {title: 'Month'},
-			width: 600,
-			height: 350
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>收入统计</title>
+	<script language="javascript">
+		function changeColor(){
+			var color="#f00|#0f0|#00f|#880|#808|#088|yellow|green|blue|gray";
+			color=color.split("|");
+			document.getElementById("blink").style.color=color[parseInt(Math.random() * color.length)];
 		}
-	});
-});
-</script>
-
-<script type="text/javascript">
-gvChartInit();
-$(document).ready(function(){
-		$('#myTable1').gvChart({
-			chartType: 'PieChart',
-			gvSettings: {
-			vAxis: {title: 'No of players'},
-			hAxis: {title: 'Month'},
-			width: 600,
-			height: 350
-		}
-	});
-});
-</script>
-
+		setInterval("changeColor()",200);
+	</script>
 </head>
-
-
 <body>
+<body style="background:#fff3e1;">
 
-	<div style="width:600px;margin:0 auto;margin-top: 100px;">
+	<div id="blink" style="position:absolute; top:20%; height:100px; width:90%; margin-top:-50px;line-height:100px;"><h1><font face="华文楷体">收入报表统计情况<br/><a style="float: right;text-decoration: none;" href="/index.php/Home/Finance/chart"><font size="5" color="red" >收入报表饼状统计图</font></a><br><a style="float: right;text-decoration: none;" href="/index.php/Home/Finance/histogram"><font size="5" color="red" >收入报表柱状统计图</font></a></div>
 
-	   <table id='myTable5'>
-			<caption>收入统计</caption>
-			<thead>
-				<tr>
-					<th></th>
-					<th>学费</th>
-					<th>包车费</th>
-					<th>欠费</th>
-					<th>其他费</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th></th>
-					<td><?php echo ($money); ?></td>
-					<td><?php echo ($money1); ?></td>
-					<td><?php echo ($money3); ?></td>
-					<td><?php echo ($money2); ?></td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
 
 </body>
 </html>

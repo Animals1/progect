@@ -5,17 +5,25 @@
 <title>驾校-管理系统</title>
 </head>
 <frameset rows="88,*,31" cols="*" frameborder="no" border="0" framespacing="0">
-  <frame src="top.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frame src="/index.php/Home/Index/showtop" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <frame src="/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+
+=======
+<<<<<<< HEAD
+>>>>>>> 717dd93378e39ea3c5b4c3759a3b6db670490142
     <frame src="/progect/drivingSchool/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
 <<<<<<< HEAD
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
     <frame src="right.html" name="rightFrame" id="rightFrame" title="rightFrame" />
-    
-=======
+
     <frame src="" name="rightFrame" id="rightFrame" title="rightFrame" />
      
->>>>>>> 260f2c52d5d0b9c16c21f0e55f7c4bbb94d91d08
+
   </frameset>
  
   <frame src="" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />

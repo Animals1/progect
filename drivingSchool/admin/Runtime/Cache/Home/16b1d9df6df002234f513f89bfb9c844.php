@@ -4,8 +4,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 
+<<<<<<< HEAD
 <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+=======
+<<<<<<< HEAD
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+
+=======
+<<<<<<< HEAD
+<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+=======
+<link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+>>>>>>> a5dac5005d7b0cc3621de731066a524def955779
+>>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
+>>>>>>> 717dd93378e39ea3c5b4c3759a3b6db670490142
 <script type="text/javascript">
 $(function(){   
     //导航切换
