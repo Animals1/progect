@@ -3,13 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<<<<<<< HEAD
 <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
-=======
-<link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
->>>>>>> a5dac5005d7b0cc3621de731066a524def955779
 <script type="text/javascript">
 $(function(){	
 	//顶部导航切换
@@ -23,32 +18,19 @@ $(function(){
 
 </head>
 
-<<<<<<< HEAD
 <body style="background:url(/progect/drivingSchool/Public/admin/images/topbg.gif) repeat-x;">
 
     <div class="topleft">
     <a href="main.html" target="_parent"><img src="/progect/drivingSchool/Public/admin/images/logo.png" title="系统首页" /></a>
-=======
-<body style="background:url(/drivingSchool/Public/admin/images/topbg.gif) repeat-x;">
-
-    <div class="topleft">
-    <a href="main.html" target="_parent"><img src="/drivingSchool/Public/admin/images/logo.png" title="系统首页" /></a>
->>>>>>> a5dac5005d7b0cc3621de731066a524def955779
     </div>
         
  
             
     <div class="topright">    
     <ul>
-<<<<<<< HEAD
     <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
     <li><a href="/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-    <li><span><img src="/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
->>>>>>> a5dac5005d7b0cc3621de731066a524def955779
     </ul>
      
     <div class="user">
