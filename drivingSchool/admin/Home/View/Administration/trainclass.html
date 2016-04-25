@@ -37,8 +37,8 @@
     <span>位置：</span>
     <ul class="placeul">
         <li><a href="#">首页</a></li>
-        <li><a href="#">数据表</a></li>
-        <li><a href="#">基本内容</a></li>
+        <li><a href="#">教练管理</a></li>
+        <li><a href="#">教练排课</a></li>
     </ul>
 </div>
 
@@ -47,170 +47,154 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t01.png" /></span>添加</li>
-            <li class="click"><span><img src="__PUBLIC__/admin/images/t02.png" /></span>修改</li>
-            <li><span><img src="__PUBLIC__/admin/images/t03.png" /></span>删除</li>
-            <li><span><img src="__PUBLIC__/admin/images/t04.png" /></span>统计</li>
+            <li class="click">教练名称:<input type="text" name="coach_name"></li>
+            <li class="click">排课日期: <input class="laydate-icon" onclick="laydate()" id='laydate'></li>
+            <li><input type="button" value="查找" onlick="search()"></li>
         </ul>
+    </div>
+    <div class="tools">
 
-
-        <ul class="toolbar1">
-            <li><span><img src="__PUBLIC__/admin/images/t05.png" /></span>我要请假</li>
-        </ul>
-
+       <ul class="toolbar">
+           <li>场内训练<div style="height: 18px;width: 20px; background-color: #00bf00;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>独立驾驶<div style="height: 18px;width: 20px; background-color: #0000FF;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>场内考核<div style="height: 18px;width: 20px; background-color: #5bb75b;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>场外训练<div style="height: 18px;width: 20px; background-color: #006dcc;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>同车互动<div style="height: 18px;width: 20px; background-color: #dca571;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>场外考核<div style="height: 18px;width: 20px; background-color: #dc4e00;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>违约<div style="height: 18px;width: 20px; background-color: #ff0000;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>预约<div style="height: 18px;width: 20px; background-color: #FFFFFF;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+           <li>可预约<div style="height: 18px;width: 20px; background-color: #a2a2a2;float: left; margin-top: 7px;margin-left: 5px;margin-right: 5px;"></div></li>
+       </ul>
     </div>
 
-
+<h3>已排课的显示</h3>
     <table class="tablelist">
         <thead>
         <tr>
-            <th><input name="" type="checkbox" value="" checked="checked"/></th>
-            <th>请假时间<i class="sort"><img src="__PUBLIC__/admin/images/px.gif" /></i></th>
-            <th>销假时间</th>
-            <th>请假类型</th>
-            <th>请假天数</th>
-            <th>请假原因</th>
-            <th>状态</th>
-            <th>操作</th>
+            <th>教练员</th>
+            <th>使用车辆</th>
+            <th>7:00-8:00</th>
+            <th>8:00-9:00</th>
+            <th>9:00-10:00</th>
+            <th>10:00-11:00</th>
+            <th>11:00-12:00</th>
+            <th>12:00-12:30</th>
+            <th>12:30-13:30</th>
+            <th>13:30-14:30</th>
+            <th>14:30-15:30</th>
+            <th>15:30-16:30</th>
+            <th>16:30-17:30</th>
+            <th>17:30-18:00</th>
+            <th>18:00-19:00</th>
+            <th>19:00-20:00</th>
+            <th>20:00-21:00</th>
         </tr>
         </thead>
         <tbody>
+       <?php foreach($order as $k=>$v){?>
         <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130908</td>
-            <td>王金平幕僚：马英九声明字字见血 人活着没意思</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-09 15:05</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
-        </tr>
+            <td><?php echo $v['staff_name']?></td>
+            <td><?php echo $v['car_number']?></td>
+            <?php foreach($v['student_name'] as $key=>$val){?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130907</td>
-            <td>温州19名小学生中毒流鼻血续：周边部分企业关停</td>
-            <td>uimaker</td>
-            <td>山东济南</td>
-            <td>2013-09-08 14:02</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130906</td>
-            <td>社科院:电子商务促进了农村经济结构和社会转型</td>
-            <td>user</td>
-            <td>江苏无锡</td>
-            <td>2013-09-07 13:16</td>
-            <td>已销假</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='1'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130905</td>
-            <td>江西&quot;局长违规建豪宅&quot;：局长检讨</td>
-            <td>admin</td>
-            <td>北京市</td>
-            <td>2013-09-06 10:36</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='2'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130904</td>
-            <td>中国2020年或迈入高收入国家行列</td>
-            <td>uimaker</td>
-            <td>江苏南京</td>
-            <td>2013-09-05 13:25</td>
-            <td>已拒绝</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='3'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130903</td>
-            <td>深圳地铁车门因乘客拉闸打开 3人被挤入隧道</td>
-            <td>user</td>
-            <td>广东深圳</td>
-            <td>2013-09-04 12:00</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='4'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130902</td>
-            <td>33次地表塌陷 村民不敢下地劳作(图)</td>
-            <td>admin</td>
-            <td>湖南长沙</td>
-            <td>2013-09-03 00:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='5'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130901</td>
-            <td>医患关系：医生在替改革不彻底背黑锅</td>
-            <td>admin</td>
-            <td>江苏南京</td>
-            <td>2013-09-02 15:05</td>
-            <td>未审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
-        </tr>
+            <?php if($v['time'][$key]=='6'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
 
-        <tr>
-            <td><input name="" type="checkbox" value="" /></td>
-            <td>20130900</td>
-            <td>山东章丘公车进饭店景点将自动向监控系统报警</td>
-            <td>uimaker</td>
-            <td>山东滨州</td>
-            <td>2013-09-01 10:26</td>
-            <td>已审核</td>
-            <td><a href="#" class="tablelink">查看</a>     <a href="#" class="tablelink">删除</a></td>
+            <?php if($v['time'][$key]=='7'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='8'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='9'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='10'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='11'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='12'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='13'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='14'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php if($v['time'][$key]=='15'){?>
+            <td><?php echo $val?></td>
+            <?php }else{?>
+            <td><?php echo "未预约";?></td>
+            <?php }?>
+
+            <?php }?>
+
         </tr>
+<?php }?>
+
         </tbody>
     </table>
-
-
-    <div class="pagin">
-        <div class="message">共<i class="blue">1256</i>条记录，当前显示第&nbsp;<i class="blue">2&nbsp;</i>页</div>
-        <ul class="paginList">
-            <li class="paginItem"><a href="javascript:;"><span class="pagepre"></span></a></li>
-            <li class="paginItem"><a href="javascript:;">1</a></li>
-            <li class="paginItem current"><a href="javascript:;">2</a></li>
-            <li class="paginItem"><a href="javascript:;">3</a></li>
-            <li class="paginItem"><a href="javascript:;">4</a></li>
-            <li class="paginItem"><a href="javascript:;">5</a></li>
-            <li class="paginItem more"><a href="javascript:;">...</a></li>
-            <li class="paginItem"><a href="javascript:;">10</a></li>
-            <li class="paginItem"><a href="javascript:;"><span class="pagenxt"></span></a></li>
-        </ul>
-    </div>
-
-
-    <div class="tip">
-        <div class="tiptop"><span>提示信息</span><a></a></div>
-
-        <div class="tipinfo">
-            <span><img src="__PUBLIC__/admin/images/ticon.png" /></span>
-            <div class="tipright">
-                <p>是否确认对信息的修改 ？</p>
-                <cite>如果是请点击确定按钮 ，否则请点取消。</cite>
-            </div>
-        </div>
-
-        <div class="tipbtn">
-            <input name="" type="button"  class="sure" value="确定" />&nbsp;
-            <input name="" type="button"  class="cancel" value="取消" />
-        </div>
-
-    </div>
-
 
 
 
@@ -219,7 +203,7 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-
+<script type="text/javascript" src="__PUBLIC__/date/laydate/laydate.js"></script>
 </html>
 
 

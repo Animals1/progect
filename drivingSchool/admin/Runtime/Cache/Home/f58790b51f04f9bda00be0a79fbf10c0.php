@@ -3,9 +3,9 @@
 <head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/drivingSchool/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -41,8 +41,8 @@
     <div class="tools">
 
         <ul class="toolbar1">
-            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/addveh"><a
-                    href="/drivingSchool/index.php/Home/Administration/addbus">增开班车</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh"><a
+                    href="/index.php/Home/Administration/addbus">增开班车</a></li>
         </ul>
 
     </div>
@@ -65,8 +65,8 @@
                 <td><?php echo ($bus["bus_station"]); ?></td>
 
                 <td>
-                    <a href="/drivingSchool/index.php/Home/Administartion/busupdate/id/<?php echo ($bus["bus_id"]); ?>">修改</a>
-                    <a href="/drivingSchool/index.php/Home/Administration/busdel/id/<?php echo ($bus["bus_id"]); ?>">删除</a>
+                    <a href="/index.php/Home/Administartion/busupdate/id/<?php echo ($bus["bus_id"]); ?>">修改</a>
+                    <a href="/index.php/Home/Administration/busdel/id/<?php echo ($bus["bus_id"]); ?>">删除</a>
                 </td>
             </tr><?php endforeach; endif; ?>
         </tbody>

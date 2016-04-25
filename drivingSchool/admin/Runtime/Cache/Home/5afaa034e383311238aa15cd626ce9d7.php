@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <!--<link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />-->
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <!--<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />-->
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script language="javascript">
         $(function(){
@@ -55,7 +55,7 @@
                 var car_number=$('#car_number').val();
                 var license_number=$('#license_number').val();
                 $.ajax({
-                    url: "/drivingSchool/index.php/Home/Administration/vehgooutsearch",
+                    url: "/index.php/Home/Administration/vehgooutsearch",
                     type: 'get',
                     data: {'coach_driving':driving,'coach_motor':motor,'car_status':status,'car_number':car_number,'license_number':license_number},
                     success: function (data) {
@@ -117,5 +117,5 @@
 
 
 </body>
-<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>

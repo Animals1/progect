@@ -26,15 +26,36 @@ class CoachModel extends Model {
         return $this->where($where)->delete();
     }
 
+    /*修改*/
+     public function updatecar($where,$data)
+     {
+         return $this->where($where)->save($data);
+     }
+
 
     /*
     *教练信息
     * */
     public function coachMessage($where=1)
     {
-        return $this->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->select();
+
+        $User = M("Coach");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->page($p,2)->select();
+        $count = $User->join('staff on coach.coach_staff_id=staff.staff_id')->join('sex on staff.staff_sex=sex.sex_id')->join('coach_group on coach.group_id=coach_group.group_id','LEFT')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
 
+    /*
+     *
+     * */
+        public function nocarcoach($where)
+        {
+            $this->join('staff on coach.coach_staff_id=staff.staff_id')->where($where)->select();
+        }
 
     public function nogroupcoachMessage($where=1)
     {

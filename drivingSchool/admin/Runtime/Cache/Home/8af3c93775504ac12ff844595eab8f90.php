@@ -3,9 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/drivingSchool/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){

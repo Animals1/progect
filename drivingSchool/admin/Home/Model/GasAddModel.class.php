@@ -49,6 +49,7 @@ class GasAddModel extends Model {
      * */
     public function gasMessage()
     {
+
        return $this->select();
     }
 

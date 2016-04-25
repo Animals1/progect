@@ -3,8 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -58,7 +58,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/vehreplaceadd">申请换车</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/vehreplaceadd">申请换车</a></li>
         </ul>
 
     </div>
@@ -71,7 +71,7 @@
             var laydate=$('#laydate').val();
 
             $.ajax({
-                url: "/drivingSchool/index.php/Home/Administration/replacesearch",
+                url: "/index.php/Home/Administration/replacesearch",
                 type: 'get',
                 data: {'car_number':car_number,'replace_name':replace_name,'laydate':laydate},
                 success: function (data) {
@@ -115,5 +115,5 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>

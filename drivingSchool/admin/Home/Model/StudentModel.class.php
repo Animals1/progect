@@ -176,7 +176,14 @@ class StudentModel extends Model {
     */
 
     public function studentinfo($where){
-        return $this->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->where($where)->select();
+        $User = M("Student");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->join('sex on student.stu_sex=sex.sex_id')->where($where)->page($p,2)->select();
+        $count = $User->join('class on student.class_id = class.class_id')->join("student_status on student_status.stu_status_id = student.stu_status_id")->join('sex on student.stu_sex=sex.sex_id')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
 
 
@@ -186,7 +193,14 @@ class StudentModel extends Model {
 
     public function inschoolstu($where=1)
     {
-        return $this->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->select();
+        $User = M("Student");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->page($p,2)->select();
+        $count = $User->join('sex on student.stu_sex=sex.sex_id')->join('student_status on student.stu_status_id=student_status.stu_status_id')->join('coach_motor on student.motor_id=coach_motor.motor_id')->join('progress on student.stu_id=progress.stu_id')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
     /*状态*/
     public function status()

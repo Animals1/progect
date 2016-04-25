@@ -15,7 +15,14 @@ class ComplaintModel extends Model {
      * */
     public function getValue($where=1)
     {
-        return $this->join('staff on complaint.complaint_name=staff.staff_id')->join('student on complaint.stu_id=student.stu_id')->where($where)->select();
+        $User = M("Complaint");
+        isset($_GET['p'])?$p=$_GET['p']:$p=1;
+        $list=$User->join('staff on complaint.complaint_name=staff.staff_id')->join('student on complaint.stu_id=student.stu_id')->where($where)->page($p,2)->select();
+        $count = $User->join('staff on complaint.complaint_name=staff.staff_id')->join('student on complaint.stu_id=student.stu_id')->where($where)->count();
+        $page       = new \Think\Page($count,2);
+        $show       = $page->show();
+        $arr = array($p,$list,$show,$count);
+        return $arr;
     }
     /*
      * 删除数据
@@ -41,7 +48,7 @@ class ComplaintModel extends Model {
      * */
     public function selectComplain()
     {
-        return $this->select('complaint_name');
+        return $this->join('staff on complaint.complaint_name=staff.staff_id')->join('student on complaint.stu_id=student.stu_id')->select();
     }
 }
 ?>

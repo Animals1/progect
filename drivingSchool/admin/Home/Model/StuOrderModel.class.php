@@ -61,9 +61,11 @@ class StuOrderModel extends Model {
      * 所有教练的预约课程情况
      * $where  查询状态
     * */
-    public function coachClass($where=1)
+    public function selectAppointment()
     {
-        $this->join('coach on stu_order.coach_id=coach.coach_id')->join('student on stu_order.stu_id=student.stu_id')->join('class on stu_order.class_id=class.class_id')->join('time_table on stu_order.time_id=time_table.time_id')->join('coach_motor_model on coach.motor_id=coach_motor_model.model_id')->where($where)->select();
+        $sql="select coach.coach_id,car.car_number,staff.staff_name,group_concat(student.stu_name) as student_name,group_concat(time_table.time_id) as time from stu_order inner join student on student.stu_id=stu_order.stu_id inner join coach on coach.coach_id=stu_order.coach_id inner join time_table on time_table.time_id=stu_order.time_id inner join staff on coach.coach_staff_id=staff.staff_id inner join car on coach.car_id=car.car_id group by staff.staff_name order by time_table.time_id ASC ";
+       $arr=$this->query($sql);
+        return $arr;
     }
     /*
      * 教练学时

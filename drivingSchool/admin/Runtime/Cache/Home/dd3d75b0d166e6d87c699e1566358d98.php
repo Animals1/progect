@@ -3,9 +3,9 @@
 <head >
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/drivingSchool/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
-    <script src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -48,10 +48,10 @@
     <div class="tools">
 
         <ul class="toolbar">
-            <li class="click1"><span><img src="/drivingSchool/Public/admin/images/t01.png" /></span><a href="/drivingSchool/index.php/Home/Administration/addveh">添加</a></li>
-            <li class="click1"><span><img src="/drivingSchool/Public/admin/images/t02.png" /></span><a href="">修改</a></li>
-            <li><span><img src="/drivingSchool/Public/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>
-            <li><span><img src="/drivingSchool/Public/admin/images/t04.png" /></span><a href="">统计</a></li>
+            <li class="click1"><span><img src="/Public/admin/images/t01.png" /></span><a href="/index.php/Home/Administration/addveh">添加</a></li>
+            <li class="click1"><span><img src="/Public/admin/images/t02.png" /></span><a href="">修改</a></li>
+            <li><span><img src="/Public/admin/images/t03.png" /></span><a href="javascript:; delAll()">删除</a></li>
+            <li><span><img src="/Public/admin/images/t04.png" /></span><a href="">统计</a></li>
 
             <li>
                 车型:<select name="coach_driving" id="coach_driving" ">
@@ -85,7 +85,7 @@
                 var license_number=$('#license_number').val();
                 //批量删除
                 $.ajax({
-                    url: "/drivingSchool/index.php/Home/Administration/registrationsearch",
+                    url: "/index.php/Home/Administration/registrationsearch",
                     type: 'get',
                     data: {'coach_driving':coach_driving,'coach_motor':coach_motor,'car_status':car_status,'car_number':car_number,'license_number':license_number},
                     success: function (data) {
@@ -98,7 +98,7 @@
         </script>
 
         <ul class="toolbar1">
-            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/addveh">车辆登记</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/addveh">车辆登记</a></li>
         </ul>
 
     </div>
@@ -108,7 +108,7 @@
         <thead>
         <tr>
             <th><input name="qx" type="checkbox" value="" id="qx" onclick="allSelect()"/></th>
-            <th>序号<i class="sort"><img src="/drivingSchool/Public/admin/images/px.gif" /></i></th>
+            <th>序号<i class="sort"><img src="/Public/admin/images/px.gif" /></i></th>
             <th>车牌号</th>
             <th>车型</th>
             <th>行驶证号</th>
@@ -130,7 +130,7 @@
             <td><?php echo (date("Y-m-d",$car["car_validity"])); ?></td>
             <td><?php echo (date("Y-m-d",$car["car_register"])); ?></td>
             <td><?php echo ($car["status_name"]); ?></td>
-            <td><a href="/drivingSchool/index.php/Home/Administration/registrationdel/id/<?php echo ($car["veh_id"]); ?>" class="tablelink"> 修改</a></td>
+            <td><a href="/index.php/Home/Administration/registrationdel/id/<?php echo ($car["veh_id"]); ?>" class="tablelink"> 修改</a></td>
         </tr><?php endforeach; endif; ?>
         </tbody>
     </table>
@@ -170,7 +170,7 @@
             {
                 //批量删除
                 $.ajax({
-                    url: "/drivingSchool/index.php/Home/Administration/registrationdel",
+                    url: "/index.php/Home/Administration/registrationdel",
                     type: 'get',
                     data: {'id': ids},
                     success: function (data) {

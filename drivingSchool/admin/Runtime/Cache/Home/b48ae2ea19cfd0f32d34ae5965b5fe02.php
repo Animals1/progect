@@ -3,21 +3,29 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="/drivingSchool/Public/text/javascript">
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="/Public/text/javascript">
 
     </script>
 
 
 </head>
+<div class="rightinfo">
 
+    <div class="tools">
+
+        <ul class="toolbar1">
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/carassignment">车辆分配</a></li>
+        </ul>
+
+    </div>
 
 <body style="background:#FFF8ED;">
 
 <div class="formbody">
 
     <div class="formtitle"><span>新增车辆</span></div>
-    <form action="/drivingSchool/index.php/Home/Administration/addveh" method="post">
+    <form action="/index.php/Home/Administration/addveh" method="post">
     <table>
         <tr>
             <td>车牌号:</td>
@@ -84,5 +92,5 @@
 
 </div>
 </body>
-<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>
