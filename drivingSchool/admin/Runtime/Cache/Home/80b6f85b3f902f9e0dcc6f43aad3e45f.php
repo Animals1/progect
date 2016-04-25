@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/eleven/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/eleven/progect/drivingSchool/Public/admin/js/jquery.js"></script>
+<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 </head>
 
 <body>
@@ -14,7 +14,7 @@
     <ul class="placeul">
     <li><a href="#">教练</a></li>
     <li><a href="#">车辆管理</a></li>
-    <li><a href="/eleven/progect/drivingSchool/index.php/Home/Service/getrepaircar">换车记录</a></li>
+    <li><a href="/index.php/Home/Service/getrepaircar">换车记录</a></li>
     <li><a href="#">修改换车记录</a></li>
 	
     </ul>

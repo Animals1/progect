@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+    <link href="__PUBLIC__/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/admin/js/jquery.js"></script>
+
+
+</head>
+
+
+<body style="background:#FFF8ED;">
+<div class="rightinfo">
+ <table class="tablelist">
+<!--      <form action="__APP__/Home/Staff/sasearch" method="post">
+            <input type="hidden" name="id" value="1" />
+            员工编号：
+            <if condition="$search.sn neq ''">
+              <input name="sn" type="text" value="{$search.sn}" />
+            <else />
+              <input name="sn" type="text" />
+            </if>
+            员工姓名：
+            <if condition="$search.name neq ''">
+              <input name="name" type="text" value="{$search.name}" />
+            <else />
+              <input name="name" type="text" />
+            </if>
+            <input type="submit"  value="查询" class="btn"/>
+     </form> -->
+     <tr>
+         <th rowspan="2">岗位</th>
+         <th rowspan="2">员工编号</th>
+         <th rowspan="2">姓名</th>
+         <th rowspan="2">出勤天数</th>
+         <th colspan="($wage[0]['count'] + 1)"><center>应发工资</center></th>
+         <th colspan="($wage[1]['count'] + 1)"><center>应扣工资</center></th>
+         <th rowspan="2">实发工资</th>
+         <th rowspan="2">状态</th>
+     </tr>
+     <tr>
+         <foreach name="wage[0]" item="vo" >
+            <th>{$vo.name}</th>
+         </foreach>
+     </tr>
+  </table>
+</div>
+
+</body>
+
+</html>

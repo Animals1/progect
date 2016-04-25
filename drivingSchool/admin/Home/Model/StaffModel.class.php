@@ -664,7 +664,9 @@ class StaffModel extends Model {
 	{
 		$db = D('in_out');
 		$fa = $db->where('parent_id = 1')->select();
+		$fa['count'] = $db->where('parent_id = 1')->count();
 		$fa1 = $db->where('parent_id = 2')->select();
+		$fa1['count'] = $db->where('parent_id = 2')->count();
 		$arr[] = $fa;
 		$arr[] = $fa1;
 		return $arr;

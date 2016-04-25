@@ -125,7 +125,7 @@
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();
-			location.href = "/index.php/Home/Service/searchcondition/status/"+value;
+			location.href = "/index.php/Home/Service/searchcondition/type/2/status/"+value;
 			
 		})
 	})

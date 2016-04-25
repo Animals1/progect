@@ -26,11 +26,7 @@
     <div class="rightinfo">
     
     <div class="tools">
-		<ul class="forminfo">
-		<li>
-			<?php  ?>
-        
-        </ul>
+		
 			<label>选择条件&nbsp;&nbsp;:</label>
 			<select class='condition'>
 			<?php if($status == ''){ echo "<option value='' selected>请选择</option><option value='0'>审核未通过</option><option value='1'>审核通过</option>"; } if($status == '0'){ echo "<option value=''>请选择</option><option value='0' selected>审核未通过</option><option value='1'>审核通过</option>"; } if($status == '1'){ echo "<option value=''>请选择</option><option value='0'>审核未通过</option><option value='1' selected>审核通过</option>"; } ?>
@@ -138,7 +134,7 @@
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();
-			location.href = "/index.php/Home/Service/searchcondition/value/"+value;
+			location.href = "/index.php/Home/Service/searchcondition/type/1/value/"+value;
 			
 		})
 	})

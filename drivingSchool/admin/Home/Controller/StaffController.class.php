@@ -168,7 +168,7 @@ class StaffController extends Controller {
     /*
      * 工资项添加
      * 作者：张捷
-     */
+     */ 
     public function wageadd()
     {
         $staff = D('staff');
@@ -197,5 +197,16 @@ class StaffController extends Controller {
         }else{
             $this->error('删除失败！');
         }
+    }
+    /*
+     * 员工工资显示
+     * 作者张捷
+     */
+    public function washow()
+    {
+        $staff = D('staff');
+        $wage = $staff->wage();
+        $this->assign('wage',$wage);
+        $this->display('washow');
     }
 }

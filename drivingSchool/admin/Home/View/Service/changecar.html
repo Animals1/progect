@@ -26,17 +26,7 @@
     <div class="rightinfo">
     
     <div class="tools">
-		<ul class="forminfo">
-		<li>
-			<?php /*if($type == '1'){
-				echo "管理员";
-			}
-			else{
-				echo "普通用户";
-			}*/
-			?>
-        
-        </ul>
+		
 			<label>选择条件&nbsp;&nbsp;:</label>
 			<select class='condition'>
 			<?php if($status == ''){
@@ -187,7 +177,7 @@
 		//筛选条件，审核未审核
 		$('.condition').change(function(){
 			var value = $(this).val();
-			location.href = "__APP__/Home/Service/searchcondition/value/"+value;
+			location.href = "__APP__/Home/Service/searchcondition/type/1/value/"+value;
 			
 		})
 	})
