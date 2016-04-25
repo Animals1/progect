@@ -46,7 +46,7 @@
     </div>
     <table class="tablelist">
 	<?php foreach($list as $v){?>
-		<img src="<?php echo "/Public/admin/".$v['stu_photo'];?>" width="20" height="20">&nbsp;&nbsp;
+		<img src="<?php echo "/Public/".$v['stu_photo'];?>" width="20" height="20">&nbsp;&nbsp;
 		总体评价:&nbsp;&nbsp;<?php echo $v['total_num'];?>&nbsp;&nbsp;&nbsp;&nbsp;
 		服务态度:&nbsp;&nbsp;<?php echo $v['service_num'];?>&nbsp;&nbsp;&nbsp;&nbsp;
 		教学质量:&nbsp;&nbsp;<?php echo $v['teach_num'];?>&nbsp;&nbsp;&nbsp;&nbsp;

@@ -97,11 +97,11 @@ class AdminModel extends Model {
             $list =$user->page($p,6)->join('admin_role ON admin.admin_id = admin_role.admin_id')
             ->join('role ON admin_role.role_id = role.role_id')
             ->join('admin_staff ON admin.admin_id = admin_staff.admin_id')
-            ->join('staff ON admin_staff.staff_id = staff.staff_id')->select();
+            ->join('staff ON admin_staff.staff_id = staff.staff_id')->where("admin.admin_status=1")->select();
             $count      = $user->join('admin_role ON admin.admin_id = admin_role.admin_id')
             ->join('role ON admin_role.role_id = role.role_id')
             ->join('admin_staff ON admin.admin_id = admin_staff.admin_id')
-            ->join('staff ON admin_staff.staff_id = staff.staff_id')->count();
+            ->join('staff ON admin_staff.staff_id = staff.staff_id')->where("admin.admin_status=1")->count();
             $page       = new \Think\Page($count,6);
             $show       = $page->show();
             $arr = array($list,$show,$count,$p);
@@ -289,6 +289,104 @@ class AdminModel extends Model {
             }
             //dump($data);die;
             return $data;
+        }
+
+
+
+
+
+
+        /*
+        *   用户登录页面操作
+        */
+        public function logadd($uname,$userip,$logstarttime){
+            //echo $uname.$userip.$logstarttime;die;
+            $data['logname'] = $uname;
+            $data['logip'] = $userip;
+            $data['logstarttime'] = $logstarttime;
+           // print_r($data);die;
+
+            return $this->Table("log")->add($data);
+        }
+
+
+        public function logsele(){
+            return $this->Table("log")->order("id desc")->limit(1)->select();
+        }
+
+        public function logout(){
+            //接收id信息
+            $id = $_GET['id'];
+            $logendtime = date("Y-m-d H:i:s",time());
+            $data['logendtime'] = $logendtime;
+            return $this->Table("log")->where("id='$id'")->save($data);
+        }
+
+
+
+
+        /*
+        *   重置密码
+        *   by 郭旭峰
+        */
+        public function pwdreset(){
+            $id = $_GET['id'];
+
+            $upwd = 666666;
+            $intermediateSalt = md5($upwd);
+            $salt = substr($intermediateSalt, 0, 6);
+            $newpwd = hash("sha256", $upwd . $salt);//最终密码
+
+            $data['admin_pwd'] = $newpwd;
+            return $this->Table("admin")->where("admin_id='$id'")->save($data);
+        }
+
+
+
+        /*
+        *   账号信息添加
+        *   by  郭旭峰
+        */
+        public function admincreate($admin_name,$nupwd,$admin_email,$admin_tel,$status){
+            $data['admin_name'] = $admin_name;
+            $data['admin_pwd'] = $nupwd;
+            $data['admin_email'] = $admin_email;
+            $data['admin_phone'] = $admin_tel;
+            $data['admin_status'] = $status;
+            return $this->Table("admin")->add($data);
+        }
+
+
+        /*
+        *   adminidsele
+        *   by 郭旭峰
+        */
+        public function adminidsele(){
+            return $this->Table("admin")->order("admin_id desc")->limit(1)->select();
+        }
+
+
+        /*
+        *   admin_role表
+        *   by 郭旭峰
+        */
+        public function adminroleadd($admin_id,$roleabout){
+            $da = array();
+            foreach ($roleabout as $key=>$value) {
+                $da[$key]['admin_id'] = $admin_id;
+                $da[$key]['role_id'] = $value;
+            }
+            return $this->Table("admin_role")->add($da);
+        }
+
+
+        /*
+        *   staff员工姓名编辑
+        *   by 郭旭峰
+        */
+        public function staffnameadd($staff_name){
+            $data['staff_name'] = $staff_name;
+            return $this->Table("staff")->add($data);
         }
 }
 ?>

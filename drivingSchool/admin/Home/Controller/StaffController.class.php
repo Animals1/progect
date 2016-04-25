@@ -165,4 +165,48 @@ class StaffController extends Controller {
         $this->assign('wage',$wage);
         $this->display('wage');
     }
+    /*
+     * 工资项添加
+     * 作者：张捷
+     */ 
+    public function wageadd()
+    {
+        $staff = D('staff');
+        if (isset($_POST['name'])) {
+            $re = $staff->wageadd($_POST);
+            if($re){
+              $this->success('添加成功！',__CONTROLLER__."/set",3);
+            }else{
+              $this->error('添加失败！');
+            }
+        }else{
+            $this->error('没有新添加的数据！');
+        }
+    }
+    /*
+     * 工资项删除
+     * 作者：张捷
+     */
+    public function wagedel()
+    {
+        $staff = D('staff');
+        $id = $_GET['id'];
+        $re = $staff->wagedel($id);
+        if($re){
+            $this->success('删除成功！',__CONTROLLER__."/set",3);
+        }else{
+            $this->error('删除失败！');
+        }
+    }
+    /*
+     * 员工工资显示
+     * 作者张捷
+     */
+    public function washow()
+    {
+        $staff = D('staff');
+        $wage = $staff->wage();
+        $this->assign('wage',$wage);
+        $this->display('washow');
+    }
 }

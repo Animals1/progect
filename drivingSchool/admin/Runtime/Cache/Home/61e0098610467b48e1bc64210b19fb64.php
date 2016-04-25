@@ -19,6 +19,7 @@ $(document).ready(function(){
 
   $(".sure").click(function(){
   $(".tip").fadeOut(100);
+  window.location.href="/index.php/Home/Usermanager/nameaddlist";
 });
 
   $(".cancel").click(function(){
@@ -53,7 +54,7 @@ $(document).ready(function(){
     </div>
     
     
-    <table class="tablelist">
+    <table class="tablelist" id="va">
         <thead>
         <tr>
         <th>序号</th>
@@ -79,11 +80,15 @@ $(document).ready(function(){
             <?php if($v['admin_status'] == 0): ?>无效    <?php else: ?> <font color="blue">有效</font><?php endif; ?>
         </td>
         <td><?php echo $v['role_name'];?></td>
-        <td><a href="/index.php/Home/Usermanager/usermanagerlistiddele/id/<?php echo $v['id'];?>" class="tablelink">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="tablelink"> 修改</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="tablelink"> 重置密码</a></td>
+        <td><a href="/index.php/Home/Usermanager/usermanagerlistiddele/id/<?php echo $v['id'];?>" class="tablelink" title="删除">删除</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php/Home/Usermanager/aboutsavelist" class="tablelink" title="修改"> 修改</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/index.php/Home/Usermanager/pwdreset/id/<?php echo $v['admin_id'];?>" class="tablelink" title="密码将会被修改为默认初始化密码:666666"> 重置密码</a></td>
         </tr>
         <?php }?>
         </tbody>
     </table>
+    <script type="text/javascript">
+        
+
+    </script>
     
    
     <div class="pagin">

@@ -1,0 +1,203 @@
+[ 2016-04-24T20:38:07+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.080307s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019575s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000259s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000583s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022069s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.010960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011077s ]
+
+[ 2016-04-24T20:38:14+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000589s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0054s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0124s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000804s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000859s ]
+
+[ 2016-04-24T20:38:15+08:00 ] 127.0.0.1 /index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000038s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000074s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004648s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000350s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000768s ]
+
+[ 2016-04-24T20:38:32+08:00 ] 127.0.0.1 /index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001366s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0279s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0107s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '郭旭峰' AND `admin_pwd` = '2ff7fd46b2dec0f597b9c7a5cca7e87c2d9657b46110f58539ab326e215f745f'  [ RunTime:0.2221s ]
+NOTIC: [8] Undefined index: checkbox F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0111s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0123s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=7 )  [ RunTime:0.0153s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0096s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(3,2) )  [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =6 )  [ RunTime:0.0068s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =1 )  [ RunTime:0.0151s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=27 )  [ RunTime:0.0122s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=28 )  [ RunTime:0.0119s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=29 )  [ RunTime:0.0188s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=30 )  [ RunTime:0.0113s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=7 )  [ RunTime:0.0236s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=8 )  [ RunTime:0.0138s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=9 )  [ RunTime:0.0195s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=10 )  [ RunTime:0.0272s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.2308s ]
+SQL: SELECT * FROM `log` ORDER BY id desc LIMIT 1   [ RunTime:0.0122s ]
+NOTIC: [8] Undefined variable: rolename F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 140 行.
+NOTIC: [8] Undefined variable: roleid F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 141 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039281s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000701s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000752s ]
+
+[ 2016-04-24T20:38:32+08:00 ] 127.0.0.1 /index.php/Home/Index/showtop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000713s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000086s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020059s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001562s ]
+
+[ 2016-04-24T20:38:33+08:00 ] 127.0.0.1 /index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000620s ]
+NOTIC: [8] Undefined index: roleid F:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 169 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000083s ]
+NOTIC: [8] Undefined index: roleid F:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.654706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.654780s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000623s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2016-04-24T20:38:33+08:00 ] 127.0.0.1 /index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000068s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132212s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000558s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-04-24T20:38:37+08:00 ] 127.0.0.1 /index.php/Home/Personal/everyoneabout
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000525s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0107s ]
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff_name='郭旭峰' ) LIMIT 1   [ RunTime:0.0084s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132382s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132506s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001129s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001506s ]
+
+[ 2016-04-24T20:38:39+08:00 ] 127.0.0.1 /index.php/Home/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000812s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000039s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000077s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004613s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+

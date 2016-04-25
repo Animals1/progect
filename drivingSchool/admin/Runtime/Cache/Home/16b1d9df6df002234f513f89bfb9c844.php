@@ -6,6 +6,10 @@
 
 <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98f0fb6c4240717a6d495698588682ef1cbd8e1b
 <script type="text/javascript">
 $(function(){   
     //导航切换

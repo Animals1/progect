@@ -428,13 +428,26 @@ class StaffModel extends Model {
 	*/
 
 
+	public function selcoachid($name)
+	{
+		return $this->where("staff_name = '$name'")->join("coach ON staff.staff_id = coach.coach_staff_id")->find();
+	}
 
-	public function selcoachid($name){
+	/*public function selcoachid($name){
+		return $this->where("staff_name = '$name'")
+					->join("coach ON staff.staff_id = coach.coach_staff_id")
+					->find();
+	}*/
+
+
+
+	/*public function selcoachid($name){
 		return $this->where("staff_name = '$name'")
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
 
-	}
+	}*/
+
 	/**
 	 * 查询全部的员工信息（部分字段）
 	 */
@@ -448,6 +461,7 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
+
 	}
 	/*
 	 * 查询月数
@@ -520,6 +534,7 @@ class StaffModel extends Model {
 		}
 		
 		return $row;
+
 	}
 	/*
 	 * 查询请假页面数据
@@ -641,14 +656,43 @@ class StaffModel extends Model {
 			return $db->where("leave_id = $id")->setField('leave_status','3');
 		}
 	}	
+	/*
+     * 工资设置查询
+     * 作者：张捷
+	 */
 	public function wage()
 	{
 		$db = D('in_out');
 		$fa = $db->where('parent_id = 1')->select();
+		$fa['count'] = $db->where('parent_id = 1')->count();
 		$fa1 = $db->where('parent_id = 2')->select();
+		$fa1['count'] = $db->where('parent_id = 2')->count();
 		$arr[] = $fa;
 		$arr[] = $fa1;
 		return $arr;
+	}
+	/*
+     * 工资设置添加
+     * 作者：张捷
+	 */
+	public function wageadd($data)
+	{
+		$db = D('in_out');
+		$list = array();
+		foreach ($data['name'] as $k => $v) {
+			$list[] = array("name" => $v , 'parent_id' => $data['pid']);
+		}
+		return $db->addAll($list);
+	}
+	/*
+     * 工资设置删除
+     * 作者：张捷
+	 */
+	public function wagedel($id)
+	{
+		$db = D('in_out');
+		return $db->where("in_out_id = $id")->delete();
+
 	}
 }
 ?>

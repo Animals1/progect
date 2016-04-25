@@ -28,8 +28,13 @@ $(function(){
             
     <div class="topright">    
     <ul>
+<<<<<<< HEAD
     <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
+=======
+    <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">帮助</a></li>
+    <li><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">关于</a></li>
+>>>>>>> 98f0fb6c4240717a6d495698588682ef1cbd8e1b
     <li><a href="/index.php/Home/Login/index" target="_parent">退出</a></li>
     </ul>
      
