@@ -47,25 +47,25 @@
 			<td>
 				联系地址：<?php echo $arr["staff_curaddress"];?>
 			</td>
-			<td>&nbsp;&nbsp;&nbsp;<a href="/drivingSchool/index.php/Home/Personal/showupdatefield/field/1" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
+			<td>&nbsp;&nbsp;&nbsp;<a href="/index.php/Home/Personal/showupdatefield/field/1" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
 		</tr>
 		<tr>
 			<td>
 				手机号：<?php echo $arr["staff_tel"];?>
 			</td>
-			<td>&nbsp;&nbsp;&nbsp;<a href="/drivingSchool/index.php/Home/Personal/showupdatefield/field/2" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
+			<td>&nbsp;&nbsp;&nbsp;<a href="/index.php/Home/Personal/showupdatefield/field/2" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
 		</tr>
 		<tr>
 			<td>
 				邮箱：<?php echo $arr["staff_email"];?>
 			</td>
-			<td>&nbsp;&nbsp;&nbsp;<a href="/drivingSchool/index.php/Home/Personal/showupdatefield/field/3" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
+			<td>&nbsp;&nbsp;&nbsp;<a href="/index.php/Home/Personal/showupdatefield/field/3" style=" text-decoration: none;"><font color="red" size="2">修改</font></a></td>
 		</tr>
 	</table>
 	</div>
 	
 	<div style="margin-left:500px;">
-		<img src="/drivingSchool/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100" style="cursor:pointer" title="照片">
+		<img src="/Public/admin/<?php echo $arr['staff_photo'];?>" width="100" height="100" style="cursor:pointer" title="照片">
 	</div>
 
 
