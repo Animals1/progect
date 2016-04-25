@@ -206,7 +206,9 @@ class StaffController extends Controller {
     {
         $staff = D('staff');
         $wage = $staff->wage();
+        $wagesel = $staff->wagesel();
         $this->assign('wage',$wage);
+        $this->assign('wagesel',$wagesel);
         $this->display('washow');
     }
 }

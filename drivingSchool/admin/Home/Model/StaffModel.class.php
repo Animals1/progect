@@ -426,28 +426,12 @@ class StaffModel extends Model {
 	/**
 	*	通过用户名来查询教练id
 	*/
-
-<<<<<<< HEAD
-	public function selcoachid($name)
-	{
-		return $this->where("staff_name = '$name'")->join("coach ON staff.staff_id = coach.coach_staff_id")->find();
-	}
-
-	/*public function selcoachid($name){
-		return $this->where("staff_name = '$name'")
-					->join("coach ON staff.staff_id = coach.coach_staff_id")
-					->find();
-	}*/
-=======
-
-
 	public function selcoachid($name){
 		return $this->where("staff_name = '$name'")
 					->join("coach ON staff.staff_id = coach.coach_staff_id")
 					->find();
 
 	}
->>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	/**
 	 * 查询全部的员工信息（部分字段）
 	 */
@@ -461,10 +445,6 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
-<<<<<<< HEAD
-
-=======
->>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	}
 	/*
 	 * 查询月数
@@ -537,9 +517,7 @@ class StaffModel extends Model {
 		}
 		
 		return $row;
-<<<<<<< HEAD
 
-=======
 	}
 	/*
 	 * 查询请假页面数据
@@ -669,9 +647,24 @@ class StaffModel extends Model {
 	{
 		$db = D('in_out');
 		$fa = $db->where('parent_id = 1')->select();
-		$fa['count'] = $db->where('parent_id = 1')->count();
+		$sum = 0;
+		foreach ($fa as $fak => $fav) {
+			$sum = ($sum + $fav['in_out_money']);
+		}
+		$fa['sum'] = $sum;
+		$facount = $db->where('parent_id = 1')->count();
+		$facount = ($facount + 1);
+		$fa['count'] = $facount;
 		$fa1 = $db->where('parent_id = 2')->select();
-		$fa1['count'] = $db->where('parent_id = 2')->count();
+		foreach ($fa1 as $fa1k => $fa1v) {
+			$sum1 = ($sum1 + $fa1v['in_out_money']);
+		}
+		$fa1['sum'] = $sum1;
+		$facount1 = $db->where('parent_id = 2')->count();
+		$facount1 = ($facount1 + 1);
+		$fa1['count'] = $facount1;
+		$allsum = ($sum - $sum1);
+		$arr['sum'] = $allsum;
 		$arr[] = $fa;
 		$arr[] = $fa1;
 		return $arr;
@@ -685,7 +678,7 @@ class StaffModel extends Model {
 		$db = D('in_out');
 		$list = array();
 		foreach ($data['name'] as $k => $v) {
-			$list[] = array("name" => $v , 'parent_id' => $data['pid']);
+			$list[] = array("name" => $v , 'parent_id' => $data['pid'] , 'in_out_money' => $data['money'][$k]);
 		}
 		return $db->addAll($list);
 	}
@@ -697,7 +690,17 @@ class StaffModel extends Model {
 	{
 		$db = D('in_out');
 		return $db->where("in_out_id = $id")->delete();
->>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
 	}
+	/*
+	 * 工资查询
+	 * 作者：张捷
+	 */
+	public function wagesel()
+	{
+		$db = D('dakanum');
+		$arr = $db->join('staff on dakanum.staff_id = staff.staff_id')->join('role on staff.role_id = role.role_id')->select();
+		return $arr;
+	}
+ 
 }
 ?>

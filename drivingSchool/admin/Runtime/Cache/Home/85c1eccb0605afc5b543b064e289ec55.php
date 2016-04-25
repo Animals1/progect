@@ -28,27 +28,9 @@ $(function(){
             
     <div class="topright">    
     <ul>
-<<<<<<< HEAD
-    <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-<<<<<<< HEAD
-    <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">帮助</a></li>
+    <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">帮助</a></li>
     <li><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">关于</a></li>
-    <li><a href="/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-<<<<<<< HEAD
-    <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
     <li><a href="/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-    <li><span><img src="/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-    <li><a href="/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
->>>>>>> a5dac5005d7b0cc3621de731066a524def955779
->>>>>>> 3c99009d0e83793ff2b7c4c59be6db6eb7b944c3
->>>>>>> 717dd93378e39ea3c5b4c3759a3b6db670490142
     </ul>
      
     <div class="user">
