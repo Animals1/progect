@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
 
-    <link href="/drivingSchool/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
-    <link href="/drivingSchool/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="/Public/admin/css/page.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function(){
@@ -49,15 +49,15 @@
     <div class="tools">
 
         <!--<ul class="toolbar">-->
-            <!--<li class="click"><span><img src="/drivingSchool/Public/admin/images/t01.png" /></span>添加</li>-->
-            <!--<li class="click"><span><img src="/drivingSchool/Public/admin/images/t02.png" /></span>修改</li>-->
-            <!--<li><span><img src="/drivingSchool/Public/admin/images/t03.png" /></span>删除</li>-->
-            <!--<li><span><img src="/drivingSchool/Public/admin/images/t04.png" /></span>统计</li>-->
+            <!--<li class="click"><span><img src="/Public/admin/images/t01.png" /></span>添加</li>-->
+            <!--<li class="click"><span><img src="/Public/admin/images/t02.png" /></span>修改</li>-->
+            <!--<li><span><img src="/Public/admin/images/t03.png" /></span>删除</li>-->
+            <!--<li><span><img src="/Public/admin/images/t04.png" /></span>统计</li>-->
         <!--</ul>-->
 
 
         <ul class="toolbar1" >
-            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/servicerecordadd">维修登记</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/servicerecordadd">维修登记</a></li>
         </ul>
         <table>
             <tr>
@@ -87,7 +87,7 @@
             var status=$('#status').val();
 
             $.ajax({
-                url: "/drivingSchool/index.php/Home/Administration/repairsearch",
+                url: "/index.php/Home/Administration/repairsearch",
                 type: 'get',
                 data: {'car_number':car_number,'repair_coachname':repair_coachname,'laydate':laydate,'repair_status':status},
                 success: function (data) {
@@ -117,7 +117,7 @@
                 <!--<td><?php echo ($repair["repair_id"]); ?></td>-->
                 <td><?php echo ($repair["staff_name"]); ?></td>
                 <td><?php echo (date("Y-m-d H:i:s",$repair["repair_time"])); ?></td>
-                <td><a href="/drivingSchool/index.php/Home/Administration/servicerecord/id/<?php echo ($repair["car_number"]); ?>"><?php echo ($repair["car_number"]); ?></a></td>
+                <td><a href="/index.php/Home/Administration/servicerecord/id/<?php echo ($repair["car_number"]); ?>"><?php echo ($repair["car_number"]); ?></a></td>
                 <td><?php echo ($repair["repair_desc"]); ?></td>
                 <td><?php echo ($repair["repair_rename"]); ?></td>
                 <td><?php echo ($repair["repair_rename"]); ?></td>
@@ -140,5 +140,5 @@
 <script type="text/javascript">
     $('.tablelist tbody tr:odd').addClass('odd');
 </script>
-<script type="text/javascript" src="/drivingSchool/Public/date/laydate/laydate.js"></script>
+<script type="text/javascript" src="/Public/date/laydate/laydate.js"></script>
 </html>

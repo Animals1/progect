@@ -350,6 +350,44 @@ class AdministrationController extends Controller {
             }
 
         }
+
+    /*
+     * 车辆分配
+     * */
+        public function carassignment()
+        {
+            $coach=D('Coach');
+            if($_POST)
+            {
+                $car_id=$_POST['car_id'];
+                $coach_id=$_POST['coach_id'];
+                $where="coach_id='$coach_id'";
+                $data['car_id']=$car_id;
+                $msg=$coach->updatecar($where,$data);
+                if($msg)
+                {
+                    $this->success('车辆分配成功','/Home/Administration/addveh');
+                }
+                else
+                {
+                    $this->error('车辆分配失败');
+                }
+            }
+            else
+            {
+                //查询所有车辆
+                $car=D('Car');
+                $car_number=$car->vehicles();
+                //查询所有没有分配车辆的教练
+
+                $where="coach.car_id='0'";
+                $coach_name=$coach->coachMessage($where);
+                $list=$coach_name[1];
+                $this->assign('coach',$list);
+                $this->assign('car',$car_number);
+                $this->display('carassignment');
+            }
+        }
     /*
     * @ vehgoout
     * @ 车辆出勤
@@ -757,10 +795,52 @@ class AdministrationController extends Controller {
      * */
         public function gasrecord()
         {
-            $record=D('GasAdd');
-            $gas_record=$record->gasMessage();
-            //print_r($gas_record);die;
-            $this->assign('record',$gas_record);
+            $record=D('GasNum');
+            $type=D('GasType');
+            $count=$type->getValue();
+            $gasadd=D('GasAdd');
+            $rec=$gasadd->gasMessage();
+            for($i=1;$i<=count($count);$i++)
+            {
+                if(1==$i)
+                {
+                    $where="t_id='1'";
+                    $jiusan=$record->gasMessage($where);
+                }
+                if(2==$i)
+                {
+                    $where="t_id='2'";
+                    $jiuqi=$record->gasMessage($where);
+                }
+                if(3==$i)
+                {
+                    $where="t_id='3'";
+                    $tianran=$record->gasMessage($where);
+                }
+
+            }
+           for($i=0;$i<count($jiusan);$i++)
+           {
+                $gas93[]=array($jiusan[$i]['m_id'],intval($jiusan[$i]['gas_num']));
+           }
+
+            for($i=0;$i<count($jiuqi);$i++)
+            {
+                $gas97[]=array($jiuqi[$i]['m_id'],intval($jiuqi[$i]['gas_num']));
+            }
+
+            for($i=0;$i<count($tianran);$i++)
+            {
+                $gas99[]=array($tianran[$i]['m_id'],intval($tianran[$i]['gas_num']));
+            }
+
+            $data93=json_encode($gas93);
+            $data97=json_encode($gas97);
+            $data99=json_encode($gas99);
+            $this->assign('data93',$data93);
+            $this->assign('data97',$data97);
+            $this->assign('data99',$data99);
+            $this->assign('record',$rec);
             $this->display('gasrecord');
         }
 
@@ -842,7 +922,16 @@ class AdministrationController extends Controller {
             $stu=D('Student');
             $where="student.stu_status_id='4'";
             $student=$stu->studentinfo($where);
-            $this->assign('student',$student);
+            /*---分页----*/
+            $p = $student['0'];//分页当前页
+            $list = $student['1'];//数据
+            $page = $student['2'];//页码
+            $count = $student['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
+            $this->assign('student',$list);
             $this->display('stureg');
         }
 
@@ -856,7 +945,16 @@ class AdministrationController extends Controller {
            // print_r($student_inschool);die;
             $status=$inschool->status();
             $driving=$inschool->driving();
-            $this->assign('student',$student_inschool);
+            /*---分页----*/
+            $p = $student_inschool['0'];//分页当前页
+            $list = $student_inschool['1'];//数据
+            $page = $student_inschool['2'];//页码
+            $count = $student_inschool['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
+            $this->assign('student',$list);
             $this->assign('status',$status);
             $this->assign('driving',$driving);
             $this->display('stuinschool');
@@ -908,9 +1006,19 @@ class AdministrationController extends Controller {
             }
             $inschool=D('Student');
             $student_inschool=$inschool->inschoolstu($where);
+            // print_r($student_inschool);die;
             $status=$inschool->status();
             $driving=$inschool->driving();
-            $this->assign('student',$student_inschool);
+            /*---分页----*/
+            $p = $student_inschool['0'];//分页当前页
+            $list = $student_inschool['1'];//数据
+            $page = $student_inschool['2'];//页码
+            $count = $student_inschool['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
+            $this->assign('student',$list);
             $this->assign('status',$status);
             $this->assign('driving',$driving);
             $this->display('stuinschool');
@@ -1020,9 +1128,19 @@ class AdministrationController extends Controller {
         {
             $com=D('Complaint');
             $complaint=$com->getValue();
-            $coach=$com->getValue();
+            $coach=$com->selectComplain();
+            /*---分页----*/
+            $p = $complaint['0'];//分页当前页
+            $list = $complaint['1'];//数据
+            $page = $complaint['2'];//页码
+            $count = $complaint['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
+
             $this->assign('coach',$coach);
-            $this->assign('complaint',$complaint);
+            $this->assign('complaint',$list);
             $this->display('suitcontrol');
         }
     /*
@@ -1034,9 +1152,19 @@ class AdministrationController extends Controller {
             $com=D('Complaint');
             $where="staff.staff_id='$val'";
             $complaint=$com->getValue($where);
-            $coach=$com->getValue();
+            $coach=$com->selectComplain();
+            /*---分页----*/
+            $p = $complaint['0'];//分页当前页
+            $list = $complaint['1'];//数据
+            $page = $complaint['2'];//页码
+            $count = $complaint['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
+
             $this->assign('coach',$coach);
-            $this->assign('complaint',$complaint);
+            $this->assign('complaint',$list);
             $this->display('suitcontrol');
         }
     /*
@@ -1047,8 +1175,17 @@ class AdministrationController extends Controller {
             $coach=D('Coach');
             $coach_message=$coach->coachMessage();
             $group=$coach->groupName();
+            /*---分页----*/
+            $p = $coach_message['0'];//分页当前页
+            $list = $coach_message['1'];//数据
+            $page = $coach_message['2'];//页码
+            $count = $coach_message['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
             $this->assign('group',$group);
-            $this->assign('coach',$coach_message);
+            $this->assign('coach',$list);
             $this->display('trainmsg');
         }
     /*
@@ -1080,8 +1217,17 @@ class AdministrationController extends Controller {
             $coach=D('Coach');
             $coach_message=$coach->coachMessage($where);
             $group=$coach->groupName();
+            /*---分页----*/
+            $p = $coach_message['0'];//分页当前页
+            $list = $coach_message['1'];//数据
+            $page = $coach_message['2'];//页码
+            $count = $coach_message['3'];//总条数
+            $this->assign('count',$count);
+            $this->assign('page',$page);
+            $this->assign('p',$p);
+            /*---分页end----*/
             $this->assign('group',$group);
-            $this->assign('coach',$coach_message);
+            $this->assign('coach',$list);
             $this->display('trainmsg');
 
         }
@@ -1165,7 +1311,6 @@ class AdministrationController extends Controller {
 
                 $where="coach.group_id=0";
                 $coachMessage=$coach->nogroupcoachmessage($where);
-                //dump($coachMessage);die;
                 $this->assign('nogroup',$coachMessage);
                 $this->display('traingroupadd');
             }
@@ -1174,13 +1319,13 @@ class AdministrationController extends Controller {
 
     /*
     * teachtime 教练学时
+     * A()方法调用人事的教学学时
     * */
         public function teachtime()
         {
             $salary=A('Staff');
             $data=$salary->salary();
-            print_r($data);die;
-            $this->display('teachtime');
+            print_r($data);
         }
 
     /*
@@ -1189,6 +1334,15 @@ class AdministrationController extends Controller {
 
         public function trainclass()
         {
+            $stu=D('StuOrder');
+            $order=$stu->selectAppointment();
+            foreach($order as $k=>$v)
+            {
+                $order[$k]['student_name']=explode(',',$v['student_name']);
+                $order[$k]['time']=explode(',',$v['time']);
+            }
+            //print_r($order);die;
+            $this->assign('order',$order);
             $this->display('trainclass');
         }
 

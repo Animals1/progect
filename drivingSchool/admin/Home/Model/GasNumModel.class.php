@@ -28,5 +28,11 @@ class GasNumModel extends Model {
         return $this->where($where)->delete();
     }
 
+    public function gasMessage($where=1)
+    {
+        return $this->where($where)
+            ->select();
+    }
+
 }
 ?>

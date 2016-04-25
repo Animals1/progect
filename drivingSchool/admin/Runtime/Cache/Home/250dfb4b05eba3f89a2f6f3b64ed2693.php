@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>无标题文档</title>
-    <link href="/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="/drivingSchool/Public/admin/js/jquery.js"></script>
+    <link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/admin/js/jquery.js"></script>
     <style>
         .wrapper{width:500px; height:300px; padding:20px; margin:0px auto}
     </style>
-    <script src="/drivingSchool/Public/admin/js/jquery-1-5-1-min.js" type="text/javascript"></script>
-    <script src="/drivingSchool/Public/admin/js/jquery-jqChart-min.js" type="text/javascript"></script>
-    <!--[if IE]><script lang="javascript" type="text/javascript" src="/drivingSchool/Public/admin/js/excanvas.js"></script><![endif]-->
+    <script src="/Public/admin/js/jquery-1-5-1-min.js" type="text/javascript"></script>
+    <script src="/Public/admin/js/jquery-jqChart-min.js" type="text/javascript"></script>
+    <!--[if IE]><script lang="javascript" type="text/javascript" src="/Public/admin/js/excanvas.js"></script><![endif]-->
     <script lang="javascript" type="text/javascript">
         $(document).ready(function(){
             $(".click").click(function(){
@@ -39,33 +39,33 @@
                     {
                         location: 'left',
                         minimum: 10,
-                        maximum: 200,
+                        maximum: 100,
                         interval: 10
                     }
                 ],
+
                 series: [
-                    //Êý¾Ý1¿ªÊ¼
+
                     {
                         type: 'column',
                         title:'#93汽油',
-                        data: [['1', 70], ['2', 40], ['3', 55], ['4', 50], ['5', 60], ['6', 40],['7', 40],['8', 40],['9', 40],['10', 40],['11', 40],['12', 40]]
+                        data: <?php echo $data93 ?>
                     },
-                    //Êý¾Ý1½áÊø
-                    //Êý¾Ý2
+
                     {
                         type: 'column',
                         title:'#95汽油',
-                        data: [['1', 40], ['2', 50], ['3', 95], ['4', 55], ['5', 25], ['6', 45],['7',70],['8',30],['9',20],['10',30],['11',55],['12',55]]
+                        data: <?php echo $data97 ?>
                     },
-                    //Êý¾Ý2½áÊø
-                    //Êý¾Ý3
+
                     {
                         type: 'column',
                         title:'#97柴油',
-                        data: [['1', 40], ['2', 50], ['3', 95], ['4', 55], ['5', 25], ['6', 45],['7',70],['8',30],['9',20],['10',30],['11',55],['12',55]]
+                        data: <?php echo $data99 ?>
                     },
-                    //Êý¾Ý3½áÊø
+
                 ]
+
             });
         });
     </script>
@@ -101,7 +101,7 @@
 
 
         <ul class="toolbar1">
-            <li><span><img src="/drivingSchool/Public/admin/images/t05.png" /></span><a href="/drivingSchool/index.php/Home/Administration/gasadd">油气添加</a></li>
+            <li><span><img src="/Public/admin/images/t05.png" /></span><a href="/index.php/Home/Administration/gasadd">油气添加</a></li>
         </ul>
 
 
