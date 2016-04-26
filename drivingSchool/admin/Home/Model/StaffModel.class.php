@@ -426,36 +426,11 @@ class StaffModel extends Model {
 	/**
 	*	通过用户名来查询教练id
 	*/
-<<<<<<< HEAD
-	public function selcoachid($name){
-=======
-
 
 	public function selcoachid($name)
 	{
 		return $this->where("staff_name = '$name'")->join("coach ON staff.staff_id = coach.coach_staff_id")->find();
 	}
-
-	/*public function selcoachid($name){
-		return $this->where("staff_name = '$name'")
-					->join("coach ON staff.staff_id = coach.coach_staff_id")
-					->find();
-	}*/
-
-
-
-	/*public function selcoachid($name){
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
-		return $this->where("staff_name = '$name'")
-					->join("coach ON staff.staff_id = coach.coach_staff_id")
-					->find();
-
-<<<<<<< HEAD
-	}
-=======
-	}*/
-
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
 	/**
 	 * 查询全部的员工信息（部分字段）
 	 */
@@ -469,10 +444,6 @@ class StaffModel extends Model {
 	 */
 	public function allpen(){
 		return $this->select();
-<<<<<<< HEAD
-=======
-
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
 	}
 	/*
 	 * 查询月数
@@ -718,10 +689,6 @@ class StaffModel extends Model {
 	{
 		$db = D('in_out');
 		return $db->where("in_out_id = $id")->delete();
-<<<<<<< HEAD
-=======
-
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
 	}
 	/*
 	 * 工资查询
