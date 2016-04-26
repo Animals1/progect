@@ -8,17 +8,8 @@
   <frame src="/progect/drivingSchool/index.php/Home/Index/showtop" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
 
-<<<<<<< HEAD
     <frame src="/progect/drivingSchool/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
 
-=======
-    <frame src="/index.php/Home/Index/showleft" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 98f0fb6c4240717a6d495698588682ef1cbd8e1b
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
     <frame src="right.html" name="rightFrame" id="rightFrame" title="rightFrame" />
 
     <frame src="" name="rightFrame" id="rightFrame" title="rightFrame" />

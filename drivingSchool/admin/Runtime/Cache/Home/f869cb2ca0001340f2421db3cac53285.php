@@ -3,15 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理员登录</title>
-<<<<<<< HEAD
 <link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
 <script src="/progect/drivingSchool/Public/admin/js/cloud.js" type="text/javascript"></script>
-=======
-<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
-<script src="/Public/admin/js/cloud.js" type="text/javascript"></script>
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
 
 <script language="javascript">
 	$(function(){
@@ -24,11 +18,7 @@
 
 </head>
 
-<<<<<<< HEAD
 <body style="background-color:#df7611; background-image:url(/progect/drivingSchool/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
-=======
-<body style="background-color:#df7611; background-image:url(/Public/admin/images/light.png); background-repeat:no-repeat; background-position:center top; overflow:hidden;">
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
 
 
 
@@ -41,11 +31,7 @@
 <div class="logintop">    
     <span>驾校管理系统</span>    
     <ul>
-<<<<<<< HEAD
     <li><a href="/progect/drivingSchool/index.php/Home/Login/index">回首页</a></li>
-=======
-    <li><a href="/index.php/Home/Login/index">回首页</a></li>
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
     <li><a href="#">帮助</a></li>
     <li><a href="#">关于</a></li>
     </ul>    
@@ -56,11 +42,7 @@
     <span class="systemlogo"></span> 
        
     <div class="loginbox">
-<<<<<<< HEAD
     <form action="/progect/drivingSchool/index.php/Home/Index/index" method="post" onsubmit="return funall();">
-=======
-    <form action="/index.php/Home/Index/index" method="post" onsubmit="return funall();">
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
     <ul>
     <li><input name="uname" id="uname" type="text" class="loginuser" placeholder="请输入用户名" onblur="fun1();" /><span id="span_name"></span></li>
     <li><input name="upwd" id="upwd" type="password" class="loginpwd" placeholder="请输入密码" onblur="fun2();" /><span id="span_pwd"></span></li>

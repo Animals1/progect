@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
-<link href="/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="/Public/admin/js/jquery.js"></script>
+<link href="/progect/drivingSchool/Public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="/progect/drivingSchool/Public/admin/js/jquery.js"></script>
 <script type="text/javascript">
 $(function(){	
 	//顶部导航切换
@@ -18,30 +18,19 @@ $(function(){
 
 </head>
 
-<body style="background:url(/Public/admin/images/topbg.gif) repeat-x;">
+<body style="background:url(/progect/drivingSchool/Public/admin/images/topbg.gif) repeat-x;">
 
     <div class="topleft">
-    <a href="main.html" target="_parent"><img src="/Public/admin/images/logo.png" title="系统首页" /></a>
+    <a href="main.html" target="_parent"><img src="/progect/drivingSchool/Public/admin/images/logo.png" title="系统首页" /></a>
     </div>
         
  
             
     <div class="topright">    
     <ul>
-<<<<<<< HEAD
     <li><span><img src="/progect/drivingSchool/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">帮助</a></li>
     <li><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">关于</a></li>
     <li><a href="/progect/drivingSchool/index.php/Home/Login/index" target="_parent">退出</a></li>
-=======
-<<<<<<< HEAD
-    <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#">帮助</a></li>
-    <li><a href="#">关于</a></li>
-=======
-    <li><span><img src="/Public/admin/images/help.png" title="帮助"  class="helpimg"/></span><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">帮助</a></li>
-    <li><a href="#" onclick="open('help.html','介绍','width=310,height=240,left=150,top=150,resizable=no,scrollbars=no,status=yes,toolbar=no,location=no,menubar=no,menu=yes')">关于</a></li>
->>>>>>> 98f0fb6c4240717a6d495698588682ef1cbd8e1b
-    <li><a href="/index.php/Home/Login/index" target="_parent">退出</a></li>
->>>>>>> 9dc0a85d272e5dcef2187e6e8706d830203e4520
     </ul>
      
     <div class="user">
