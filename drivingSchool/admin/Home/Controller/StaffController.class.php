@@ -211,4 +211,15 @@ class StaffController extends Controller {
         $this->assign('wagesel',$wagesel);
         $this->display('washow');
     }
+    /*
+     * 社保显示
+     * 作者：张捷
+     */
+      public function social()
+      {
+          $staff = D('staff');
+          $social = $staff->social();
+          $this->assign('social',$social);
+          $this->display('social');
+      }
 }

@@ -226,3 +226,977 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
 
+[ 2016-04-26T08:18:32+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0460s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.1550s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '张捷' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0970s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0380s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=4 )  [ RunTime:0.0650s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0590s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(5) )  [ RunTime:0.0430s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =4 )  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=19 )  [ RunTime:0.0150s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=20 )  [ RunTime:0.0140s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=21 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=22 )  [ RunTime:0.0270s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0210s ]
+SQL: SELECT * FROM `log` ORDER BY id desc LIMIT 1   [ RunTime:0.0250s ]
+NOTIC: [8] Undefined variable: rolename D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 140 行.
+NOTIC: [8] Undefined variable: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 141 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T08:18:32+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showtop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T08:18:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 169 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T08:18:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T09:04:09+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/staff_add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 214 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0720s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `role`  [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `coach_driving` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `coach_grade` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `coach_quality` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `coach_model` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `coach_motor` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `coach_driving`  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `coach_grade`  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `coach_quality`  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `coach_model`  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `coach_motor`  [ RunTime:0.0050s ]
+NOTIC: [2] Missing argument 1 for Home\Model\StaffModel::linkage(), called in D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php on line 13 and defined D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `region` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `region` WHERE ( parent_id = 1 )  [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-26T09:04:10+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/show
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 214 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1410s ]
+SQL: SELECT * FROM `staff` INNER JOIN coach ON staff.staff_id = coach.coach_staff_id  WHERE ( staff.role_id = 1 )  [ RunTime:0.0280s ]
+SQL: SELECT * FROM `staff` INNER JOIN role ON staff.role_id = role.role_id  WHERE ( staff.role_id in (4,5,6) )  [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 238 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 239 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 240 行.
+NOTIC: [8] Undefined index: coach_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 241 行.
+NOTIC: [8] Undefined index: coach_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 242 行.
+NOTIC: [8] Undefined index: driving_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 243 行.
+NOTIC: [8] Undefined index: driving_validity D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 244 行.
+NOTIC: [8] Undefined index: staff_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 262 行.
+NOTIC: [8] Undefined index: staff_start_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 263 行.
+NOTIC: [8] Undefined index: staff_end_year D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 264 行.
+NOTIC: [8] Undefined variable: coachyear D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 268 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T09:04:14+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/salary
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 214 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `dakanum` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `staff` WHERE ( staff.role_id in (1,4,5,6) )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '1' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '2' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '3' )  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '4' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '5' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '6' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '7' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '8' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '9' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '10' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '11' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '4' and month = '12' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '1' )  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '2' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '3' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '4' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '5' )  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '6' )  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '7' )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '8' )  [ RunTime:0.0150s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '9' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '10' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '11' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '12' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '1' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '2' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '3' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '4' )  [ RunTime:0.0080s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '5' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '6' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '7' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '8' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '9' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '10' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '11' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '12' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '1' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '2' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '3' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '4' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '5' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '6' )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '7' )  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '8' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '9' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '10' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '11' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '12' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '1' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '2' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '3' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '4' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '5' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '6' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '7' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '8' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '9' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '10' )  [ RunTime:0.0140s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '11' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '12' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '1' )  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '2' )  [ RunTime:0.0570s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '3' )  [ RunTime:0.0290s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '4' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '5' )  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '6' )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '7' )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '8' )  [ RunTime:0.0330s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '9' )  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '10' )  [ RunTime:0.0210s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '11' )  [ RunTime:0.0370s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '12' )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '1' )  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '2' )  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '3' )  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '4' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '5' )  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '6' )  [ RunTime:0.0160s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '7' )  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '8' )  [ RunTime:0.0100s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '9' )  [ RunTime:0.0040s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '10' )  [ RunTime:0.0110s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '11' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '12' )  [ RunTime:0.0130s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 19 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 23 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\10ef1fdb913a8400bda9c2fab8ebc1d9.php 第 40 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T09:04:15+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/leave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 214 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0840s ]
+SQL: SELECT * FROM `staff` INNER JOIN staff_leave on staff.staff_id = staff_leave.work_id  WHERE ( staff.role_id in (1,4,5,6) )  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 17 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 21 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T09:04:21+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/hours
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 214 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.3560s ]
+SQL: SHOW COLUMNS FROM `month` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `dakanum` [ RunTime:0.0230s ]
+SQL: SELECT * FROM `month`  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `staff` WHERE ( role_id = 1 )  [ RunTime:0.0260s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '1' )  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '2' )  [ RunTime:0.0180s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '3' )  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '4' )  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '5' )  [ RunTime:0.0130s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '6' )  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '7' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '8' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '9' )  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '10' )  [ RunTime:0.0330s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '11' )  [ RunTime:0.0300s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '5' and month = '12' )  [ RunTime:0.0640s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '1' )  [ RunTime:0.0230s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '2' )  [ RunTime:0.0200s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '3' )  [ RunTime:0.0130s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '4' )  [ RunTime:0.0120s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '5' )  [ RunTime:0.0220s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '6' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '7' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '8' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '9' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '10' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '11' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '6' and month = '12' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '1' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '2' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '3' )  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '4' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '5' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '6' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '7' )  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '8' )  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '9' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '10' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '11' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '7' and month = '12' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '1' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '2' )  [ RunTime:0.0060s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '3' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '4' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '5' )  [ RunTime:0.0050s ]
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '6' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '7' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '8' )  [ RunTime:0.0040s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '9' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '10' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '11' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '33' and month = '12' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '1' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '2' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '3' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '4' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '5' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '6' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '7' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '8' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '9' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '10' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '11' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '34' and month = '12' )  [ RunTime:0.0080s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '1' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '2' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '3' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '4' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '5' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '6' )  [ RunTime:0.0110s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '7' )  [ RunTime:0.0060s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '8' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '9' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '10' )  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '11' )  [ RunTime:0.0070s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+SQL: SELECT * FROM `dakanum` WHERE ( staff_id = '35' and month = '12' )  [ RunTime:0.0050s ]
+NOTIC: [8] Undefined offset: 0 D:\WWW\progect\drivingSchool\admin\Home\Model\StaffModel.class.php 第 571 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\e515fee5ba469dd77eec8a49913febd4.php 第 23 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\e515fee5ba469dd77eec8a49913febd4.php 第 27 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-04-26T10:04:28+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `admin` WHERE `admin_name` = '张捷' AND `admin_pwd` = '3c4bbe2658f1df10ef6b4c38a8e614f59a96455807d39326bef7f0deb28374ff'  [ RunTime:0.0090s ]
+NOTIC: [8] Undefined index: checkbox D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 42 行.
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `admin` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `admin` INNER JOIN admin_role ON admin.admin_id = admin_role.admin_id INNER JOIN role ON admin_role.role_id = role.role_id  WHERE ( admin_role.admin_id=4 )  [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `role` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `role` INNER JOIN role_privilege ON role.role_id = role_privilege.role_id INNER JOIN privilege ON role_privilege.privilege_id = privilege.privilege_id  WHERE ( role.role_id in(5) )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `privilege` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id =4 )  [ RunTime:0.0070s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=19 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=20 )  [ RunTime:0.0360s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=21 )  [ RunTime:0.0090s ]
+SQL: SELECT * FROM `privilege` WHERE ( parent_id=22 )  [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `log` [ RunTime:0.0310s ]
+SQL: SELECT * FROM `log` ORDER BY id desc LIMIT 1   [ RunTime:0.0220s ]
+NOTIC: [8] Undefined variable: rolename D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 140 行.
+NOTIC: [8] Undefined variable: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 141 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-26T10:04:29+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/leave
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `staff` INNER JOIN staff_leave on staff.staff_id = staff_leave.work_id  WHERE ( staff.role_id in (1,4,5,6) )  [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 17 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 21 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 25 行.
+NOTIC: [8] Undefined variable: search D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\6118d72b34788c9771c50dd879f59fa2.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-26T10:04:29+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showtop
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.131007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131007s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:04:30+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/right.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:04:30+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Index/showleft
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Home\Controller\IndexController.class.php 第 169 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: roleid D:\WWW\progect\drivingSchool\admin\Runtime\Cache\Home\16b1d9df6df002234f513f89bfb9c844.php 第 83 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.060004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.060004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-26T10:04:33+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+ERR: Think\Controller:dispaly方法不存在！
+
+[ 2016-04-26T10:04:47+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:05:10+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:05:12+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-26T10:05:13+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:05:28+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-04-26T10:05:35+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:05:36+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 222 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-04-26T10:12:12+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:12:21+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:12:30+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 225 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1320s ]
+SQL: SHOW COLUMNS FROM `social` [ RunTime:0.1060s ]
+SQL: SELECT * FROM `social`  [ RunTime:0.0910s ]
+
+[ 2016-04-26T10:15:25+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 225 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.1830s ]
+SQL: SHOW COLUMNS FROM `social` [ RunTime:0.2210s ]
+SQL: SELECT * FROM `social`  [ RunTime:0.0470s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:16:01+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 225 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0550s ]
+SQL: SHOW COLUMNS FROM `social` [ RunTime:0.0540s ]
+SQL: SELECT * FROM `social`  [ RunTime:0.0370s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-04-26T10:16:12+08:00 ] 127.0.0.1 /progect/drivingSchool/index.php/Home/Staff/social
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2048] Declaration of Home\Controller\StaffController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') D:\WWW\progect\drivingSchool\admin\Home\Controller\StaffController.class.php 第 225 行.
+SQL: SHOW COLUMNS FROM `staff` [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `social` [ RunTime:0.0200s ]
+SQL: SELECT * FROM `social`  [ RunTime:0.0220s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

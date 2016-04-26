@@ -700,6 +700,14 @@ class StaffModel extends Model {
 		$arr = $db->join('staff on dakanum.staff_id = staff.staff_id')->join('role on staff.role_id = role.role_id')->select();
 		return $arr;
 	}
- 
+ 	/*
+	 * 社保查询
+	 * 作者：张捷
+ 	 */
+ 	public function social()
+ 	{
+ 		$db = D('social');
+ 		return $db->select();
+ 	}
 }
 ?>
