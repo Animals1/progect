@@ -120,7 +120,7 @@ class StaffModel extends Model {
 			$codata['coach_sn'] = $rows['coachsn'];
 			$codata['grade_id'] = $rows['gradeid'];
 			$codata['quality'] = $rows['qualityid'];
-			$codata['model'] = $rows['modelid']; 
+			$codata['model'] = $rows['modelid'];  
 			$codata['motor'] = $rows['motorid'];
 			$codata['group_id']=0;
 			$core = $coach->add($codata);
