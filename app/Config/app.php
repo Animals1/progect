@@ -6,10 +6,10 @@
 return array(
 
     /**
-     * 应用接口层的统一参数
+     * 用户信息显示条件
      */
-    'apiCommonRules' => array(
-        //'sign' => array('name' => 'sign', 'require' => true),
+    'User-info' => array(
+        'userid' => array('name' => 'userid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '用户ID'),
     ),
 
 );
