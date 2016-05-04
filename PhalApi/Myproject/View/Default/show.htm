@@ -1,0 +1,12 @@
+<!--载入head模板-->
+<?php DI()->view->load('head'); ?>
+
+<h1>这是一个<?php echo $test?></h1>
+<h2>遍历</h2>
+<ul>
+    <?php foreach ($list as $k => $v) { ?>
+    <li>名字：<?php echo $v['name']?>，年龄：<?php echo $v['age']?></li>
+    <?php } ?>
+</ul>
+<!--载入foot模板-->
+<?php DI()->view->load('foot'); ?>
