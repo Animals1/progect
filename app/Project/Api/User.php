@@ -24,10 +24,10 @@ class Api_User extends PhalApi_Api {
 		$rs['info'] = $info;
 		return $rs;
 	}
-	public function updateuser()
+	public function userupdate()
 	{
 		$user = new Domain_User();
-		$info = $user->useruodate($this);
+		$info = $user->userupdate($this);
 		$rs['code'] = 1;
 		$rs['msg'] = '数据更新成功';
 		$rs['info'] = $info;

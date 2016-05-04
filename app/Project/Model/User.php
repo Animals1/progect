@@ -13,7 +13,7 @@ class Model_User extends PhalApi_Model_NotORM {
                     ->fetch();
     }
 
-    public function useruodate($data)
+    public function userupdate($data)
     {
         $id = $data->userid;
         $arr = array(

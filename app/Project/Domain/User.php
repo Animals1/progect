@@ -14,10 +14,10 @@ class Domain_User {
 
     }
 
-    public function useruodate($data)
+    public function userupdate($data)
     {
         $user = new Model_User();
-        $rs = $user->useruodate($data);
+        $rs = $user->userupdate($data);
         if ($rs === false) {
             throw new PhalApi_Exception_BadRequest('更新失败！有可能是相同的数据！', 1);
         }
