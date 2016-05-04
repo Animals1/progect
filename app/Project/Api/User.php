@@ -11,7 +11,7 @@ class Api_User extends PhalApi_Api {
 	public function getRules() {
         return array(
         	'userinfo' => DI()->config->get('app.User-info'),
-        	'updateuser' => DI()->config->get('app.User-update'),
+        	'userupdate' => DI()->config->get('app.User-update'),
         );
 	}
 
