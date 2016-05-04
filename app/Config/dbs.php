@@ -12,7 +12,7 @@ return array(
     'servers' => array(
         'db_demo' => array(                         //服务器标记
             'host'      => '123.56.248.127',             //数据库域名
-            'name'      => 'app',               //数据库名字
+            'name'      => 'driving',               //数据库名字
             'user'      => 'meimei',                  //数据库用户名
             'password'  => 'root',	                    //数据库密码
             'port'      => '3306',                  //数据库端口

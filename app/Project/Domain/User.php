@@ -13,4 +13,17 @@ class Domain_User {
         }
 
     }
+
+    public function useruodate($data)
+    {
+        $user = new Model_User();
+        $rs = $user->useruodate($data);
+        if ($rs === false) {
+            throw new PhalApi_Exception_BadRequest('更新失败！有可能是相同的数据！', 1);
+        }
+        if ($rs == '0') {
+            throw new PhalApi_Exception_BadRequest('已结更新过了，请勿重复操作！', 1);
+        }
+        return $rs;
+    }
 }
