@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d2318dc9-9ecc-406d-85bb-1e05130f71df" name="101.200.201.202" url="http://101.200.201.202">
+        <fileTransfer host="101.200.201.202" port="22" rootFolder="/phpstudy/www/phalapi" username="root">
+          <advancedOptions>
+            <advancedOptions controlEncoding="UTF-8" dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
