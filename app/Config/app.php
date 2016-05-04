@@ -18,5 +18,8 @@ return array(
     	'usersex' => array('name' => 'sex' , 'type' => 'string' ,'require' => true,'desc' => '用户性别'),
     	'userarea' => array('name' => 'area' , 'type' => 'string' , 'min' => 2 , 'max' => 30 ,'require' => true,'desc' => '用户住址'),
     ),
+	'Staff-info' => array( //教练信息显示条件
+        'staffid' => array('name' => 'staffid', 'type' => 'int', 'min' => 1, 'require' => true, 'desc' => '教练ID'),
+    ),
 
 );
