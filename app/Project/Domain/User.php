@@ -26,4 +26,56 @@ class Domain_User {
         }
         return $rs;
     }
+
+
+
+	/*
+    *   轮播图
+	*	by 郭旭峰
+    */
+    public function getLunbo(){
+
+        $rs = array();
+
+        //获取
+        $model = new Model_User();
+        $rs = $model->getLunbo();
+
+        return $rs;
+        
+    }
+
+
+    /*
+    *   公司简介  
+	*	by 郭旭峰
+    */
+    public function getCompanyabout($cId){
+        $rs = array();
+
+        $userId = intval($cId);
+        if ($cId <= 0) {
+            return $rs;
+        }
+
+        //版本:1：简单的获取
+        $model = new Model_User();
+        $rs = $model->getCompanyabout($cId);
+
+        return $rs;
+    }
+
+
+    /*
+    *   底部菜单
+	*	by 郭旭峰
+    */
+    public function getAppfooter(){
+        $rs = array();
+        $model = new Model_User();
+        $rs = $model->getAppfooter();
+        return $rs;
+    }
+
+	
 }
