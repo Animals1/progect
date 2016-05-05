@@ -27,7 +27,7 @@ return array(
         //通用路由
         '__default__' => array(
             'prefix' => '',
-            'key' => 'id',
+            'key' => 'stu_id',
             'map' => array(
                 array('db' => 'db_demo'),
             ),

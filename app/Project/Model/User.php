@@ -26,4 +26,44 @@ class Model_User extends PhalApi_Model_NotORM {
     }
 
 
+
+
+	/*
+    *   轮播图
+	*	by 郭旭峰
+    */
+    public function getLunbo(){
+        $sql = "select * from lunbo";
+        
+        $rs = DI()->notorm->lunbo->queryAll($sql);
+        return $rs;
+    }
+
+
+    /*
+    *   公司简介
+	*	by 郭旭峰
+    */
+    public function getCompanyabout($cId){
+        $sql = "select * from company where company_id = :id";
+        $params = array(
+            ":id" => $cId
+        );
+
+        $rs = DI()->notorm->company->queryAll($sql,$params);
+        return $rs;
+    }
+
+
+    /*
+    *   底部菜单
+	*    by 郭旭峰
+    */
+    public function getAppfooter(){
+        $sql = "select * from appfooter";
+        $rs = DI()->notorm->appfooter->queryAll($sql);
+        return $rs;
+    }
+
+
 }
